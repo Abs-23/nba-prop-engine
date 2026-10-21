@@ -263,3 +263,34 @@ def load_weights():
     if WEIGHTS.exists():
         return json.loads(WEIGHTS.read_text())
     return None
+
+
+# ------------------------------------------------------------------ projections for a whole frame
+
+CARD_STATS = ["pts", "reb", "ast", "fg3m", "pra", "pr", "pa", "ra"]
+PARTS = {"pts": ["pts"], "reb": ["reb"], "ast": ["ast"], "fg3m": ["fg3m"], **COMBOS}
+
+
+def project_frame(df, w):
+    """Matchup-adjusted means for every row (same math as the live engine), plus the
+    matchup lean (net %) per stat. Returns (means, base_means, nets) dicts of arrays."""
+    mm = w["minutes"]
+    pm = df["proj_min"].to_numpy()
+    pm_new = (pm + mm["blowout_per_point"] * df["blowout"].to_numpy() * (pm / 36)
+              + mm.get("b2b", 0) * df["b2b"].astype(float).to_numpy()
+              + mm.get("vac_min_same", 0) * df["d_vac_min_same"].to_numpy()
+              + mm.get("vac_min_other", 0) * df["d_vac_min_other"].to_numpy())
+    pm_new = np.maximum(pm_new, 0)
+    base_c, new_c = {}, {}
+    for c in BASE:
+        X = feature_matrix(df, c)
+        wts = np.array([w["stats"][c]["factors"][f]["weight"] for f in FACTORS[c]])
+        rate = df[f"rate_{c}"].to_numpy()
+        base_c[c] = rate * pm
+        new_c[c] = rate * pm_new * np.exp(X @ wts)
+    means, base, nets = {}, {}, {}
+    for s, parts in PARTS.items():
+        means[s] = sum(new_c[c] for c in parts)
+        base[s] = sum(base_c[c] for c in parts)
+        nets[s] = np.where(base[s] > 0, means[s] / np.maximum(base[s], 1e-9) - 1, 0.0)
+    return means, base, nets
