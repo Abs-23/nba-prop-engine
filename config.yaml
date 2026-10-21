@@ -65,18 +65,30 @@ matchups:
   show_context_min_effect: 0.03
 
 card:
-  # Tonight's card: 3 to 6 props at the real DraftKings line (lines via ESPN, free).
-  # Backtest at real DraftKings closing lines (last season, 46 days, mostly April + playoffs):
-  #   this rule: ~4.8 qualifying legs/day, 67% of legs hit, full card won ~17-20% of the time.
-  #   Small sample: the live track record is the real test.
-  p_min: 0.58          # blended chance the leg hits
-  form_min: 0.7        # cleared this exact line in 7+ of last 10
-  lean_min: 0.0        # matchup must not lean against the pick
+  # Two cards a night, 3 to 6 props each, at the real DraftKings line (lines via ESPN, free).
+  # Backtest at real DraftKings closing lines (last season, 46 days, mostly April + playoffs).
+  # Neither card beat DraftKings on profit by more than noise (about +-2% per leg): they pick
+  # the best-supported legs and show honest odds. The live track record is the real test.
   min_legs: 3
   max_legs: 6
   max_per_game: 2
-  fill_p_min: 0.55     # if fewer than 3 qualify, fill with the best legs above these (marked "below bar")
-  fill_form_min: 0.6
+  cards:
+    likely:                 # "Most likely": highest chance, any price. Backtest: legs hit ~67% at ~-175.
+      title: "Most likely"
+      p_min: 0.58           # blended chance the leg hits
+      form_min: 0.7         # cleared this exact line in 7+ of last 10
+      lean_min: 0.0         # matchup must not lean against the pick
+      price_min: null       # no price limit
+      fill_p_min: 0.55      # if fewer than 3 qualify, fill with legs above these (marked "below bar")
+      fill_form_min: 0.6
+    fair:                   # "Fair price": every leg -150 or better. Backtest: legs hit ~57% at ~-126.
+      title: "Fair price"
+      p_min: 0.52
+      form_min: 0.6
+      lean_min: 0.01
+      price_min: -150
+      fill_p_min: 0.50
+      fill_form_min: 0.5
   # Blend of model and market, learned from real lines + results (scripts/backtest_lines.py):
   # logit(p) = b0 + b1 * logit(model) + b2 * logit(DraftKings no-vig)
   blend: [-0.000, 0.108, 0.894]

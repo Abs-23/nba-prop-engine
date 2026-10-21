@@ -7,24 +7,26 @@ Every afternoon this repo builds a board of NBA player props, picks 3-, 4-, 5- a
 
 ## What you get each day
 
-**Tonight's card: 3 to 6 props at the real DraftKings line.** Lines come free from DraftKings
-via ESPN (points, rebounds, assists, threes, and the P+R / P+A / R+A / P+R+A combos).
+**Two cards a night, 3 to 6 props each, at the real DraftKings line.** Lines come free from
+DraftKings via ESPN (points, rebounds, assists, threes, and the P+R / P+A / R+A / P+R+A combos).
 
-A leg makes the card when:
+| Check | Most likely | Fair price |
+|---|---|---|
+| DraftKings price | any | -150 or better |
+| Chance it hits (our model blended with DraftKings' price) | 58%+ | 52%+ |
+| Cleared this exact line recently | 7+ of last 10 | 6+ of last 10 |
+| Tonight's matchup (who's out, defense, pace, minutes) | not against | +1% or better |
+| Backtest: legs hit / typical price | ~67% / -175 | ~57% / -126 |
 
-| Check | Bar |
-|---|---|
-| Chance it hits (our model blended with DraftKings' price) | 58%+ |
-| Cleared this exact line recently | 7+ of last 10 |
-| Tonight's matchup (who's out, defense, pace, minutes) | leans its way |
-| Player gates | healthy, steady minutes, 3+ games with his current team |
+Both need the player gates: healthy, steady minutes, 3+ games with his current team.
+Neither card beat DraftKings on profit by more than noise in the backtest (about +-2% per leg).
 
-The card takes every qualifying leg, best first, up to 6 (one per player, at most 2 per game).
+Each card takes every qualifying leg, best first, up to 6 (one per player, at most 2 per game).
 If fewer than 3 qualify, it is filled to 3 with the next-best legs, marked **below bar**.
 
 At the real line nothing is a sure thing: books set it near 50/50. In the backtest at real
-DraftKings closing lines, qualifying legs hit about 67%, so a 3-leg card wins roughly 30% of
-the time and a 6-leg card under 10%. The dashboard shows the combined chance on every card,
+DraftKings closing lines, "Most likely" legs hit about 67%, so a 3-leg card wins roughly 30%
+of the time and a 6-leg card under 10%; "Fair price" legs hit about 57%. The dashboard shows the combined chance on every card,
 and the track record shows whether the numbers hold up.
 
 ## How a pick is made

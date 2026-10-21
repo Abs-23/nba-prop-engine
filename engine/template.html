@@ -82,9 +82,10 @@ footer ol{padding-left:18px}
     <div><div class="date" id="date"></div><h1>NBA Prop Board</h1></div>
     <div class="chips" id="chips"></div>
   </div>
-  <p class="note">Every leg is at the real DraftKings line. At the real line no prop is a sure thing: books set it near 50/50, and our best legs historically hit about two times in three. Each leg shows the evidence for it and the risks against it, and the track record at the bottom shows whether the percentages hold up.</p>
+  <p class="note">Every leg is at the real DraftKings line. At the real line no prop is a sure thing: books set it near 50/50. In last season's backtest the "Most likely" legs hit about 67% and the "Fair price" legs about 57%, and neither beat DraftKings on profit by more than noise. So treat these as the best-supported picks with honest odds, not a money machine. The track record at the bottom shows whether the numbers hold up.</p>
 
-  <h2>Tonight's card <small id="lu-sub"></small></h2>
+  <h2>Tonight's cards <small id="lu-sub"></small></h2>
+  <div class="tabs" id="card-tabs"></div>
   <div class="panel" id="lineup"></div>
 
   <div class="panel" id="outs" style="margin-top:12px;padding:12px 18px;font-size:14px"></div>
@@ -104,7 +105,7 @@ footer ol{padding-left:18px}
       <li>Minutes are projected from the last ~5 games (blended with last season early on), and trimmed on back-to-backs.</li>
       <li>The opponent's tendency to allow each stat adjusts the projection, shrunk toward average until it has enough games.</li>
       <li>A player-specific distribution turns the projection into a probability at tonight's DraftKings line. That is blended with DraftKings' own price, using weights learned from last season's real lines and results (the market carries most of the weight; it predicted results better than the model alone).</li>
-      <li><b>A leg makes the card</b> when the blended chance is at least 58%, the player cleared that exact line in 7+ of his last 10, and the matchup leans his way. The card takes every qualifying leg, best first, up to 6. If fewer than 3 qualify it is filled to 3 with the next-best legs, marked "below bar".</li>
+      <li><b>Two cards.</b> "Most likely": blended chance 58%+, cleared that exact line in 7+ of his last 10, matchup not against him, any price. "Fair price": priced -150 or better, blended chance 52%+, 6+ of last 10, matchup +1% or better. Each card takes every qualifying leg, best first, up to 6. If fewer than 3 qualify it is filled to 3 with the next-best legs, marked "below bar".</li>
       <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. Teammates and opponents who are out are part of it: their share of shots, assists, rebounds and minutes is redistributed. </li>
       <li>Players who are injured, listed questionable, low-minute or volatile are excluded. The card takes one leg per player and at most two per game.</li>
     </ol>
@@ -125,7 +126,7 @@ $("chips").innerHTML = D.health.map(h => `<span class="chip ${h.ok ? "" : "bad"}
 function legHTML(p){
   const sideTxt = `${p.side === "over" ? "Over" : "Under"} ${p.line}`;
   return `<details class="leg"><summary>
-    <div><div class="tier">${p.below_bar ? '<span class="down">Below bar</span> · ' : ""}DraftKings ${esc(p.price_fmt || "")}</div>
+    <div><div class="tier">${p.below_bar ? '<span class="down">Below bar</span> · ' : ""}${esc(p.tier || "")} · DraftKings ${esc(p.price_fmt || "")}</div>
     <div class="what">${esc(p.label)}</div>
     <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)} · last 10: ${p.l10 != null ? Math.round(p.l10*10) + "/10" : "–"}${p.matchup_net != null ? ` · <span class="${p.matchup_net >= 0 ? "up" : "down"}">matchup ${p.matchup_net >= 0 ? "+" : ""}${(p.matchup_net*100).toFixed(1)}%</span>` : ""}</div></div>
     <div class="p">${pct(p.prob)}<div class="meta">book ${pct(p.fair)}</div></div></summary>
@@ -133,14 +134,30 @@ function legHTML(p){
   </details>`;
 }
 
-// ---- tonight's card
-const CARD = (D.lineups.card || [])[0];
+// ---- tonight's cards
+const CARD_INFO = {
+  likely: "Highest chance at any price. Legs are usually heavy favorites (often -160 or worse), so they pay less.",
+  fair: "Only legs priced -150 or better. Each leg is a little less likely, but every one pays a fair price."
+};
+const CARDS = D.lineups || {};
+const names = Object.keys(CARDS);
+let cardName = names.find(n => (CARDS[n] || []).length) || names[0];
+function drawCard(){
+  $("card-tabs").innerHTML = names.map(n => {
+    const c = (CARDS[n] || [])[0];
+    const title = c ? c.title : ({likely: "Most likely", fair: "Fair price"}[n] || n);
+    return `<button class="tab ${n===cardName?"on":""}" data-c="${n}">${esc(title)}${c ? ` (${c.size})` : ""}</button>`;
+  }).join("");
+  const c = (CARDS[cardName] || [])[0];
+  $("lineup").innerHTML = c
+    ? `<div class="lu-head"><div><div class="big">${c.size} legs<small>${pct(c.prob)} chance all hit</small></div></div>
+       <div class="meta" style="max-width:420px">${esc(CARD_INFO[cardName] || "")} ${c.n_filled ? `${c.n_qualified} cleared the bar; ${c.n_filled} added to reach 3.` : `All ${c.size} cleared the bar.`}</div></div>`
+      + c.legs.map(legHTML).join("")
+    : `<div class="empty">${D.games_today ? "Not even 3 reasonable legs for this card tonight. Sitting out is a pick too." : "No games today."}</div>`;
+  document.querySelectorAll("[data-c]").forEach(b => b.onclick = () => {cardName = b.dataset.c; drawCard();});
+}
 $("lu-sub").textContent = D.games_today ? `${D.games_today} games tonight` : "no games today";
-$("lineup").innerHTML = CARD
-  ? `<div class="lu-head"><div><div class="big">${CARD.size} legs<small>${pct(CARD.prob)} chance all hit</small></div></div>
-     <div class="meta">${CARD.n_filled ? `${CARD.n_qualified} cleared the bar; ${CARD.n_filled} added to reach the minimum of 3` : `All ${CARD.size} cleared the bar`}</div></div>`
-    + CARD.legs.map(legHTML).join("")
-  : `<div class="empty">${D.games_today ? "Not even 3 reasonable legs tonight, so no card. Sitting out is a pick too." : "No games today."}</div>`;
+drawCard();
 
 // ---- who's out
 const OUT = D.out_tonight || {};
@@ -174,7 +191,7 @@ function barRow(label, actual, expected, n){
 const cards = [];
 cards.push(`<div class="panel"><h3>Hit rate by tier</h3>${R.by_tier.length ? R.by_tier.map(t => barRow(t.tier, t.rate, t.expected, t.n)).join("") : '<div class="meta">No graded picks yet.</div>'}</div>`);
 cards.push(`<div class="panel"><h3>Are the % honest?</h3>${R.calibration.length ? R.calibration.map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Needs graded picks. Bars should land on the black tick.</div>'}</div>`);
-cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${l.size}-leg cards`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
+cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${({likely:"Most likely",fair:"Fair price"})[l.flavor] || l.flavor} · ${l.size} legs`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
 $("record").innerHTML = cards.join("");
 $("recent").innerHTML = R.recent.length ? `<table><tr><th>Date</th><th>Pick</th><th class="n">Actual</th><th>Result</th></tr>` +
   R.recent.map(r => `<tr><td>${r.date}</td><td>${esc(r.player)} ${r.side} ${r.line} ${esc(r.stat)} <span class="meta">${r.tier}</span></td><td class="n">${r.actual ?? "–"}</td><td class="${r.result}">${r.result}</td></tr>`).join("") + `</table>`

@@ -20,7 +20,7 @@ PICK_COLS = ["pick_id", "date", "kind", "tier", "game_id", "player_id", "player"
 
 
 def pick_id(date, p):
-    return f'{date}|{p["player_id"]}|{p["stat"]}|{p["side"]}|{p["line"]}|{p["kind"]}'
+    return f'{date}|{p["player_id"]}|{p["stat"]}|{p["side"]}|{p["line"]}|{p["kind"]}|{p.get("card", "")}'
 
 
 def _load(path, cols):
@@ -41,7 +41,7 @@ def record_today(date, safe, market, lineups):
                      "prob": round(p["prob"], 4), "fair": round(p.get("fair", np.nan), 4),
                      "edge": round(p.get("edge", np.nan), 4), "price": p.get("price"),
                      "result": "pending", "actual": None})
-    ph = pd.concat([ph, pd.DataFrame(rows, columns=PICK_COLS)], ignore_index=True)
+    ph = pd.concat([ph, pd.DataFrame(rows, columns=PICK_COLS)], ignore_index=True).drop_duplicates("pick_id")
     ph.to_csv(PICKS, index=False)
 
     lh = _load(LINEUPS, ["date", "flavor", "size", "prob", "legs", "result"])

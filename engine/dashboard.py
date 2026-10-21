@@ -8,7 +8,7 @@ from engine import DOCS, ROOT
 
 KEEP = ["kind", "tier", "game_id", "matchup", "player", "team", "stat", "stat_label", "side", "line",
         "label", "prob", "fair", "edge", "ev", "price", "book", "proj", "l10", "l20", "reasons", "matchup_net",
-        "below_bar", "prob_model"]
+        "below_bar", "prob_model", "card"]
 
 
 def _clean(o):
@@ -38,8 +38,9 @@ def render(day, games_today, safe, market, lineups, record, health, odds_enabled
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "games_today": games_today,
         "safe": [_pick(p) for p in sorted(safe, key=lambda p: -p["prob"])],
-        "market": [_pick(p) for p in sorted(market, key=lambda p: -p["ev"])],
+        "market": [_pick(p) for p in sorted(market, key=lambda p: -p["prob"])],
         "lineups": {f: [{"size": l["size"], "prob": l["prob"], "legs": [_pick(x) for x in l["legs"]],
+                         "title": l.get("title", f), "name": l.get("name", f),
                          "n_qualified": l.get("n_qualified", l["size"]), "n_filled": l.get("n_filled", 0)}
                         for l in lus] for f, lus in lineups.items()},
         "record": record, "health": health, "odds_enabled": odds_enabled, "out_tonight": out_tonight or {},

@@ -80,7 +80,7 @@ def main(day=None):
     log(f"{len(games)} games today")
     rosters = None
     injuries = None
-    profiles, safe, market, lineups = [], [], [], {"card": []}
+    profiles, safe, market, lineups = [], [], [], {}
     out_tonight = {}
     if games:
         from engine.sources.rosters import fetch_rosters
@@ -112,19 +112,18 @@ def main(day=None):
         log("Out tonight: " + "; ".join(f"{t}: {', '.join(v)}" for t, v in sorted(out_tonight.items())))
         log(f"Projected {len(profiles)} players")
         # 5. tonight's DraftKings lines (free, via ESPN) -> the card
-        from engine.card import build_card, candidates
+        from engine.card import build_cards, candidates
         from engine.sources.espn_props import fetch_lines
         lines = fetch_lines([g["game_id"] for g in games])
         save_line_snapshot(lines, today)
         health.append({"ok": bool(lines), "text": f"DraftKings lines: {len(lines)} for {len({l['game_id'] for l in lines})} games"
                        if lines else "DraftKings lines unavailable"})
         cands = candidates(profiles, lines, injuries, cfg)
-        card, market = build_card(cands, cfg, injuries)
-        log(f"Lines: {len(lines)}; candidates: {len(cands)}; qualified: {len(market)}; "
-            f"card: {card['size'] if card else 0} legs")
-        lineups = {"card": [card] if card else []}
-        grading.record_today(today, [], market + ([l for l in card["legs"] if l["below_bar"]] if card else []),
-                             lineups)
+        lineups, market = build_cards(cands, cfg, injuries)
+        log(f"Lines: {len(lines)}; candidates: {len(cands)}; qualified: {len(market)}; cards: "
+            + ", ".join(f"{k} {v[0]['size'] if v else 0} legs" for k, v in lineups.items()))
+        fills = [l for v in lineups.values() for c in v for l in c["legs"] if l["below_bar"]]
+        grading.record_today(today, [], market + fills, lineups)
 
     render(today, len(games), safe, market, lineups, grading.track_record(), health, True,
            out_tonight if games else {})

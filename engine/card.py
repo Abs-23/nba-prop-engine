@@ -1,6 +1,10 @@
 """Tonight's card: 3 to 6 props at the REAL DraftKings line.
 
-How a leg qualifies (all must hold; thresholds in config.yaml -> card):
+Two cards, each with its own bar (config.yaml -> card -> cards):
+  * "Most likely": the highest-chance legs at any price
+  * "Fair price": only legs priced -150 or better, with a lower bar to match
+
+How a leg qualifies (all must hold):
   * blended chance >= p_min. The blend combines our model with DraftKings' own
     price, using weights learned from last season's real lines and results
     (scripts/backtest_lines.py). The market carries most of the weight because
@@ -70,17 +74,21 @@ def candidates(profiles, lines, injuries, cfg):
     return out
 
 
-def qualifies(c, cc):
-    return (c["p"] >= cc["p_min"] and c["h10"] is not None and c["h10"] >= cc["form_min"]
-            and c["lean"] >= cc["lean_min"])
+def price_ok(c, rule):
+    return rule.get("price_min") is None or c["price"] >= rule["price_min"]
 
 
-def reasons(c, cfg, injuries):
+def qualifies(c, rule):
+    return (price_ok(c, rule) and c["p"] >= rule["p_min"] and c["h10"] is not None
+            and c["h10"] >= rule["form_min"] and c["lean"] >= rule["lean_min"])
+
+
+def reasons(c, cfg, injuries, rule):
     prof, stat, side, line = c["prof"], c["stat"], c["side"], c["line"]
     lab = LABELS[stat].lower()
     n_hist = len(prof["history"])
     r = [
-        ("+" if c["p"] >= cfg["card"]["p_min"] else "!",
+        ("+" if c["p"] >= rule["p_min"] else "!",
          f'Chance it hits: {100*c["p"]:.0f}%. DraftKings prices {side} {line} at {_price(c["price"])} '
          f'({100*c["fair"]:.0f}% after removing their margin); our model says {100*c["p_model"]:.0f}%. '
          f'The two are blended using how each predicted results last season.'),
@@ -100,11 +108,11 @@ def reasons(c, cfg, injuries):
     return r
 
 
-def to_pick(c, cfg, injuries, below_bar=False):
+def to_pick(c, cfg, injuries, rule, card_name, below_bar=False):
     prof = c["prof"]
     stat, side, line = c["stat"], c["side"], c["line"]
     return {
-        "kind": "card", "tier": "Below bar" if below_bar else "Card",
+        "kind": "card", "tier": rule.get("title", card_name), "card": card_name,
         "game_id": prof["game_id"], "matchup": prof["matchup"], "tipoff_utc": prof.get("tipoff_utc"),
         "player_id": prof["player_id"], "player": prof["player"], "team": prof["team"],
         "stat": stat, "stat_label": LABELS[stat], "side": side, "line": line,
@@ -112,7 +120,7 @@ def to_pick(c, cfg, injuries, below_bar=False):
         "prob": c["p"], "prob_model": c["p_model"], "fair": c["fair"], "edge": c["p"] - c["fair"],
         "ev": c["ev"], "price": c["price"], "book": c["book"], "proj": c["mean"],
         "l10": c["h10"], "l20": c["h20"], "matchup_net": c["lean"], "below_bar": below_bar,
-        "reasons": reasons(c, cfg, injuries),
+        "reasons": reasons(c, cfg, injuries, rule),
     }
 
 
@@ -133,19 +141,32 @@ def _pick_legs(pool, n_max, per_game, taken=None):
     return legs
 
 
-def build_card(cands, cfg, injuries):
-    """Returns (card dict or None, list of all qualifying picks)."""
+def build_card(cands, cfg, injuries, card_name):
+    """Returns (card dict or None, list of all qualifying picks) for one card rule."""
     cc = cfg["card"]
-    good = [c for c in cands if qualifies(c, cc)]
+    rule = cc["cards"][card_name]
+    good = [c for c in cands if qualifies(c, rule)]
     legs = _pick_legs(good, cc["max_legs"], cc["max_per_game"])
     fill = []
     if len(legs) < cc["min_legs"]:
-        backup = [c for c in cands if c not in good and c["p"] >= cc["fill_p_min"]
-                  and (c["h10"] or 0) >= cc["fill_form_min"] and c["lean"] >= 0]
+        backup = [c for c in cands if c not in good and price_ok(c, rule) and c["p"] >= rule["fill_p_min"]
+                  and (c["h10"] or 0) >= rule["fill_form_min"] and c["lean"] >= 0]
         fill = _pick_legs(backup, cc["min_legs"] - len(legs), cc["max_per_game"], taken=legs)
-    picks = [to_pick(c, cfg, injuries) for c in legs] + [to_pick(c, cfg, injuries, True) for c in fill]
-    qualified = [to_pick(c, cfg, injuries) for c in sorted(good, key=lambda c: -c["p"])]
+    picks = ([to_pick(c, cfg, injuries, rule, card_name) for c in legs]
+             + [to_pick(c, cfg, injuries, rule, card_name, True) for c in fill])
+    qualified = [to_pick(c, cfg, injuries, rule, card_name) for c in sorted(good, key=lambda c: -c["p"])]
     if len(picks) < cc["min_legs"]:
         return None, qualified
-    return {"size": len(picks), "legs": picks, "prob": float(np.prod([p["prob"] for p in picks])),
-            "n_qualified": len(legs), "n_filled": len(fill)}, qualified
+    return {"name": card_name, "title": rule.get("title", card_name), "size": len(picks), "legs": picks,
+            "prob": float(np.prod([p["prob"] for p in picks])), "n_qualified": len(legs),
+            "n_filled": len(fill)}, qualified
+
+
+def build_cards(cands, cfg, injuries):
+    """All cards in config order. Returns ({name: [card] or []}, all qualifying picks)."""
+    cards, qualified = {}, []
+    for name in cfg["card"]["cards"]:
+        card, q = build_card(cands, cfg, injuries, name)
+        cards[name] = [card] if card else []
+        qualified += q
+    return cards, qualified
