@@ -46,7 +46,7 @@ The dashboard always shows the combined probability so the risk is in plain sigh
    Weights are re-learned from the box scores every run. A check counts only if it clearly
    predicted results in past games *and* pointed the way basketball sense says it should;
    others (e.g. opponent height, opponent fouls last season) are shown as context but not counted.
-   A pick needs the matchup to lean its way overall. Backtest: `python scripts/backtest.py`.
+   A pick needs the matchup to lean its way by at least +1% overall. Backtest: `python scripts/backtest.py`.
 8. **Gates.** Injured / questionable / low-minute / thin-history players are dropped.
 9. **Lineups.** One leg per team, at most two per game, never padded with weaker legs.
 
@@ -65,11 +65,11 @@ talent of every player is known. Latest result over 28 simulated days:
 
 ### Matchup backtest (last season, weights learned only from earlier games)
 
-| Test period | All Safe picks | Favorable matchup | Unfavorable / neutral |
-|---|---|---|---|
-| Jan 1 - Apr | 86.6% | 87.2% | 86.0% |
-| Feb 1 - Apr | 86.5% | 87.8% | 85.4% |
-| Mar 1 - Apr | 87.0% | 88.0% | 86.1% |
+| Test period | All Safe picks | Matchup > 0% | Matchup > +1% (used) | Neutral (-1% to +1%) |
+|---|---|---|---|---|
+| Jan 1 - Apr | 86.6% | 87.2% | 88.0% (31/day) | 86.2% |
+| Feb 1 - Apr | 86.5% | 87.8% | 88.3% (30/day) | 85.8% |
+| Mar 1 - Apr | 87.0% | 88.0% | 89.2% (28/day) | 85.8% |
 
 Requiring 2+ individual checks to each pass a bar was also tested; it cut picks to ~4/day
 and hit 85.3%, so the engine uses the overall matchup lean instead.
