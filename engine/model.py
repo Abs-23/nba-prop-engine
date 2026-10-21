@@ -234,10 +234,39 @@ def hit_rate(values, line, side):
 class MatchupContext:
     """Tonight's matchup numbers for every team, plus the learned factor weights."""
 
-    def __init__(self, logs, game_log, players, rosters, weights, season):
+    def __init__(self, logs, game_log, players, rosters, weights, season, injuries=None, frame=None,
+                 today=None):
         from engine import matchups as M
+        from engine.absences import ROT_MIN, SHARE_STATS, player_shares
         self.M = M
         self.w = weights
+        self.today = today
+        self.SHARE_STATS = SHARE_STATS
+        # --- who is out tonight, and what share of their team leaves with them
+        sh = player_shares(logs).sort_values("date")
+        last = sh.groupby("player_id").tail(1).set_index("player_id")
+        self.last_team_game = logs.groupby("team")["date"].max().to_dict()
+        out_status = {"out", "doubtful"}
+        self.out = {}
+        for pid, r in last.iterrows():
+            inj = (injuries or {}).get(norm_name(r["player"]))
+            team_now = (rosters or {}).get(norm_name(r["player"]), r["team"])
+            if not inj or inj["status"] not in out_status or team_now != r["team"] or r["cur_min"] < ROT_MIN:
+                continue
+            self.out.setdefault(r["team"], []).append({
+                "player": r["player"], "pos": r["pos"], "min": float(r["cur_min"]),
+                **{s: float(r[f"cur_sh_{s}"]) for s in SHARE_STATS}})
+        # --- each player's normal situation (recent average of teammates/opponents missing)
+        self.base = {}
+        if frame is not None and len(frame):
+            cols = [c for c in frame.columns if c.startswith("d_vac_") or c.startswith("d_ovac_")]
+            keep = ["player_id", "date"] + cols + [c.replace("d_", "x_", 1) + "_base" for c in cols]
+            f = pd.DataFrame({c: frame[c].to_numpy() for c in keep}).sort_values(["player_id", "date"])
+            for c in cols:
+                raw = f[c] + f[c.replace("d_", "x_", 1) + "_base"]
+                last_ew = raw.groupby(f["player_id"]).agg(lambda x: x.ewm(halflife=15).mean().iloc[-1])
+                for pid, v in last_ew.items():
+                    self.base.setdefault(int(pid), {})[c.replace("d_", "x_", 1)] = float(v)
         tg = M.team_games(logs, players)
         self.team = M.team_latest(tg, season)
         self.pos = M.pos_latest(M.pos_table(logs), season)
@@ -275,12 +304,47 @@ class MatchupContext:
         opp = prof["opp_abbr"]
         team_row = self.team.loc[opp].to_dict() if opp in self.team.index else None
         pos_row = self.pos.get((opp, pos))
+        from engine.absences import boost_x
+        from engine.fit import ALTITUDE, USAGE_SRC
         pm = prof["proj_min"]
-        pm_adj = pm + w["minutes"]["blowout_per_point"] * gf["blowout"] * (pm / 36)
+        base = self.base.get(int(prof["player_id"]), {})
+        team, wm = prof["team"], w["minutes"]
+        mates = [o for o in self.out.get(team, []) if o["player"] != prof["player"]]
+        opps = self.out.get(opp, [])
+        vac = {s: min(0.8, sum(o[s] for o in mates)) for s in self.SHARE_STATS}
+        ovac = {s: min(0.8, sum(o[s] for o in opps)) for s in self.SHARE_STATS}
+        same = sum(o["min"] for o in mates if o["pos"] == pos)
+        other = sum(o["min"] for o in mates if o["pos"] != pos)
+        d_same = same - base.get("x_vac_min_same", 0.0)
+        d_other = other - base.get("x_vac_min_other", 0.0)
+        today = self.today or game.get("date")
+        rest = (date.fromisoformat(today) - date.fromisoformat(self.last_team_game.get(team, today))).days \
+            if today else 2
+        opp_rest = (date.fromisoformat(today) - date.fromisoformat(self.last_team_game.get(opp, today))).days \
+            if today else 2
+        if rest > 10:
+            rest = 2  # season opener / long break: normal rest
+        if opp_rest > 10:
+            opp_rest = 2
+        b2b = rest == 1
+        parts_min = {"blowout": wm["blowout_per_point"] * gf["blowout"] * (pm / 36),
+                     "b2b": wm.get("b2b", 0.0) * b2b,
+                     "freed": wm.get("vac_min_same", 0.0) * d_same + wm.get("vac_min_other", 0.0) * d_other}
+        pm_adj = max(0.0, pm + sum(parts_min.values()))
         min_eff = pm_adj / pm - 1 if pm else 0.0
         eff, means = {}, {}
+        prof["base_means"] = {k: v for k, v in prof["means"].items()}
         for c in M.POS_STATS:
-            x = M.stat_features(c, team_row, pos_row, gf)
+            src = USAGE_SRC[c]
+            extra = {
+                "usage": float(boost_x(vac[src]) - base.get(f"x_vac_{src}", 0.0)),
+                "opp_out": float(boost_x(ovac["reb" if c == "reb" else "min"])
+                                 - base.get("x_ovac_reb" if c == "reb" else "x_ovac_min", 0.0)),
+                "opp_tired": 1.0 if opp_rest == 1 else 0.0,
+                "altitude": 1.0 if (not home and opp in ALTITUDE) else 0.0,
+                "rested": 1.0 if rest >= 3 else 0.0,
+            }
+            x = M.stat_features(c, team_row, pos_row, gf, extra)
             tot = 0.0
             eff[c] = {}
             for fac, xv in x.items():
@@ -304,8 +368,8 @@ class MatchupContext:
                 for fac, e in eff[c].items():
                     items.append({"stat": c, "factor": fac, "effect": share[c] * e["effect"], "x": e["x"],
                                   "weight": e["weight"]})
-            if gf["blowout"] > 0 and abs(min_eff) > 0.005:
-                items.append({"stat": None, "factor": "blowout", "effect": min_eff, "x": pm - pm_adj, "weight": 1})
+            if abs(min_eff) > 0.005:
+                items.append({"stat": None, "factor": "minutes", "effect": min_eff, "x": pm_adj - pm, "weight": 1})
             net = float(np.prod([1 + i["effect"] for i in items if i["weight"]]) - 1)
             prof["matchup_detail"][stat] = {"net": net, "items": items}
         implied = None
@@ -314,11 +378,43 @@ class MatchupContext:
         prof["game"] = {"spread": game.get("spread"), "total": game.get("total"), "home": home,
                         "implied_pts": implied, "blowout": gf["blowout"]}
         bigs = self.bigs.get(opp, [])
+
+        def who(lst, key):
+            lst = sorted(lst, key=lambda o: -o[key])
+            return ", ".join(f'{o["player"]} ({100*o[key]:.0f}%)' for o in lst[:3])
+
+        min_bits = []
+        if parts_min["freed"] >= 0.3:
+            min_bits.append(f'+{parts_min["freed"]:.1f} with teammates out')
+        if parts_min["blowout"] <= -0.3:
+            min_bits.append(f'{parts_min["blowout"]:.1f} for blowout risk (spread {abs(game["spread"]):.1f})')
+        if b2b and abs(parts_min["b2b"]) >= 0.1:
+            min_bits.append(f'{parts_min["b2b"]:.1f} on a back-to-back')
         for stat, mu in prof["matchup_detail"].items():
             for it in mu["items"]:
-                it["text"] = M.describe(it["factor"], it["stat"] or stat, opp, pos, self.team, bigs,
-                                        prof["game"], it["x"])
-                it["label"] = M.FACTOR_LABELS.get(it["factor"], "Blowout risk")
+                fac, c = it["factor"], it["stat"] or stat
+                if fac == "usage":
+                    src = USAGE_SRC[c]
+                    it["text"] = (f"{team} without {who(mates, src)} of the team's "
+                                  f"{dict(pts='points', fga='shots', fg3a='3PA', fta='FTA', reb='rebounds', ast='assists')[src]}"
+                                  if mates else "No new absences vs his recent games (a returning teammate can lower this)")
+                elif fac == "opp_out":
+                    k = "reb" if c == "reb" else "min"
+                    it["text"] = (f"{opp} without {who(opps, k)} of their {'rebounds' if k == 'reb' else 'minutes'}"
+                                  if opps else f"{opp} at full strength")
+                elif fac == "opp_tired":
+                    it["text"] = f"{opp} played yesterday" if opp_rest == 1 else ""
+                elif fac == "altitude":
+                    it["text"] = f"Road game at {opp}" if it["x"] else ""
+                elif fac == "rested":
+                    it["text"] = f"{rest} days since last game" if it["x"] else ""
+                elif fac == "minutes":
+                    it["text"] = f"projected {pm_adj:.1f} minutes vs usual {pm:.1f} (" + "; ".join(min_bits) + ")" \
+                        if min_bits else f"projected {pm_adj:.1f} minutes vs usual {pm:.1f}"
+                else:
+                    it["text"] = M.describe(fac, c, opp, pos, self.team, bigs, prof["game"], it["x"])
+                it["label"] = M.FACTOR_LABELS.get(fac, "Minutes")
+        prof["teammates_out"] = [o["player"] for o in mates]
         prof["pos"] = pos
         prof["opp_bigs"] = self.bigs.get(opp, [])
         prof["proj_min_adj"] = pm_adj

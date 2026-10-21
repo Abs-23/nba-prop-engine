@@ -83,7 +83,10 @@ def main(split):
     mm = w["minutes"]
     test = test.reset_index(drop=True)
     pm = test["proj_min"].to_numpy()
-    pm_new = pm + mm["blowout_per_point"] * test["blowout"].to_numpy() * (pm / 36)
+    pm_new = (pm + mm["blowout_per_point"] * test["blowout"].to_numpy() * (pm / 36)
+              + mm.get("b2b", 0) * test["b2b"].astype(float).to_numpy()
+              + mm.get("vac_min_same", 0) * test["d_vac_min_same"].to_numpy()
+              + mm.get("vac_min_other", 0) * test["d_vac_min_other"].to_numpy())
     # per base stat: old/new means and each factor's % effect
     base_old, base_new, base_contrib = {}, {}, {}
     for c in POS_STATS:
@@ -118,7 +121,8 @@ def main(split):
         cnt = (~np.isnan(L)).sum(1)
         actual = test[s].to_numpy()
         kmin = int(mins[s])
-        for label, mean in (("OLD", m_old), ("NEW", m_new)):
+        m_base = sum(test[f"rate_{c}"].to_numpy() * pm for c in parts)
+        for label, mean in (("OLD", m_old), ("NEW", m_new), ("BASE", m_base)):
             best_k = np.full(len(test), -1)
             best_p = np.zeros(len(test))
             alive = np.ones(len(test), bool)
@@ -137,6 +141,7 @@ def main(split):
                        "k": int(best_k[i]), "prob": float(best_p[i]), "hit": bool(actual[i] >= best_k[i]),
                        "game_id": test.at[i, "game_id"]}
                 rec["effect"] = float(m_new[i] / m_old[i] - 1) if m_old[i] > 0 else 0.0
+                rec["prob_new"] = prob_at_least(float(m_new[i]), float(disp[i]), int(best_k[i]))
                 rec["support"] = int(support[i])
                 rec["worst"] = float(worst[i])
                 rec["net"] = float(cm[i].sum())

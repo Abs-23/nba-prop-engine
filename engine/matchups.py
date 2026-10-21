@@ -24,16 +24,17 @@ PRIOR_KEEP = 0.5       # last season's team tendencies carry over at half streng
 POS_STATS = ["pts", "reb", "ast", "fgm", "fga", "fg3m", "fg3a", "ftm", "fta"]
 
 # Factors per base stat. "pos" = what the opponent allows to the player's position.
+_COMMON = ["usage", "opp_out", "opp_tired", "altitude", "rested"]
 FACTORS = {
-    "pts":  ["pos", "implied", "efg", "rim"],
-    "fgm":  ["pos", "implied", "efg", "rim"],
-    "fga":  ["pos", "total", "tov_forced"],
-    "fg3m": ["pos", "fg3a_rate", "fg3pct", "implied"],
-    "fg3a": ["pos", "fg3a_rate", "total"],
-    "ftm":  ["pos", "fouls", "ftr", "home"],
-    "fta":  ["pos", "fouls", "ftr", "home"],
-    "reb":  ["pos", "reb_share", "size", "reb_avail"],
-    "ast":  ["pos", "ast_rate", "implied", "tov_forced"],
+    "pts":  ["pos", "implied", "efg", "rim"] + _COMMON,
+    "fgm":  ["pos", "implied", "efg", "rim"] + _COMMON,
+    "fga":  ["pos", "total", "tov_forced"] + _COMMON,
+    "fg3m": ["pos", "fg3a_rate", "fg3pct", "implied"] + _COMMON,
+    "fg3a": ["pos", "fg3a_rate", "total"] + _COMMON,
+    "ftm":  ["pos", "fouls", "ftr", "home"] + _COMMON,
+    "fta":  ["pos", "fouls", "ftr", "home"] + _COMMON,
+    "reb":  ["pos", "reb_share", "size", "reb_avail"] + _COMMON,
+    "ast":  ["pos", "ast_rate", "implied", "tov_forced"] + _COMMON,
 }
 FACTOR_LABELS = {
     "pos": "Position defense", "implied": "Vegas team total", "total": "Game pace (Vegas total)",
@@ -41,6 +42,8 @@ FACTOR_LABELS = {
     "fg3a_rate": "3s allowed", "fg3pct": "3P% allowed", "fouls": "Opponent fouling",
     "ftr": "FT rate allowed", "home": "Home/away", "reb_share": "Opponent rebounding",
     "size": "Opponent size", "reb_avail": "Rebound chances", "ast_rate": "Assisted shots allowed",
+    "usage": "Teammates out", "opp_out": "Opponent players out", "opp_tired": "Opponent on a back-to-back",
+    "altitude": "Altitude (road game at DEN/UTA)", "rested": "Extra rest (3+ days)",
 }
 # Team metrics, computed for the DEFENDING team from what happened in its games.
 # (name, higher_is_good_for_offense)
@@ -242,11 +245,16 @@ def game_features(spread, total, home, league_total, league_team_pts):
     return f
 
 
-def stat_features(stat, team_row, pos_row, game_f):
-    """Feature vector {factor: x} for one base stat."""
+def stat_features(stat, team_row, pos_row, game_f, extra=None):
+    """Feature vector {factor: x} for one base stat. `extra` supplies the non-team factors
+    (teammates out, opponents out, rest, altitude)."""
     x = {}
     for fac in FACTORS[stat]:
-        if fac == "pos":
+        if extra is not None and fac in extra:
+            x[fac] = float(extra[fac])
+        elif fac in ("usage", "opp_out", "opp_tired", "altitude", "rested"):
+            x[fac] = 0.0
+        elif fac == "pos":
             x[fac] = float(pos_row.get(stat, 0.0)) if pos_row else 0.0
         elif fac in ("implied", "total", "home"):
             x[fac] = game_f[fac]

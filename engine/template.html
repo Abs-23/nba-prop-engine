@@ -89,6 +89,8 @@ footer ol{padding-left:18px}
   <div class="tabs" id="size-tabs"></div>
   <div class="panel" id="lineup"></div>
 
+  <div class="panel" id="outs" style="margin-top:12px;padding:12px 18px;font-size:14px"></div>
+
   <h2>All qualified picks <small>tap a row to see the reasoning</small></h2>
   <div class="tabs" id="kind-tabs"></div>
   <div style="margin-bottom:10px"><select id="stat-filter"></select></div>
@@ -106,7 +108,7 @@ footer ol{padding-left:18px}
       <li>The opponent's tendency to allow each stat adjusts the projection, shrunk toward average until it has enough games.</li>
       <li>A player-specific distribution turns the projection into a probability for any line.</li>
       <li><b>Safe</b> picks need ≥85% from the model <i>and</i> ≥85% hit rate over the last 20 games. <b>Market</b> picks must beat the sportsbooks' no-vig price by 5+ points and agree with recent form.</li>
-      <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. A pick needs the matchup to lean its way by at least +1%. Last season, those Safe picks hit 88-89%, vs 86% for neutral matchups.</li>
+      <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. Teammates and opponents who are out are part of it: their share of shots, assists, rebounds and minutes is redistributed. The line is set from the player's own numbers, and the matchup must then favor it by at least +1%. Last season this hit 89-90%, vs 86.5-87% for the original engine.</li>
       <li>Players who are injured, listed questionable, low-minute or volatile are excluded. Lineups take one leg per team, at most two per game, and prefer the strongest matchups.</li>
     </ol>
     <div id="generated"></div>
@@ -160,6 +162,14 @@ if (!nLegs("safest") && nLegs("value")) flavor = "value";
 size = Math.min(3, nLegs(flavor)) || 3;
 $("lu-sub").textContent = D.games_today ? `${D.games_today} games tonight` : "no games today";
 drawLineups();
+
+// ---- who's out
+const OUT = D.out_tonight || {};
+const teams = Object.keys(OUT).sort();
+$("outs").innerHTML = teams.length
+  ? `<b>Out tonight (rotation players):</b> ` + teams.map(t => `${t}: ${OUT[t].map(esc).join(", ")}`).join(" · ")
+    + `<div class="meta" style="margin-top:4px">Their shots, assists, rebounds and minutes are redistributed to teammates in the projections.</div>`
+  : `<span class="meta">No rotation players listed out tonight.</span>`;
 
 // ---- all picks
 let kind = "safe";

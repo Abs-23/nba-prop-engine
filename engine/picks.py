@@ -73,10 +73,11 @@ def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over", cfg=Non
         r.append(("!", f'New team (was {prof["last_team"]}): role and minutes less certain.'))
     if prof["n_cur"] < 5:
         r.append(("i", f'Early season: {prof["n_cur"]} games this season, so last season carries more weight.'))
-    for name, m in outs.get(prof["team"], []):
-        if name != prof["player"]:
-            r.append(("+" if up else "!",
-                      f"Teammate {name} is OUT ({m:.0f} min/game): more shots and touches likely (not in the projection)."))
+    if "teammates_out" not in prof:  # only when the matchup model didn't run
+        for name, m in outs.get(prof["team"], []):
+            if name != prof["player"]:
+                r.append(("+" if up else "!",
+                          f"Teammate {name} is OUT ({m:.0f} min/game): more shots and touches likely (not in the projection)."))
     if not injuries_ok:
         r.append(("!", "Injury report could not be loaded today: check status before tip-off."))
     return r
@@ -104,7 +105,8 @@ def matchup_reasons(prof, stat, side, cfg=None):
     up = side == "over"
     ctx_min = (cfg or {}).get("matchups", {}).get("show_context_min_effect", 0.03)
     counted = [i for i in m["items"] if i["weight"]]
-    ctx = [i for i in m["items"] if not i["weight"] and abs(np.exp(i["x"]) - 1) >= ctx_min and i["text"]]
+    ctx = [i for i in m["items"] if not i["weight"] and i["text"]
+           and (abs(np.exp(i["x"]) - 1) >= ctx_min if i["factor"] not in ("usage", "opp_out") else False)]
     help_ = [i for i in counted if (i["effect"] > 0.005) == up and abs(i["effect"]) > 0.005]
     hurt = [i for i in counted if (i["effect"] > 0.005) != up and abs(i["effect"]) > 0.005]
     net = m["net"]
@@ -189,26 +191,32 @@ def safe_picks(profiles, injuries, cfg):
         if general_gate(prof, injuries, cfg):
             continue
         for stat, kmin in sc["min_threshold"].items():
+            # The line is set from the player's OWN numbers (usual minutes x usual production).
+            # Tonight's matchup must then lean in favor: it acts as extra cushion, not as a
+            # reason to push the line higher. Backtest: 89-90% vs 87-88% letting the matchup set the line.
+            base = prof.get("base_means", prof["means"])[stat]
             mean, disp = prof["means"][stat], prof["disp"][stat]
             vals = prof["history"][stat].to_numpy()
             last20 = vals[-20:]
             best = None
             k = int(kmin)
             while True:
-                p = prob_at_least(mean, disp, k)
+                p_base = prob_at_least(base, disp, k)
                 l20 = float((last20 >= k).mean())
-                if p < sc["min_model_prob"] or l20 < sc["min_l20_hit_rate"]:
+                if p_base < sc["min_model_prob"] or l20 < sc["min_l20_hit_rate"]:
                     break
-                best = (k, p, l20)
+                best = (k, l20)
                 k += 1
             if not best or not matchup_ok(prof, stat, "over", cfg):
                 continue
-            k, p, l20 = best
+            k, l20 = best
+            p = prob_at_least(mean, disp, k)
             l10n = int((vals[-10:] >= k).sum())
             l20n = int((last20 >= k).sum())
             season_rate = float((vals >= k).mean())
             reasons = [
-                ("+", f'Projection: {mean:.1f} {LABELS[stat].lower()}; model gives {100*p:.0f}% for {k}+.'),
+                ("+", f'Projection: {mean:.1f} {LABELS[stat].lower()} tonight (usual {base:.1f}); '
+                      f'model gives {100*p:.0f}% for {k}+.'),
                 ("+", f'Floor: reached {k}+ in {l20n} of last {len(last20)} and {l10n} of last {min(10, len(vals))} '
                       f'({100*season_rate:.0f}% across all {len(vals)} games tracked).'),
                 ("i", f"Cushion: needs {k}, projected {mean:.1f} ({mean - k:+.1f}). "

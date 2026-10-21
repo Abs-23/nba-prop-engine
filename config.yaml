@@ -55,10 +55,10 @@ matchups:
   # re-learned from the box scores on every run. A check only counts if, in past games,
   # it clearly predicted results AND pointed the way basketball sense says it should.
   fit_min_t: 1.5
-  # A pick needs the matchup to lean its way by at least this much overall.
+  # A pick needs the matchup (incl. teammates/opponents out and minutes) to lean its way by
+  # at least this much. Safe lines are set from the player's own numbers; the matchup is cushion.
   # Backtest (3 test periods, last season), Safe picks:
-  #   matchup > +1%: 88.0-89.2% hit, ~30/day   matchup > 0%: 87.2-88.0%, ~45/day
-  #   neutral (-1%..+1%): 85.8-86.2%           all picks: 86.5-87.0%
+  #   this rule: 88.9-90.4% hit, ~29-38/day    original engine: 86.5-87.0%, ~95/day
   min_net_effect: 0.01
   # Checks with weight 0 (e.g. opponent height, opponent fouls) are still shown as context.
   show_context_min_effect: 0.03

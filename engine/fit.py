@@ -68,6 +68,47 @@ def player_asof(logs, rate_half=15, min_half=5, prior_w=0.5, disp_window=40):
     return df
 
 
+USAGE_SRC = {"pts": "pts", "fgm": "fga", "fga": "fga", "fg3m": "fg3a", "fg3a": "fg3a", "ftm": "fta",
+             "fta": "fta", "reb": "reb", "ast": "ast"}
+ALTITUDE = {"DEN", "UTA"}
+
+
+def rest_days(logs):
+    """{(team, date): days since the team's previous game} (capped at 4)."""
+    td = logs[["team", "date"]].drop_duplicates().sort_values(["team", "date"])
+    td["prev"] = td.groupby("team")["date"].shift(1)
+    d = (pd.to_datetime(td["date"]) - pd.to_datetime(td["prev"])).dt.days
+    d = d.where(d <= 10, 2)  # first game after the offseason / All-Star break: treat as normal rest
+    return dict(zip(zip(td["team"], td["date"].astype(str)), d.fillna(2).clip(upper=4).astype(int)))
+
+
+def add_absence_features(df, logs, half_life=15):
+    """Teammates out / opponents out, as the CHANGE vs the player's recent normal."""
+    from engine.absences import SHARE_STATS, boost_x, find_absences, player_shares, vacated
+    v = vacated(find_absences(logs, player_shares(logs)))
+    vcols = [f"vac_{s}" for s in SHARE_STATS] + [f"vac_min_{p}" for p in ("G", "F", "C")]
+    df = df.merge(v[["game_id", "team"] + vcols + ["vac_names"]], on=["game_id", "team"], how="left")
+    ov = v[["game_id", "team"] + vcols].rename(columns={"team": "opp", **{c: "o" + c for c in vcols}})
+    df = df.merge(ov, on=["game_id", "opp"], how="left")
+    for c in vcols:
+        df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0.0).astype(float)
+        df["o" + c] = pd.to_numeric(df["o" + c], errors="coerce").fillna(0.0).astype(float)
+    df["vac_min_same"] = [r[f"vac_min_{p}"] for p, r in zip(df["pos"], df[[f"vac_min_{x}" for x in "GFC"]]
+                                                                .to_dict("records"))]
+    df["vac_min_other"] = df[[f"vac_min_{x}" for x in "GFC"]].sum(axis=1) - df["vac_min_same"]
+    # baseline: what the player's recent games looked like (exponentially weighted, earlier games only)
+    df = df.sort_values(["player_id", "date"])
+    raw = {f"x_vac_{s}": boost_x(df[f"vac_{s}"]) for s in SHARE_STATS}
+    raw.update({f"x_ovac_{s}": boost_x(df[f"ovac_{s}"]) for s in ("reb", "min")})
+    raw.update({"x_vac_min_same": df["vac_min_same"], "x_vac_min_other": df["vac_min_other"]})
+    g = df["player_id"]
+    for name, series in raw.items():
+        base = series.groupby(g).transform(lambda x: x.shift(1).ewm(halflife=half_life).mean()).fillna(0.0)
+        df[f"{name}_base"] = base
+        df[name.replace("x_", "d_")] = series - base
+    return df.sort_values("row")
+
+
 def back_to_back(logs):
     """{(team, date): True} when the team also played the day before."""
     td = logs[["team", "date"]].drop_duplicates()
@@ -111,7 +152,12 @@ def build_frame(logs, games, players):
     gf = pd.DataFrame(gf, index=df.index)
     for c in gf.columns:
         df[c] = gf[c]
+    rd = rest_days(logs)
+    df["rest"] = [rd.get((t, str(d)), 2) for t, d in zip(df["team"], df["date"])]
+    df["opp_rest"] = [rd.get((t, str(d)), 2) for t, d in zip(df["opp"], df["date"])]
+    df["altitude"] = [h < 0 and t in ALTITUDE for t, h in zip(df["opp"], df["home"])]  # home is +-0.5 here
     df = df.sort_values("row")
+    df = add_absence_features(df, logs)
     df.attrs["l20"] = l20
     return df
 
@@ -123,6 +169,16 @@ def feature_matrix(df, stat):
     for fac in FACTORS[stat]:
         if fac == "pos":
             cols.append(df[f"pos_{stat}"].fillna(0.0).to_numpy())
+        elif fac == "usage":
+            cols.append(df[f"d_vac_{USAGE_SRC[stat]}"].fillna(0.0).to_numpy())
+        elif fac == "opp_out":
+            cols.append(df["d_ovac_reb" if stat == "reb" else "d_ovac_min"].fillna(0.0).to_numpy())
+        elif fac == "opp_tired":
+            cols.append((df["opp_rest"] == 1).astype(float).to_numpy())
+        elif fac == "altitude":
+            cols.append(df["altitude"].astype(float).to_numpy())
+        elif fac == "rested":
+            cols.append((df["rest"] >= 3).astype(float).to_numpy())
         elif fac in ("implied", "total", "home"):
             cols.append(df[fac].fillna(0.0).to_numpy())
         else:
@@ -181,13 +237,21 @@ def fit_weights(df, min_t=1.5):
             keep = b > 0 and b / e >= min_t
             facs[fac] = {"weight": min(b, 1.5) if keep else 0.0, "raw": b, "t": b / e}
         out["stats"][s] = {"intercept": float(beta[0]), "factors": facs, "n": int(ok.sum())}
-    # minutes: how much starters lose in expected blowouts, and on back-to-backs
-    m = d[d["proj_min"] >= 20]
+    # minutes: blowouts, back-to-backs, and minutes freed up by absent teammates
+    m = d[d["proj_min"] >= 15]
     y = (m["min"] - m["proj_min"]).to_numpy()
+    names = ["intercept", "blowout_per_point", "b2b", "vac_min_same", "vac_min_other"]
     X = np.column_stack([np.ones(len(m)), m["blowout"].to_numpy() * (m["proj_min"].to_numpy() / 36),
-                         m["b2b"].astype(float).to_numpy()])
-    coef, *_ = np.linalg.lstsq(X, y, rcond=None)
-    out["minutes"] = {"intercept": float(coef[0]), "blowout_per_point": float(coef[1]), "b2b": float(coef[2])}
+                         m["b2b"].astype(float).to_numpy(), m["d_vac_min_same"].to_numpy(),
+                         m["d_vac_min_other"].to_numpy()])
+    # small ridge so a factor with no data yet (e.g. no absences) just gets 0 instead of failing
+    R = np.diag([0.0] + [1.0] * (X.shape[1] - 1))
+    A = X.T @ X + R
+    coef = np.linalg.solve(A, X.T @ y)
+    resid = y - X @ coef
+    se = np.sqrt(np.maximum(np.diag(np.linalg.pinv(A)), 1e-12) * resid.var())
+    out["minutes"] = {n: float(c) for n, c in zip(names, coef)}
+    out["minutes_t"] = {n: float(c / e) for n, c, e in zip(names, coef, se)}
     return out
 
 

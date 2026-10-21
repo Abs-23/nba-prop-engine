@@ -72,6 +72,7 @@ def main(day=None):
     rosters = None
     injuries = None
     profiles, safe, market, lineups = [], [], [], {"safest": [], "value": []}
+    out_tonight = {}
     odds = OddsClient(regions=cfg["odds_api"]["regions"])
     if games:
         from engine.sources.rosters import fetch_rosters
@@ -91,10 +92,16 @@ def main(day=None):
         weights = fit.fit_weights(frame, cfg["matchups"]["fit_min_t"])
         fit.save_weights(weights)
         used = sum(1 for v in weights["stats"].values() for f in v["factors"].values() if f["weight"])
+        log(f"Weights: " + "; ".join(f"{s}: " + ", ".join(f"{k} {f['weight']:.2f}" for k, f in v["factors"].items()
+                                                               if f["weight"]) for s, v in weights["stats"].items()))
         health.append({"ok": True, "text": f"Matchup checks: {used} weighted, from {weights['n_rows']:,} player-games"})
         mctx = MatchupContext(db, database.load_games(), database.load_players(), rosters, weights,
-                              cfg["season"]["current"])
+                              cfg["season"]["current"], injuries=injuries, frame=frame, today=today)
         profiles, _ = build_profiles(db, games, rosters, cfg, mctx)
+        out_tonight = {t: [o["player"] for o in v] for t, v in mctx.out.items()}
+        n_out = sum(len(v) for v in out_tonight.values())
+        health.append({"ok": True, "text": f"{n_out} rotation players out tonight"})
+        log("Out tonight: " + "; ".join(f"{t}: {', '.join(v)}" for t, v in sorted(out_tonight.items())))
         log(f"Projected {len(profiles)} players")
         safe = safe_picks(profiles, injuries, cfg)
 
@@ -126,7 +133,8 @@ def main(day=None):
         lineups = build_all(safe, market, cfg)
         grading.record_today(today, safe, market, lineups)
 
-    render(today, len(games), safe, market, lineups, grading.track_record(), health, odds.enabled)
+    render(today, len(games), safe, market, lineups, grading.track_record(), health, odds.enabled,
+           out_tonight if games else {})
     log("Dashboard written to docs/index.html")
 
 

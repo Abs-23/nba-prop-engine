@@ -30,7 +30,7 @@ def _pick(p):
     return d
 
 
-def render(day, games_today, safe, market, lineups, record, health, odds_enabled):
+def render(day, games_today, safe, market, lineups, record, health, odds_enabled, out_tonight=None):
     data = {
         "date": day,
         "date_label": date.fromisoformat(day).strftime("%A, %B %-d, %Y"),
@@ -40,7 +40,7 @@ def render(day, games_today, safe, market, lineups, record, health, odds_enabled
         "market": [_pick(p) for p in sorted(market, key=lambda p: -p["ev"])],
         "lineups": {f: [{"size": l["size"], "prob": l["prob"], "legs": [_pick(x) for x in l["legs"]]}
                         for l in lus] for f, lus in lineups.items()},
-        "record": record, "health": health, "odds_enabled": odds_enabled,
+        "record": record, "health": health, "odds_enabled": odds_enabled, "out_tonight": out_tonight or {},
     }
     data = _clean(data)
     DOCS.mkdir(exist_ok=True)

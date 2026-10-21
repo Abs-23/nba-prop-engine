@@ -41,12 +41,18 @@ The dashboard always shows the combined probability so the risk is in plain sigh
    | FG attempts | position defense, Vegas game total, turnovers forced |
    | 3PM / 3PA | position defense, 3s allowed, 3P% allowed, Vegas total |
    | FTM / FTA | position defense, FT rate allowed, opponent fouling, home/away |
-   | Minutes (all) | blowout risk from the spread |
+   | All stats | **teammates out** (their share of shots/assists/rebounds redistributed), **opponent players out** |
+   | Minutes (all) | blowout risk from the spread, minutes freed by absent teammates (more if same position), back-to-backs |
+
+   Also tested and found to have no measurable effect last season (kept at weight 0, re-tested
+   every run): altitude, extra rest (3+ days), opponent on a back-to-back.
 
    Weights are re-learned from the box scores every run. A check counts only if it clearly
    predicted results in past games *and* pointed the way basketball sense says it should;
    others (e.g. opponent height, opponent fouls last season) are shown as context but not counted.
-   A pick needs the matchup to lean its way by at least +1% overall. Backtest: `python scripts/backtest.py`.
+   **How a Safe line is set:** from the player's *own* numbers (usual minutes x usual production).
+   Tonight's matchup, including who's out, must then favor it by at least +1%. The matchup acts as
+   extra cushion instead of pushing the line higher. Backtest: `python scripts/backtest.py`.
 8. **Gates.** Injured / questionable / low-minute / thin-history players are dropped.
 9. **Lineups.** One leg per team, at most two per game, never padded with weaker legs.
 
@@ -65,14 +71,14 @@ talent of every player is known. Latest result over 28 simulated days:
 
 ### Matchup backtest (last season, weights learned only from earlier games)
 
-| Test period | All Safe picks | Matchup > 0% | Matchup > +1% (used) | Neutral (-1% to +1%) |
-|---|---|---|---|---|
-| Jan 1 - Apr | 86.6% | 87.2% | 88.0% (31/day) | 86.2% |
-| Feb 1 - Apr | 86.5% | 87.8% | 88.3% (30/day) | 85.8% |
-| Mar 1 - Apr | 87.0% | 88.0% | 89.2% (28/day) | 85.8% |
+| Test period | Original engine | Matchups (v2) | + teammates/opponents out, line from own numbers (v3, used) |
+|---|---|---|---|
+| Jan 1 - Apr | 86.6% (108/day) | 88.0% (31/day) | 88.9% (38/day) |
+| Feb 1 - Apr | 86.5% (95/day) | 88.3% (30/day) | 89.2% (33/day) |
+| Mar 1 - Apr | 87.0% (88/day) | 89.2% (28/day) | 90.4% (29/day) |
 
-Requiring 2+ individual checks to each pass a bar was also tested; it cut picks to ~4/day
-and hit 85.3%, so the engine uses the overall matchup lean instead.
+Also tested and rejected: requiring 2+ individual checks to each pass a bar (~4 picks/day,
+85.3%), and letting the matchup raise the line (87.1-88.7%).
 
 ## Setup (one time)
 
