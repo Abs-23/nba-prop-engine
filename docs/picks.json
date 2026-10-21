@@ -1,7 +1,7 @@
 {
  "date": "2026-10-21",
  "date_label": "Wednesday, October 21, 2026",
- "generated": "2026-10-21 15:46 UTC",
+ "generated": "2026-10-21 17:45 UTC",
  "games_today": 11,
  "safe": [
   {
@@ -9280,6 +9280,59 @@
  "market": [
   {
    "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909838",
+   "matchup": "UTA @ MEM",
+   "player": "Isaiah Collier",
+   "team": "UTA",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "over",
+   "line": 4.5,
+   "label": "Isaiah Collier Over 4.5 Assists",
+   "prob": 0.5539,
+   "fair": 0.4323,
+   "edge": 0.1216,
+   "ev": 0.3017,
+   "price": 135,
+   "book": "Bovada",
+   "proj": 7.1835,
+   "l10": 0.8,
+   "l20": 0.9,
+   "reasons": [
+    [
+     "+",
+     "Projection: 7.2 assists vs line 4.5. Model alone: 78% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 43% (no-vig). Blending model and market gives 55%, an edge of +12.2 pts. Best price +135 at Bovada."
+    ],
+    [
+     "+",
+     "Recent form: went over 4.5 in 8 of last 10, 18 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+    ],
+    [
+     "+",
+     "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ],
+    [
+     "+",
+     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+    ]
+   ],
+   "price_fmt": "+135"
+  },
+  {
+   "kind": "market",
    "tier": "Lock",
    "game_id": "401909836",
    "matchup": "CHA @ BKN",
@@ -9290,11 +9343,11 @@
    "side": "under",
    "line": 17.5,
    "label": "Naz Reid Under 17.5 Points",
-   "prob": 0.6216,
-   "fair": 0.4915,
-   "edge": 0.1301,
-   "ev": 0.2432,
-   "price": 100,
+   "prob": 0.6238,
+   "fair": 0.495,
+   "edge": 0.1289,
+   "ev": 0.2354,
+   "price": -102,
    "book": "FanDuel",
    "proj": 12.0665,
    "l10": 0.8,
@@ -9306,7 +9359,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +13.0 pts. Best price +100 at FanDuel."
+     "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -102 at FanDuel."
     ],
     [
      "+",
@@ -9333,113 +9386,7 @@
      "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "+100"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909838",
-   "matchup": "UTA @ MEM",
-   "player": "Isaiah Collier",
-   "team": "UTA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 13.5,
-   "label": "Isaiah Collier Over 13.5 Pts+Reb+Ast",
-   "prob": 0.6222,
-   "fair": 0.478,
-   "edge": 0.1442,
-   "ev": 0.2262,
-   "price": -103,
-   "book": "DraftKings",
-   "proj": 23.4377,
-   "l10": 1.0,
-   "l20": 1.0,
-   "reasons": [
-    [
-     "+",
-     "Projection: 23.4 pts+reb+ast vs line 13.5. Model alone: 89% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 48% (no-vig). Blending model and market gives 62%, an edge of +14.4 pts. Best price -103 at DraftKings."
-    ],
-    [
-     "+",
-     "Recent form: went over 13.5 in 10 of last 10, 20 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-103"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Naz Reid",
-   "team": "CHA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 27.5,
-   "label": "Naz Reid Under 27.5 Pts+Reb+Ast",
-   "prob": 0.6241,
-   "fair": 0.4947,
-   "edge": 0.1293,
-   "ev": 0.2184,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 20.0597,
-   "l10": 0.7,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 20.1 pts+reb+ast vs line 27.5. Model alone: 86% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 27.5 in 7 of last 10, 15 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 24.8 (last 10 avg 27.4, fairly stable at \u00b14.9)."
-    ],
-    [
-     "!",
-     "New team (was MIN): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Kon Knueppel is OUT (31 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-105"
+   "price_fmt": "-102"
   },
   {
    "kind": "market",
@@ -9453,11 +9400,11 @@
    "side": "over",
    "line": 6.5,
    "label": "Isaiah Collier Over 6.5 Points",
-   "prob": 0.6457,
-   "fair": 0.5102,
-   "edge": 0.1355,
-   "ev": 0.2023,
-   "price": -116,
+   "prob": 0.6427,
+   "fair": 0.5056,
+   "edge": 0.1371,
+   "ev": 0.2065,
+   "price": -114,
    "book": "DraftKings",
    "proj": 13.6798,
    "l10": 1.0,
@@ -9469,7 +9416,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 65%, an edge of +13.5 pts. Best price -116 at DraftKings."
+     "Market: books price the over at 51% (no-vig). Blending model and market gives 64%, an edge of +13.7 pts. Best price -114 at DraftKings."
     ],
     [
      "+",
@@ -9488,137 +9435,7 @@
      "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-116"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Rui Hachimura",
-   "team": "LAC",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 5.5,
-   "label": "Rui Hachimura Under 5.5 Rebounds",
-   "prob": 0.6281,
-   "fair": 0.5052,
-   "edge": 0.1229,
-   "ev": 0.1991,
-   "price": -110,
-   "book": "Bovada",
-   "proj": 3.2629,
-   "l10": 0.9,
-   "l20": 0.8,
-   "reasons": [
-    [
-     "+",
-     "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.3 pts. Best price -110 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.2 (last 10 avg 38.9, stable at \u00b14.4)."
-    ],
-    [
-     "!",
-     "New team (was LAL): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-110"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Rui Hachimura",
-   "team": "LAC",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 26.5,
-   "label": "Rui Hachimura Under 26.5 Pts+Reb+Ast",
-   "prob": 0.6264,
-   "fair": 0.4906,
-   "edge": 0.1358,
-   "ev": 0.1959,
-   "price": -110,
-   "book": "FanDuel",
-   "proj": 16.9881,
-   "l10": 0.6,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 17.0 pts+reb+ast vs line 26.5. Model alone: 88% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 63%, an edge of +13.6 pts. Best price -110 at FanDuel."
-    ],
-    [
-     "i",
-     "Recent form: went under 26.5 in 6 of last 10, 14 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.2 (last 10 avg 38.9, stable at \u00b14.4)."
-    ],
-    [
-     "!",
-     "New team (was LAL): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-110"
+   "price_fmt": "-114"
   },
   {
    "kind": "market",
@@ -9627,32 +9444,32 @@
    "matchup": "CHI @ TOR",
    "player": "Tre Jones",
    "team": "CHI",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "over",
-   "line": 16.5,
-   "label": "Tre Jones Over 16.5 Pts+Reb+Ast",
-   "prob": 0.6035,
-   "fair": 0.488,
-   "edge": 0.1155,
-   "ev": 0.1783,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 24.8078,
+   "line": 9.5,
+   "label": "Tre Jones Over 9.5 Points",
+   "prob": 0.6143,
+   "fair": 0.5054,
+   "edge": 0.1089,
+   "ev": 0.1938,
+   "price": -106,
+   "book": "FanDuel",
+   "proj": 16.3027,
    "l10": 0.9,
    "l20": 0.85,
    "reasons": [
     [
      "+",
-     "Projection: 24.8 pts+reb+ast vs line 16.5. Model alone: 82% for the over."
+     "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
     ],
     [
      "+",
-     "Market: books price the over at 49% (no-vig). Blending model and market gives 60%, an edge of +11.5 pts. Best price -105 at Bovada."
+     "Market: books price the over at 51% (no-vig). Blending model and market gives 61%, an edge of +10.9 pts. Best price -106 at FanDuel."
     ],
     [
      "+",
-     "Recent form: went over 16.5 in 9 of last 10, 17 of last 20."
+     "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
     ],
     [
      "+",
@@ -9667,7 +9484,7 @@
      "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-105"
+   "price_fmt": "-106"
   },
   {
    "kind": "market",
@@ -9681,11 +9498,11 @@
    "side": "under",
    "line": 19.5,
    "label": "Rui Hachimura Under 19.5 Points",
-   "prob": 0.6331,
-   "fair": 0.5094,
-   "edge": 0.1238,
-   "ev": 0.1697,
-   "price": -118,
+   "prob": 0.6313,
+   "fair": 0.5065,
+   "edge": 0.1248,
+   "ev": 0.185,
+   "price": -114,
    "book": "FanDuel",
    "proj": 12.658,
    "l10": 0.6,
@@ -9697,11 +9514,76 @@
     ],
     [
      "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.4 pts. Best price -118 at FanDuel."
+     "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.5 pts. Best price -114 at FanDuel."
     ],
     [
      "i",
      "Recent form: went under 19.5 in 6 of last 10, 14 of last 20."
+    ],
+    [
+     "+",
+     "Minutes: projected 28.2 (last 10 avg 38.9, stable at \u00b14.4)."
+    ],
+    [
+     "!",
+     "New team (was LAL): role and minutes less certain."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ],
+    [
+     "!",
+     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
+    ],
+    [
+     "!",
+     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
+    ],
+    [
+     "!",
+     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
+    ],
+    [
+     "!",
+     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
+    ]
+   ],
+   "price_fmt": "-114"
+  },
+  {
+   "kind": "market",
+   "tier": "Lock",
+   "game_id": "401909842",
+   "matchup": "SAC @ LAC",
+   "player": "Rui Hachimura",
+   "team": "LAC",
+   "stat": "reb",
+   "stat_label": "Rebounds",
+   "side": "under",
+   "line": 5.5,
+   "label": "Rui Hachimura Under 5.5 Rebounds",
+   "prob": 0.6346,
+   "fair": 0.5152,
+   "edge": 0.1194,
+   "ev": 0.1724,
+   "price": -118,
+   "book": "DraftKings",
+   "proj": 3.2629,
+   "l10": 0.9,
+   "l20": 0.8,
+   "reasons": [
+    [
+     "+",
+     "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
+    ],
+    [
+     "+",
+     "Market: books price the under at 52% (no-vig). Blending model and market gives 63%, an edge of +11.9 pts. Best price -118 at DraftKings."
+    ],
+    [
+     "+",
+     "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
     ],
     [
      "+",
@@ -9746,11 +9628,11 @@
    "side": "under",
    "line": 24.5,
    "label": "Brandon Miller Under 24.5 Points",
-   "prob": 0.6021,
-   "fair": 0.4978,
+   "prob": 0.6022,
+   "fair": 0.4979,
    "edge": 0.1043,
-   "ev": 0.1649,
-   "price": -107,
+   "ev": 0.1546,
+   "price": -109,
    "book": "DraftKings",
    "proj": 19.3834,
    "l10": 0.9,
@@ -9762,7 +9644,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 60%, an edge of +10.4 pts. Best price -107 at DraftKings."
+     "Market: books price the under at 50% (no-vig). Blending model and market gives 60%, an edge of +10.4 pts. Best price -109 at DraftKings."
     ],
     [
      "+",
@@ -9785,363 +9667,86 @@
      "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-107"
+   "price_fmt": "-109"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Derrick Jones Jr.",
-   "team": "LAC",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 18.5,
-   "label": "Derrick Jones Jr. Under 18.5 Pts+Reb+Ast",
-   "prob": 0.5648,
-   "fair": 0.4741,
-   "edge": 0.0907,
-   "ev": 0.1579,
-   "price": 105,
-   "book": "Bovada",
-   "proj": 14.9555,
-   "l10": 0.9,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 15.0 pts+reb+ast vs line 18.5. Model alone: 73% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 47% (no-vig). Blending model and market gives 56%, an edge of +9.1 pts. Best price +105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 18.5 in 9 of last 10, 15 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.9 (last 10 avg 24.4, stable at \u00b12.5)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "+105"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
    "game_id": "401909836",
    "matchup": "CHA @ BKN",
-   "player": "Brandon Miller",
-   "team": "CHA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 34.5,
-   "label": "Brandon Miller Under 34.5 Pts+Reb+Ast",
-   "prob": 0.6189,
-   "fair": 0.5083,
-   "edge": 0.1107,
-   "ev": 0.1571,
-   "price": -115,
-   "book": "DraftKings",
-   "proj": 27.3182,
-   "l10": 1.0,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 27.3 pts+reb+ast vs line 34.5. Model alone: 82% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 62%, an edge of +11.1 pts. Best price -115 at DraftKings."
-    ],
-    [
-     "+",
-     "Recent form: went under 34.5 in 10 of last 10, 17 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.4 (last 10 avg 31.4, stable at \u00b13.0)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Kon Knueppel is OUT (31 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-115"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909837",
-   "matchup": "CHI @ TOR",
-   "player": "Tre Jones",
-   "team": "CHI",
+   "player": "Egor Demin",
+   "team": "BKN",
    "stat": "pts",
    "stat_label": "Points",
-   "side": "over",
-   "line": 9.5,
-   "label": "Tre Jones Over 9.5 Points",
-   "prob": 0.6213,
-   "fair": 0.5162,
-   "edge": 0.1051,
-   "ev": 0.1479,
-   "price": -118,
-   "book": "DraftKings",
-   "proj": 16.3027,
-   "l10": 0.9,
-   "l20": 0.85,
+   "side": "under",
+   "line": 12.5,
+   "label": "Egor Demin Under 12.5 Points",
+   "prob": 0.5781,
+   "fair": 0.5032,
+   "edge": 0.0749,
+   "ev": 0.1394,
+   "price": -103,
+   "book": "BetOnline.ag",
+   "proj": 9.8896,
+   "l10": 0.7,
+   "l20": 0.65,
    "reasons": [
     [
      "+",
-     "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
+     "Projection: 9.9 points vs line 12.5. Model alone: 72% for the under."
     ],
     [
      "+",
-     "Market: books price the over at 52% (no-vig). Blending model and market gives 62%, an edge of +10.5 pts. Best price -118 at DraftKings."
+     "Market: books price the under at 50% (no-vig). Blending model and market gives 58%, an edge of +7.5 pts. Best price -103 at BetOnline.ag."
     ],
     [
      "+",
-     "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
+     "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
     ],
     [
      "+",
-     "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
+     "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-118"
+   "price_fmt": "-103"
   },
   {
    "kind": "market",
    "tier": "Lock",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Darius Garland",
-   "team": "LAC",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 34.5,
-   "label": "Darius Garland Under 34.5 Pts+Reb+Ast",
-   "prob": 0.5816,
-   "fair": 0.4903,
-   "edge": 0.0913,
-   "ev": 0.1355,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 28.9795,
-   "l10": 0.9,
-   "l20": 0.8,
-   "reasons": [
-    [
-     "+",
-     "Projection: 29.0 pts+reb+ast vs line 34.5. Model alone: 75% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 58%, an edge of +9.1 pts. Best price -105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 34.5 in 9 of last 10, 16 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.8 (last 10 avg 30.9, fairly stable at \u00b15.2)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "Giannis Antetokounmpo",
-   "team": "MIA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 46.5,
-   "label": "Giannis Antetokounmpo Under 46.5 Pts+Reb+Ast",
-   "prob": 0.5777,
-   "fair": 0.4909,
-   "edge": 0.0868,
-   "ev": 0.1279,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 39.751,
-   "l10": 0.9,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 39.8 pts+reb+ast vs line 46.5. Model alone: 74% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 58%, an edge of +8.7 pts. Best price -105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 46.5 in 9 of last 10, 15 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-    ],
-    [
-     "!",
-     "New team (was MIL): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909834",
-   "matchup": "ATL @ ORL",
-   "player": "Franz Wagner",
-   "team": "ORL",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "under",
-   "line": 5.5,
-   "label": "Franz Wagner Under 5.5 Assists",
-   "prob": 0.6716,
-   "fair": 0.5736,
-   "edge": 0.098,
-   "ev": 0.1254,
-   "price": -148,
-   "book": "BetRivers",
-   "proj": 3.5303,
-   "l10": 0.8,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 3.5 assists vs line 5.5. Model alone: 85% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 57% (no-vig). Blending model and market gives 67%, an edge of +9.8 pts. Best price -148 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went under 5.5 in 8 of last 10, 17 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Anthony Black is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-148"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
    "game_id": "401909839",
    "matchup": "IND @ NOP",
    "player": "Pascal Siakam",
    "team": "IND",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "over",
-   "line": 30.5,
-   "label": "Pascal Siakam Over 30.5 Pts+Reb+Ast",
-   "prob": 0.5782,
-   "fair": 0.4987,
-   "edge": 0.0795,
-   "ev": 0.1237,
-   "price": -106,
-   "book": "BetRivers",
-   "proj": 36.1954,
+   "line": 20.5,
+   "label": "Pascal Siakam Over 20.5 Points",
+   "prob": 0.5868,
+   "fair": 0.5041,
+   "edge": 0.0827,
+   "ev": 0.1302,
+   "price": -108,
+   "book": "DraftKings",
+   "proj": 25.4997,
    "l10": 0.7,
    "l20": 0.75,
    "reasons": [
     [
      "+",
-     "Projection: 36.2 pts+reb+ast vs line 30.5. Model alone: 73% for the over."
+     "Projection: 25.5 points vs line 20.5. Model alone: 74% for the over."
     ],
     [
      "+",
-     "Market: books price the over at 50% (no-vig). Blending model and market gives 58%, an edge of +8.0 pts. Best price -106 at BetRivers."
+     "Market: books price the over at 50% (no-vig). Blending model and market gives 59%, an edge of +8.3 pts. Best price -108 at DraftKings."
     ],
     [
      "+",
-     "Recent form: went over 30.5 in 7 of last 10, 15 of last 20."
+     "Recent form: went over 20.5 in 7 of last 10, 15 of last 20."
     ],
     [
      "+",
@@ -10160,260 +9765,101 @@
      "Teammate Aaron Nesmith is OUT (30 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-106"
+   "price_fmt": "-108"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Zach LaVine",
-   "team": "SAC",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
+   "game_id": "401909841",
+   "matchup": "PHX @ POR",
+   "player": "Jrue Holiday",
+   "team": "POR",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "over",
    "line": 3.5,
-   "label": "Zach LaVine Under 3.5 Rebounds",
-   "prob": 0.5727,
-   "fair": 0.49,
-   "edge": 0.0827,
-   "ev": 0.1234,
-   "price": -104,
-   "book": "FanDuel",
-   "proj": 2.6442,
-   "l10": 0.8,
-   "l20": 0.7,
+   "label": "Jrue Holiday Over 3.5 Assists",
+   "prob": 0.6366,
+   "fair": 0.5777,
+   "edge": 0.0588,
+   "ev": 0.1188,
+   "price": -132,
+   "book": "BetRivers",
+   "proj": 5.4413,
+   "l10": 0.9,
+   "l20": 0.75,
    "reasons": [
     [
      "+",
-     "Projection: 2.6 rebounds vs line 3.5. Model alone: 73% for the under."
+     "Projection: 5.4 assists vs line 3.5. Model alone: 75% for the over."
     ],
     [
      "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 57%, an edge of +8.3 pts. Best price -104 at FanDuel."
+     "Market: books price the over at 58% (no-vig). Blending model and market gives 64%, an edge of +5.9 pts. Best price -132 at BetRivers."
     ],
     [
      "+",
-     "Recent form: went under 3.5 in 8 of last 10, 14 of last 20."
+     "Recent form: went over 3.5 in 9 of last 10, 15 of last 20."
     ],
     [
-     "i",
-     "Minutes: projected 31.4 (last 10 avg 27.1, fairly stable at \u00b16.5)."
+     "+",
+     "Minutes: projected 30.3 (last 10 avg 36.6, stable at \u00b13.5)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-104"
+   "price_fmt": "-132"
   },
   {
    "kind": "market",
    "tier": "Lock",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Kris Dunn",
-   "team": "LAC",
-   "stat": "pts",
-   "stat_label": "Points",
+   "game_id": "401909834",
+   "matchup": "ATL @ ORL",
+   "player": "Franz Wagner",
+   "team": "ORL",
+   "stat": "ast",
+   "stat_label": "Assists",
    "side": "under",
-   "line": 8.5,
-   "label": "Kris Dunn Under 8.5 Points",
-   "prob": 0.5832,
-   "fair": 0.5045,
-   "edge": 0.0786,
-   "ev": 0.1231,
-   "price": -108,
-   "book": "FanDuel",
-   "proj": 6.5047,
+   "line": 5.5,
+   "label": "Franz Wagner Under 5.5 Assists",
+   "prob": 0.6692,
+   "fair": 0.5699,
+   "edge": 0.0993,
+   "ev": 0.1153,
+   "price": -150,
+   "book": "Bovada",
+   "proj": 3.5303,
    "l10": 0.8,
    "l20": 0.85,
    "reasons": [
     [
      "+",
-     "Projection: 6.5 points vs line 8.5. Model alone: 73% for the under."
+     "Projection: 3.5 assists vs line 5.5. Model alone: 85% for the under."
     ],
     [
      "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 58%, an edge of +7.9 pts. Best price -108 at FanDuel."
+     "Market: books price the under at 57% (no-vig). Blending model and market gives 67%, an edge of +9.9 pts. Best price -150 at Bovada."
     ],
     [
      "+",
-     "Recent form: went under 8.5 in 8 of last 10, 17 of last 20."
+     "Recent form: went under 5.5 in 8 of last 10, 17 of last 20."
     ],
     [
      "i",
-     "Minutes: projected 27.3 (last 10 avg 25.6, fairly stable at \u00b14.4)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-108"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Jabari Smith Jr.",
-   "team": "HOU",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 20.5,
-   "label": "Jabari Smith Jr. Over 20.5 Pts+Reb+Ast",
-   "prob": 0.5973,
-   "fair": 0.5132,
-   "edge": 0.0841,
-   "ev": 0.1213,
-   "price": -114,
-   "book": "FanDuel",
-   "proj": 25.4638,
-   "l10": 1.0,
-   "l20": 0.95,
-   "reasons": [
-    [
-     "+",
-     "Projection: 25.5 pts+reb+ast vs line 20.5. Model alone: 75% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 60%, an edge of +8.4 pts. Best price -114 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went over 20.5 in 10 of last 10, 19 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 35.6 (last 10 avg 39.7, stable at \u00b13.9)."
+     "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-114"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Julius Randle",
-   "team": "BKN",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 31.5,
-   "label": "Julius Randle Under 31.5 Pts+Reb+Ast",
-   "prob": 0.5767,
-   "fair": 0.5021,
-   "edge": 0.0746,
-   "ev": 0.1207,
-   "price": -106,
-   "book": "FanDuel",
-   "proj": 27.0323,
-   "l10": 0.7,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 27.0 pts+reb+ast vs line 31.5. Model alone: 72% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 58%, an edge of +7.5 pts. Best price -106 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went under 31.5 in 7 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 31.4 (last 10 avg 33.0, fairly stable at \u00b15.1)."
     ],
     [
      "!",
-     "New team (was MIN): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
+     "Teammate Anthony Black is OUT (26 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-106"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Egor Demin",
-   "team": "BKN",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 19.5,
-   "label": "Egor Demin Under 19.5 Pts+Reb+Ast",
-   "prob": 0.5684,
-   "fair": 0.493,
-   "edge": 0.0754,
-   "ev": 0.1202,
-   "price": -103,
-   "book": "DraftKings",
-   "proj": 16.067,
-   "l10": 0.7,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Projection: 16.1 pts+reb+ast vs line 19.5. Model alone: 71% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 57%, an edge of +7.5 pts. Best price -103 at DraftKings."
-    ],
-    [
-     "+",
-     "Recent form: went under 19.5 in 7 of last 10, 13 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-103"
+   "price_fmt": "-150"
   },
   {
    "kind": "market",
@@ -10427,11 +9873,11 @@
    "side": "under",
    "line": 12.5,
    "label": "Derrick Jones Jr. Under 12.5 Points",
-   "prob": 0.573,
-   "fair": 0.485,
-   "edge": 0.088,
-   "ev": 0.1188,
-   "price": -105,
+   "prob": 0.5775,
+   "fair": 0.4919,
+   "edge": 0.0856,
+   "ev": 0.1074,
+   "price": -109,
    "book": "DraftKings",
    "proj": 9.6583,
    "l10": 0.8,
@@ -10443,7 +9889,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 57%, an edge of +8.8 pts. Best price -105 at DraftKings."
+     "Market: books price the under at 49% (no-vig). Blending model and market gives 58%, an edge of +8.6 pts. Best price -109 at DraftKings."
     ],
     [
      "+",
@@ -10474,211 +9920,7 @@
      "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "AJ Green",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 11.5,
-   "label": "AJ Green Over 11.5 Pts+Reb+Ast",
-   "prob": 0.5546,
-   "fair": 0.4726,
-   "edge": 0.082,
-   "ev": 0.1092,
-   "price": 100,
-   "book": "Bovada",
-   "proj": 17.1793,
-   "l10": 0.9,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Projection: 17.2 pts+reb+ast vs line 11.5. Model alone: 71% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 47% (no-vig). Blending model and market gives 55%, an edge of +8.2 pts. Best price +100 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went over 11.5 in 9 of last 10, 13 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.1 (last 10 avg 33.3, fairly stable at \u00b16.8)."
-    ],
-    [
-     "+",
-     "Matchup: WAS allow 5% more pts+reb+ast than average (#29 most generous of 30)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "+100"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909838",
-   "matchup": "UTA @ MEM",
-   "player": "Ace Bailey",
-   "team": "UTA",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "over",
-   "line": 11.5,
-   "label": "Ace Bailey Over 11.5 Points",
-   "prob": 0.5652,
-   "fair": 0.494,
-   "edge": 0.0712,
-   "ev": 0.1087,
-   "price": -104,
-   "book": "DraftKings",
-   "proj": 15.6656,
-   "l10": 1.0,
-   "l20": 0.9,
-   "reasons": [
-    [
-     "+",
-     "Projection: 15.7 points vs line 11.5. Model alone: 70% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 49% (no-vig). Blending model and market gives 57%, an edge of +7.1 pts. Best price -104 at DraftKings."
-    ],
-    [
-     "+",
-     "Recent form: went over 11.5 in 10 of last 10, 18 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.6 (last 10 avg 31.7, stable at \u00b12.9)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-104"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909839",
-   "matchup": "IND @ NOP",
-   "player": "Pascal Siakam",
-   "team": "IND",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "over",
-   "line": 20.5,
-   "label": "Pascal Siakam Over 20.5 Points",
-   "prob": 0.5894,
-   "fair": 0.5082,
-   "edge": 0.0813,
-   "ev": 0.1065,
-   "price": -114,
-   "book": "DraftKings",
-   "proj": 25.4997,
-   "l10": 0.7,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 25.5 points vs line 20.5. Model alone: 74% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 59%, an edge of +8.1 pts. Best price -114 at DraftKings."
-    ],
-    [
-     "+",
-     "Recent form: went over 20.5 in 7 of last 10, 15 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 33.1 (last 10 avg 30.4, stable at \u00b13.5)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Johnny Furphy is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "+",
-     "Teammate Aaron Nesmith is OUT (30 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-114"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909839",
-   "matchup": "IND @ NOP",
-   "player": "Andrew Nembhard",
-   "team": "IND",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "over",
-   "line": 13.5,
-   "label": "Andrew Nembhard Over 13.5 Points",
-   "prob": 0.5532,
-   "fair": 0.5002,
-   "edge": 0.053,
-   "ev": 0.1063,
-   "price": 100,
-   "book": "BetOnline.ag",
-   "proj": 16.9357,
-   "l10": 0.6,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 16.9 points vs line 13.5. Model alone: 65% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 50% (no-vig). Blending model and market gives 55%, an edge of +5.3 pts. Best price +100 at BetOnline.ag."
-    ],
-    [
-     "i",
-     "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Johnny Furphy is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "+",
-     "Teammate Aaron Nesmith is OUT (30 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "+100"
+   "price_fmt": "-109"
   },
   {
    "kind": "market",
@@ -10692,11 +9934,11 @@
    "side": "under",
    "line": 2.5,
    "label": "Naz Reid Under 2.5 Assists",
-   "prob": 0.5873,
-   "fair": 0.5119,
-   "edge": 0.0754,
-   "ev": 0.1025,
-   "price": -114,
+   "prob": 0.5869,
+   "fair": 0.5112,
+   "edge": 0.0756,
+   "ev": 0.1063,
+   "price": -113,
    "book": "DraftKings",
    "proj": 1.8005,
    "l10": 0.8,
@@ -10708,7 +9950,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 59%, an edge of +7.5 pts. Best price -114 at DraftKings."
+     "Market: books price the under at 51% (no-vig). Blending model and market gives 59%, an edge of +7.6 pts. Best price -113 at DraftKings."
     ],
     [
      "+",
@@ -10735,323 +9977,41 @@
      "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-114"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909841",
-   "matchup": "PHX @ POR",
-   "player": "Jrue Holiday",
-   "team": "POR",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "over",
-   "line": 3.5,
-   "label": "Jrue Holiday Over 3.5 Assists",
-   "prob": 0.623,
-   "fair": 0.5569,
-   "edge": 0.0661,
-   "ev": 0.1023,
-   "price": -130,
-   "book": "BetRivers",
-   "proj": 5.4413,
-   "l10": 0.9,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 5.4 assists vs line 3.5. Model alone: 75% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 56% (no-vig). Blending model and market gives 62%, an edge of +6.6 pts. Best price -130 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went over 3.5 in 9 of last 10, 15 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.3 (last 10 avg 36.6, stable at \u00b13.5)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-130"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Egor Demin",
-   "team": "BKN",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 12.5,
-   "label": "Egor Demin Under 12.5 Points",
-   "prob": 0.5832,
-   "fair": 0.5111,
-   "edge": 0.0721,
-   "ev": 0.0949,
-   "price": -114,
-   "book": "BetOnline.ag",
-   "proj": 9.8896,
-   "l10": 0.7,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Projection: 9.9 points vs line 12.5. Model alone: 72% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +7.2 pts. Best price -114 at BetOnline.ag."
-    ],
-    [
-     "+",
-     "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-114"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Jabari Smith Jr.",
-   "team": "HOU",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 5.5,
-   "label": "Jabari Smith Jr. Over 5.5 Rebounds",
-   "prob": 0.5808,
-   "fair": 0.5254,
-   "edge": 0.0555,
-   "ev": 0.0948,
-   "price": -113,
-   "book": "BetRivers",
-   "proj": 7.2076,
-   "l10": 0.9,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 7.2 rebounds vs line 5.5. Model alone: 68% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 53% (no-vig). Blending model and market gives 58%, an edge of +5.5 pts. Best price -113 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went over 5.5 in 9 of last 10, 14 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 35.6 (last 10 avg 39.7, stable at \u00b13.9)."
-    ],
-    [
-     "+",
-     "Matchup: DAL allow 3% more rebounds than average (#28 most generous of 30)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
    "price_fmt": "-113"
   },
   {
    "kind": "market",
    "tier": "Lock",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Jabari Smith Jr.",
-   "team": "HOU",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "over",
-   "line": 12.5,
-   "label": "Jabari Smith Jr. Over 12.5 Points",
-   "prob": 0.595,
-   "fair": 0.5206,
-   "edge": 0.0744,
-   "ev": 0.0909,
-   "price": -120,
-   "book": "BetRivers",
-   "proj": 16.3982,
-   "l10": 0.9,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 16.4 points vs line 12.5. Model alone: 73% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 52% (no-vig). Blending model and market gives 60%, an edge of +7.4 pts. Best price -120 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went over 12.5 in 9 of last 10, 17 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 35.6 (last 10 avg 39.7, stable at \u00b13.9)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-120"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "AJ Green",
-   "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "over",
-   "line": 7.5,
-   "label": "AJ Green Over 7.5 Points",
-   "prob": 0.556,
-   "fair": 0.4901,
-   "edge": 0.0659,
-   "ev": 0.0906,
-   "price": -104,
-   "book": "FanDuel",
-   "proj": 11.8433,
-   "l10": 0.8,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 11.8 points vs line 7.5. Model alone: 68% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 49% (no-vig). Blending model and market gives 56%, an edge of +6.6 pts. Best price -104 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went over 7.5 in 8 of last 10, 12 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.1 (last 10 avg 33.3, fairly stable at \u00b16.8)."
-    ],
-    [
-     "+",
-     "Matchup: WAS allow 4% more points than average (#29 most generous of 30)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-104"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909838",
-   "matchup": "UTA @ MEM",
-   "player": "Ace Bailey",
-   "team": "UTA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 17.5,
-   "label": "Ace Bailey Over 17.5 Pts+Reb+Ast",
-   "prob": 0.5573,
-   "fair": 0.4841,
-   "edge": 0.0732,
-   "ev": 0.088,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 22.1071,
-   "l10": 0.9,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 22.1 pts+reb+ast vs line 17.5. Model alone: 69% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 48% (no-vig). Blending model and market gives 56%, an edge of +7.3 pts. Best price -105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went over 17.5 in 9 of last 10, 17 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.6 (last 10 avg 31.7, stable at \u00b12.9)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
    "game_id": "401909842",
    "matchup": "SAC @ LAC",
    "player": "Kris Dunn",
    "team": "LAC",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "under",
-   "line": 16.5,
-   "label": "Kris Dunn Under 16.5 Pts+Reb+Ast",
-   "prob": 0.5581,
-   "fair": 0.4919,
-   "edge": 0.0662,
-   "ev": 0.0846,
-   "price": -106,
+   "line": 8.5,
+   "label": "Kris Dunn Under 8.5 Points",
+   "prob": 0.5842,
+   "fair": 0.5062,
+   "edge": 0.0781,
+   "ev": 0.1058,
+   "price": -112,
    "book": "FanDuel",
-   "proj": 14.255,
-   "l10": 0.7,
-   "l20": 0.75,
+   "proj": 6.5047,
+   "l10": 0.8,
+   "l20": 0.85,
    "reasons": [
     [
      "+",
-     "Projection: 14.3 pts+reb+ast vs line 16.5. Model alone: 68% for the under."
+     "Projection: 6.5 points vs line 8.5. Model alone: 73% for the under."
     ],
     [
      "+",
-     "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.6 pts. Best price -106 at FanDuel."
+     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +7.8 pts. Best price -112 at FanDuel."
     ],
     [
      "+",
-     "Recent form: went under 16.5 in 7 of last 10, 15 of last 20."
+     "Recent form: went under 8.5 in 8 of last 10, 17 of last 20."
     ],
     [
      "i",
@@ -11078,45 +10038,45 @@
      "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-106"
+   "price_fmt": "-112"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909839",
-   "matchup": "IND @ NOP",
-   "player": "Andrew Nembhard",
-   "team": "IND",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "game_id": "401909838",
+   "matchup": "UTA @ MEM",
+   "player": "Ace Bailey",
+   "team": "UTA",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "over",
-   "line": 23.5,
-   "label": "Andrew Nembhard Over 23.5 Pts+Reb+Ast",
-   "prob": 0.5555,
-   "fair": 0.4814,
-   "edge": 0.074,
-   "ev": 0.0845,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 28.5213,
-   "l10": 0.8,
-   "l20": 0.75,
+   "line": 11.5,
+   "label": "Ace Bailey Over 11.5 Points",
+   "prob": 0.568,
+   "fair": 0.4983,
+   "edge": 0.0697,
+   "ev": 0.094,
+   "price": -108,
+   "book": "BetRivers",
+   "proj": 15.6656,
+   "l10": 1.0,
+   "l20": 0.9,
    "reasons": [
     [
      "+",
-     "Projection: 28.5 pts+reb+ast vs line 23.5. Model alone: 69% for the over."
+     "Projection: 15.7 points vs line 11.5. Model alone: 70% for the over."
     ],
     [
      "+",
-     "Market: books price the over at 48% (no-vig). Blending model and market gives 56%, an edge of +7.4 pts. Best price -105 at Bovada."
+     "Market: books price the over at 50% (no-vig). Blending model and market gives 57%, an edge of +7.0 pts. Best price -108 at BetRivers."
     ],
     [
      "+",
-     "Recent form: went over 23.5 in 8 of last 10, 15 of last 20."
+     "Recent form: went over 11.5 in 10 of last 10, 18 of last 20."
     ],
     [
-     "i",
-     "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
+     "+",
+     "Minutes: projected 27.6 (last 10 avg 31.7, stable at \u00b12.9)."
     ],
     [
      "i",
@@ -11124,14 +10084,210 @@
     ],
     [
      "+",
-     "Teammate Johnny Furphy is OUT (21 min/game): more shots and touches likely (not in the projection)."
+     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+    ]
+   ],
+   "price_fmt": "-108"
+  },
+  {
+   "kind": "market",
+   "tier": "Lock",
+   "game_id": "401909835",
+   "matchup": "MIL @ WAS",
+   "player": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "over",
+   "line": 3.5,
+   "label": "Jaime Jaquez Jr. Over 3.5 Assists",
+   "prob": 0.5928,
+   "fair": 0.5251,
+   "edge": 0.0677,
+   "ev": 0.0868,
+   "price": -120,
+   "book": "Bovada",
+   "proj": 4.8905,
+   "l10": 0.6,
+   "l20": 0.8,
+   "reasons": [
+    [
+     "+",
+     "Projection: 4.9 assists vs line 3.5. Model alone: 72% for the over."
     ],
     [
      "+",
-     "Teammate Aaron Nesmith is OUT (30 min/game): more shots and touches likely (not in the projection)."
+     "Market: books price the over at 53% (no-vig). Blending model and market gives 59%, an edge of +6.8 pts. Best price -120 at Bovada."
+    ],
+    [
+     "i",
+     "Recent form: went over 3.5 in 6 of last 10, 16 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.1 (last 10 avg 29.4, fairly stable at \u00b16.0)."
+    ],
+    [
+     "+",
+     "Matchup: WAS allow 6% more assists than average (#29 most generous of 30)."
+    ],
+    [
+     "!",
+     "New team (was MIA): role and minutes less certain."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
     ]
    ],
-   "price_fmt": "-105"
+   "price_fmt": "-120"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909840",
+   "matchup": "DAL @ HOU",
+   "player": "Jabari Smith Jr.",
+   "team": "HOU",
+   "stat": "reb",
+   "stat_label": "Rebounds",
+   "side": "over",
+   "line": 5.5,
+   "label": "Jabari Smith Jr. Over 5.5 Rebounds",
+   "prob": 0.5808,
+   "fair": 0.5253,
+   "edge": 0.0555,
+   "ev": 0.0858,
+   "price": -115,
+   "book": "BetRivers",
+   "proj": 7.2076,
+   "l10": 0.9,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Projection: 7.2 rebounds vs line 5.5. Model alone: 68% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 53% (no-vig). Blending model and market gives 58%, an edge of +5.6 pts. Best price -115 at BetRivers."
+    ],
+    [
+     "+",
+     "Recent form: went over 5.5 in 9 of last 10, 14 of last 20."
+    ],
+    [
+     "+",
+     "Minutes: projected 35.6 (last 10 avg 39.7, stable at \u00b13.9)."
+    ],
+    [
+     "+",
+     "Matchup: DAL allow 3% more rebounds than average (#28 most generous of 30)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-115"
+  },
+  {
+   "kind": "market",
+   "tier": "Lock",
+   "game_id": "401909840",
+   "matchup": "DAL @ HOU",
+   "player": "Jabari Smith Jr.",
+   "team": "HOU",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "over",
+   "line": 12.5,
+   "label": "Jabari Smith Jr. Over 12.5 Points",
+   "prob": 0.5965,
+   "fair": 0.5229,
+   "edge": 0.0736,
+   "ev": 0.0855,
+   "price": -122,
+   "book": "BetRivers",
+   "proj": 16.3982,
+   "l10": 0.9,
+   "l20": 0.85,
+   "reasons": [
+    [
+     "+",
+     "Projection: 16.4 points vs line 12.5. Model alone: 73% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 52% (no-vig). Blending model and market gives 60%, an edge of +7.4 pts. Best price -122 at BetRivers."
+    ],
+    [
+     "+",
+     "Recent form: went over 12.5 in 9 of last 10, 17 of last 20."
+    ],
+    [
+     "+",
+     "Minutes: projected 35.6 (last 10 avg 39.7, stable at \u00b13.9)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-122"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909835",
+   "matchup": "MIL @ WAS",
+   "player": "Tyler Herro",
+   "team": "MIL",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "under",
+   "line": 22.5,
+   "label": "Tyler Herro Under 22.5 Points",
+   "prob": 0.5781,
+   "fair": 0.5122,
+   "edge": 0.0659,
+   "ev": 0.0852,
+   "price": -114,
+   "book": "BetOnline.ag",
+   "proj": 19.5295,
+   "l10": 0.7,
+   "l20": 0.6,
+   "reasons": [
+    [
+     "+",
+     "Projection: 19.5 points vs line 22.5. Model alone: 70% for the under."
+    ],
+    [
+     "+",
+     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.6 pts. Best price -114 at BetOnline.ag."
+    ],
+    [
+     "+",
+     "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
+    ],
+    [
+     "!",
+     "Matchup: WAS allow 4% more points than average (#29 most generous of 30)."
+    ],
+    [
+     "!",
+     "New team (was MIA): role and minutes less certain."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-114"
   },
   {
    "kind": "market",
@@ -11145,10 +10301,10 @@
    "side": "over",
    "line": 3.5,
    "label": "Royce O'Neale Over 3.5 Rebounds",
-   "prob": 0.602,
-   "fair": 0.5553,
-   "edge": 0.0468,
-   "ev": 0.0836,
+   "prob": 0.6027,
+   "fair": 0.5563,
+   "edge": 0.0464,
+   "ev": 0.0849,
    "price": -125,
    "book": "BetMGM",
    "proj": 4.9724,
@@ -11161,7 +10317,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 56% (no-vig). Blending model and market gives 60%, an edge of +4.7 pts. Best price -125 at BetMGM."
+     "Market: books price the over at 56% (no-vig). Blending model and market gives 60%, an edge of +4.6 pts. Best price -125 at BetMGM."
     ],
     [
      "i",
@@ -11192,45 +10348,41 @@
   },
   {
    "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909838",
-   "matchup": "UTA @ MEM",
-   "player": "Keyonte George",
-   "team": "UTA",
-   "stat": "ast",
-   "stat_label": "Assists",
+   "tier": "Lock",
+   "game_id": "401909842",
+   "matchup": "SAC @ LAC",
+   "player": "Zach LaVine",
+   "team": "SAC",
+   "stat": "reb",
+   "stat_label": "Rebounds",
    "side": "under",
-   "line": 6.5,
-   "label": "Keyonte George Under 6.5 Assists",
-   "prob": 0.5534,
-   "fair": 0.5088,
-   "edge": 0.0447,
-   "ev": 0.0805,
-   "price": -105,
-   "book": "BetMGM",
-   "proj": 5.8046,
+   "line": 3.5,
+   "label": "Zach LaVine Under 3.5 Rebounds",
+   "prob": 0.5992,
+   "fair": 0.5307,
+   "edge": 0.0685,
+   "ev": 0.0786,
+   "price": -125,
+   "book": "FanDuel",
+   "proj": 2.6442,
    "l10": 0.8,
    "l20": 0.7,
    "reasons": [
     [
      "+",
-     "Projection: 5.8 assists vs line 6.5. Model alone: 64% for the under."
+     "Projection: 2.6 rebounds vs line 3.5. Model alone: 73% for the under."
     ],
     [
      "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 55%, an edge of +4.5 pts. Best price -105 at BetMGM."
+     "Market: books price the under at 53% (no-vig). Blending model and market gives 60%, an edge of +6.8 pts. Best price -125 at FanDuel."
     ],
     [
      "+",
-     "Recent form: went under 6.5 in 8 of last 10, 14 of last 20."
+     "Recent form: went under 3.5 in 8 of last 10, 14 of last 20."
     ],
     [
      "i",
-     "Minutes: projected 33.1 (last 10 avg 27.0, fairly stable at \u00b16.9)."
-    ],
-    [
-     "!",
-     "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+     "Minutes: projected 31.4 (last 10 avg 27.1, fairly stable at \u00b16.5)."
     ],
     [
      "i",
@@ -11238,10 +10390,14 @@
     ],
     [
      "!",
-     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
+    ],
+    [
+     "!",
+     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-105"
+   "price_fmt": "-125"
   },
   {
    "kind": "market",
@@ -11255,10 +10411,10 @@
    "side": "under",
    "line": 23.5,
    "label": "Darius Garland Under 23.5 Points",
-   "prob": 0.5839,
-   "fair": 0.5118,
-   "edge": 0.0721,
-   "ev": 0.0788,
+   "prob": 0.5835,
+   "fair": 0.5112,
+   "edge": 0.0723,
+   "ev": 0.078,
    "price": -118,
    "book": "FanDuel",
    "proj": 19.8794,
@@ -11307,273 +10463,89 @@
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Kevin Durant",
-   "team": "HOU",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 33.5,
-   "label": "Kevin Durant Over 33.5 Pts+Reb+Ast",
-   "prob": 0.5522,
-   "fair": 0.4887,
-   "edge": 0.0636,
-   "ev": 0.0782,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 37.8194,
-   "l10": 0.6,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Projection: 37.8 pts+reb+ast vs line 33.5. Model alone: 67% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 49% (no-vig). Blending model and market gives 55%, an edge of +6.4 pts. Best price -105 at Bovada."
-    ],
-    [
-     "i",
-     "Recent form: went over 33.5 in 6 of last 10, 11 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 36.5 (last 10 avg 35.9, stable at \u00b13.9)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909841",
-   "matchup": "PHX @ POR",
-   "player": "Jrue Holiday",
-   "team": "POR",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 20.5,
-   "label": "Jrue Holiday Over 20.5 Pts+Reb+Ast",
-   "prob": 0.5642,
-   "fair": 0.4968,
-   "edge": 0.0674,
-   "ev": 0.0771,
-   "price": -110,
-   "book": "Bovada",
-   "proj": 25.7106,
-   "l10": 0.9,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 25.7 pts+reb+ast vs line 20.5. Model alone: 69% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 50% (no-vig). Blending model and market gives 56%, an edge of +6.7 pts. Best price -110 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went over 20.5 in 9 of last 10, 17 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.3 (last 10 avg 36.6, stable at \u00b13.5)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-110"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909838",
-   "matchup": "UTA @ MEM",
-   "player": "Jaylen Wells",
-   "team": "MEM",
+   "game_id": "401909835",
+   "matchup": "MIL @ WAS",
+   "player": "AJ Green",
+   "team": "MIL",
    "stat": "pts",
    "stat_label": "Points",
    "side": "over",
-   "line": 10.5,
-   "label": "Jaylen Wells Over 10.5 Points",
-   "prob": 0.5683,
-   "fair": 0.5068,
-   "edge": 0.0615,
-   "ev": 0.0757,
-   "price": -112,
+   "line": 7.5,
+   "label": "AJ Green Over 7.5 Points",
+   "prob": 0.5547,
+   "fair": 0.488,
+   "edge": 0.0666,
+   "ev": 0.0779,
+   "price": -106,
    "book": "FanDuel",
-   "proj": 13.955,
-   "l10": 0.6,
-   "l20": 0.7,
+   "proj": 11.8433,
+   "l10": 0.8,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Projection: 14.0 points vs line 10.5. Model alone: 68% for the over."
+     "Projection: 11.8 points vs line 7.5. Model alone: 68% for the over."
     ],
     [
      "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 57%, an edge of +6.1 pts. Best price -112 at FanDuel."
-    ],
-    [
-     "i",
-     "Recent form: went over 10.5 in 6 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.4 (last 10 avg 25.0, fairly stable at \u00b14.1)."
+     "Market: books price the over at 49% (no-vig). Blending model and market gives 55%, an edge of +6.7 pts. Best price -106 at FanDuel."
     ],
     [
      "+",
-     "Matchup: UTA allow 5% more points than average (#30 most generous of 30)."
+     "Recent form: went over 7.5 in 8 of last 10, 12 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 29.1 (last 10 avg 33.3, fairly stable at \u00b16.8)."
+    ],
+    [
+     "+",
+     "Matchup: WAS allow 4% more points than average (#29 most generous of 30)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
     ]
    ],
-   "price_fmt": "-112"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909092",
-   "matchup": "GSW @ LAL",
-   "player": "Austin Reaves",
-   "team": "LAL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 34.5,
-   "label": "Austin Reaves Under 34.5 Pts+Reb+Ast",
-   "prob": 0.5509,
-   "fair": 0.4814,
-   "edge": 0.0695,
-   "ev": 0.0756,
-   "price": -105,
-   "book": "Bovada",
-   "proj": 30.576,
-   "l10": 0.7,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Projection: 30.6 pts+reb+ast vs line 34.5. Model alone: 68% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 48% (no-vig). Blending model and market gives 55%, an edge of +6.9 pts. Best price -105 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 34.5 in 7 of last 10, 13 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Bilal Coulibaly",
-   "team": "WAS",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 16.5,
-   "label": "Bilal Coulibaly Over 16.5 Pts+Reb+Ast",
-   "prob": 0.5671,
-   "fair": 0.5015,
-   "edge": 0.0656,
-   "ev": 0.0734,
-   "price": -112,
-   "book": "BetRivers",
-   "proj": 20.8273,
-   "l10": 0.7,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 20.8 pts+reb+ast vs line 16.5. Model alone: 69% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 50% (no-vig). Blending model and market gives 57%, an edge of +6.6 pts. Best price -112 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went over 16.5 in 7 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.3 (last 10 avg 24.8, fairly stable at \u00b15.6)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Jamir Watkins is OUT (25 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-112"
+   "price_fmt": "-106"
   },
   {
    "kind": "market",
    "tier": "Strong",
    "game_id": "401909834",
    "matchup": "ATL @ ORL",
-   "player": "Franz Wagner",
+   "player": "Jalen Suggs",
    "team": "ORL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "under",
-   "line": 32.5,
-   "label": "Franz Wagner Under 32.5 Pts+Reb+Ast",
-   "prob": 0.5758,
-   "fair": 0.5094,
-   "edge": 0.0664,
-   "ev": 0.0722,
+   "line": 13.5,
+   "label": "Jalen Suggs Under 13.5 Points",
+   "prob": 0.575,
+   "fair": 0.5186,
+   "edge": 0.0565,
+   "ev": 0.0708,
    "price": -116,
-   "book": "BetOnline.ag",
-   "proj": 28.4705,
-   "l10": 1.0,
-   "l20": 0.9,
+   "book": "DraftKings",
+   "proj": 11.5548,
+   "l10": 0.6,
+   "l20": 0.65,
    "reasons": [
     [
      "+",
-     "Projection: 28.5 pts+reb+ast vs line 32.5. Model alone: 70% for the under."
+     "Projection: 11.6 points vs line 13.5. Model alone: 68% for the under."
     ],
     [
      "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.6 pts. Best price -116 at BetOnline.ag."
-    ],
-    [
-     "+",
-     "Recent form: went under 32.5 in 10 of last 10, 18 of last 20."
+     "Market: books price the under at 52% (no-vig). Blending model and market gives 58%, an edge of +5.6 pts. Best price -116 at DraftKings."
     ],
     [
      "i",
-     "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
+     "Recent form: went under 13.5 in 6 of last 10, 13 of last 20."
+    ],
+    [
+     "+",
+     "Minutes: projected 28.4 (last 10 avg 34.4, stable at \u00b14.8)."
     ],
     [
      "i",
@@ -11588,218 +10560,6 @@
   },
   {
    "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Domantas Sabonis",
-   "team": "SAC",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 35.5,
-   "label": "Domantas Sabonis Under 35.5 Pts+Reb+Ast",
-   "prob": 0.5613,
-   "fair": 0.4987,
-   "edge": 0.0626,
-   "ev": 0.0715,
-   "price": -110,
-   "book": "Bovada",
-   "proj": 31.7104,
-   "l10": 0.7,
-   "l20": 0.7368,
-   "reasons": [
-    [
-     "+",
-     "Projection: 31.7 pts+reb+ast vs line 35.5. Model alone: 68% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -110 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 35.5 in 7 of last 10, 14 of last 19."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.7 (last 10 avg 27.4, fairly stable at \u00b17.3)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-110"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "over",
-   "line": 3.5,
-   "label": "Jaime Jaquez Jr. Over 3.5 Assists",
-   "prob": 0.5947,
-   "fair": 0.5281,
-   "edge": 0.0666,
-   "ev": 0.0705,
-   "price": -125,
-   "book": "DraftKings",
-   "proj": 4.8905,
-   "l10": 0.6,
-   "l20": 0.8,
-   "reasons": [
-    [
-     "+",
-     "Projection: 4.9 assists vs line 3.5. Model alone: 72% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 53% (no-vig). Blending model and market gives 59%, an edge of +6.7 pts. Best price -125 at DraftKings."
-    ],
-    [
-     "i",
-     "Recent form: went over 3.5 in 6 of last 10, 16 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.1 (last 10 avg 29.4, fairly stable at \u00b16.0)."
-    ],
-    [
-     "+",
-     "Matchup: WAS allow 6% more assists than average (#29 most generous of 30)."
-    ],
-    [
-     "!",
-     "New team (was MIA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-125"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 22.5,
-   "label": "Tyler Herro Under 22.5 Points",
-   "prob": 0.5793,
-   "fair": 0.5141,
-   "edge": 0.0652,
-   "ev": 0.0702,
-   "price": -118,
-   "book": "FanDuel",
-   "proj": 19.5295,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 19.5 points vs line 22.5. Model alone: 70% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.5 pts. Best price -118 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-    ],
-    [
-     "!",
-     "Matchup: WAS allow 4% more points than average (#29 most generous of 30)."
-    ],
-    [
-     "!",
-     "New team (was MIA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-118"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "Domantas Sabonis",
-   "team": "SAC",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 12.5,
-   "label": "Domantas Sabonis Under 12.5 Rebounds",
-   "prob": 0.5546,
-   "fair": 0.5019,
-   "edge": 0.0527,
-   "ev": 0.0681,
-   "price": -108,
-   "book": "FanDuel",
-   "proj": 11.2384,
-   "l10": 0.7,
-   "l20": 0.5789,
-   "reasons": [
-    [
-     "+",
-     "Projection: 11.2 rebounds vs line 12.5. Model alone: 65% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 55%, an edge of +5.3 pts. Best price -108 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went under 12.5 in 7 of last 10, 11 of last 19."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.7 (last 10 avg 27.4, fairly stable at \u00b17.3)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-108"
-  },
-  {
-   "kind": "market",
    "tier": "Lock",
    "game_id": "401909842",
    "matchup": "SAC @ LAC",
@@ -11810,11 +10570,11 @@
    "side": "under",
    "line": 3.5,
    "label": "Darius Garland Under 3.5 Rebounds",
-   "prob": 0.6445,
-   "fair": 0.5762,
-   "edge": 0.0683,
-   "ev": 0.063,
-   "price": -154,
+   "prob": 0.6412,
+   "fair": 0.5712,
+   "edge": 0.0701,
+   "ev": 0.0687,
+   "price": -150,
    "book": "DraftKings",
    "proj": 2.4305,
    "l10": 0.6,
@@ -11826,7 +10586,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 58% (no-vig). Blending model and market gives 64%, an edge of +6.8 pts. Best price -154 at DraftKings."
+     "Market: books price the under at 57% (no-vig). Blending model and market gives 64%, an edge of +7.0 pts. Best price -150 at DraftKings."
     ],
     [
      "i",
@@ -11857,154 +10617,11 @@
      "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-154"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909837",
-   "matchup": "CHI @ TOR",
-   "player": "Scottie Barnes",
-   "team": "TOR",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 7.5,
-   "label": "Scottie Barnes Under 7.5 Rebounds",
-   "prob": 0.5564,
-   "fair": 0.5085,
-   "edge": 0.0479,
-   "ev": 0.0622,
-   "price": -110,
-   "book": "BetMGM",
-   "proj": 6.6427,
-   "l10": 0.6,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 6.6 rebounds vs line 7.5. Model alone: 65% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +4.8 pts. Best price -110 at BetMGM."
-    ],
-    [
-     "i",
-     "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-110"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "Giannis Antetokounmpo",
-   "team": "MIA",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 28.5,
-   "label": "Giannis Antetokounmpo Under 28.5 Points",
-   "prob": 0.5681,
-   "fair": 0.5128,
-   "edge": 0.0553,
-   "ev": 0.0621,
-   "price": -115,
-   "book": "BetMGM",
-   "proj": 25.5528,
-   "l10": 0.8,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 25.6 points vs line 28.5. Model alone: 67% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 57%, an edge of +5.5 pts. Best price -115 at BetMGM."
-    ],
-    [
-     "+",
-     "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-    ],
-    [
-     "!",
-     "New team (was MIL): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "price_fmt": "-115"
-  },
-  {
-   "kind": "market",
-   "tier": "Lock",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Kevin Durant",
-   "team": "HOU",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "over",
-   "line": 3.5,
-   "label": "Kevin Durant Over 3.5 Assists",
-   "prob": 0.6366,
-   "fair": 0.5741,
-   "edge": 0.0625,
-   "ev": 0.0609,
-   "price": -150,
-   "book": "BetRivers",
-   "proj": 5.4647,
-   "l10": 0.9,
-   "l20": 0.8,
-   "reasons": [
-    [
-     "+",
-     "Projection: 5.5 assists vs line 3.5. Model alone: 75% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 57% (no-vig). Blending model and market gives 64%, an edge of +6.2 pts. Best price -150 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went over 3.5 in 9 of last 10, 16 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 36.5 (last 10 avg 35.9, stable at \u00b13.9)."
-    ],
-    [
-     "+",
-     "Matchup: DAL allow 3% more assists than average (#27 most generous of 30)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
    "price_fmt": "-150"
   },
   {
    "kind": "market",
-   "tier": "Lock",
+   "tier": "Strong",
    "game_id": "401909842",
    "matchup": "SAC @ LAC",
    "player": "Domantas Sabonis",
@@ -12014,10 +10631,10 @@
    "side": "under",
    "line": 5.5,
    "label": "Domantas Sabonis Under 5.5 Assists",
-   "prob": 0.624,
-   "fair": 0.5634,
-   "edge": 0.0607,
-   "ev": 0.0574,
+   "prob": 0.6295,
+   "fair": 0.5718,
+   "edge": 0.0577,
+   "ev": 0.0667,
    "price": -144,
    "book": "FanDuel",
    "proj": 4.2991,
@@ -12030,7 +10647,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 56% (no-vig). Blending model and market gives 62%, an edge of +6.1 pts. Best price -144 at FanDuel."
+     "Market: books price the under at 57% (no-vig). Blending model and market gives 63%, an edge of +5.8 pts. Best price -144 at FanDuel."
     ],
     [
      "+",
@@ -12057,6 +10674,145 @@
   },
   {
    "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909839",
+   "matchup": "IND @ NOP",
+   "player": "Jeremiah Fears",
+   "team": "NOP",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "over",
+   "line": 11.5,
+   "label": "Jeremiah Fears Over 11.5 Points",
+   "prob": 0.5533,
+   "fair": 0.4954,
+   "edge": 0.0579,
+   "ev": 0.0657,
+   "price": -108,
+   "book": "DraftKings",
+   "proj": 16.4639,
+   "l10": 0.9,
+   "l20": 0.6,
+   "reasons": [
+    [
+     "+",
+     "Projection: 16.5 points vs line 11.5. Model alone: 66% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 50% (no-vig). Blending model and market gives 55%, an edge of +5.8 pts. Best price -108 at DraftKings."
+    ],
+    [
+     "+",
+     "Recent form: went over 11.5 in 9 of last 10, 12 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.8 (last 10 avg 32.0, fairly stable at \u00b18.4)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-108"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909838",
+   "matchup": "UTA @ MEM",
+   "player": "Jaylen Wells",
+   "team": "MEM",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "over",
+   "line": 10.5,
+   "label": "Jaylen Wells Over 10.5 Points",
+   "prob": 0.5717,
+   "fair": 0.512,
+   "edge": 0.0597,
+   "ev": 0.0645,
+   "price": -116,
+   "book": "BetOnline.ag",
+   "proj": 13.955,
+   "l10": 0.6,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Projection: 14.0 points vs line 10.5. Model alone: 68% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 51% (no-vig). Blending model and market gives 57%, an edge of +6.0 pts. Best price -116 at BetOnline.ag."
+    ],
+    [
+     "i",
+     "Recent form: went over 10.5 in 6 of last 10, 14 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 26.4 (last 10 avg 25.0, fairly stable at \u00b14.1)."
+    ],
+    [
+     "+",
+     "Matchup: UTA allow 5% more points than average (#30 most generous of 30)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-116"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909837",
+   "matchup": "CHI @ TOR",
+   "player": "Scottie Barnes",
+   "team": "TOR",
+   "stat": "reb",
+   "stat_label": "Rebounds",
+   "side": "under",
+   "line": 7.5,
+   "label": "Scottie Barnes Under 7.5 Rebounds",
+   "prob": 0.5574,
+   "fair": 0.5099,
+   "edge": 0.0474,
+   "ev": 0.064,
+   "price": -110,
+   "book": "BetMGM",
+   "proj": 6.6427,
+   "l10": 0.6,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Projection: 6.6 rebounds vs line 7.5. Model alone: 65% for the under."
+    ],
+    [
+     "+",
+     "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +4.7 pts. Best price -110 at BetMGM."
+    ],
+    [
+     "i",
+     "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-110"
+  },
+  {
+   "kind": "market",
    "tier": "Lock",
    "game_id": "401909837",
    "matchup": "CHI @ TOR",
@@ -12067,11 +10823,11 @@
    "side": "over",
    "line": 1.5,
    "label": "Tre Jones Over 1.5 Rebounds",
-   "prob": 0.6905,
-   "fair": 0.6218,
-   "edge": 0.0688,
-   "ev": 0.0559,
-   "price": -189,
+   "prob": 0.6808,
+   "fair": 0.6068,
+   "edge": 0.074,
+   "ev": 0.0612,
+   "price": -179,
    "book": "BetOnline.ag",
    "proj": 3.4311,
    "l10": 1.0,
@@ -12083,7 +10839,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 62% (no-vig). Blending model and market gives 69%, an edge of +6.9 pts. Best price -189 at BetOnline.ag."
+     "Market: books price the over at 61% (no-vig). Blending model and market gives 68%, an edge of +7.4 pts. Best price -179 at BetOnline.ag."
     ],
     [
      "+",
@@ -12102,109 +10858,105 @@
      "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-189"
+   "price_fmt": "-179"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Naji Marshall",
-   "team": "DAL",
+   "game_id": "401909091",
+   "matchup": "MIN @ MIA",
+   "player": "Giannis Antetokounmpo",
+   "team": "MIA",
    "stat": "pts",
    "stat_label": "Points",
-   "side": "over",
-   "line": 11.5,
-   "label": "Naji Marshall Over 11.5 Points",
-   "prob": 0.5601,
-   "fair": 0.5116,
-   "edge": 0.0485,
-   "ev": 0.0514,
+   "side": "under",
+   "line": 28.5,
+   "label": "Giannis Antetokounmpo Under 28.5 Points",
+   "prob": 0.5624,
+   "fair": 0.5041,
+   "edge": 0.0583,
+   "ev": 0.0558,
    "price": -114,
-   "book": "DraftKings",
-   "proj": 15.4781,
-   "l10": 0.7,
-   "l20": 0.65,
+   "book": "BetOnline.ag",
+   "proj": 25.5528,
+   "l10": 0.8,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Projection: 15.5 points vs line 11.5. Model alone: 65% for the over."
+     "Projection: 25.6 points vs line 28.5. Model alone: 67% for the under."
     ],
     [
      "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 56%, an edge of +4.8 pts. Best price -114 at DraftKings."
+     "Market: books price the under at 50% (no-vig). Blending model and market gives 56%, an edge of +5.8 pts. Best price -114 at BetOnline.ag."
     ],
     [
      "+",
-     "Recent form: went over 11.5 in 7 of last 10, 13 of last 20."
+     "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
     ],
     [
-     "i",
-     "Minutes: projected 29.6 (last 10 avg 30.4, fairly stable at \u00b15.1)."
+     "+",
+     "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
+    ],
+    [
+     "!",
+     "New team (was MIL): role and minutes less certain."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "+",
-     "Teammate Santi Aldama is OUT (28 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
    "price_fmt": "-114"
   },
   {
    "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 31.5,
-   "label": "Tyler Herro Under 31.5 Pts+Reb+Ast",
-   "prob": 0.5666,
-   "fair": 0.5154,
-   "edge": 0.0513,
-   "ev": 0.0469,
-   "price": -118,
-   "book": "FanDuel",
-   "proj": 28.7723,
-   "l10": 0.7,
-   "l20": 0.5,
+   "tier": "Lock",
+   "game_id": "401909840",
+   "matchup": "DAL @ HOU",
+   "player": "Kevin Durant",
+   "team": "HOU",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "over",
+   "line": 3.5,
+   "label": "Kevin Durant Over 3.5 Assists",
+   "prob": 0.6394,
+   "fair": 0.5785,
+   "edge": 0.0609,
+   "ev": 0.052,
+   "price": -155,
+   "book": "BetRivers",
+   "proj": 5.4647,
+   "l10": 0.9,
+   "l20": 0.8,
    "reasons": [
     [
      "+",
-     "Projection: 28.8 pts+reb+ast vs line 31.5. Model alone: 66% for the under."
+     "Projection: 5.5 assists vs line 3.5. Model alone: 75% for the over."
     ],
     [
      "+",
-     "Market: books price the under at 52% (no-vig). Blending model and market gives 57%, an edge of +5.1 pts. Best price -118 at FanDuel."
+     "Market: books price the over at 58% (no-vig). Blending model and market gives 64%, an edge of +6.1 pts. Best price -155 at BetRivers."
     ],
     [
      "+",
-     "Recent form: went under 31.5 in 7 of last 10, 10 of last 20."
+     "Recent form: went over 3.5 in 9 of last 10, 16 of last 20."
     ],
     [
-     "i",
-     "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
+     "+",
+     "Minutes: projected 36.5 (last 10 avg 35.9, stable at \u00b13.9)."
     ],
     [
-     "!",
-     "Matchup: WAS allow 5% more pts+reb+ast than average (#29 most generous of 30)."
-    ],
-    [
-     "!",
-     "New team (was MIA): role and minutes less certain."
+     "+",
+     "Matchup: DAL allow 3% more assists than average (#27 most generous of 30)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
     ]
    ],
-   "price_fmt": "-118"
+   "price_fmt": "-155"
   },
   {
    "kind": "market",
@@ -12218,11 +10970,11 @@
    "side": "under",
    "line": 19.5,
    "label": "Julius Randle Under 19.5 Points",
-   "prob": 0.5727,
-   "fair": 0.5231,
-   "edge": 0.0496,
-   "ev": 0.046,
-   "price": -121,
+   "prob": 0.5746,
+   "fair": 0.526,
+   "edge": 0.0486,
+   "ev": 0.0456,
+   "price": -122,
    "book": "BetRivers",
    "proj": 17.1531,
    "l10": 0.7,
@@ -12234,7 +10986,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 52% (no-vig). Blending model and market gives 57%, an edge of +5.0 pts. Best price -121 at BetRivers."
+     "Market: books price the under at 53% (no-vig). Blending model and market gives 57%, an edge of +4.9 pts. Best price -122 at BetRivers."
     ],
     [
      "+",
@@ -12253,60 +11005,113 @@
      "Early season: 0 games this season, so last season carries more weight."
     ]
    ],
-   "price_fmt": "-121"
+   "price_fmt": "-122"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "over",
-   "line": 21.5,
-   "label": "Jaime Jaquez Jr. Over 21.5 Pts+Reb+Ast",
-   "prob": 0.5526,
-   "fair": 0.5071,
-   "edge": 0.0454,
-   "ev": 0.0459,
-   "price": -112,
-   "book": "BetRivers",
-   "proj": 24.9239,
+   "game_id": "401909838",
+   "matchup": "UTA @ MEM",
+   "player": "Keyonte George",
+   "team": "UTA",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "under",
+   "line": 6.5,
+   "label": "Keyonte George Under 6.5 Assists",
+   "prob": 0.5588,
+   "fair": 0.517,
+   "edge": 0.0418,
+   "ev": 0.0447,
+   "price": -115,
+   "book": "BetMGM",
+   "proj": 5.8046,
    "l10": 0.8,
-   "l20": 0.65,
+   "l20": 0.7,
    "reasons": [
     [
      "+",
-     "Projection: 24.9 pts+reb+ast vs line 21.5. Model alone: 64% for the over."
+     "Projection: 5.8 assists vs line 6.5. Model alone: 64% for the under."
     ],
     [
      "+",
-     "Market: books price the over at 51% (no-vig). Blending model and market gives 55%, an edge of +4.5 pts. Best price -112 at BetRivers."
+     "Market: books price the under at 52% (no-vig). Blending model and market gives 56%, an edge of +4.2 pts. Best price -115 at BetMGM."
     ],
     [
      "+",
-     "Recent form: went over 21.5 in 8 of last 10, 13 of last 20."
+     "Recent form: went under 6.5 in 8 of last 10, 14 of last 20."
     ],
     [
      "i",
-     "Minutes: projected 27.1 (last 10 avg 29.4, fairly stable at \u00b16.0)."
-    ],
-    [
-     "+",
-     "Matchup: WAS allow 5% more pts+reb+ast than average (#29 most generous of 30)."
+     "Minutes: projected 33.1 (last 10 avg 27.0, fairly stable at \u00b16.9)."
     ],
     [
      "!",
-     "New team (was MIA): role and minutes less certain."
+     "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
+    ],
+    [
+     "!",
+     "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-112"
+   "price_fmt": "-115"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909842",
+   "matchup": "SAC @ LAC",
+   "player": "De'Andre Hunter",
+   "team": "SAC",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "under",
+   "line": 2.5,
+   "label": "De'Andre Hunter Under 2.5 Assists",
+   "prob": 0.6332,
+   "fair": 0.5877,
+   "edge": 0.0455,
+   "ev": 0.0443,
+   "price": -154,
+   "book": "FanDuel",
+   "proj": 1.838,
+   "l10": 0.7,
+   "l20": 0.75,
+   "reasons": [
+    [
+     "+",
+     "Projection: 1.8 assists vs line 2.5. Model alone: 72% for the under."
+    ],
+    [
+     "+",
+     "Market: books price the under at 59% (no-vig). Blending model and market gives 63%, an edge of +4.5 pts. Best price -154 at FanDuel."
+    ],
+    [
+     "+",
+     "Recent form: went under 2.5 in 7 of last 10, 15 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 26.2 (last 10 avg 22.4, fairly stable at \u00b15.0)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ],
+    [
+     "!",
+     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
+    ],
+    [
+     "!",
+     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
+    ]
+   ],
+   "price_fmt": "-154"
   },
   {
    "kind": "market",
@@ -12360,120 +11165,6 @@
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909092",
-   "matchup": "GSW @ LAL",
-   "player": "Draymond Green",
-   "team": "GSW",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 20.5,
-   "label": "Draymond Green Under 20.5 Pts+Reb+Ast",
-   "prob": 0.5616,
-   "fair": 0.5079,
-   "edge": 0.0537,
-   "ev": 0.0416,
-   "price": -117,
-   "book": "BetRivers",
-   "proj": 18.2927,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Projection: 18.3 pts+reb+ast vs line 20.5. Model alone: 66% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +5.4 pts. Best price -117 at BetRivers."
-    ],
-    [
-     "i",
-     "Recent form: went under 20.5 in 6 of last 10, 10 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.7 (last 10 avg 29.6, fairly stable at \u00b15.7)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Jimmy Butler III is OUT (30 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Moses Moody is OUT (31 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Brandin Podziemski is OUT (31 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Kristaps Porzingis is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-117"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909842",
-   "matchup": "SAC @ LAC",
-   "player": "De'Andre Hunter",
-   "team": "SAC",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "under",
-   "line": 2.5,
-   "label": "De'Andre Hunter Under 2.5 Assists",
-   "prob": 0.6315,
-   "fair": 0.5851,
-   "edge": 0.0464,
-   "ev": 0.0416,
-   "price": -154,
-   "book": "FanDuel",
-   "proj": 1.838,
-   "l10": 0.7,
-   "l20": 0.75,
-   "reasons": [
-    [
-     "+",
-     "Projection: 1.8 assists vs line 2.5. Model alone: 72% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 59% (no-vig). Blending model and market gives 63%, an edge of +4.6 pts. Best price -154 at FanDuel."
-    ],
-    [
-     "+",
-     "Recent form: went under 2.5 in 7 of last 10, 15 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.2 (last 10 avg 22.4, fairly stable at \u00b15.0)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Dylan Cardwell is OUT (21 min/game): more shots and touches likely (not in the projection)."
-    ],
-    [
-     "!",
-     "Teammate Maxime Raynaud is OUT (32 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-154"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
    "game_id": "401909091",
    "matchup": "MIN @ MIA",
    "player": "Andrew Wiggins",
@@ -12483,12 +11174,12 @@
    "side": "over",
    "line": 1.5,
    "label": "Andrew Wiggins Over 1.5 Assists",
-   "prob": 0.6403,
-   "fair": 0.5895,
-   "edge": 0.0508,
-   "ev": 0.0331,
-   "price": -163,
-   "book": "DraftKings",
+   "prob": 0.6411,
+   "fair": 0.5907,
+   "edge": 0.0504,
+   "ev": 0.032,
+   "price": -164,
+   "book": "BetOnline.ag",
    "proj": 2.6163,
    "l10": 0.7,
    "l20": 0.75,
@@ -12499,7 +11190,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 59% (no-vig). Blending model and market gives 64%, an edge of +5.1 pts. Best price -163 at DraftKings."
+     "Market: books price the over at 59% (no-vig). Blending model and market gives 64%, an edge of +5.0 pts. Best price -164 at BetOnline.ag."
     ],
     [
      "+",
@@ -12514,101 +11205,56 @@
      "Early season: 0 games this season, so last season carries more weight."
     ]
    ],
-   "price_fmt": "-163"
+   "price_fmt": "-164"
   },
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909834",
-   "matchup": "ATL @ ORL",
-   "player": "Franz Wagner",
-   "team": "ORL",
+   "game_id": "401909840",
+   "matchup": "DAL @ HOU",
+   "player": "Naji Marshall",
+   "team": "DAL",
    "stat": "pts",
    "stat_label": "Points",
-   "side": "under",
-   "line": 21.5,
-   "label": "Franz Wagner Under 21.5 Points",
-   "prob": 0.5525,
-   "fair": 0.5068,
-   "edge": 0.0458,
-   "ev": 0.033,
-   "price": -115,
-   "book": "BetMGM",
-   "proj": 19.6681,
-   "l10": 0.9,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Projection: 19.7 points vs line 21.5. Model alone: 64% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 55%, an edge of +4.6 pts. Best price -115 at BetMGM."
-    ],
-    [
-     "+",
-     "Recent form: went under 21.5 in 9 of last 10, 17 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ],
-    [
-     "!",
-     "Teammate Anthony Black is OUT (26 min/game): more shots and touches likely (not in the projection)."
-    ]
-   ],
-   "price_fmt": "-115"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909839",
-   "matchup": "IND @ NOP",
-   "player": "Jeremiah Fears",
-   "team": "NOP",
-   "stat": "ast",
-   "stat_label": "Assists",
    "side": "over",
-   "line": 2.5,
-   "label": "Jeremiah Fears Over 2.5 Assists",
-   "prob": 0.6096,
-   "fair": 0.5648,
-   "edge": 0.0448,
-   "ev": 0.0215,
-   "price": -148,
+   "line": 11.5,
+   "label": "Naji Marshall Over 11.5 Points",
+   "prob": 0.5603,
+   "fair": 0.512,
+   "edge": 0.0483,
+   "ev": 0.0312,
+   "price": -119,
    "book": "DraftKings",
-   "proj": 3.7818,
-   "l10": 0.9,
-   "l20": 0.7,
+   "proj": 15.4781,
+   "l10": 0.7,
+   "l20": 0.65,
    "reasons": [
     [
      "+",
-     "Projection: 3.8 assists vs line 2.5. Model alone: 69% for the over."
+     "Projection: 15.5 points vs line 11.5. Model alone: 65% for the over."
     ],
     [
      "+",
-     "Market: books price the over at 56% (no-vig). Blending model and market gives 61%, an edge of +4.5 pts. Best price -148 at DraftKings."
+     "Market: books price the over at 51% (no-vig). Blending model and market gives 56%, an edge of +4.8 pts. Best price -119 at DraftKings."
     ],
     [
      "+",
-     "Recent form: went over 2.5 in 9 of last 10, 14 of last 20."
+     "Recent form: went over 11.5 in 7 of last 10, 13 of last 20."
     ],
     [
      "i",
-     "Minutes: projected 25.8 (last 10 avg 32.0, fairly stable at \u00b18.4)."
+     "Minutes: projected 29.6 (last 10 avg 30.4, fairly stable at \u00b15.1)."
     ],
     [
      "i",
      "Early season: 0 games this season, so last season carries more weight."
+    ],
+    [
+     "+",
+     "Teammate Santi Aldama is OUT (28 min/game): more shots and touches likely (not in the projection)."
     ]
    ],
-   "price_fmt": "-148"
+   "price_fmt": "-119"
   },
   {
    "kind": "market",
@@ -12622,10 +11268,10 @@
    "side": "over",
    "line": 1.5,
    "label": "Bilal Coulibaly Over 1.5 Assists",
-   "prob": 0.6513,
-   "fair": 0.6058,
-   "edge": 0.0455,
-   "ev": 0.0091,
+   "prob": 0.6564,
+   "fair": 0.6136,
+   "edge": 0.0428,
+   "ev": 0.017,
    "price": -182,
    "book": "BetRivers",
    "proj": 2.6805,
@@ -12638,7 +11284,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 61% (no-vig). Blending model and market gives 65%, an edge of +4.6 pts. Best price -182 at BetRivers."
+     "Market: books price the over at 61% (no-vig). Blending model and market gives 66%, an edge of +4.3 pts. Best price -182 at BetRivers."
     ],
     [
      "+",
@@ -12658,6 +11304,51 @@
     ]
    ],
    "price_fmt": "-182"
+  },
+  {
+   "kind": "market",
+   "tier": "Strong",
+   "game_id": "401909839",
+   "matchup": "IND @ NOP",
+   "player": "Jeremiah Fears",
+   "team": "NOP",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "over",
+   "line": 2.5,
+   "label": "Jeremiah Fears Over 2.5 Assists",
+   "prob": 0.6142,
+   "fair": 0.572,
+   "edge": 0.0423,
+   "ev": 0.0131,
+   "price": -154,
+   "book": "DraftKings",
+   "proj": 3.7818,
+   "l10": 0.9,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Projection: 3.8 assists vs line 2.5. Model alone: 69% for the over."
+    ],
+    [
+     "+",
+     "Market: books price the over at 57% (no-vig). Blending model and market gives 61%, an edge of +4.2 pts. Best price -154 at DraftKings."
+    ],
+    [
+     "+",
+     "Recent form: went over 2.5 in 9 of last 10, 14 of last 20."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.8 (last 10 avg 32.0, fairly stable at \u00b18.4)."
+    ],
+    [
+     "i",
+     "Early season: 0 games this season, so last season carries more weight."
+    ]
+   ],
+   "price_fmt": "-154"
   }
  ],
  "lineups": {
@@ -13538,8 +12229,61 @@
   "value": [
    {
     "size": 3,
-    "prob": 0.2429,
+    "prob": 0.2123,
     "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909838",
+      "matchup": "UTA @ MEM",
+      "player": "Isaiah Collier",
+      "team": "UTA",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "over",
+      "line": 4.5,
+      "label": "Isaiah Collier Over 4.5 Assists",
+      "prob": 0.5539,
+      "fair": 0.4323,
+      "edge": 0.1216,
+      "ev": 0.3017,
+      "price": 135,
+      "book": "Bovada",
+      "proj": 7.1835,
+      "l10": 0.8,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 7.2 assists vs line 4.5. Model alone: 78% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 43% (no-vig). Blending model and market gives 55%, an edge of +12.2 pts. Best price +135 at Bovada."
+       ],
+       [
+        "+",
+        "Recent form: went over 4.5 in 8 of last 10, 18 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+       ],
+       [
+        "+",
+        "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ],
+       [
+        "+",
+        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+       ]
+      ],
+      "price_fmt": "+135"
+     },
      {
       "kind": "market",
       "tier": "Lock",
@@ -13552,11 +12296,11 @@
       "side": "under",
       "line": 17.5,
       "label": "Naz Reid Under 17.5 Points",
-      "prob": 0.6216,
-      "fair": 0.4915,
-      "edge": 0.1301,
-      "ev": 0.2432,
-      "price": 100,
+      "prob": 0.6238,
+      "fair": 0.495,
+      "edge": 0.1289,
+      "ev": 0.2354,
+      "price": -102,
       "book": "FanDuel",
       "proj": 12.0665,
       "l10": 0.8,
@@ -13568,7 +12312,7 @@
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +13.0 pts. Best price +100 at FanDuel."
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -102 at FanDuel."
        ],
        [
         "+",
@@ -13595,128 +12339,116 @@
         "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "+100"
+      "price_fmt": "-102"
      },
      {
       "kind": "market",
       "tier": "Lock",
-      "game_id": "401909838",
-      "matchup": "UTA @ MEM",
-      "player": "Isaiah Collier",
-      "team": "UTA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Tre Jones",
+      "team": "CHI",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "over",
-      "line": 13.5,
-      "label": "Isaiah Collier Over 13.5 Pts+Reb+Ast",
-      "prob": 0.6222,
-      "fair": 0.478,
-      "edge": 0.1442,
-      "ev": 0.2262,
-      "price": -103,
-      "book": "DraftKings",
-      "proj": 23.4377,
-      "l10": 1.0,
-      "l20": 1.0,
-      "reasons": [
-       [
-        "+",
-        "Projection: 23.4 pts+reb+ast vs line 13.5. Model alone: 89% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 62%, an edge of +14.4 pts. Best price -103 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went over 13.5 in 10 of last 10, 20 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ],
-       [
-        "+",
-        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
-       ]
-      ],
-      "price_fmt": "-103"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909842",
-      "matchup": "SAC @ LAC",
-      "player": "Rui Hachimura",
-      "team": "LAC",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 5.5,
-      "label": "Rui Hachimura Under 5.5 Rebounds",
-      "prob": 0.6281,
-      "fair": 0.5052,
-      "edge": 0.1229,
-      "ev": 0.1991,
-      "price": -110,
-      "book": "Bovada",
-      "proj": 3.2629,
+      "line": 9.5,
+      "label": "Tre Jones Over 9.5 Points",
+      "prob": 0.6143,
+      "fair": 0.5054,
+      "edge": 0.1089,
+      "ev": 0.1938,
+      "price": -106,
+      "book": "FanDuel",
+      "proj": 16.3027,
       "l10": 0.9,
-      "l20": 0.8,
+      "l20": 0.85,
       "reasons": [
        [
         "+",
-        "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
+        "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
        ],
        [
         "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.3 pts. Best price -110 at Bovada."
+        "Market: books price the over at 51% (no-vig). Blending model and market gives 61%, an edge of +10.9 pts. Best price -106 at FanDuel."
        ],
        [
         "+",
-        "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
+        "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
        ],
        [
         "+",
-        "Minutes: projected 28.2 (last 10 avg 38.9, stable at \u00b14.4)."
-       ],
-       [
-        "!",
-        "New team (was LAL): role and minutes less certain."
+        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
        ],
        [
         "i",
         "Early season: 0 games this season, so last season carries more weight."
        ],
        [
-        "!",
-        "Teammate Bradley Beal is OUT (20 min/game): more shots and touches likely (not in the projection)."
-       ],
-       [
-        "!",
-        "Teammate Brandon Ingram is OUT (32 min/game): more shots and touches likely (not in the projection)."
-       ],
-       [
-        "!",
-        "Teammate Jordan Miller is OUT (23 min/game): more shots and touches likely (not in the projection)."
-       ],
-       [
-        "!",
-        "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
+        "+",
+        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-110"
+      "price_fmt": "-106"
      }
     ]
    },
    {
     "size": 4,
-    "prob": 0.1466,
+    "prob": 0.134,
     "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909838",
+      "matchup": "UTA @ MEM",
+      "player": "Isaiah Collier",
+      "team": "UTA",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "over",
+      "line": 4.5,
+      "label": "Isaiah Collier Over 4.5 Assists",
+      "prob": 0.5539,
+      "fair": 0.4323,
+      "edge": 0.1216,
+      "ev": 0.3017,
+      "price": 135,
+      "book": "Bovada",
+      "proj": 7.1835,
+      "l10": 0.8,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 7.2 assists vs line 4.5. Model alone: 78% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 43% (no-vig). Blending model and market gives 55%, an edge of +12.2 pts. Best price +135 at Bovada."
+       ],
+       [
+        "+",
+        "Recent form: went over 4.5 in 8 of last 10, 18 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+       ],
+       [
+        "+",
+        "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ],
+       [
+        "+",
+        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+       ]
+      ],
+      "price_fmt": "+135"
+     },
      {
       "kind": "market",
       "tier": "Lock",
@@ -13729,11 +12461,11 @@
       "side": "under",
       "line": 17.5,
       "label": "Naz Reid Under 17.5 Points",
-      "prob": 0.6216,
-      "fair": 0.4915,
-      "edge": 0.1301,
-      "ev": 0.2432,
-      "price": 100,
+      "prob": 0.6238,
+      "fair": 0.495,
+      "edge": 0.1289,
+      "ev": 0.2354,
+      "price": -102,
       "book": "FanDuel",
       "proj": 12.0665,
       "l10": 0.8,
@@ -13745,7 +12477,7 @@
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +13.0 pts. Best price +100 at FanDuel."
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -102 at FanDuel."
        ],
        [
         "+",
@@ -13772,45 +12504,45 @@
         "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "+100"
+      "price_fmt": "-102"
      },
      {
       "kind": "market",
       "tier": "Lock",
-      "game_id": "401909838",
-      "matchup": "UTA @ MEM",
-      "player": "Isaiah Collier",
-      "team": "UTA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Tre Jones",
+      "team": "CHI",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "over",
-      "line": 13.5,
-      "label": "Isaiah Collier Over 13.5 Pts+Reb+Ast",
-      "prob": 0.6222,
-      "fair": 0.478,
-      "edge": 0.1442,
-      "ev": 0.2262,
-      "price": -103,
-      "book": "DraftKings",
-      "proj": 23.4377,
-      "l10": 1.0,
-      "l20": 1.0,
+      "line": 9.5,
+      "label": "Tre Jones Over 9.5 Points",
+      "prob": 0.6143,
+      "fair": 0.5054,
+      "edge": 0.1089,
+      "ev": 0.1938,
+      "price": -106,
+      "book": "FanDuel",
+      "proj": 16.3027,
+      "l10": 0.9,
+      "l20": 0.85,
       "reasons": [
        [
         "+",
-        "Projection: 23.4 pts+reb+ast vs line 13.5. Model alone: 89% for the over."
+        "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
        ],
        [
         "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 62%, an edge of +14.4 pts. Best price -103 at DraftKings."
+        "Market: books price the over at 51% (no-vig). Blending model and market gives 61%, an edge of +10.9 pts. Best price -106 at FanDuel."
        ],
        [
         "+",
-        "Recent form: went over 13.5 in 10 of last 10, 20 of last 20."
+        "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
        ],
        [
-        "i",
-        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+        "+",
+        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
        ],
        [
         "i",
@@ -13818,10 +12550,10 @@
        ],
        [
         "+",
-        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-103"
+      "price_fmt": "-106"
      },
      {
       "kind": "market",
@@ -13830,32 +12562,32 @@
       "matchup": "SAC @ LAC",
       "player": "Rui Hachimura",
       "team": "LAC",
-      "stat": "reb",
-      "stat_label": "Rebounds",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "under",
-      "line": 5.5,
-      "label": "Rui Hachimura Under 5.5 Rebounds",
-      "prob": 0.6281,
-      "fair": 0.5052,
-      "edge": 0.1229,
-      "ev": 0.1991,
-      "price": -110,
-      "book": "Bovada",
-      "proj": 3.2629,
-      "l10": 0.9,
-      "l20": 0.8,
+      "line": 19.5,
+      "label": "Rui Hachimura Under 19.5 Points",
+      "prob": 0.6313,
+      "fair": 0.5065,
+      "edge": 0.1248,
+      "ev": 0.185,
+      "price": -114,
+      "book": "FanDuel",
+      "proj": 12.658,
+      "l10": 0.6,
+      "l20": 0.7,
       "reasons": [
        [
         "+",
-        "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
+        "Projection: 12.7 points vs line 19.5. Model alone: 86% for the under."
        ],
        [
         "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.3 pts. Best price -110 at Bovada."
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.5 pts. Best price -114 at FanDuel."
        ],
        [
-        "+",
-        "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
+        "i",
+        "Recent form: went under 19.5 in 6 of last 10, 14 of last 20."
        ],
        [
         "+",
@@ -13886,63 +12618,67 @@
         "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-110"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Tre Jones",
-      "team": "CHI",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
-      "side": "over",
-      "line": 16.5,
-      "label": "Tre Jones Over 16.5 Pts+Reb+Ast",
-      "prob": 0.6035,
-      "fair": 0.488,
-      "edge": 0.1155,
-      "ev": 0.1783,
-      "price": -105,
-      "book": "Bovada",
-      "proj": 24.8078,
-      "l10": 0.9,
-      "l20": 0.85,
-      "reasons": [
-       [
-        "+",
-        "Projection: 24.8 pts+reb+ast vs line 16.5. Model alone: 82% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 49% (no-vig). Blending model and market gives 60%, an edge of +11.5 pts. Best price -105 at Bovada."
-       ],
-       [
-        "+",
-        "Recent form: went over 16.5 in 9 of last 10, 17 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ],
-       [
-        "+",
-        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
-       ]
-      ],
-      "price_fmt": "-105"
+      "price_fmt": "-114"
      }
     ]
    },
    {
     "size": 5,
-    "prob": 0.0847,
+    "prob": 0.0775,
     "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909838",
+      "matchup": "UTA @ MEM",
+      "player": "Isaiah Collier",
+      "team": "UTA",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "over",
+      "line": 4.5,
+      "label": "Isaiah Collier Over 4.5 Assists",
+      "prob": 0.5539,
+      "fair": 0.4323,
+      "edge": 0.1216,
+      "ev": 0.3017,
+      "price": 135,
+      "book": "Bovada",
+      "proj": 7.1835,
+      "l10": 0.8,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 7.2 assists vs line 4.5. Model alone: 78% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 43% (no-vig). Blending model and market gives 55%, an edge of +12.2 pts. Best price +135 at Bovada."
+       ],
+       [
+        "+",
+        "Recent form: went over 4.5 in 8 of last 10, 18 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+       ],
+       [
+        "+",
+        "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ],
+       [
+        "+",
+        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+       ]
+      ],
+      "price_fmt": "+135"
+     },
      {
       "kind": "market",
       "tier": "Lock",
@@ -13955,11 +12691,11 @@
       "side": "under",
       "line": 17.5,
       "label": "Naz Reid Under 17.5 Points",
-      "prob": 0.6216,
-      "fair": 0.4915,
-      "edge": 0.1301,
-      "ev": 0.2432,
-      "price": 100,
+      "prob": 0.6238,
+      "fair": 0.495,
+      "edge": 0.1289,
+      "ev": 0.2354,
+      "price": -102,
       "book": "FanDuel",
       "proj": 12.0665,
       "l10": 0.8,
@@ -13971,7 +12707,7 @@
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +13.0 pts. Best price +100 at FanDuel."
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -102 at FanDuel."
        ],
        [
         "+",
@@ -13998,45 +12734,45 @@
         "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "+100"
+      "price_fmt": "-102"
      },
      {
       "kind": "market",
       "tier": "Lock",
-      "game_id": "401909838",
-      "matchup": "UTA @ MEM",
-      "player": "Isaiah Collier",
-      "team": "UTA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Tre Jones",
+      "team": "CHI",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "over",
-      "line": 13.5,
-      "label": "Isaiah Collier Over 13.5 Pts+Reb+Ast",
-      "prob": 0.6222,
-      "fair": 0.478,
-      "edge": 0.1442,
-      "ev": 0.2262,
-      "price": -103,
-      "book": "DraftKings",
-      "proj": 23.4377,
-      "l10": 1.0,
-      "l20": 1.0,
+      "line": 9.5,
+      "label": "Tre Jones Over 9.5 Points",
+      "prob": 0.6143,
+      "fair": 0.5054,
+      "edge": 0.1089,
+      "ev": 0.1938,
+      "price": -106,
+      "book": "FanDuel",
+      "proj": 16.3027,
+      "l10": 0.9,
+      "l20": 0.85,
       "reasons": [
        [
         "+",
-        "Projection: 23.4 pts+reb+ast vs line 13.5. Model alone: 89% for the over."
+        "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
        ],
        [
         "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 62%, an edge of +14.4 pts. Best price -103 at DraftKings."
+        "Market: books price the over at 51% (no-vig). Blending model and market gives 61%, an edge of +10.9 pts. Best price -106 at FanDuel."
        ],
        [
         "+",
-        "Recent form: went over 13.5 in 10 of last 10, 20 of last 20."
+        "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
        ],
        [
-        "i",
-        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+        "+",
+        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
        ],
        [
         "i",
@@ -14044,10 +12780,10 @@
        ],
        [
         "+",
-        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-103"
+      "price_fmt": "-106"
      },
      {
       "kind": "market",
@@ -14056,32 +12792,32 @@
       "matchup": "SAC @ LAC",
       "player": "Rui Hachimura",
       "team": "LAC",
-      "stat": "reb",
-      "stat_label": "Rebounds",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "under",
-      "line": 5.5,
-      "label": "Rui Hachimura Under 5.5 Rebounds",
-      "prob": 0.6281,
-      "fair": 0.5052,
-      "edge": 0.1229,
-      "ev": 0.1991,
-      "price": -110,
-      "book": "Bovada",
-      "proj": 3.2629,
-      "l10": 0.9,
-      "l20": 0.8,
+      "line": 19.5,
+      "label": "Rui Hachimura Under 19.5 Points",
+      "prob": 0.6313,
+      "fair": 0.5065,
+      "edge": 0.1248,
+      "ev": 0.185,
+      "price": -114,
+      "book": "FanDuel",
+      "proj": 12.658,
+      "l10": 0.6,
+      "l20": 0.7,
       "reasons": [
        [
         "+",
-        "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
+        "Projection: 12.7 points vs line 19.5. Model alone: 86% for the under."
        ],
        [
         "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.3 pts. Best price -110 at Bovada."
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.5 pts. Best price -114 at FanDuel."
        ],
        [
-        "+",
-        "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
+        "i",
+        "Recent form: went under 19.5 in 6 of last 10, 14 of last 20."
        ],
        [
         "+",
@@ -14112,112 +12848,112 @@
         "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-110"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Tre Jones",
-      "team": "CHI",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
-      "side": "over",
-      "line": 16.5,
-      "label": "Tre Jones Over 16.5 Pts+Reb+Ast",
-      "prob": 0.6035,
-      "fair": 0.488,
-      "edge": 0.1155,
-      "ev": 0.1783,
-      "price": -105,
-      "book": "Bovada",
-      "proj": 24.8078,
-      "l10": 0.9,
-      "l20": 0.85,
-      "reasons": [
-       [
-        "+",
-        "Projection: 24.8 pts+reb+ast vs line 16.5. Model alone: 82% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 49% (no-vig). Blending model and market gives 60%, an edge of +11.5 pts. Best price -105 at Bovada."
-       ],
-       [
-        "+",
-        "Recent form: went over 16.5 in 9 of last 10, 17 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ],
-       [
-        "+",
-        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
-       ]
-      ],
-      "price_fmt": "-105"
+      "price_fmt": "-114"
      },
      {
       "kind": "market",
       "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909836",
+      "matchup": "CHA @ BKN",
+      "player": "Egor Demin",
+      "team": "BKN",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "under",
-      "line": 46.5,
-      "label": "Giannis Antetokounmpo Under 46.5 Pts+Reb+Ast",
-      "prob": 0.5777,
-      "fair": 0.4909,
-      "edge": 0.0868,
-      "ev": 0.1279,
-      "price": -105,
-      "book": "Bovada",
-      "proj": 39.751,
-      "l10": 0.9,
-      "l20": 0.75,
+      "line": 12.5,
+      "label": "Egor Demin Under 12.5 Points",
+      "prob": 0.5781,
+      "fair": 0.5032,
+      "edge": 0.0749,
+      "ev": 0.1394,
+      "price": -103,
+      "book": "BetOnline.ag",
+      "proj": 9.8896,
+      "l10": 0.7,
+      "l20": 0.65,
       "reasons": [
        [
         "+",
-        "Projection: 39.8 pts+reb+ast vs line 46.5. Model alone: 74% for the under."
+        "Projection: 9.9 points vs line 12.5. Model alone: 72% for the under."
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 58%, an edge of +8.7 pts. Best price -105 at Bovada."
+        "Market: books price the under at 50% (no-vig). Blending model and market gives 58%, an edge of +7.5 pts. Best price -103 at BetOnline.ag."
        ],
        [
         "+",
-        "Recent form: went under 46.5 in 9 of last 10, 15 of last 20."
+        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
        ],
        [
         "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
+        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
        ],
        [
         "i",
         "Early season: 0 games this season, so last season carries more weight."
        ]
       ],
-      "price_fmt": "-105"
+      "price_fmt": "-103"
      }
     ]
    },
    {
     "size": 6,
-    "prob": 0.0569,
+    "prob": 0.0455,
     "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909838",
+      "matchup": "UTA @ MEM",
+      "player": "Isaiah Collier",
+      "team": "UTA",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "over",
+      "line": 4.5,
+      "label": "Isaiah Collier Over 4.5 Assists",
+      "prob": 0.5539,
+      "fair": 0.4323,
+      "edge": 0.1216,
+      "ev": 0.3017,
+      "price": 135,
+      "book": "Bovada",
+      "proj": 7.1835,
+      "l10": 0.8,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 7.2 assists vs line 4.5. Model alone: 78% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 43% (no-vig). Blending model and market gives 55%, an edge of +12.2 pts. Best price +135 at Bovada."
+       ],
+       [
+        "+",
+        "Recent form: went over 4.5 in 8 of last 10, 18 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+       ],
+       [
+        "+",
+        "Matchup: MEM allow 3% more assists than average (#26 most generous of 30)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ],
+       [
+        "+",
+        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+       ]
+      ],
+      "price_fmt": "+135"
+     },
      {
       "kind": "market",
       "tier": "Lock",
@@ -14230,11 +12966,11 @@
       "side": "under",
       "line": 17.5,
       "label": "Naz Reid Under 17.5 Points",
-      "prob": 0.6216,
-      "fair": 0.4915,
-      "edge": 0.1301,
-      "ev": 0.2432,
-      "price": 100,
+      "prob": 0.6238,
+      "fair": 0.495,
+      "edge": 0.1289,
+      "ev": 0.2354,
+      "price": -102,
       "book": "FanDuel",
       "proj": 12.0665,
       "l10": 0.8,
@@ -14246,7 +12982,7 @@
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +13.0 pts. Best price +100 at FanDuel."
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 62%, an edge of +12.9 pts. Best price -102 at FanDuel."
        ],
        [
         "+",
@@ -14273,45 +13009,45 @@
         "Teammate Grant Williams is OUT (20 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "+100"
+      "price_fmt": "-102"
      },
      {
       "kind": "market",
       "tier": "Lock",
-      "game_id": "401909838",
-      "matchup": "UTA @ MEM",
-      "player": "Isaiah Collier",
-      "team": "UTA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Tre Jones",
+      "team": "CHI",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "over",
-      "line": 13.5,
-      "label": "Isaiah Collier Over 13.5 Pts+Reb+Ast",
-      "prob": 0.6222,
-      "fair": 0.478,
-      "edge": 0.1442,
-      "ev": 0.2262,
-      "price": -103,
-      "book": "DraftKings",
-      "proj": 23.4377,
-      "l10": 1.0,
-      "l20": 1.0,
+      "line": 9.5,
+      "label": "Tre Jones Over 9.5 Points",
+      "prob": 0.6143,
+      "fair": 0.5054,
+      "edge": 0.1089,
+      "ev": 0.1938,
+      "price": -106,
+      "book": "FanDuel",
+      "proj": 16.3027,
+      "l10": 0.9,
+      "l20": 0.85,
       "reasons": [
        [
         "+",
-        "Projection: 23.4 pts+reb+ast vs line 13.5. Model alone: 89% for the over."
+        "Projection: 16.3 points vs line 9.5. Model alone: 82% for the over."
        ],
        [
         "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 62%, an edge of +14.4 pts. Best price -103 at DraftKings."
+        "Market: books price the over at 51% (no-vig). Blending model and market gives 61%, an edge of +10.9 pts. Best price -106 at FanDuel."
        ],
        [
         "+",
-        "Recent form: went over 13.5 in 10 of last 10, 20 of last 20."
+        "Recent form: went over 9.5 in 9 of last 10, 17 of last 20."
        ],
        [
-        "i",
-        "Minutes: projected 25.7 (last 10 avg 26.7, fairly stable at \u00b14.4)."
+        "+",
+        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
        ],
        [
         "i",
@@ -14319,10 +13055,10 @@
        ],
        [
         "+",
-        "Teammate Jusuf Nurkic is OUT (28 min/game): more shots and touches likely (not in the projection)."
+        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-103"
+      "price_fmt": "-106"
      },
      {
       "kind": "market",
@@ -14331,32 +13067,32 @@
       "matchup": "SAC @ LAC",
       "player": "Rui Hachimura",
       "team": "LAC",
-      "stat": "reb",
-      "stat_label": "Rebounds",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "under",
-      "line": 5.5,
-      "label": "Rui Hachimura Under 5.5 Rebounds",
-      "prob": 0.6281,
-      "fair": 0.5052,
-      "edge": 0.1229,
-      "ev": 0.1991,
-      "price": -110,
-      "book": "Bovada",
-      "proj": 3.2629,
-      "l10": 0.9,
-      "l20": 0.8,
+      "line": 19.5,
+      "label": "Rui Hachimura Under 19.5 Points",
+      "prob": 0.6313,
+      "fair": 0.5065,
+      "edge": 0.1248,
+      "ev": 0.185,
+      "price": -114,
+      "book": "FanDuel",
+      "proj": 12.658,
+      "l10": 0.6,
+      "l20": 0.7,
       "reasons": [
        [
         "+",
-        "Projection: 3.3 rebounds vs line 5.5. Model alone: 86% for the under."
+        "Projection: 12.7 points vs line 19.5. Model alone: 86% for the under."
        ],
        [
         "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.3 pts. Best price -110 at Bovada."
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 63%, an edge of +12.5 pts. Best price -114 at FanDuel."
        ],
        [
-        "+",
-        "Recent form: went under 5.5 in 9 of last 10, 16 of last 20."
+        "i",
+        "Recent form: went under 19.5 in 6 of last 10, 14 of last 20."
        ],
        [
         "+",
@@ -14387,154 +13123,105 @@
         "Teammate Max Strus is OUT (26 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-110"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Tre Jones",
-      "team": "CHI",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
-      "side": "over",
-      "line": 16.5,
-      "label": "Tre Jones Over 16.5 Pts+Reb+Ast",
-      "prob": 0.6035,
-      "fair": 0.488,
-      "edge": 0.1155,
-      "ev": 0.1783,
-      "price": -105,
-      "book": "Bovada",
-      "proj": 24.8078,
-      "l10": 0.9,
-      "l20": 0.85,
-      "reasons": [
-       [
-        "+",
-        "Projection: 24.8 pts+reb+ast vs line 16.5. Model alone: 82% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 49% (no-vig). Blending model and market gives 60%, an edge of +11.5 pts. Best price -105 at Bovada."
-       ],
-       [
-        "+",
-        "Recent form: went over 16.5 in 9 of last 10, 17 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.1 (last 10 avg 26.5, stable at \u00b13.3)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ],
-       [
-        "+",
-        "Teammate Nic Claxton is OUT (22 min/game): more shots and touches likely (not in the projection)."
-       ]
-      ],
-      "price_fmt": "-105"
+      "price_fmt": "-114"
      },
      {
       "kind": "market",
       "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "game_id": "401909836",
+      "matchup": "CHA @ BKN",
+      "player": "Egor Demin",
+      "team": "BKN",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "under",
-      "line": 46.5,
-      "label": "Giannis Antetokounmpo Under 46.5 Pts+Reb+Ast",
-      "prob": 0.5777,
-      "fair": 0.4909,
-      "edge": 0.0868,
-      "ev": 0.1279,
-      "price": -105,
-      "book": "Bovada",
-      "proj": 39.751,
-      "l10": 0.9,
-      "l20": 0.75,
+      "line": 12.5,
+      "label": "Egor Demin Under 12.5 Points",
+      "prob": 0.5781,
+      "fair": 0.5032,
+      "edge": 0.0749,
+      "ev": 0.1394,
+      "price": -103,
+      "book": "BetOnline.ag",
+      "proj": 9.8896,
+      "l10": 0.7,
+      "l20": 0.65,
       "reasons": [
        [
         "+",
-        "Projection: 39.8 pts+reb+ast vs line 46.5. Model alone: 74% for the under."
+        "Projection: 9.9 points vs line 12.5. Model alone: 72% for the under."
        ],
        [
         "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 58%, an edge of +8.7 pts. Best price -105 at Bovada."
+        "Market: books price the under at 50% (no-vig). Blending model and market gives 58%, an edge of +7.5 pts. Best price -103 at BetOnline.ag."
        ],
        [
         "+",
-        "Recent form: went under 46.5 in 9 of last 10, 15 of last 20."
+        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
        ],
        [
         "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
+        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
        ],
        [
         "i",
         "Early season: 0 games this season, so last season carries more weight."
        ]
       ],
-      "price_fmt": "-105"
+      "price_fmt": "-103"
      },
      {
       "kind": "market",
       "tier": "Lock",
-      "game_id": "401909834",
-      "matchup": "ATL @ ORL",
-      "player": "Franz Wagner",
-      "team": "ORL",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "side": "under",
-      "line": 5.5,
-      "label": "Franz Wagner Under 5.5 Assists",
-      "prob": 0.6716,
-      "fair": 0.5736,
-      "edge": 0.098,
-      "ev": 0.1254,
-      "price": -148,
-      "book": "BetRivers",
-      "proj": 3.5303,
-      "l10": 0.8,
-      "l20": 0.85,
+      "game_id": "401909839",
+      "matchup": "IND @ NOP",
+      "player": "Pascal Siakam",
+      "team": "IND",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "over",
+      "line": 20.5,
+      "label": "Pascal Siakam Over 20.5 Points",
+      "prob": 0.5868,
+      "fair": 0.5041,
+      "edge": 0.0827,
+      "ev": 0.1302,
+      "price": -108,
+      "book": "DraftKings",
+      "proj": 25.4997,
+      "l10": 0.7,
+      "l20": 0.75,
       "reasons": [
        [
         "+",
-        "Projection: 3.5 assists vs line 5.5. Model alone: 85% for the under."
+        "Projection: 25.5 points vs line 20.5. Model alone: 74% for the over."
        ],
        [
         "+",
-        "Market: books price the under at 57% (no-vig). Blending model and market gives 67%, an edge of +9.8 pts. Best price -148 at BetRivers."
+        "Market: books price the over at 50% (no-vig). Blending model and market gives 59%, an edge of +8.3 pts. Best price -108 at DraftKings."
        ],
        [
         "+",
-        "Recent form: went under 5.5 in 8 of last 10, 17 of last 20."
+        "Recent form: went over 20.5 in 7 of last 10, 15 of last 20."
        ],
        [
-        "i",
-        "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
+        "+",
+        "Minutes: projected 33.1 (last 10 avg 30.4, stable at \u00b13.5)."
        ],
        [
         "i",
         "Early season: 0 games this season, so last season carries more weight."
        ],
        [
-        "!",
-        "Teammate Anthony Black is OUT (26 min/game): more shots and touches likely (not in the projection)."
+        "+",
+        "Teammate Johnny Furphy is OUT (21 min/game): more shots and touches likely (not in the projection)."
+       ],
+       [
+        "+",
+        "Teammate Aaron Nesmith is OUT (30 min/game): more shots and touches likely (not in the projection)."
        ]
       ],
-      "price_fmt": "-148"
+      "price_fmt": "-108"
      }
     ]
    }
@@ -14563,7 +13250,7 @@
   },
   {
    "ok": true,
-   "text": "Odds: 4 markets, 456 credits left"
+   "text": "Odds: 3 markets, 423 credits left"
   }
  ],
  "odds_enabled": true
