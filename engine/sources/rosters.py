@@ -1,14 +1,17 @@
 """Current team rosters from ESPN, so traded/signed players are on the right team."""
 import requests
 
+from engine.sources.espn import pos_group
 from engine.stats import TEAM_NAMES, norm_name
 
 TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
 ROSTER_URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{tid}/roster"
 
 
-def fetch_rosters():
-    """Returns {normalized player name: team tricode}, or None if ESPN is unreachable."""
+def fetch_rosters(players_out=None):
+    """Returns {normalized player name: team tricode}, or None if ESPN is unreachable.
+
+    If players_out is a list, it is filled with {player_id, player, team, height, pos} rows."""
     try:
         js = requests.get(TEAMS_URL, timeout=20).json()
         teams = [t["team"] for t in js["sports"][0]["leagues"][0]["teams"]]
@@ -31,4 +34,8 @@ def fetch_rosters():
             name = a.get("displayName") or a.get("fullName")
             if name:
                 out[norm_name(name)] = tri
+                if players_out is not None and a.get("id"):
+                    players_out.append({"player_id": int(a["id"]), "player": name, "team": tri,
+                                        "height": a.get("height"),
+                                        "pos": pos_group((a.get("position") or {}).get("abbreviation"))})
     return out or None

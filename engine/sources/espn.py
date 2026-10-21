@@ -51,6 +51,17 @@ def _et_date(utc):
     return dt.astimezone(ET).date().isoformat()
 
 
+def _odds(odds_list):
+    """(home spread, over/under total) from ESPN's odds block. Negative spread = home favored."""
+    for o in odds_list or []:
+        sp, tot = o.get("spread"), o.get("overUnder")
+        try:
+            return (float(sp) if sp is not None else None), (float(tot) if tot is not None else None)
+        except (TypeError, ValueError):
+            continue
+    return None, None
+
+
 def parse_scoreboard(js):
     games = []
     for ev in js.get("events", []):
@@ -60,9 +71,11 @@ def parse_scoreboard(js):
         if stype not in COUNTED_TYPES or not {teams.get("home"), teams.get("away")} <= NBA_TEAMS:
             continue
         st = (comp.get("status") or ev.get("status") or {}).get("type", {})
+        spread, total = _odds(comp.get("odds"))
         games.append({
             "game_id": str(ev["id"]), "date": _et_date(ev["date"]), "tipoff_utc": ev["date"],
             "completed": bool(st.get("completed")), "home": teams["home"], "away": teams["away"],
+            "spread": spread, "total": total,
         })
     return games
 
@@ -90,13 +103,22 @@ def games_between(start_iso, end_iso, workers=8):
 # --------------------------------------------------------------- box scores
 
 LABEL_MAP = {"MIN": "min", "PTS": "pts", "REB": "reb", "OREB": "oreb", "AST": "ast", "STL": "stl",
-             "BLK": "blk", "TO": "tov", "FG": ("fgm", "fga"), "3PT": ("fg3m", "fg3a"), "FT": ("ftm", "fta")}
+             "BLK": "blk", "TO": "tov", "FG": ("fgm", "fga"), "3PT": ("fg3m", "fg3a"), "FT": ("ftm", "fta"),
+             "DREB": "dreb", "PF": "pf"}
 KEY_MAP = {"minutes": "min", "points": "pts", "rebounds": "reb", "offensiveRebounds": "oreb",
            "assists": "ast", "steals": "stl", "blocks": "blk", "turnovers": "tov",
            "fieldGoalsMade-fieldGoalsAttempted": ("fgm", "fga"),
            "threePointFieldGoalsMade-threePointFieldGoalsAttempted": ("fg3m", "fg3a"),
-           "freeThrowsMade-freeThrowsAttempted": ("ftm", "fta")}
-FIELDS = ["min", "pts", "reb", "oreb", "ast", "stl", "blk", "tov", "fgm", "fga", "fg3m", "fg3a", "ftm", "fta"]
+           "freeThrowsMade-freeThrowsAttempted": ("ftm", "fta"),
+           "defensiveRebounds": "dreb", "fouls": "pf"}
+FIELDS = ["min", "pts", "reb", "oreb", "dreb", "ast", "stl", "blk", "tov", "pf",
+          "fgm", "fga", "fg3m", "fg3a", "ftm", "fta"]
+POS = {"PG": "G", "SG": "G", "G": "G", "SF": "F", "PF": "F", "F": "F", "C": "C", "GF": "F", "FC": "C"}
+
+
+def pos_group(abbr):
+    """ESPN position -> G / F / C."""
+    return POS.get(str(abbr or "").upper(), "F")
 
 
 def _num(v):
@@ -115,7 +137,7 @@ def _minutes(v):
 
 
 def parse_summary(js, game_id=None):
-    """Summary JSON -> list of player-game rows, or None if the game isn't final."""
+    """Summary JSON -> (player-game rows, game info), or None if the game isn't final."""
     comp = js["header"]["competitions"][0]
     if not comp.get("status", {}).get("type", {}).get("completed"):
         return None
@@ -148,10 +170,19 @@ def parse_summary(js, game_id=None):
                 played = bool(vals) and not a.get("didNotPlay") and row["min"] > 0
                 rows.append({"game_id": gid, "date": day, "team": team, "opp": opp,
                              "home": side.get(team) == "home", "player_id": int(ath["id"]),
-                             "player": ath.get("displayName", ""), "starter": bool(a.get("starter")),
+                             "player": ath.get("displayName", ""),
+                             "pos": pos_group((ath.get("position") or {}).get("abbreviation")),
+                             "starter": bool(a.get("starter")),
                              "played": played, **{k: (row[k] if k == "min" else int(row[k])) for k in FIELDS}})
-    return rows
+    spread, total = _odds(js.get("pickcenter"))
+    home = next((t for t, h in side.items() if h == "home"), None)
+    score = {tri(c["team"]["abbreviation"]): _num(c.get("score", 0)) for c in comp["competitors"]}
+    game = {"game_id": gid, "date": day, "home": home, "away": next((t for t in teams if t != home), None),
+            "spread": spread, "total": total, "home_score": score.get(home),
+            "away_score": next((v for t, v in score.items() if t != home), None)}
+    return rows, game
 
 
 def box(game_id):
+    """(rows, game info) for a finished game, or None."""
     return parse_summary(get_json(f"{BASE}/summary", {"event": game_id}), game_id)

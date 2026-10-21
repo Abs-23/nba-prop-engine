@@ -36,6 +36,11 @@ def main(day=None):
 
     # 1. database
     db = database.load()
+    if len(db) and not {"pos", "pf", "dreb"} <= set(db.columns):
+        log("Database is missing matchup fields (position, fouls): rebuilding it from scratch.")
+        db = db.iloc[0:0]
+        for f in DATA.glob("backfill_*.done"):
+            f.unlink()
     cur_year = espn.season_start_year(today)
     # Seasons are worked out from the date, so the engine rolls over each October by itself.
     cfg["season"] = {"current": str(cur_year)[2:], "prior": str(cur_year - 1)[2:]}
@@ -70,7 +75,10 @@ def main(day=None):
     odds = OddsClient(regions=cfg["odds_api"]["regions"])
     if games:
         from engine.sources.rosters import fetch_rosters
-        rosters = fetch_rosters()
+        roster_rows = []
+        rosters = fetch_rosters(roster_rows)
+        if roster_rows:
+            database.save_players(roster_rows)
         health.append({"ok": rosters is not None,
                        "text": "Rosters loaded" if rosters else "Rosters unavailable (using last team played for)"})
         injuries = fetch_injuries()

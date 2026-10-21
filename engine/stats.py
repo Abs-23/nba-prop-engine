@@ -3,7 +3,7 @@ import re
 import unicodedata
 
 # Base box-score columns we store for every player-game.
-BASE_STATS = ["pts", "reb", "oreb", "ast", "stl", "blk", "tov",
+BASE_STATS = ["pts", "reb", "oreb", "dreb", "ast", "stl", "blk", "tov", "pf",
               "fgm", "fga", "fg3m", "fg3a", "ftm", "fta"]
 
 # Every stat the engine can pick, as a sum of base columns.
