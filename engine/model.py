@@ -293,7 +293,7 @@ class MatchupContext:
         for k in ("stl", "blk", "tov", "bs"):
             prof["means"][k] *= pm_adj / pm if pm else 1.0
         combos = {"pra": ["pts", "reb", "ast"], "pr": ["pts", "reb"], "pa": ["pts", "ast"], "ra": ["reb", "ast"]}
-        prof["matchup"] = {}
+        prof["matchup_detail"] = {}
         for stat in list(M.POS_STATS) + list(combos):
             parts = combos.get(stat, [stat])
             if stat in combos:
@@ -307,14 +307,14 @@ class MatchupContext:
             if gf["blowout"] > 0 and abs(min_eff) > 0.005:
                 items.append({"stat": None, "factor": "blowout", "effect": min_eff, "x": pm - pm_adj, "weight": 1})
             net = float(np.prod([1 + i["effect"] for i in items if i["weight"]]) - 1)
-            prof["matchup"][stat] = {"net": net, "items": items}
+            prof["matchup_detail"][stat] = {"net": net, "items": items}
         implied = None
         if game.get("total") is not None and game.get("spread") is not None and not pd.isna(game.get("total")):
             implied = (game["total"] - game["spread"]) / 2 if home else (game["total"] + game["spread"]) / 2
         prof["game"] = {"spread": game.get("spread"), "total": game.get("total"), "home": home,
                         "implied_pts": implied, "blowout": gf["blowout"]}
         bigs = self.bigs.get(opp, [])
-        for stat, mu in prof["matchup"].items():
+        for stat, mu in prof["matchup_detail"].items():
             for it in mu["items"]:
                 it["text"] = M.describe(it["factor"], it["stat"] or stat, opp, pos, self.team, bigs,
                                         prof["game"], it["x"])

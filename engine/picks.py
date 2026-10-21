@@ -83,13 +83,13 @@ def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over", cfg=Non
 
 
 def matchup_net(prof, stat):
-    m = prof.get("matchup", {}).get(stat)
+    m = prof.get("matchup_detail", {}).get(stat)
     return m["net"] if m else 0.0
 
 
 def matchup_ok(prof, stat, side, cfg):
     """The matchup must lean the pick's way overall."""
-    if stat not in prof.get("matchup", {}):
+    if stat not in prof.get("matchup_detail", {}):
         return True  # stats without matchup checks (steals, blocks...) aren't gated
     net = matchup_net(prof, stat)
     thr = cfg["matchups"]["min_net_effect"]
@@ -98,7 +98,7 @@ def matchup_ok(prof, stat, side, cfg):
 
 def matchup_reasons(prof, stat, side, cfg=None):
     """One line per matchup check, strongest first, plus a one-line summary."""
-    m = prof.get("matchup", {}).get(stat)
+    m = prof.get("matchup_detail", {}).get(stat)
     if not m:
         return []
     up = side == "over"
