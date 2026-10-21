@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NBA Prop Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Layout: arena scoreboard. Dark slate board, court-blue accent, condensed scoreboard numerals. */
+:root{
+  --bg:#eef1f5; --panel:#ffffff; --ink:#0f1a2a; --muted:#5a6678; --line:#d8dee8; --chip:#e3e8f0;
+  --accent:#1f4fd1; --good:#1f8a4c; --warn:#b86e00; --info:#2f6fb3;
+  --display:"Saira Condensed","Arial Narrow",sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0b1220; --panel:#121b2c; --ink:#e8edf5; --muted:#8d99ad; --line:#223049; --chip:#1a2539;
+  --accent:#6f9bff; --good:#4cc77f; --warn:#f0a531; --info:#6aa8ec; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1220; --panel:#121b2c; --ink:#e8edf5; --muted:#8d99ad; --line:#223049; --chip:#1a2539;
+  --accent:#6f9bff; --good:#4cc77f; --warn:#f0a531; --info:#6aa8ec; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--body)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);letter-spacing:.02em;margin:0;text-wrap:balance}
+h1{font-size:46px;line-height:1;text-transform:uppercase}
+h2{font-size:26px;text-transform:uppercase;margin:40px 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 small{font:500 13px var(--body);color:var(--muted);text-transform:none;letter-spacing:0}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:3px solid var(--ink);padding-bottom:12px}
+.date{color:var(--accent);font:700 18px var(--display);text-transform:uppercase}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:var(--chip);border-radius:99px;padding:3px 10px;font-size:12px;color:var(--muted)}
+.chip.bad{color:var(--warn)}
+.demo{background:var(--warn);color:var(--panel);font:600 13px var(--body);padding:8px 12px;border-radius:6px;margin-bottom:16px}
+.note{margin:16px 0 0;color:var(--muted);font-size:13px;max-width:760px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px}
+.tab{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 14px;border-radius:6px;cursor:pointer;font:600 14px var(--body)}
+.tab:focus-visible,.leg summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.lu-head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line);gap:12px;flex-wrap:wrap}
+.big{font:800 44px var(--display);font-variant-numeric:tabular-nums;color:var(--accent);line-height:1}
+.big small{font:500 13px var(--body);color:var(--muted);margin-left:6px}
+.leg{border-bottom:1px solid var(--line)}
+.leg:last-child{border-bottom:0}
+.leg summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 18px}
+.leg summary::-webkit-details-marker{display:none}
+.leg .what{font-weight:600}
+.leg .meta{color:var(--muted);font-size:13px}
+.leg .p{font:500 15px var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.leg .tier{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:600}
+.leg summary>div{min-width:0}
+ul.reasons{margin:0;padding:0 18px 16px 18px;list-style:none}
+ul.reasons li{padding:4px 0 4px 26px;position:relative;font-size:14px}
+ul.reasons li::before{position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:4px;font:700 12px/18px var(--body);text-align:center;color:var(--panel)}
+li.r-plus::before{content:"+";background:var(--good)}
+li.r-risk::before{content:"!";background:var(--warn)}
+li.r-info::before{content:"i";background:var(--info)}
+.empty{padding:22px 18px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font:600 12px var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+td.n,th.n{text-align:right;font-family:var(--mono);font-size:13px}
+.scroll{overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.grid .panel{padding:14px 16px}
+.grid h3{font-size:18px;text-transform:uppercase;margin-bottom:8px}
+.bar{height:8px;background:var(--chip);border-radius:4px;position:relative;margin-top:4px}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:4px}
+.bar b{position:absolute;top:-3px;width:2px;height:14px;background:var(--ink)}
+.hit{color:var(--good);font-weight:600}.miss{color:var(--warn);font-weight:600}
+select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font:14px var(--body)}
+footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+footer ol{padding-left:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div><div class="date" id="date"></div><h1>NBA Prop Board</h1></div>
+    <div class="chips" id="chips"></div>
+  </div>
+  <p class="note">No pick is guaranteed. Every leg below passed strict filters, and each one shows the evidence for it and the risks against it. The track record at the bottom shows whether the probabilities are honest.</p>
+
+  <h2>Tonight's lineups <small id="lu-sub"></small></h2>
+  <div class="tabs" id="flavor-tabs"></div>
+  <div class="tabs" id="size-tabs"></div>
+  <div class="panel" id="lineup"></div>
+
+  <h2>All qualified picks <small>tap a row to see the reasoning</small></h2>
+  <div class="tabs" id="kind-tabs"></div>
+  <div style="margin-bottom:10px"><select id="stat-filter"></select></div>
+  <div class="panel" id="allpicks"></div>
+
+  <h2>Track record <small id="tr-sub"></small></h2>
+  <div class="grid" id="record"></div>
+  <div class="panel scroll" id="recent" style="margin-top:12px"></div>
+
+  <footer>
+    <strong>How a pick is made</strong>
+    <ol>
+      <li>Every finished box score is stored. Each player's production per minute is weighted toward recent games; last season counts at half weight.</li>
+      <li>Minutes are projected from the last ~5 games (blended with last season early on), and trimmed on back-to-backs.</li>
+      <li>The opponent's tendency to allow each stat adjusts the projection, shrunk toward average until it has enough games.</li>
+      <li>A player-specific distribution turns the projection into a probability for any line.</li>
+      <li><b>Safe</b> picks need ≥85% from the model <i>and</i> ≥85% hit rate over the last 20 games. <b>Market</b> picks must beat the sportsbooks' no-vig price by 5+ points and agree with recent form.</li>
+      <li>Players who are injured, listed questionable, low-minute or volatile are excluded. Lineups take one leg per team, at most two per game.</li>
+    </ol>
+    <div id="generated"></div>
+  </footer>
+</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const pct = x => x == null || isNaN(x) ? "–" : Math.round(x * 100) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const RCLS = {"+":"r-plus","!":"r-risk","i":"r-info"};
+
+$("date").textContent = D.date_label;
+$("generated").textContent = "Generated " + D.generated;
+$("chips").innerHTML = D.health.map(h => `<span class="chip ${h.ok ? "" : "bad"}">${esc(h.text)}</span>`).join("");
+
+function legHTML(p){
+  const right = p.kind === "market"
+    ? `${pct(p.prob)} <span class="meta">vs ${pct(p.fair)}</span>`
+    : pct(p.prob);
+  return `<details class="leg"><summary>
+    <div><div class="tier">${p.tier}${p.kind==="market" ? " · " + esc(p.price_fmt) + " " + esc(p.book) : ""}</div>
+    <div class="what">${esc(p.label)}</div>
+    <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)}</div></div>
+    <div class="p">${right}</div></summary>
+    <ul class="reasons">${p.reasons.map(r => `<li class="${RCLS[r[0]]}">${esc(r[1])}</li>`).join("")}</ul>
+  </details>`;
+}
+
+// ---- lineups
+let flavor = "safest", size = 3;
+const FLAV = {safest:"Safest (X+ thresholds)", value:"Value (vs sportsbook lines)"};
+function drawLineups(){
+  $("flavor-tabs").innerHTML = Object.keys(FLAV).map(f =>
+    `<button class="tab ${f===flavor?"on":""}" data-f="${f}">${FLAV[f]}</button>`).join("");
+  const lus = D.lineups[flavor] || [];
+  $("size-tabs").innerHTML = [3,4,5,6].map(n => {
+    const has = lus.some(l => l.size === n);
+    return `<button class="tab ${n===size?"on":""}" data-s="${n}" ${has?"":"disabled style='opacity:.4'"}>${n}-man</button>`;
+  }).join("");
+  const lu = lus.find(l => l.size === size);
+  $("lineup").innerHTML = lu ? `<div class="lu-head"><div><div class="big">${pct(lu.prob)}<small>chance all ${size} legs hit</small></div></div>
+     <div class="meta">${flavor==="safest" ? "Each leg ≥85% on its own" : "Each leg beats the market price"}</div></div>`
+     + lu.legs.map(legHTML).join("")
+    : `<div class="empty">Not enough picks qualified for a ${size}-leg ${flavor} lineup today. The system won't pad a lineup with weaker legs.</div>`;
+  document.querySelectorAll("[data-f]").forEach(b => b.onclick = () => {flavor = b.dataset.f; drawLineups();});
+  document.querySelectorAll("[data-s]").forEach(b => b.onclick = () => {if(!b.disabled){size = +b.dataset.s; drawLineups();}});
+}
+const nLegs = f => Math.max(0, ...(D.lineups[f]||[]).map(l => l.size));
+if (!nLegs("safest") && nLegs("value")) flavor = "value";
+size = Math.min(3, nLegs(flavor)) || 3;
+$("lu-sub").textContent = D.games_today ? `${D.games_today} games tonight` : "no games today";
+drawLineups();
+
+// ---- all picks
+let kind = "safe";
+function drawPicks(){
+  const KIND = {safe:`Safe (${D.safe.length})`, market:`Market (${D.market.length})`};
+  $("kind-tabs").innerHTML = Object.keys(KIND).map(k =>
+    `<button class="tab ${k===kind?"on":""}" data-k="${k}">${KIND[k]}</button>`).join("");
+  const list = D[kind];
+  const stats = [...new Set(list.map(p => p.stat_label))].sort();
+  const sel = $("stat-filter"), cur = sel.value;
+  sel.innerHTML = `<option value="">All stats</option>` + stats.map(s => `<option ${s===cur?"selected":""}>${esc(s)}</option>`).join("");
+  const shown = list.filter(p => !sel.value || p.stat_label === sel.value);
+  $("allpicks").innerHTML = shown.length ? shown.map(legHTML).join("")
+    : `<div class="empty">${kind==="market" && !D.odds_enabled ? "Add an ODDS_API_KEY to enable picks against real sportsbook lines." : "Nothing qualified here today."}</div>`;
+  document.querySelectorAll("[data-k]").forEach(b => b.onclick = () => {kind = b.dataset.k; $("stat-filter").value=""; drawPicks();});
+}
+$("stat-filter").onchange = drawPicks;
+drawPicks();
+
+// ---- track record
+const R = D.record;
+$("tr-sub").textContent = R.graded_picks ? `${R.graded_picks} graded picks` : "fills in after the first games are graded";
+function barRow(label, actual, expected, n){
+  return `<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-size:13px">
+    <span>${esc(label)} <span class="meta">(${n})</span></span><span><b>${pct(actual)}</b> <span class="meta">vs ${pct(expected)} expected</span></span></div>
+    <div class="bar"><i style="width:${actual*100}%"></i><b style="left:${expected*100}%"></b></div></div>`;
+}
+const cards = [];
+cards.push(`<div class="panel"><h3>Hit rate by tier</h3>${R.by_tier.length ? R.by_tier.map(t => barRow(t.tier, t.rate, t.expected, t.n)).join("") : '<div class="meta">No graded picks yet.</div>'}</div>`);
+cards.push(`<div class="panel"><h3>Are the % honest?</h3>${R.calibration.length ? R.calibration.map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Needs graded picks. Bars should land on the black tick.</div>'}</div>`);
+cards.push(`<div class="panel"><h3>Lineups</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${l.flavor} ${l.size}-man`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
+$("record").innerHTML = cards.join("");
+$("recent").innerHTML = R.recent.length ? `<table><tr><th>Date</th><th>Pick</th><th class="n">Actual</th><th>Result</th></tr>` +
+  R.recent.map(r => `<tr><td>${r.date}</td><td>${esc(r.player)} ${r.side} ${r.line} ${esc(r.stat)} <span class="meta">${r.tier}</span></td><td class="n">${r.actual ?? "–"}</td><td class="${r.result}">${r.result}</td></tr>`).join("") + `</table>`
+  : `<div class="empty">Recent graded picks will appear here.</div>`;
+</script>
+</body>
+</html>

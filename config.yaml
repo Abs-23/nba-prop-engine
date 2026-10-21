@@ -1,0 +1,77 @@
+# NBA Prop Engine — settings you can tune without touching code.
+# Every number here is a deliberate rule. Change one, and the dashboard's
+# track record will tell you whether it helped.
+
+season:
+  current: "2026-27"        # season being predicted
+  prior: "2025-26"          # last season, used as a baseline early on
+  current_id_prefix: "26"   # NBA game IDs look like 0022600001 -> "26"
+  prior_id_prefix: "25"
+
+model:
+  rate_half_life_games: 15        # how fast old games fade when estimating per-minute production
+  minutes_half_life_games: 5      # minutes react faster (role changes show up quickly)
+  prior_season_weight: 0.5        # a last-season game counts half as much as a this-season game
+  minutes_prior_games: 5          # early season: blend this many "virtual" games of last-season minutes
+  opponent_shrink_games: 15       # opponent defense numbers are noisy; shrink toward average until this many games
+  opponent_factor_clamp: [0.90, 1.10]
+  back_to_back_minutes_factor: 0.96
+  dispersion_prior_games: 10      # how much to trust a player's own volatility vs league-typical volatility
+
+gates:                             # a pick must pass ALL of these to be shown
+  min_games_sample: 15            # games in the player's history (both seasons)
+  min_projected_minutes: 24
+  max_minutes_cv: 0.30            # skip players whose minutes swing wildly (coefficient of variation, last 10)
+  exclude_injury_statuses: ["out", "doubtful", "questionable", "day-to-day"]
+
+market_picks:                      # picks against a real sportsbook line
+  # Sportsbook lines are sharp. Picking the spots where our model disagrees most
+  # with the market also picks the spots where our model is most wrong. So the
+  # final probability blends the two: 35% model, 65% market. (In simulation this
+  # weight made the predicted and actual hit rates match. Tune it from the track record.)
+  model_weight: 0.35
+  min_prob: 0.55                  # blended probability
+  min_edge: 0.04                  # blended probability minus the books' fair (no-vig) probability
+  min_l10_hit_rate: 0.60
+  min_books: 2                    # the line must be posted by at least this many books
+  lock_prob: 0.58                 # "Lock" tier
+  lock_l20_hit_rate: 0.65
+  lock_edge: 0.06
+
+safe_thresholds:                   # "X+" picks for any stat, including ones books rarely post (FTA, FGA, 3PA)
+  min_model_prob: 0.85
+  min_l20_hit_rate: 0.85
+  min_threshold:                  # don't bother with trivial picks like "1+ assist"
+    pts: 12
+    reb: 5
+    ast: 4
+    fg3m: 2
+    fg3a: 5
+    fga: 10
+    fgm: 5
+    ftm: 3
+    fta: 4
+    pra: 22
+    pr: 18
+    pa: 16
+    ra: 8
+
+lineups:
+  sizes: [3, 4, 5, 6]
+  max_legs_per_game: 2            # legs from the same game move together; cap the exposure
+  max_legs_per_team: 1
+
+odds_api:
+  regions: "us"
+  # Ordered by priority. When credits are tight, markets at the end are dropped first.
+  markets:
+    - player_points
+    - player_rebounds
+    - player_assists
+    - player_points_rebounds_assists
+    - player_threes
+    - player_frees_made
+    - player_frees_attempts
+    - player_field_goals
+  reserve_credits: 10             # never spend the last few credits
+  max_daily_credits: 400          # hard cap per run even on a paid plan
