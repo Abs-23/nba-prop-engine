@@ -39,7 +39,8 @@ def render(day, games_today, safe, market, lineups, record, health, odds_enabled
         "games_today": games_today,
         "safe": [_pick(p) for p in sorted(safe, key=lambda p: -p["prob"])],
         "market": [_pick(p) for p in sorted(market, key=lambda p: -p["ev"])],
-        "lineups": {f: [{"size": l["size"], "prob": l["prob"], "legs": [_pick(x) for x in l["legs"]]}
+        "lineups": {f: [{"size": l["size"], "prob": l["prob"], "legs": [_pick(x) for x in l["legs"]],
+                         "n_qualified": l.get("n_qualified", l["size"]), "n_filled": l.get("n_filled", 0)}
                         for l in lus] for f, lus in lineups.items()},
         "record": record, "health": health, "odds_enabled": odds_enabled, "out_tonight": out_tonight or {},
     }
