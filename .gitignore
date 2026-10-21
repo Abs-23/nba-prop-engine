@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 .env
 chk.js
+.cache_frame.pkl

@@ -69,6 +69,7 @@ td.n,th.n{text-align:right;font-family:var(--mono);font-size:13px}
 .bar{height:8px;background:var(--chip);border-radius:4px;position:relative;margin-top:4px}
 .bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:4px}
 .bar b{position:absolute;top:-3px;width:2px;height:14px;background:var(--ink)}
+.up{color:var(--good);font-weight:600}.down{color:var(--warn);font-weight:600}
 .hit{color:var(--good);font-weight:600}.miss{color:var(--warn);font-weight:600}
 select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font:14px var(--body)}
 footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
@@ -105,7 +106,8 @@ footer ol{padding-left:18px}
       <li>The opponent's tendency to allow each stat adjusts the projection, shrunk toward average until it has enough games.</li>
       <li>A player-specific distribution turns the projection into a probability for any line.</li>
       <li><b>Safe</b> picks need ≥85% from the model <i>and</i> ≥85% hit rate over the last 20 games. <b>Market</b> picks must beat the sportsbooks' no-vig price by 5+ points and agree with recent form.</li>
-      <li>Players who are injured, listed questionable, low-minute or volatile are excluded. Lineups take one leg per team, at most two per game.</li>
+      <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. A pick needs the matchup to lean its way overall. Last season, Safe picks with a favorable matchup hit about 2 points more often than the rest.</li>
+      <li>Players who are injured, listed questionable, low-minute or volatile are excluded. Lineups take one leg per team, at most two per game, and prefer the strongest matchups.</li>
     </ol>
     <div id="generated"></div>
   </footer>
@@ -128,7 +130,7 @@ function legHTML(p){
   return `<details class="leg"><summary>
     <div><div class="tier">${p.tier}${p.kind==="market" ? " · " + esc(p.price_fmt) + " " + esc(p.book) : ""}</div>
     <div class="what">${esc(p.label)}</div>
-    <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)}</div></div>
+    <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)}${p.matchup_net != null ? ` · <span class="${p.matchup_net >= 0 ? "up" : "down"}">matchup ${p.matchup_net >= 0 ? "+" : ""}${(p.matchup_net*100).toFixed(1)}%</span>` : ""}</div></div>
     <div class="p">${right}</div></summary>
     <ul class="reasons">${p.reasons.map(r => `<li class="${RCLS[r[0]]}">${esc(r[1])}</li>`).join("")}</ul>
   </details>`;

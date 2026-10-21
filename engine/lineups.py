@@ -38,7 +38,7 @@ def build_all(safe, market, cfg):
     lc = cfg["lineups"]
     return {
         "safest": build(safe, lc["sizes"], lc["max_legs_per_game"], lc["max_legs_per_team"],
-                        key=lambda p: (round(p["prob"], 3), p.get("cushion", 0))),
+                        key=lambda p: (round(p["prob"], 2), p.get("matchup_net", 0), p.get("cushion", 0))),
         "value": build(market, lc["sizes"], lc["max_legs_per_game"], lc["max_legs_per_team"],
                        key=lambda p: p["ev"]),
     }

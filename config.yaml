@@ -9,7 +9,7 @@ model:
   minutes_prior_games: 5          # early season: blend this many "virtual" games of last-season minutes
   opponent_shrink_games: 15       # opponent defense numbers are noisy; shrink toward average until this many games
   opponent_factor_clamp: [0.90, 1.10]
-  back_to_back_minutes_factor: 0.96
+  back_to_back_minutes_factor: 1.0   # backtest: starters lost no minutes on back-to-backs
   dispersion_prior_games: 10      # how much to trust a player's own volatility vs league-typical volatility
 
 gates:                             # a pick must pass ALL of these to be shown
@@ -49,6 +49,17 @@ safe_thresholds:                   # "X+" picks for any stat, including ones boo
     pr: 18
     pa: 16
     ra: 8
+
+matchups:
+  # Every stat has its own matchup checks (see engine/matchups.py). Their weights are
+  # re-learned from the box scores on every run. A check only counts if, in past games,
+  # it clearly predicted results AND pointed the way basketball sense says it should.
+  fit_min_t: 1.5
+  # A pick needs the matchup to lean its way overall. Backtest (Jan-Apr of last season):
+  # Safe picks with a favorable matchup hit 87-88%; neutral/unfavorable ones 85-86%.
+  min_net_effect: 0.0
+  # Checks with weight 0 (e.g. opponent height, opponent fouls) are still shown as context.
+  show_context_min_effect: 0.03
 
 lineups:
   sizes: [3, 4, 5, 6]

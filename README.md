@@ -23,16 +23,32 @@ The dashboard always shows the combined probability so the risk is in plain sigh
    (from NBA's public CDN). The first run downloads all of last season as a baseline.
 2. **Production per minute.** Recent games weigh more; last season counts at half weight.
 3. **Minutes.** The biggest driver of any prop. Weighted to the last ~5 games, blended with
-   last season early on, trimmed on back-to-backs. Volatile-minute players are excluded.
-4. **Opponent.** How much of each stat the opponent allows vs league average,
+   last season early on, trimmed when the spread signals a blowout. Volatile-minute players are excluded.
+4. **Opponent.** Steals, blocks and turnovers use how much the opponent allows vs league average,
    shrunk toward neutral until there are enough games to trust it.
 5. **Probability.** A player-specific distribution (negative binomial) turns the projection
    into a probability for any line.
 6. **Market check.** For sportsbook lines, the final probability blends model (35%)
    and market (65%), because sportsbooks are sharp and the model's biggest disagreements
    with them are often the model's mistakes. A pick needs a 4+ point edge after blending.
-7. **Gates.** Injured / questionable / low-minute / thin-history players are dropped.
-8. **Lineups.** One leg per team, at most two per game, never padded with weaker legs.
+7. **Matchup checks.** Each stat has its own (see `engine/matchups.py`):
+
+   | Stat | Checks |
+   |---|---|
+   | Rebounds | position defense, opponent rebounding share, rebound chances, opponent frontcourt height |
+   | Assists | position defense, assisted-shot rate allowed, Vegas team total, turnovers forced |
+   | Points / FG made | position defense, shooting allowed (eFG%), rim protection, Vegas team total |
+   | FG attempts | position defense, Vegas game total, turnovers forced |
+   | 3PM / 3PA | position defense, 3s allowed, 3P% allowed, Vegas total |
+   | FTM / FTA | position defense, FT rate allowed, opponent fouling, home/away |
+   | Minutes (all) | blowout risk from the spread |
+
+   Weights are re-learned from the box scores every run. A check counts only if it clearly
+   predicted results in past games *and* pointed the way basketball sense says it should;
+   others (e.g. opponent height, opponent fouls last season) are shown as context but not counted.
+   A pick needs the matchup to lean its way overall. Backtest: `python scripts/backtest.py`.
+8. **Gates.** Injured / questionable / low-minute / thin-history players are dropped.
+9. **Lineups.** One leg per team, at most two per game, never padded with weaker legs.
 
 Every threshold lives in [`config.yaml`](config.yaml) with a comment explaining it.
 
@@ -46,6 +62,17 @@ talent of every player is known. Latest result over 28 simulated days:
 | Safe (X+) | 88.4% | 88.0% |
 | Market, Strong | 56.2% | 54.7% |
 | Market, Lock | 59.0% | 56.8% |
+
+### Matchup backtest (last season, weights learned only from earlier games)
+
+| Test period | All Safe picks | Favorable matchup | Unfavorable / neutral |
+|---|---|---|---|
+| Jan 1 - Apr | 86.6% | 87.2% | 86.0% |
+| Feb 1 - Apr | 86.5% | 87.8% | 85.4% |
+| Mar 1 - Apr | 87.0% | 88.0% | 86.1% |
+
+Requiring 2+ individual checks to each pass a bar was also tested; it cut picks to ~4/day
+and hit 85.3%, so the engine uses the overall matchup lean instead.
 
 ## Setup (one time)
 

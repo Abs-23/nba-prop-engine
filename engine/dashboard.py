@@ -7,7 +7,7 @@ import numpy as np
 from engine import DOCS, ROOT
 
 KEEP = ["kind", "tier", "game_id", "matchup", "player", "team", "stat", "stat_label", "side", "line",
-        "label", "prob", "fair", "edge", "ev", "price", "book", "proj", "l10", "l20", "reasons"]
+        "label", "prob", "fair", "edge", "ev", "price", "book", "proj", "l10", "l20", "reasons", "matchup_net"]
 
 
 def _clean(o):

@@ -42,6 +42,7 @@ for t in TEAMS:
         scorer = rng.uniform(0.35, 0.85)
         players.append(dict(
             pid=pid, name=f"{t} {NATO[slot]}", team=t, mins=max(1, mins), defense=defense,
+            pos="GGFFC"[slot % 5],
             rate=dict(fga=scorer * 0.55, fg3a=rng.uniform(0.05, 0.25), fta=rng.uniform(0.05, 0.3),
                       reb=rng.uniform(0.12, 0.40), ast=rng.uniform(0.04, 0.28), stl=0.03, blk=0.03, tov=0.06),
         ))
@@ -62,9 +63,12 @@ def sim_game(gid, day, home, away):
             fg3m = min(fgm, rng.binomial(fg3a, 0.36))
             fta = rng.poisson(r["fta"] * m * f)
             ftm = rng.binomial(fta, 0.78)
+            reb = rng.poisson(r["reb"] * m * f)
+            oreb = rng.binomial(reb, 0.25)
             rows.append(dict(game_id=gid, date=day, team=side, opp=opp, home=side == home, player_id=p["pid"],
-                             player=p["name"], starter=p["mins"] > 26, played=m > 0, min=round(m, 2),
-                             pts=2 * fgm + fg3m + ftm, reb=rng.poisson(r["reb"] * m * f), oreb=0,
+                             player=p["name"], pos=p["pos"], starter=p["mins"] > 26, played=m > 0, min=round(m, 2),
+                             pts=2 * fgm + fg3m + ftm, reb=reb, oreb=oreb, dreb=reb - oreb,
+                             pf=rng.poisson(0.07 * m),
                              ast=rng.poisson(r["ast"] * m * f), stl=rng.poisson(r["stl"] * m),
                              blk=rng.poisson(r["blk"] * m), tov=rng.poisson(r["tov"] * m),
                              fgm=fgm, fga=fga, fg3m=fg3m, fg3a=fg3a, ftm=ftm, fta=fta))
@@ -93,13 +97,20 @@ for g in cur_sched:
     BOX[g["game_id"]] = sim_game(g["game_id"], g["date"], g["home"], g["away"])
 
 # ---------------------------------------------------------------- fakes
-for f in [database.PATH, grading.PICKS, grading.LINEUPS, DATA / "backfill_2025.done"]:
+for f in [database.PATH, grading.PICKS, grading.LINEUPS, DATA / "backfill_2025.done", database.GAMES,
+          database.PLAYERS, DATA / "weights.json"]:
     if f.exists():
         f.unlink()
 database.save(pd.DataFrame(rows))
+pd.DataFrame([dict(game_id=g["game_id"], date=g["date"], home=g["home"], away=g["away"], spread=rng.normal(0, 6),
+                   total=rng.normal(226, 8), home_score=None, away_score=None)
+              for g in prior_sched + cur_sched]).to_csv(database.GAMES, index=False)
+pd.DataFrame([dict(player_id=p["pid"], player=p["name"], team=p["team"], height=76 + 3 * "GFC".index(p["pos"]),
+                   pos=p["pos"]) for p in players]).to_csv(database.PLAYERS, index=False)
 (DATA / "backfill_2025.done").write_text("sim")
 for g in cur_sched:
     g["completed"] = True
+    g["spread"], g["total"] = None, None
 
 
 def fake_boxes(game_ids, workers=8):
@@ -110,7 +121,7 @@ database.fetch_boxes = fake_boxes
 espn.games_between = lambda start, end: [g for g in cur_sched if start <= g["date"] <= end]
 import engine.sources.rosters as ros  # noqa: E402
 
-ros.fetch_rosters = lambda: {norm_name(p["name"]): p["team"] for p in players}
+ros.fetch_rosters = lambda players_out=None: {norm_name(p["name"]): p["team"] for p in players}
 run_daily.fetch_injuries = lambda: {norm_name("BOS Alpha"): {"name": "BOS Alpha", "status": "out", "detail": ""},
                                     norm_name("LAL Bravo"): {"name": "LAL Bravo", "status": "questionable", "detail": ""}}
 
@@ -151,7 +162,7 @@ class FakeOdds(odds_mod.OddsClient):
 
 # ---------------------------------------------------------------- run 14 "days"
 days = sorted({g["date"] for g in cur_sched})
-for d in days[:-1]:
+for d in days[-7:-1]:  # last 6 days (each day re-learns weights, ~1 min)
     FakeOdds.today = d
     run_daily.OddsClient = FakeOdds
     run_daily.main(d)

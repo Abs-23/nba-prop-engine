@@ -150,6 +150,8 @@ def player_profile(h, team, opp, game_date, cfg, opp_f, disp0, last_game_by_team
     yesterday = (date.fromisoformat(game_date) - timedelta(days=1)).isoformat()
     b2b = last_game_by_team.get(team) == yesterday
     if b2b:
+        # Last season's data showed no minutes drop on back-to-backs (+0.07 min), so the
+        # default factor is 1.0. Kept as a setting in case that changes.
         proj_min *= mcfg["back_to_back_minutes_factor"]
 
     last10 = h.tail(10)
@@ -229,7 +231,101 @@ def hit_rate(values, line, side):
     return float(hits.mean()), int(hits.sum())
 
 
-def build_profiles(logs, games, rosters, cfg):
+class MatchupContext:
+    """Tonight's matchup numbers for every team, plus the learned factor weights."""
+
+    def __init__(self, logs, game_log, players, rosters, weights, season):
+        from engine import matchups as M
+        self.M = M
+        self.w = weights
+        tg = M.team_games(logs, players)
+        self.team = M.team_latest(tg, season)
+        self.pos = M.pos_latest(M.pos_table(logs), season)
+        gl = game_log.copy()
+        gl["season"] = gl["date"].astype(str).map(season_key)
+        cur = gl[(gl["season"] == season) & gl["total"].notna()]
+        src = cur if len(cur) >= 20 else gl[gl["total"].notna()]
+        self.league_total = float(src["total"].mean()) if len(src) else 225.0
+        self.player_pos = {}
+        if players is not None and len(players):
+            self.player_pos = dict(zip(players["player_id"].astype(int), players["pos"]))
+        played = logs[logs["played"].astype(bool)]
+        self.log_pos = played.groupby("player_id")["pos"].agg(lambda x: x.mode().iat[0]).to_dict()
+        # each team's top rebounding bigs on the current roster (for the evidence text)
+        self.bigs = {}
+        on_team = {k: v for k, v in (rosters or {}).items()}
+        recent = played[played["pos"].isin(["F", "C"]) & (played["min"] >= 15)]
+        recent = recent.sort_values("date").groupby("player_id").tail(40)
+        agg = recent.groupby("player_id").agg(player=("player", "last"), reb=("reb", "mean"), n=("reb", "size"))
+        agg = agg[agg["n"] >= 8].reset_index()
+        for r in agg.sort_values("reb", ascending=False).itertuples():
+            team = on_team.get(norm_name(r.player))
+            if team and len(self.bigs.setdefault(team, [])) < 2 and r.reb >= 5:
+                self.bigs[team].append(f"{r.player.split()[-1]} {r.reb:.1f} rpg")
+
+    def pos_of(self, pid):
+        return self.player_pos.get(int(pid)) or self.log_pos.get(int(pid), "F")
+
+    def apply(self, prof, game):
+        """Re-project the 9 core stats (and their combos) with tonight's matchup."""
+        M, w = self.M, self.w
+        home = prof["home"]
+        gf = M.game_features(game.get("spread"), game.get("total"), home, self.league_total, self.league_total / 2)
+        pos = self.pos_of(prof["player_id"])
+        opp = prof["opp_abbr"]
+        team_row = self.team.loc[opp].to_dict() if opp in self.team.index else None
+        pos_row = self.pos.get((opp, pos))
+        pm = prof["proj_min"]
+        pm_adj = pm + w["minutes"]["blowout_per_point"] * gf["blowout"] * (pm / 36)
+        min_eff = pm_adj / pm - 1 if pm else 0.0
+        eff, means = {}, {}
+        for c in M.POS_STATS:
+            x = M.stat_features(c, team_row, pos_row, gf)
+            tot = 0.0
+            eff[c] = {}
+            for fac, xv in x.items():
+                wt = w["stats"][c]["factors"][fac]["weight"]
+                eff[c][fac] = {"effect": float(np.exp(wt * xv) - 1), "x": xv, "weight": wt}
+                tot += wt * xv
+            means[c] = prof["rates"][c] * pm_adj * float(np.exp(tot))
+        for c in M.POS_STATS:
+            prof["means"][c] = means[c]
+        for k in ("stl", "blk", "tov", "bs"):
+            prof["means"][k] *= pm_adj / pm if pm else 1.0
+        combos = {"pra": ["pts", "reb", "ast"], "pr": ["pts", "reb"], "pa": ["pts", "ast"], "ra": ["reb", "ast"]}
+        prof["matchup"] = {}
+        for stat in list(M.POS_STATS) + list(combos):
+            parts = combos.get(stat, [stat])
+            if stat in combos:
+                prof["means"][stat] = sum(means[c] for c in parts)
+            share = {c: means[c] / max(1e-9, sum(means[x] for x in parts)) for c in parts}
+            items = []
+            for c in parts:
+                for fac, e in eff[c].items():
+                    items.append({"stat": c, "factor": fac, "effect": share[c] * e["effect"], "x": e["x"],
+                                  "weight": e["weight"]})
+            if gf["blowout"] > 0 and abs(min_eff) > 0.005:
+                items.append({"stat": None, "factor": "blowout", "effect": min_eff, "x": pm - pm_adj, "weight": 1})
+            net = float(np.prod([1 + i["effect"] for i in items if i["weight"]]) - 1)
+            prof["matchup"][stat] = {"net": net, "items": items}
+        implied = None
+        if game.get("total") is not None and game.get("spread") is not None and not pd.isna(game.get("total")):
+            implied = (game["total"] - game["spread"]) / 2 if home else (game["total"] + game["spread"]) / 2
+        prof["game"] = {"spread": game.get("spread"), "total": game.get("total"), "home": home,
+                        "implied_pts": implied, "blowout": gf["blowout"]}
+        bigs = self.bigs.get(opp, [])
+        for stat, mu in prof["matchup"].items():
+            for it in mu["items"]:
+                it["text"] = M.describe(it["factor"], it["stat"] or stat, opp, pos, self.team, bigs,
+                                        prof["game"], it["x"])
+                it["label"] = M.FACTOR_LABELS.get(it["factor"], "Blowout risk")
+        prof["pos"] = pos
+        prof["opp_bigs"] = self.bigs.get(opp, [])
+        prof["proj_min_adj"] = pm_adj
+        return prof
+
+
+def build_profiles(logs, games, rosters, cfg, mctx=None):
     """Profiles for every player on tonight's rosters who has history."""
     df = prepare_logs(logs, cfg)
     opp_f = opponent_factors(df, cfg)
@@ -254,5 +350,7 @@ def build_profiles(logs, games, rosters, cfg):
                 if prof:
                     prof.update(game_id=g["game_id"], home=home, tipoff_utc=g.get("tipoff_utc"),
                                 matchup=f'{g["away"]} @ {g["home"]}')
+                    if mctx is not None:
+                        mctx.apply(prof, g)
                     profiles.append(prof)
     return profiles, {"opp_factors": opp_f, "dispersion": disp0}

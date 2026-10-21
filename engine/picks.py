@@ -12,6 +12,10 @@ Two kinds of picks:
                  >= 85% of his last 20 games. This is the closest honest thing
                  to a "sure shot".
 
+Both kinds also need tonight's MATCHUP to lean their way: the per-stat
+matchup checks (engine/matchups.py), weighted by how much each one
+mattered in past games, must add up in the pick's favor.
+
 Every pick carries its reasons: each is a fact computed from the data,
 labeled as support (+), risk (!) or context (i).
 """
@@ -53,7 +57,7 @@ def teammates_out(profiles, injuries):
     return out
 
 
-def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over"):
+def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over", cfg=None):
     """Context reasons. Each is marked + (helps this pick) or ! (works against it),
     which depends on the side: a generous defense helps an over and hurts an under."""
     r = []
@@ -62,15 +66,9 @@ def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over"):
     r.append(("+" if prof["min_cv10"] < 0.15 else "i",
               f'Minutes: projected {prof["proj_min"]:.1f} (last 10 avg {prof["min_l10"]:.1f}, '
               f'{stab} at ±{prof["min_sd10"]:.1f}).'))
-    o, lab = prof["opp"][stat], LABELS[stat].lower()
-    if o["factor"] >= 1.03:
-        r.append(("+" if up else "!", f'Matchup: {prof["opp_abbr"]} allow {100*(o["factor"]-1):.0f}% more {lab} '
-                                      f'than average (#{o["rank"]} most generous of 30).'))
-    elif o["factor"] <= 0.97:
-        r.append(("!" if up else "+", f'Matchup: {prof["opp_abbr"]} allow {100*(1-o["factor"]):.0f}% fewer {lab} '
-                                      f'than average (#{31-o["rank"]} toughest of 30).'))
+    r += matchup_reasons(prof, stat, side, cfg)
     if prof["b2b"]:
-        r.append(("!" if up else "+", "Second night of a back-to-back: minutes trimmed 4%."))
+        r.append(("i", "Second night of a back-to-back (last season this didn't cut starters' minutes)."))
     if prof["new_team"]:
         r.append(("!", f'New team (was {prof["last_team"]}): role and minutes less certain.'))
     if prof["n_cur"] < 5:
@@ -82,6 +80,49 @@ def common_reasons(prof, stat, injuries, outs, injuries_ok, side="over"):
     if not injuries_ok:
         r.append(("!", "Injury report could not be loaded today: check status before tip-off."))
     return r
+
+
+def matchup_net(prof, stat):
+    m = prof.get("matchup", {}).get(stat)
+    return m["net"] if m else 0.0
+
+
+def matchup_ok(prof, stat, side, cfg):
+    """The matchup must lean the pick's way overall."""
+    if stat not in prof.get("matchup", {}):
+        return True  # stats without matchup checks (steals, blocks...) aren't gated
+    net = matchup_net(prof, stat)
+    thr = cfg["matchups"]["min_net_effect"]
+    return net > thr if side == "over" else net < -thr
+
+
+def matchup_reasons(prof, stat, side, cfg=None):
+    """One line per matchup check, strongest first, plus a one-line summary."""
+    m = prof.get("matchup", {}).get(stat)
+    if not m:
+        return []
+    up = side == "over"
+    ctx_min = (cfg or {}).get("matchups", {}).get("show_context_min_effect", 0.03)
+    counted = [i for i in m["items"] if i["weight"]]
+    ctx = [i for i in m["items"] if not i["weight"] and abs(np.exp(i["x"]) - 1) >= ctx_min and i["text"]]
+    help_ = [i for i in counted if (i["effect"] > 0.005) == up and abs(i["effect"]) > 0.005]
+    hurt = [i for i in counted if (i["effect"] > 0.005) != up and abs(i["effect"]) > 0.005]
+    net = m["net"]
+    lab = LABELS[stat].lower()
+    out = [("+" if (net > 0) == up else "!",
+            f'Matchup overall: {100*net:+.1f}% {lab} vs his usual output '
+            f'({len(help_)} check{"s" if len(help_) != 1 else ""} for this pick, {len(hurt)} against).')]
+    multi = len({i["stat"] for i in counted if i["stat"]}) > 1
+    for i in sorted(counted, key=lambda i: -abs(i["effect"])):
+        if abs(i["effect"]) < 0.005 or not i["text"]:
+            continue
+        tag = "+" if (i["effect"] > 0) == up else "!"
+        comp = f'{LABELS[i["stat"]]} · ' if multi and i["stat"] else ""
+        out.append((tag, f'{comp}{i["label"]}: {i["text"]} ({100*i["effect"]:+.1f}%).'))
+    for i in ctx:
+        out.append(("i", f'{i["label"]}: {i["text"]}. Checked, but it had no measurable effect last season, '
+                         'so it is not counted.'))
+    return out
 
 
 def market_picks(profiles, lines, injuries, cfg):
@@ -114,7 +155,7 @@ def market_picks(profiles, lines, injuries, cfg):
             l10, l10n = hit_rate(vals[-10:], line, side)
             l20, l20n = hit_rate(vals[-20:], line, side)
             if (p < mc["min_prob"] or edge < mc["min_edge"] or ln["books"] < mc["min_books"]
-                    or l10 is None or l10 < mc["min_l10_hit_rate"]):
+                    or l10 is None or l10 < mc["min_l10_hit_rate"] or not matchup_ok(prof, stat, side, cfg)):
                 continue
             lock = (p >= mc["lock_prob"] and (l20 or 0) >= mc["lock_l20_hit_rate"]
                     and edge >= mc["lock_edge"])
@@ -127,7 +168,7 @@ def market_picks(profiles, lines, injuries, cfg):
                  f'Recent form: went {side} {line} in {l10n} of last {min(10, len(vals))}, '
                  f'{l20n} of last {min(20, len(vals))}.'),
             ]
-            reasons += common_reasons(prof, stat, injuries, outs, injuries is not None, side)
+            reasons += common_reasons(prof, stat, injuries, outs, injuries is not None, side, cfg)
             picks.append({
                 "kind": "market", "tier": "Lock" if lock else "Strong",
                 "game_id": prof["game_id"], "matchup": prof["matchup"], "tipoff_utc": prof["tipoff_utc"],
@@ -136,6 +177,7 @@ def market_picks(profiles, lines, injuries, cfg):
                 "label": f'{prof["player"]} {side.title()} {line} {LABELS[stat]}',
                 "prob": p, "prob_model": p_model, "fair": fair, "edge": edge, "ev": ev, "price": price, "book": book,
                 "proj": mean, "l10": l10, "l20": l20, "reasons": reasons,
+                "matchup_net": matchup_net(prof, stat),
             })
     return picks, skipped
 
@@ -159,7 +201,7 @@ def safe_picks(profiles, injuries, cfg):
                     break
                 best = (k, p, l20)
                 k += 1
-            if not best:
+            if not best or not matchup_ok(prof, stat, "over", cfg):
                 continue
             k, p, l20 = best
             l10n = int((vals[-10:] >= k).sum())
@@ -172,7 +214,7 @@ def safe_picks(profiles, injuries, cfg):
                 ("i", f"Cushion: needs {k}, projected {mean:.1f} ({mean - k:+.1f}). "
                       "Sportsbooks sell this as an alt line at heavy juice."),
             ]
-            reasons += common_reasons(prof, stat, injuries, outs, injuries is not None)
+            reasons += common_reasons(prof, stat, injuries, outs, injuries is not None, "over", cfg)
             picks.append({
                 "kind": "safe", "tier": "Safe",
                 "game_id": prof["game_id"], "matchup": prof["matchup"], "tipoff_utc": prof["tipoff_utc"],
@@ -181,6 +223,6 @@ def safe_picks(profiles, injuries, cfg):
                 "label": f'{prof["player"]} {k}+ {LABELS[stat]}',
                 "prob": p, "proj": mean, "l20": l20, "l10": l10n / min(10, len(vals)),
                 "cushion": (mean - k) / max(1.0, np.sqrt(mean * prof["disp"][stat])),
-                "reasons": reasons,
+                "reasons": reasons, "matchup_net": matchup_net(prof, stat),
             })
     return picks

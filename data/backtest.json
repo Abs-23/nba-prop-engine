@@ -1,0 +1,27 @@
+{
+ "split": "2026-03-01",
+ "test_days": 87,
+ "summary": [
+  {
+   "model": "OLD",
+   "picks": 7625,
+   "per_day": 87.6437,
+   "predicted": 0.8802,
+   "hit_rate": 0.8698
+  },
+  {
+   "model": "NEW",
+   "picks": 7411,
+   "per_day": 85.1839,
+   "predicted": 0.879,
+   "hit_rate": 0.8724
+  },
+  {
+   "model": "NEW+A",
+   "picks": 279,
+   "per_day": 3.2069,
+   "predicted": 0.8874,
+   "hit_rate": 0.8889
+  }
+ ]
+}

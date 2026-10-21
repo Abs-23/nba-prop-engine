@@ -14,10 +14,10 @@ import argparse
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from engine import DATA, database, grading, load_config
+from engine import DATA, database, fit, grading, load_config
 from engine.dashboard import render
 from engine.lineups import build_all
-from engine.model import build_profiles
+from engine.model import MatchupContext, build_profiles
 from engine.picks import market_picks, safe_picks
 from engine.sources import espn
 from engine.sources.injuries import fetch_injuries
@@ -85,8 +85,16 @@ def main(day=None):
         health.append({"ok": injuries is not None,
                        "text": f"Injury report: {len(injuries)} listed" if injuries is not None else "Injury report unavailable"})
 
-        # 4. project + pick
-        profiles, _ = build_profiles(db, games, rosters, cfg)
+        # 4. learn matchup weights from every game so far, then project + pick
+        log("Learning matchup weights from past games...")
+        frame = fit.build_frame(db, database.load_games(), database.load_players())
+        weights = fit.fit_weights(frame, cfg["matchups"]["fit_min_t"])
+        fit.save_weights(weights)
+        used = sum(1 for v in weights["stats"].values() for f in v["factors"].values() if f["weight"])
+        health.append({"ok": True, "text": f"Matchup checks: {used} weighted, from {weights['n_rows']:,} player-games"})
+        mctx = MatchupContext(db, database.load_games(), database.load_players(), rosters, weights,
+                              cfg["season"]["current"])
+        profiles, _ = build_profiles(db, games, rosters, cfg, mctx)
         log(f"Projected {len(profiles)} players")
         safe = safe_picks(profiles, injuries, cfg)
 
