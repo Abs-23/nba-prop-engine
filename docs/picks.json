@@ -1,7 +1,7 @@
 {
  "date": "2026-10-21",
  "date_label": "Wednesday, October 21, 2026",
- "generated": "2026-10-21 20:15 UTC",
+ "generated": "2026-10-21 20:19 UTC",
  "games_today": 11,
  "safe": [
   {
@@ -401,71 +401,6 @@
     ]
    ],
    "matchup_net": 0.0669
-  },
-  {
-   "kind": "safe",
-   "tier": "Safe",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "LaMelo Ball",
-   "team": "MIN",
-   "stat": "fg3a",
-   "stat_label": "3-Point Attempts",
-   "side": "over",
-   "line": 6.5,
-   "label": "LaMelo Ball 7+ 3-Point Attempts",
-   "prob": 0.9175,
-   "fair": null,
-   "edge": null,
-   "ev": null,
-   "price": null,
-   "book": null,
-   "proj": 11.1321,
-   "l10": 0.9,
-   "l20": 0.95,
-   "reasons": [
-    [
-     "+",
-     "Projection: 11.1 3-point attempts tonight (usual 11.0); model gives 92% for 7+."
-    ],
-    [
-     "+",
-     "Floor: reached 7+ in 19 of last 20 and 9 of last 10 (89% across all 72 games tracked)."
-    ],
-    [
-     "i",
-     "Cushion: needs 7, projected 11.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-    ],
-    [
-     "+",
-     "Matchup overall: +4.6% 3-point attempts vs his usual output (3 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Game pace (Vegas total): Vegas game total 240.5 (+2.5%)."
-    ],
-    [
-     "+",
-     "Position defense: MIA allow 4% more 3-point attempts per minute to guards than average (+1.3%)."
-    ],
-    [
-     "+",
-     "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.6%)."
-    ],
-    [
-     "!",
-     "New team (was CHA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0464
   },
   {
    "kind": "safe",
@@ -876,75 +811,6 @@
   {
    "kind": "safe",
    "tier": "Safe",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "LaMelo Ball",
-   "team": "MIN",
-   "stat": "fg3m",
-   "stat_label": "3-Pointers Made",
-   "side": "over",
-   "line": 1.5,
-   "label": "LaMelo Ball 2+ 3-Pointers Made",
-   "prob": 0.9005,
-   "fair": null,
-   "edge": null,
-   "ev": null,
-   "price": null,
-   "book": null,
-   "proj": 3.9191,
-   "l10": 1.0,
-   "l20": 1.0,
-   "reasons": [
-    [
-     "+",
-     "Projection: 3.9 3-pointers made tonight (usual 3.9); model gives 90% for 2+."
-    ],
-    [
-     "+",
-     "Floor: reached 2+ in 20 of last 20 and 10 of last 10 (88% across all 72 games tracked)."
-    ],
-    [
-     "i",
-     "Cushion: needs 2, projected 3.9 (+1.9). Sportsbooks sell this as an alt line at heavy juice."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-    ],
-    [
-     "+",
-     "Matchup overall: +2.9% 3-pointers made vs his usual output (3 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 119.5 points (+2.1%)."
-    ],
-    [
-     "!",
-     "Opponent players out: MIA at full strength (-0.9%)."
-    ],
-    [
-     "+",
-     "Position defense: MIA allow 4% more 3-pointers made per minute to guards than average (+0.9%)."
-    ],
-    [
-     "+",
-     "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.5%)."
-    ],
-    [
-     "!",
-     "New team (was CHA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0294
-  },
-  {
-   "kind": "safe",
-   "tier": "Safe",
    "game_id": "401909839",
    "matchup": "IND @ NOP",
    "player": "Pascal Siakam",
@@ -1136,75 +1002,6 @@
     ]
    ],
    "matchup_net": 0.0646
-  },
-  {
-   "kind": "safe",
-   "tier": "Safe",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "LaMelo Ball",
-   "team": "MIN",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "over",
-   "line": 3.5,
-   "label": "LaMelo Ball 4+ Assists",
-   "prob": 0.885,
-   "fair": null,
-   "edge": null,
-   "ev": null,
-   "price": null,
-   "book": null,
-   "proj": 6.4552,
-   "l10": 0.9,
-   "l20": 0.9,
-   "reasons": [
-    [
-     "+",
-     "Projection: 6.5 assists tonight (usual 6.5); model gives 89% for 4+."
-    ],
-    [
-     "+",
-     "Floor: reached 4+ in 18 of last 20 and 9 of last 10 (93% across all 72 games tracked)."
-    ],
-    [
-     "i",
-     "Cushion: needs 4, projected 6.5 (+2.5). Sportsbooks sell this as an alt line at heavy juice."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-    ],
-    [
-     "+",
-     "Matchup overall: +1.1% assists vs his usual output (2 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 119.5 points (+1.9%)."
-    ],
-    [
-     "!",
-     "Opponent players out: MIA at full strength (-1.5%)."
-    ],
-    [
-     "+",
-     "Position defense: MIA allow 4% more assists per minute to guards than average (+1.3%)."
-    ],
-    [
-     "!",
-     "Teammates out: MIN without Donte DiVincenzo (11%) of the team's assists (-0.8%)."
-    ],
-    [
-     "!",
-     "New team (was CHA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0105
   },
   {
    "kind": "safe",
@@ -1538,71 +1335,6 @@
     ]
    ],
    "matchup_net": 0.0241
-  },
-  {
-   "kind": "safe",
-   "tier": "Safe",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "LaMelo Ball",
-   "team": "MIN",
-   "stat": "fga",
-   "stat_label": "FG Attempts",
-   "side": "over",
-   "line": 12.5,
-   "label": "LaMelo Ball 13+ FG Attempts",
-   "prob": 0.8596,
-   "fair": null,
-   "edge": null,
-   "ev": null,
-   "price": null,
-   "book": null,
-   "proj": 17.2096,
-   "l10": 0.9,
-   "l20": 0.95,
-   "reasons": [
-    [
-     "+",
-     "Projection: 17.2 fg attempts tonight (usual 17.4); model gives 86% for 13+."
-    ],
-    [
-     "+",
-     "Floor: reached 13+ in 19 of last 20 and 9 of last 10 (85% across all 72 games tracked)."
-    ],
-    [
-     "i",
-     "Cushion: needs 13, projected 17.2 (+4.2). Sportsbooks sell this as an alt line at heavy juice."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-    ],
-    [
-     "+",
-     "Matchup overall: +1.4% fg attempts vs his usual output (2 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Game pace (Vegas total): Vegas game total 240.5 (+1.5%)."
-    ],
-    [
-     "+",
-     "Position defense: MIA allow 3% more fg attempts per minute to guards than average (+1.4%)."
-    ],
-    [
-     "!",
-     "Teammates out: MIN without Donte DiVincenzo (10%) of the team's shots (-1.3%)."
-    ],
-    [
-     "!",
-     "New team (was CHA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0139
   }
  ],
  "market": [
@@ -1618,10 +1350,10 @@
    "side": "over",
    "line": 13.5,
    "label": "Andrew Nembhard Over 13.5 Points",
-   "prob": 0.5693,
-   "fair": 0.4768,
-   "edge": 0.0925,
-   "ev": 0.1671,
+   "prob": 0.5711,
+   "fair": 0.4796,
+   "edge": 0.0916,
+   "ev": 0.1708,
    "price": 105,
    "book": "BetRivers",
    "proj": 18.7654,
@@ -1634,7 +1366,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.3 pts. Best price +105 at BetRivers."
+     "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.2 pts. Best price +105 at BetRivers."
     ],
     [
      "i",
@@ -1688,10 +1420,10 @@
    "side": "over",
    "line": 20.5,
    "label": "Pascal Siakam Over 20.5 Points",
-   "prob": 0.6011,
-   "fair": 0.5018,
-   "edge": 0.0993,
-   "ev": 0.1576,
+   "prob": 0.6001,
+   "fair": 0.5003,
+   "edge": 0.0998,
+   "ev": 0.1558,
    "price": -108,
    "book": "DraftKings",
    "proj": 26.5739,
@@ -1704,7 +1436,7 @@
     ],
     [
      "+",
-     "Market: books price the over at 50% (no-vig). Blending model and market gives 60%, an edge of +9.9 pts. Best price -108 at DraftKings."
+     "Market: books price the over at 50% (no-vig). Blending model and market gives 60%, an edge of +10.0 pts. Best price -108 at DraftKings."
     ],
     [
      "+",
@@ -1741,158 +1473,6 @@
    ],
    "matchup_net": 0.0637,
    "price_fmt": "-108"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909835",
-   "matchup": "MIL @ WAS",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 22.5,
-   "label": "Tyler Herro Under 22.5 Points",
-   "prob": 0.6115,
-   "fair": 0.5137,
-   "edge": 0.0978,
-   "ev": 0.1478,
-   "price": -114,
-   "book": "BetOnline.ag",
-   "proj": 17.7021,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 17.7 points vs line 22.5. Model alone: 79% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 61%, an edge of +9.8 pts. Best price -114 at BetOnline.ag."
-    ],
-    [
-     "+",
-     "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.5% points vs his usual output (2 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-    ],
-    [
-     "!",
-     "Position defense: WAS allow 2% more points per minute to guards than average (+0.9%)."
-    ],
-    [
-     "!",
-     "Shooting allowed: WAS allow 56.6% effective FG (#4 worst defense, last season) (+0.7%)."
-    ],
-    [
-     "i",
-     "Rim protection: WAS block 5.3 shots per 100 possessions (#6 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "!",
-     "New team (was MIA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0551,
-   "price_fmt": "-114"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909091",
-   "matchup": "MIN @ MIA",
-   "player": "Giannis Antetokounmpo",
-   "team": "MIA",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 28.5,
-   "label": "Giannis Antetokounmpo Under 28.5 Points",
-   "prob": 0.5917,
-   "fair": 0.5036,
-   "edge": 0.088,
-   "ev": 0.1295,
-   "price": -110,
-   "book": "BetMGM",
-   "proj": 23.6237,
-   "l10": 0.8,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 23.6 points vs line 28.5. Model alone: 76% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 50% (no-vig). Blending model and market gives 59%, an edge of +8.8 pts. Best price -110 at BetMGM."
-    ],
-    [
-     "+",
-     "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-    ],
-    [
-     "+",
-     "Matchup overall: -7.7% points vs his usual output (4 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.2 minutes vs usual 27.4 (-4.4%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-    ],
-    [
-     "!",
-     "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-    ],
-    [
-     "+",
-     "Position defense: MIN allow 1% fewer points per minute to forwards than average (-0.6%)."
-    ],
-    [
-     "+",
-     "Shooting allowed: MIN allow 53.1% effective FG (#27 worst defense, last season) (-0.5%)."
-    ],
-    [
-     "i",
-     "Rim protection: MIN block 5.3 shots per 100 possessions (#8 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "!",
-     "New team (was MIL): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0773,
-   "price_fmt": "-110"
   },
   {
    "kind": "market",
@@ -2112,10 +1692,10 @@
    "side": "under",
    "line": 23.5,
    "label": "Austin Reaves Under 23.5 Points",
-   "prob": 0.5555,
-   "fair": 0.492,
-   "edge": 0.0635,
-   "ev": 0.0795,
+   "prob": 0.5558,
+   "fair": 0.4924,
+   "edge": 0.0633,
+   "ev": 0.0801,
    "price": -106,
    "book": "DraftKings",
    "proj": 20.6534,
@@ -2173,142 +1753,6 @@
    ],
    "matchup_net": -0.012,
    "price_fmt": "-106"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909837",
-   "matchup": "CHI @ TOR",
-   "player": "Norman Powell",
-   "team": "CHI",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 19.5,
-   "label": "Norman Powell Under 19.5 Points",
-   "prob": 0.5632,
-   "fair": 0.5144,
-   "edge": 0.0487,
-   "ev": 0.0752,
-   "price": -110,
-   "book": "BetMGM",
-   "proj": 17.5141,
-   "l10": 0.6,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Projection: 17.5 points vs line 19.5. Model alone: 65% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +4.9 pts. Best price -110 at BetMGM."
-    ],
-    [
-     "i",
-     "Recent form: went under 19.5 in 6 of last 10, 11 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 28.0 (last 10 avg 26.7, fairly stable at \u00b15.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -10.1% points vs his usual output (3 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.2 minutes vs usual 28.0 (-0.6 for blowout risk (spread 10.5)) (-6.3%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-    ],
-    [
-     "+",
-     "Opponent players out: TOR at full strength (-1.0%)."
-    ],
-    [
-     "!",
-     "New team (was MIA): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.1014,
-   "price_fmt": "-110"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Julius Randle",
-   "team": "BKN",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 19.5,
-   "label": "Julius Randle Under 19.5 Points",
-   "prob": 0.5885,
-   "fair": 0.5217,
-   "edge": 0.0667,
-   "ev": 0.0708,
-   "price": -122,
-   "book": "BetRivers",
-   "proj": 16.1782,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Projection: 16.2 points vs line 19.5. Model alone: 71% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 52% (no-vig). Blending model and market gives 59%, an edge of +6.7 pts. Best price -122 at BetRivers."
-    ],
-    [
-     "+",
-     "Recent form: went under 19.5 in 7 of last 10, 12 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 31.4 (last 10 avg 33.0, fairly stable at \u00b15.1)."
-    ],
-    [
-     "+",
-     "Matchup overall: -7.1% points vs his usual output (3 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.2 minutes vs usual 31.4 (-3.9%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-    ],
-    [
-     "!",
-     "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
-    ],
-    [
-     "!",
-     "New team (was MIN): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0706,
-   "price_fmt": "-122"
   },
   {
    "kind": "market",
@@ -2379,76 +1823,6 @@
   {
    "kind": "market",
    "tier": "Strong",
-   "game_id": "401909836",
-   "matchup": "CHA @ BKN",
-   "player": "Royce O'Neale",
-   "team": "CHA",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 3.5,
-   "label": "Royce O'Neale Over 3.5 Rebounds",
-   "prob": 0.6208,
-   "fair": 0.5663,
-   "edge": 0.0545,
-   "ev": 0.0611,
-   "price": -141,
-   "book": "BetRivers",
-   "proj": 5.2273,
-   "l10": 0.6,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Projection: 5.2 rebounds vs line 3.5. Model alone: 72% for the over."
-    ],
-    [
-     "+",
-     "Market: books price the over at 57% (no-vig). Blending model and market gives 62%, an edge of +5.5 pts. Best price -141 at BetRivers."
-    ],
-    [
-     "i",
-     "Recent form: went over 3.5 in 6 of last 10, 11 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.8 (last 10 avg 23.1, fairly stable at \u00b14.7)."
-    ],
-    [
-     "+",
-     "Matchup overall: +5.1% rebounds vs his usual output (2 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.2 minutes vs usual 26.8 (+1.4 with teammates out) (+5.2%)."
-    ],
-    [
-     "+",
-     "Opponent rebounding: BKN grab 47.3% of all rebounds in their games (#27 of 30, last season); Sharpe 7.4 rpg, Randle 6.8 rpg (+1.9%)."
-    ],
-    [
-     "!",
-     "Rebound chances: 82.8 total rebounds per game in BKN games (#28 of 30, last season) (-1.6%)."
-    ],
-    [
-     "!",
-     "Opponent players out: BKN at full strength (-0.9%)."
-    ],
-    [
-     "!",
-     "New team (was PHX): role and minutes less certain."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0509,
-   "price_fmt": "-141"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
    "game_id": "401909839",
    "matchup": "IND @ NOP",
    "player": "Zion Williamson",
@@ -2458,10 +1832,10 @@
    "side": "under",
    "line": 21.5,
    "label": "Zion Williamson Under 21.5 Points",
-   "prob": 0.5727,
-   "fair": 0.5166,
-   "edge": 0.0561,
-   "ev": 0.058,
+   "prob": 0.5722,
+   "fair": 0.5159,
+   "edge": 0.0563,
+   "ev": 0.0571,
    "price": -118,
    "book": "DraftKings",
    "proj": 19.0212,
@@ -2645,7 +2019,7 @@
   "safest": [
    {
     "size": 3,
-    "prob": 0.8228,
+    "prob": 0.8131,
     "legs": [
      {
       "kind": "safe",
@@ -2776,73 +2150,85 @@
      {
       "kind": "safe",
       "tier": "Safe",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "LaMelo Ball",
-      "team": "MIN",
-      "stat": "fg3a",
-      "stat_label": "3-Point Attempts",
+      "game_id": "401909836",
+      "matchup": "CHA @ BKN",
+      "player": "Brandon Miller",
+      "team": "CHA",
+      "stat": "pts",
+      "stat_label": "Points",
       "side": "over",
-      "line": 6.5,
-      "label": "LaMelo Ball 7+ 3-Point Attempts",
-      "prob": 0.9175,
+      "line": 12.5,
+      "label": "Brandon Miller 13+ Points",
+      "prob": 0.9067,
       "fair": null,
       "edge": null,
       "ev": null,
       "price": null,
       "book": null,
-      "proj": 11.1321,
+      "proj": 20.8791,
       "l10": 0.9,
-      "l20": 0.95,
+      "l20": 0.85,
       "reasons": [
        [
         "+",
-        "Projection: 11.1 3-point attempts tonight (usual 11.0); model gives 92% for 7+."
+        "Projection: 20.9 points tonight (usual 19.4); model gives 91% for 13+."
        ],
        [
         "+",
-        "Floor: reached 7+ in 19 of last 20 and 9 of last 10 (89% across all 72 games tracked)."
+        "Floor: reached 13+ in 17 of last 20 and 9 of last 10 (88% across all 65 games tracked)."
        ],
        [
         "i",
-        "Cushion: needs 7, projected 11.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
-       ],
-       [
-        "i",
-        "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
+        "Cushion: needs 13, projected 20.9 (+7.9). Sportsbooks sell this as an alt line at heavy juice."
        ],
        [
         "+",
-        "Matchup overall: +4.6% 3-point attempts vs his usual output (3 checks for this pick, 0 against)."
+        "Minutes: projected 30.4 (last 10 avg 31.4, stable at \u00b13.0)."
        ],
        [
         "+",
-        "Game pace (Vegas total): Vegas game total 240.5 (+2.5%)."
+        "Matchup overall: +8.1% points vs his usual output (4 checks for this pick, 2 against)."
        ],
        [
         "+",
-        "Position defense: MIA allow 4% more 3-point attempts per minute to guards than average (+1.3%)."
+        "Minutes: projected 31.8 minutes vs usual 30.4 (+1.4 with teammates out) (+4.6%)."
        ],
        [
         "+",
-        "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.6%)."
+        "Teammates out: CHA without Coby White (12%), Kon Knueppel (11%), Grant Williams (6%) of the team's points (+3.3%)."
+       ],
+       [
+        "+",
+        "Shooting allowed: BKN allow 57.5% effective FG (#2 worst defense, last season) (+1.0%)."
        ],
        [
         "!",
-        "New team (was CHA): role and minutes less certain."
+        "Opponent players out: BKN at full strength (-1.0%)."
+       ],
+       [
+        "+",
+        "Position defense: BKN allow 2% more points per minute to forwards than average (+0.8%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 110.5 points (-0.8%)."
+       ],
+       [
+        "i",
+        "Rim protection: BKN block 4.2 shots per 100 possessions (#23 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
        ],
        [
         "i",
         "Early season: 0 games this season, so last season carries more weight."
        ]
       ],
-      "matchup_net": 0.0464
+      "matchup_net": 0.0811
      }
     ]
    },
    {
     "size": 4,
-    "prob": 0.746,
+    "prob": 0.7405,
     "legs": [
      {
       "kind": "safe",
@@ -2973,71 +2359,6 @@
      {
       "kind": "safe",
       "tier": "Safe",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "LaMelo Ball",
-      "team": "MIN",
-      "stat": "fg3a",
-      "stat_label": "3-Point Attempts",
-      "side": "over",
-      "line": 6.5,
-      "label": "LaMelo Ball 7+ 3-Point Attempts",
-      "prob": 0.9175,
-      "fair": null,
-      "edge": null,
-      "ev": null,
-      "price": null,
-      "book": null,
-      "proj": 11.1321,
-      "l10": 0.9,
-      "l20": 0.95,
-      "reasons": [
-       [
-        "+",
-        "Projection: 11.1 3-point attempts tonight (usual 11.0); model gives 92% for 7+."
-       ],
-       [
-        "+",
-        "Floor: reached 7+ in 19 of last 20 and 9 of last 10 (89% across all 72 games tracked)."
-       ],
-       [
-        "i",
-        "Cushion: needs 7, projected 11.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
-       ],
-       [
-        "i",
-        "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: +4.6% 3-point attempts vs his usual output (3 checks for this pick, 0 against)."
-       ],
-       [
-        "+",
-        "Game pace (Vegas total): Vegas game total 240.5 (+2.5%)."
-       ],
-       [
-        "+",
-        "Position defense: MIA allow 4% more 3-point attempts per minute to guards than average (+1.3%)."
-       ],
-       [
-        "+",
-        "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.6%)."
-       ],
-       [
-        "!",
-        "New team (was CHA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.0464
-     },
-     {
-      "kind": "safe",
-      "tier": "Safe",
       "game_id": "401909836",
       "matchup": "CHA @ BKN",
       "player": "Brandon Miller",
@@ -3111,12 +2432,81 @@
        ]
       ],
       "matchup_net": 0.0811
+     },
+     {
+      "kind": "safe",
+      "tier": "Safe",
+      "game_id": "401909835",
+      "matchup": "MIL @ WAS",
+      "player": "Trae Young",
+      "team": "WAS",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "over",
+      "line": 3.5,
+      "label": "Trae Young 4+ Assists",
+      "prob": 0.9107,
+      "fair": null,
+      "edge": null,
+      "ev": null,
+      "price": null,
+      "book": null,
+      "proj": 8.141,
+      "l10": 1.0,
+      "l20": 0.9333,
+      "reasons": [
+       [
+        "+",
+        "Projection: 8.1 assists tonight (usual 8.2); model gives 91% for 4+."
+       ],
+       [
+        "+",
+        "Floor: reached 4+ in 14 of last 15 and 10 of last 10 (93% across all 15 games tracked)."
+       ],
+       [
+        "i",
+        "Cushion: needs 4, projected 8.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.5 (last 10 avg 24.3, fairly stable at \u00b15.4)."
+       ],
+       [
+        "+",
+        "Matchup overall: +1.2% assists vs his usual output (3 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Vegas team total: Vegas implied team total 121.5 points (+2.7%)."
+       ],
+       [
+        "!",
+        "Teammates out: WAS without Jamir Watkins (7%) of the team's assists (-1.6%)."
+       ],
+       [
+        "!",
+        "Opponent players out: MIL at full strength (-1.5%)."
+       ],
+       [
+        "+",
+        "Position defense: MIL allow 2% more assists per minute to guards than average (+0.8%)."
+       ],
+       [
+        "+",
+        "Turnovers forced: MIL force 12.3 turnovers per 100 possessions (#25 most, last season) (+0.8%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0117
      }
     ]
    },
    {
     "size": 5,
-    "prob": 0.6794,
+    "prob": 0.67,
     "legs": [
      {
       "kind": "safe",
@@ -3243,71 +2633,6 @@
        ]
       ],
       "matchup_net": 0.0328
-     },
-     {
-      "kind": "safe",
-      "tier": "Safe",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "LaMelo Ball",
-      "team": "MIN",
-      "stat": "fg3a",
-      "stat_label": "3-Point Attempts",
-      "side": "over",
-      "line": 6.5,
-      "label": "LaMelo Ball 7+ 3-Point Attempts",
-      "prob": 0.9175,
-      "fair": null,
-      "edge": null,
-      "ev": null,
-      "price": null,
-      "book": null,
-      "proj": 11.1321,
-      "l10": 0.9,
-      "l20": 0.95,
-      "reasons": [
-       [
-        "+",
-        "Projection: 11.1 3-point attempts tonight (usual 11.0); model gives 92% for 7+."
-       ],
-       [
-        "+",
-        "Floor: reached 7+ in 19 of last 20 and 9 of last 10 (89% across all 72 games tracked)."
-       ],
-       [
-        "i",
-        "Cushion: needs 7, projected 11.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
-       ],
-       [
-        "i",
-        "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: +4.6% 3-point attempts vs his usual output (3 checks for this pick, 0 against)."
-       ],
-       [
-        "+",
-        "Game pace (Vegas total): Vegas game total 240.5 (+2.5%)."
-       ],
-       [
-        "+",
-        "Position defense: MIA allow 4% more 3-point attempts per minute to guards than average (+1.3%)."
-       ],
-       [
-        "+",
-        "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.6%)."
-       ],
-       [
-        "!",
-        "New team (was CHA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.0464
      },
      {
       "kind": "safe",
@@ -3454,12 +2779,73 @@
        ]
       ],
       "matchup_net": 0.0117
+     },
+     {
+      "kind": "safe",
+      "tier": "Safe",
+      "game_id": "401909091",
+      "matchup": "MIN @ MIA",
+      "player": "Anthony Edwards",
+      "team": "MIN",
+      "stat": "fga",
+      "stat_label": "FG Attempts",
+      "side": "over",
+      "line": 12.5,
+      "label": "Anthony Edwards 13+ FG Attempts",
+      "prob": 0.9048,
+      "fair": null,
+      "edge": null,
+      "ev": null,
+      "price": null,
+      "book": null,
+      "proj": 19.7543,
+      "l10": 0.9,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 19.8 fg attempts tonight (usual 20.0); model gives 90% for 13+."
+       ],
+       [
+        "+",
+        "Floor: reached 13+ in 18 of last 20 and 9 of last 10 (91% across all 70 games tracked)."
+       ],
+       [
+        "i",
+        "Cushion: needs 13, projected 19.8 (+6.8). Sportsbooks sell this as an alt line at heavy juice."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.6 (last 10 avg 32.5, fairly stable at \u00b18.7)."
+       ],
+       [
+        "+",
+        "Matchup overall: +1.4% fg attempts vs his usual output (2 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Game pace (Vegas total): Vegas game total 240.5 (+1.5%)."
+       ],
+       [
+        "+",
+        "Position defense: MIA allow 3% more fg attempts per minute to guards than average (+1.4%)."
+       ],
+       [
+        "!",
+        "Teammates out: MIN without Donte DiVincenzo (10%) of the team's shots (-1.3%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0139
      }
     ]
    },
    {
     "size": 6,
-    "prob": 0.5877,
+    "prob": 0.5796,
     "legs": [
      {
       "kind": "safe",
@@ -3586,71 +2972,6 @@
        ]
       ],
       "matchup_net": 0.0328
-     },
-     {
-      "kind": "safe",
-      "tier": "Safe",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "LaMelo Ball",
-      "team": "MIN",
-      "stat": "fg3a",
-      "stat_label": "3-Point Attempts",
-      "side": "over",
-      "line": 6.5,
-      "label": "LaMelo Ball 7+ 3-Point Attempts",
-      "prob": 0.9175,
-      "fair": null,
-      "edge": null,
-      "ev": null,
-      "price": null,
-      "book": null,
-      "proj": 11.1321,
-      "l10": 0.9,
-      "l20": 0.95,
-      "reasons": [
-       [
-        "+",
-        "Projection: 11.1 3-point attempts tonight (usual 11.0); model gives 92% for 7+."
-       ],
-       [
-        "+",
-        "Floor: reached 7+ in 19 of last 20 and 9 of last 10 (89% across all 72 games tracked)."
-       ],
-       [
-        "i",
-        "Cushion: needs 7, projected 11.1 (+4.1). Sportsbooks sell this as an alt line at heavy juice."
-       ],
-       [
-        "i",
-        "Minutes: projected 26.8 (last 10 avg 30.4, fairly stable at \u00b15.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: +4.6% 3-point attempts vs his usual output (3 checks for this pick, 0 against)."
-       ],
-       [
-        "+",
-        "Game pace (Vegas total): Vegas game total 240.5 (+2.5%)."
-       ],
-       [
-        "+",
-        "Position defense: MIA allow 4% more 3-point attempts per minute to guards than average (+1.3%)."
-       ],
-       [
-        "+",
-        "Teammates out: MIN without Donte DiVincenzo (19%) of the team's 3PA (+0.6%)."
-       ],
-       [
-        "!",
-        "New team (was CHA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.0464
      },
      {
       "kind": "safe",
@@ -3797,6 +3118,67 @@
        ]
       ],
       "matchup_net": 0.0117
+     },
+     {
+      "kind": "safe",
+      "tier": "Safe",
+      "game_id": "401909091",
+      "matchup": "MIN @ MIA",
+      "player": "Anthony Edwards",
+      "team": "MIN",
+      "stat": "fga",
+      "stat_label": "FG Attempts",
+      "side": "over",
+      "line": 12.5,
+      "label": "Anthony Edwards 13+ FG Attempts",
+      "prob": 0.9048,
+      "fair": null,
+      "edge": null,
+      "ev": null,
+      "price": null,
+      "book": null,
+      "proj": 19.7543,
+      "l10": 0.9,
+      "l20": 0.9,
+      "reasons": [
+       [
+        "+",
+        "Projection: 19.8 fg attempts tonight (usual 20.0); model gives 90% for 13+."
+       ],
+       [
+        "+",
+        "Floor: reached 13+ in 18 of last 20 and 9 of last 10 (91% across all 70 games tracked)."
+       ],
+       [
+        "i",
+        "Cushion: needs 13, projected 19.8 (+6.8). Sportsbooks sell this as an alt line at heavy juice."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.6 (last 10 avg 32.5, fairly stable at \u00b18.7)."
+       ],
+       [
+        "+",
+        "Matchup overall: +1.4% fg attempts vs his usual output (2 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Game pace (Vegas total): Vegas game total 240.5 (+1.5%)."
+       ],
+       [
+        "+",
+        "Position defense: MIA allow 3% more fg attempts per minute to guards than average (+1.4%)."
+       ],
+       [
+        "!",
+        "Teammates out: MIN without Donte DiVincenzo (10%) of the team's shots (-1.3%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0139
      },
      {
       "kind": "safe",
@@ -3873,7 +3255,7 @@
   "value": [
    {
     "size": 3,
-    "prob": 0.206,
+    "prob": 0.1959,
     "legs": [
      {
       "kind": "market",
@@ -3887,10 +3269,10 @@
       "side": "over",
       "line": 13.5,
       "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5693,
-      "fair": 0.4768,
-      "edge": 0.0925,
-      "ev": 0.1671,
+      "prob": 0.5711,
+      "fair": 0.4796,
+      "edge": 0.0916,
+      "ev": 0.1708,
       "price": 105,
       "book": "BetRivers",
       "proj": 18.7654,
@@ -3903,7 +3285,7 @@
        ],
        [
         "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.3 pts. Best price +105 at BetRivers."
+        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.2 pts. Best price +105 at BetRivers."
        ],
        [
         "i",
@@ -3944,684 +3326,6 @@
       ],
       "matchup_net": 0.1309,
       "price_fmt": "+105"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909835",
-      "matchup": "MIL @ WAS",
-      "player": "Tyler Herro",
-      "team": "MIL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 22.5,
-      "label": "Tyler Herro Under 22.5 Points",
-      "prob": 0.6115,
-      "fair": 0.5137,
-      "edge": 0.0978,
-      "ev": 0.1478,
-      "price": -114,
-      "book": "BetOnline.ag",
-      "proj": 17.7021,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 17.7 points vs line 22.5. Model alone: 79% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 61%, an edge of +9.8 pts. Best price -114 at BetOnline.ag."
-       ],
-       [
-        "+",
-        "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.5% points vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Position defense: WAS allow 2% more points per minute to guards than average (+0.9%)."
-       ],
-       [
-        "!",
-        "Shooting allowed: WAS allow 56.6% effective FG (#4 worst defense, last season) (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: WAS block 5.3 shots per 100 possessions (#6 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0551,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 28.5,
-      "label": "Giannis Antetokounmpo Under 28.5 Points",
-      "prob": 0.5917,
-      "fair": 0.5036,
-      "edge": 0.088,
-      "ev": 0.1295,
-      "price": -110,
-      "book": "BetMGM",
-      "proj": 23.6237,
-      "l10": 0.8,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 23.6 points vs line 28.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 50% (no-vig). Blending model and market gives 59%, an edge of +8.8 pts. Best price -110 at BetMGM."
-       ],
-       [
-        "+",
-        "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "+",
-        "Matchup overall: -7.7% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 26.2 minutes vs usual 27.4 (-4.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "+",
-        "Position defense: MIN allow 1% fewer points per minute to forwards than average (-0.6%)."
-       ],
-       [
-        "+",
-        "Shooting allowed: MIN allow 53.1% effective FG (#27 worst defense, last season) (-0.5%)."
-       ],
-       [
-        "i",
-        "Rim protection: MIN block 5.3 shots per 100 possessions (#8 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0773,
-      "price_fmt": "-110"
-     }
-    ]
-   },
-   {
-    "size": 4,
-    "prob": 0.1225,
-    "legs": [
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909839",
-      "matchup": "IND @ NOP",
-      "player": "Andrew Nembhard",
-      "team": "IND",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "over",
-      "line": 13.5,
-      "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5693,
-      "fair": 0.4768,
-      "edge": 0.0925,
-      "ev": 0.1671,
-      "price": 105,
-      "book": "BetRivers",
-      "proj": 18.7654,
-      "l10": 0.6,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.3 pts. Best price +105 at BetRivers."
-       ],
-       [
-        "i",
-        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
-       ],
-       [
-        "+",
-        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "!",
-        "Opponent players out: NOP at full strength (-1.0%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.1309,
-      "price_fmt": "+105"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909835",
-      "matchup": "MIL @ WAS",
-      "player": "Tyler Herro",
-      "team": "MIL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 22.5,
-      "label": "Tyler Herro Under 22.5 Points",
-      "prob": 0.6115,
-      "fair": 0.5137,
-      "edge": 0.0978,
-      "ev": 0.1478,
-      "price": -114,
-      "book": "BetOnline.ag",
-      "proj": 17.7021,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 17.7 points vs line 22.5. Model alone: 79% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 61%, an edge of +9.8 pts. Best price -114 at BetOnline.ag."
-       ],
-       [
-        "+",
-        "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.5% points vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Position defense: WAS allow 2% more points per minute to guards than average (+0.9%)."
-       ],
-       [
-        "!",
-        "Shooting allowed: WAS allow 56.6% effective FG (#4 worst defense, last season) (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: WAS block 5.3 shots per 100 possessions (#6 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0551,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 28.5,
-      "label": "Giannis Antetokounmpo Under 28.5 Points",
-      "prob": 0.5917,
-      "fair": 0.5036,
-      "edge": 0.088,
-      "ev": 0.1295,
-      "price": -110,
-      "book": "BetMGM",
-      "proj": 23.6237,
-      "l10": 0.8,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 23.6 points vs line 28.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 50% (no-vig). Blending model and market gives 59%, an edge of +8.8 pts. Best price -110 at BetMGM."
-       ],
-       [
-        "+",
-        "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "+",
-        "Matchup overall: -7.7% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 26.2 minutes vs usual 27.4 (-4.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "+",
-        "Position defense: MIN allow 1% fewer points per minute to forwards than average (-0.6%)."
-       ],
-       [
-        "+",
-        "Shooting allowed: MIN allow 53.1% effective FG (#27 worst defense, last season) (-0.5%)."
-       ],
-       [
-        "i",
-        "Rim protection: MIN block 5.3 shots per 100 possessions (#8 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0773,
-      "price_fmt": "-110"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909836",
-      "matchup": "CHA @ BKN",
-      "player": "Egor Demin",
-      "team": "BKN",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 12.5,
-      "label": "Egor Demin Under 12.5 Points",
-      "prob": 0.5945,
-      "fair": 0.5052,
-      "edge": 0.0893,
-      "ev": 0.116,
-      "price": -114,
-      "book": "DraftKings",
-      "proj": 9.1082,
-      "l10": 0.7,
-      "l20": 0.65,
-      "reasons": [
-       [
-        "+",
-        "Projection: 9.1 points vs line 12.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 59%, an edge of +8.9 pts. Best price -114 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: -9.2% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 23.9 minutes vs usual 25.2 (-4.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "+",
-        "Position defense: CHA allow 2% fewer points per minute to guards than average (-1.4%)."
-       ],
-       [
-        "!",
-        "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0925,
-      "price_fmt": "-114"
-     }
-    ]
-   },
-   {
-    "size": 5,
-    "prob": 0.0706,
-    "legs": [
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909839",
-      "matchup": "IND @ NOP",
-      "player": "Andrew Nembhard",
-      "team": "IND",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "over",
-      "line": 13.5,
-      "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5693,
-      "fair": 0.4768,
-      "edge": 0.0925,
-      "ev": 0.1671,
-      "price": 105,
-      "book": "BetRivers",
-      "proj": 18.7654,
-      "l10": 0.6,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.3 pts. Best price +105 at BetRivers."
-       ],
-       [
-        "i",
-        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
-       ],
-       [
-        "+",
-        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "!",
-        "Opponent players out: NOP at full strength (-1.0%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.1309,
-      "price_fmt": "+105"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909835",
-      "matchup": "MIL @ WAS",
-      "player": "Tyler Herro",
-      "team": "MIL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 22.5,
-      "label": "Tyler Herro Under 22.5 Points",
-      "prob": 0.6115,
-      "fair": 0.5137,
-      "edge": 0.0978,
-      "ev": 0.1478,
-      "price": -114,
-      "book": "BetOnline.ag",
-      "proj": 17.7021,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 17.7 points vs line 22.5. Model alone: 79% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 61%, an edge of +9.8 pts. Best price -114 at BetOnline.ag."
-       ],
-       [
-        "+",
-        "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.5% points vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Position defense: WAS allow 2% more points per minute to guards than average (+0.9%)."
-       ],
-       [
-        "!",
-        "Shooting allowed: WAS allow 56.6% effective FG (#4 worst defense, last season) (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: WAS block 5.3 shots per 100 possessions (#6 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0551,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 28.5,
-      "label": "Giannis Antetokounmpo Under 28.5 Points",
-      "prob": 0.5917,
-      "fair": 0.5036,
-      "edge": 0.088,
-      "ev": 0.1295,
-      "price": -110,
-      "book": "BetMGM",
-      "proj": 23.6237,
-      "l10": 0.8,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 23.6 points vs line 28.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 50% (no-vig). Blending model and market gives 59%, an edge of +8.8 pts. Best price -110 at BetMGM."
-       ],
-       [
-        "+",
-        "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "+",
-        "Matchup overall: -7.7% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 26.2 minutes vs usual 27.4 (-4.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "+",
-        "Position defense: MIN allow 1% fewer points per minute to forwards than average (-0.6%)."
-       ],
-       [
-        "+",
-        "Shooting allowed: MIN allow 53.1% effective FG (#27 worst defense, last season) (-0.5%)."
-       ],
-       [
-        "i",
-        "Rim protection: MIN block 5.3 shots per 100 possessions (#8 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0773,
-      "price_fmt": "-110"
      },
      {
       "kind": "market",
@@ -4762,8 +3466,8 @@
     ]
    },
    {
-    "size": 6,
-    "prob": 0.0398,
+    "size": 4,
+    "prob": 0.1103,
     "legs": [
      {
       "kind": "market",
@@ -4777,10 +3481,10 @@
       "side": "over",
       "line": 13.5,
       "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5693,
-      "fair": 0.4768,
-      "edge": 0.0925,
-      "ev": 0.1671,
+      "prob": 0.5711,
+      "fair": 0.4796,
+      "edge": 0.0916,
+      "ev": 0.1708,
       "price": 105,
       "book": "BetRivers",
       "proj": 18.7654,
@@ -4793,7 +3497,7 @@
        ],
        [
         "+",
-        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.3 pts. Best price +105 at BetRivers."
+        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.2 pts. Best price +105 at BetRivers."
        ],
        [
         "i",
@@ -4834,158 +3538,6 @@
       ],
       "matchup_net": 0.1309,
       "price_fmt": "+105"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909835",
-      "matchup": "MIL @ WAS",
-      "player": "Tyler Herro",
-      "team": "MIL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 22.5,
-      "label": "Tyler Herro Under 22.5 Points",
-      "prob": 0.6115,
-      "fair": 0.5137,
-      "edge": 0.0978,
-      "ev": 0.1478,
-      "price": -114,
-      "book": "BetOnline.ag",
-      "proj": 17.7021,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 17.7 points vs line 22.5. Model alone: 79% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 61%, an edge of +9.8 pts. Best price -114 at BetOnline.ag."
-       ],
-       [
-        "+",
-        "Recent form: went under 22.5 in 7 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 29.7 (last 10 avg 31.9, fairly stable at \u00b16.2)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.5% points vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Position defense: WAS allow 2% more points per minute to guards than average (+0.9%)."
-       ],
-       [
-        "!",
-        "Shooting allowed: WAS allow 56.6% effective FG (#4 worst defense, last season) (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: WAS block 5.3 shots per 100 possessions (#6 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIA): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0551,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909091",
-      "matchup": "MIN @ MIA",
-      "player": "Giannis Antetokounmpo",
-      "team": "MIA",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 28.5,
-      "label": "Giannis Antetokounmpo Under 28.5 Points",
-      "prob": 0.5917,
-      "fair": 0.5036,
-      "edge": 0.088,
-      "ev": 0.1295,
-      "price": -110,
-      "book": "BetMGM",
-      "proj": 23.6237,
-      "l10": 0.8,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 23.6 points vs line 28.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 50% (no-vig). Blending model and market gives 59%, an edge of +8.8 pts. Best price -110 at BetMGM."
-       ],
-       [
-        "+",
-        "Recent form: went under 28.5 in 8 of last 10, 12 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.4 (last 10 avg 27.7, stable at \u00b13.7)."
-       ],
-       [
-        "+",
-        "Matchup overall: -7.7% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 26.2 minutes vs usual 27.4 (-4.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "+",
-        "Position defense: MIN allow 1% fewer points per minute to forwards than average (-0.6%)."
-       ],
-       [
-        "+",
-        "Shooting allowed: MIN allow 53.1% effective FG (#27 worst defense, last season) (-0.5%)."
-       ],
-       [
-        "i",
-        "Rim protection: MIN block 5.3 shots per 100 possessions (#8 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "!",
-        "New team (was MIL): role and minutes less certain."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0773,
-      "price_fmt": "-110"
      },
      {
       "kind": "market",
@@ -5194,6 +3746,792 @@
       "price_fmt": "-108"
      }
     ]
+   },
+   {
+    "size": 5,
+    "prob": 0.0613,
+    "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909839",
+      "matchup": "IND @ NOP",
+      "player": "Andrew Nembhard",
+      "team": "IND",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "over",
+      "line": 13.5,
+      "label": "Andrew Nembhard Over 13.5 Points",
+      "prob": 0.5711,
+      "fair": 0.4796,
+      "edge": 0.0916,
+      "ev": 0.1708,
+      "price": 105,
+      "book": "BetRivers",
+      "proj": 18.7654,
+      "l10": 0.6,
+      "l20": 0.6,
+      "reasons": [
+       [
+        "+",
+        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.2 pts. Best price +105 at BetRivers."
+       ],
+       [
+        "i",
+        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
+       ],
+       [
+        "+",
+        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
+       ],
+       [
+        "+",
+        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
+       ],
+       [
+        "+",
+        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
+       ],
+       [
+        "+",
+        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
+       ],
+       [
+        "!",
+        "Opponent players out: NOP at full strength (-1.0%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.1309,
+      "price_fmt": "+105"
+     },
+     {
+      "kind": "market",
+      "tier": "Lock",
+      "game_id": "401909836",
+      "matchup": "CHA @ BKN",
+      "player": "Egor Demin",
+      "team": "BKN",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 12.5,
+      "label": "Egor Demin Under 12.5 Points",
+      "prob": 0.5945,
+      "fair": 0.5052,
+      "edge": 0.0893,
+      "ev": 0.116,
+      "price": -114,
+      "book": "DraftKings",
+      "proj": 9.1082,
+      "l10": 0.7,
+      "l20": 0.65,
+      "reasons": [
+       [
+        "+",
+        "Projection: 9.1 points vs line 12.5. Model alone: 76% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 59%, an edge of +8.9 pts. Best price -114 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
+       ],
+       [
+        "+",
+        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
+       ],
+       [
+        "+",
+        "Matchup overall: -9.2% points vs his usual output (4 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 23.9 minutes vs usual 25.2 (-4.8%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "+",
+        "Position defense: CHA allow 2% fewer points per minute to guards than average (-1.4%)."
+       ],
+       [
+        "!",
+        "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
+       ],
+       [
+        "+",
+        "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0925,
+      "price_fmt": "-114"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Scottie Barnes",
+      "team": "TOR",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "side": "under",
+      "line": 7.5,
+      "label": "Scottie Barnes Under 7.5 Rebounds",
+      "prob": 0.5768,
+      "fair": 0.5096,
+      "edge": 0.0672,
+      "ev": 0.1012,
+      "price": -110,
+      "book": "BetMGM",
+      "proj": 6.1938,
+      "l10": 0.6,
+      "l20": 0.7,
+      "reasons": [
+       [
+        "+",
+        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.7 pts. Best price -110 at BetMGM."
+       ],
+       [
+        "i",
+        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
+       ],
+       [
+        "+",
+        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
+       ],
+       [
+        "!",
+        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
+       ],
+       [
+        "!",
+        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
+       ],
+       [
+        "+",
+        "Opponent players out: CHI at full strength (-0.9%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0466,
+      "price_fmt": "-110"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909834",
+      "matchup": "ATL @ ORL",
+      "player": "Franz Wagner",
+      "team": "ORL",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 21.5,
+      "label": "Franz Wagner Under 21.5 Points",
+      "prob": 0.5634,
+      "fair": 0.5077,
+      "edge": 0.0557,
+      "ev": 0.085,
+      "price": -108,
+      "book": "BetRivers",
+      "proj": 19.1326,
+      "l10": 0.9,
+      "l20": 0.85,
+      "reasons": [
+       [
+        "+",
+        "Projection: 19.1 points vs line 21.5. Model alone: 67% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +5.6 pts. Best price -108 at BetRivers."
+       ],
+       [
+        "+",
+        "Recent form: went under 21.5 in 9 of last 10, 17 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
+       ],
+       [
+        "+",
+        "Matchup overall: -2.3% points vs his usual output (3 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Teammates out: ORL without Anthony Black (9%) of the team's points (-1.5%)."
+       ],
+       [
+        "+",
+        "Minutes: projected 29.4 minutes vs usual 29.8 (-1.3%)."
+       ],
+       [
+        "+",
+        "Opponent players out: ATL at full strength (-1.0%)."
+       ],
+       [
+        "!",
+        "Position defense: ATL allow 1% more points per minute to forwards than average (+0.8%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 118.0 points (+0.7%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0229,
+      "price_fmt": "-108"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909092",
+      "matchup": "GSW @ LAL",
+      "player": "Austin Reaves",
+      "team": "LAL",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 23.5,
+      "label": "Austin Reaves Under 23.5 Points",
+      "prob": 0.5558,
+      "fair": 0.4924,
+      "edge": 0.0633,
+      "ev": 0.0801,
+      "price": -106,
+      "book": "DraftKings",
+      "proj": 20.6534,
+      "l10": 0.7,
+      "l20": 0.5,
+      "reasons": [
+       [
+        "+",
+        "Projection: 20.7 points vs line 23.5. Model alone: 67% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -106 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 23.5 in 7 of last 10, 10 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
+       ],
+       [
+        "+",
+        "Matchup overall: -1.2% points vs his usual output (2 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 33.6 minutes vs usual 34.8 (-3.5%)."
+       ],
+       [
+        "!",
+        "Opponent players out: GSW without Moses Moody (13%), Brandin Podziemski (13%), Jimmy Butler III (12%) of their minutes (+3.4%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 120.5 points (+1.1%)."
+       ],
+       [
+        "!",
+        "Position defense: GSW allow 1% more points per minute to guards than average (+0.8%)."
+       ],
+       [
+        "i",
+        "Rim protection: GSW block 4.1 shots per 100 possessions (#26 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.012,
+      "price_fmt": "-106"
+     }
+    ]
+   },
+   {
+    "size": 6,
+    "prob": 0.0351,
+    "legs": [
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909839",
+      "matchup": "IND @ NOP",
+      "player": "Andrew Nembhard",
+      "team": "IND",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "over",
+      "line": 13.5,
+      "label": "Andrew Nembhard Over 13.5 Points",
+      "prob": 0.5711,
+      "fair": 0.4796,
+      "edge": 0.0916,
+      "ev": 0.1708,
+      "price": 105,
+      "book": "BetRivers",
+      "proj": 18.7654,
+      "l10": 0.6,
+      "l20": 0.6,
+      "reasons": [
+       [
+        "+",
+        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
+       ],
+       [
+        "+",
+        "Market: books price the over at 48% (no-vig). Blending model and market gives 57%, an edge of +9.2 pts. Best price +105 at BetRivers."
+       ],
+       [
+        "i",
+        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
+       ],
+       [
+        "+",
+        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
+       ],
+       [
+        "+",
+        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
+       ],
+       [
+        "+",
+        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
+       ],
+       [
+        "+",
+        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
+       ],
+       [
+        "!",
+        "Opponent players out: NOP at full strength (-1.0%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.1309,
+      "price_fmt": "+105"
+     },
+     {
+      "kind": "market",
+      "tier": "Lock",
+      "game_id": "401909836",
+      "matchup": "CHA @ BKN",
+      "player": "Egor Demin",
+      "team": "BKN",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 12.5,
+      "label": "Egor Demin Under 12.5 Points",
+      "prob": 0.5945,
+      "fair": 0.5052,
+      "edge": 0.0893,
+      "ev": 0.116,
+      "price": -114,
+      "book": "DraftKings",
+      "proj": 9.1082,
+      "l10": 0.7,
+      "l20": 0.65,
+      "reasons": [
+       [
+        "+",
+        "Projection: 9.1 points vs line 12.5. Model alone: 76% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 59%, an edge of +8.9 pts. Best price -114 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
+       ],
+       [
+        "+",
+        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
+       ],
+       [
+        "+",
+        "Matchup overall: -9.2% points vs his usual output (4 checks for this pick, 1 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 23.9 minutes vs usual 25.2 (-4.8%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "+",
+        "Position defense: CHA allow 2% fewer points per minute to guards than average (-1.4%)."
+       ],
+       [
+        "!",
+        "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
+       ],
+       [
+        "+",
+        "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0925,
+      "price_fmt": "-114"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909837",
+      "matchup": "CHI @ TOR",
+      "player": "Scottie Barnes",
+      "team": "TOR",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "side": "under",
+      "line": 7.5,
+      "label": "Scottie Barnes Under 7.5 Rebounds",
+      "prob": 0.5768,
+      "fair": 0.5096,
+      "edge": 0.0672,
+      "ev": 0.1012,
+      "price": -110,
+      "book": "BetMGM",
+      "proj": 6.1938,
+      "l10": 0.6,
+      "l20": 0.7,
+      "reasons": [
+       [
+        "+",
+        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.7 pts. Best price -110 at BetMGM."
+       ],
+       [
+        "i",
+        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
+       ],
+       [
+        "+",
+        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
+       ],
+       [
+        "!",
+        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
+       ],
+       [
+        "!",
+        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
+       ],
+       [
+        "+",
+        "Opponent players out: CHI at full strength (-0.9%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0466,
+      "price_fmt": "-110"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909834",
+      "matchup": "ATL @ ORL",
+      "player": "Franz Wagner",
+      "team": "ORL",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 21.5,
+      "label": "Franz Wagner Under 21.5 Points",
+      "prob": 0.5634,
+      "fair": 0.5077,
+      "edge": 0.0557,
+      "ev": 0.085,
+      "price": -108,
+      "book": "BetRivers",
+      "proj": 19.1326,
+      "l10": 0.9,
+      "l20": 0.85,
+      "reasons": [
+       [
+        "+",
+        "Projection: 19.1 points vs line 21.5. Model alone: 67% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 51% (no-vig). Blending model and market gives 56%, an edge of +5.6 pts. Best price -108 at BetRivers."
+       ],
+       [
+        "+",
+        "Recent form: went under 21.5 in 9 of last 10, 17 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 29.8 (last 10 avg 26.7, fairly stable at \u00b14.8)."
+       ],
+       [
+        "+",
+        "Matchup overall: -2.3% points vs his usual output (3 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Teammates out: ORL without Anthony Black (9%) of the team's points (-1.5%)."
+       ],
+       [
+        "+",
+        "Minutes: projected 29.4 minutes vs usual 29.8 (-1.3%)."
+       ],
+       [
+        "+",
+        "Opponent players out: ATL at full strength (-1.0%)."
+       ],
+       [
+        "!",
+        "Position defense: ATL allow 1% more points per minute to forwards than average (+0.8%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 118.0 points (+0.7%)."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0229,
+      "price_fmt": "-108"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909092",
+      "matchup": "GSW @ LAL",
+      "player": "Austin Reaves",
+      "team": "LAL",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 23.5,
+      "label": "Austin Reaves Under 23.5 Points",
+      "prob": 0.5558,
+      "fair": 0.4924,
+      "edge": 0.0633,
+      "ev": 0.0801,
+      "price": -106,
+      "book": "DraftKings",
+      "proj": 20.6534,
+      "l10": 0.7,
+      "l20": 0.5,
+      "reasons": [
+       [
+        "+",
+        "Projection: 20.7 points vs line 23.5. Model alone: 67% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -106 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 23.5 in 7 of last 10, 10 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
+       ],
+       [
+        "+",
+        "Matchup overall: -1.2% points vs his usual output (2 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 33.6 minutes vs usual 34.8 (-3.5%)."
+       ],
+       [
+        "!",
+        "Opponent players out: GSW without Moses Moody (13%), Brandin Podziemski (13%), Jimmy Butler III (12%) of their minutes (+3.4%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 120.5 points (+1.1%)."
+       ],
+       [
+        "!",
+        "Position defense: GSW allow 1% more points per minute to guards than average (+0.8%)."
+       ],
+       [
+        "i",
+        "Rim protection: GSW block 4.1 shots per 100 possessions (#26 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.012,
+      "price_fmt": "-106"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909839",
+      "matchup": "IND @ NOP",
+      "player": "Zion Williamson",
+      "team": "NOP",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 21.5,
+      "label": "Zion Williamson Under 21.5 Points",
+      "prob": 0.5722,
+      "fair": 0.5159,
+      "edge": 0.0563,
+      "ev": 0.0571,
+      "price": -118,
+      "book": "DraftKings",
+      "proj": 19.0212,
+      "l10": 0.7,
+      "l20": 0.65,
+      "reasons": [
+       [
+        "+",
+        "Projection: 19.0 points vs line 21.5. Model alone: 68% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 52% (no-vig). Blending model and market gives 57%, an edge of +5.6 pts. Best price -118 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 21.5 in 7 of last 10, 13 of last 20."
+       ],
+       [
+        "+",
+        "Minutes: projected 29.7 (last 10 avg 30.0, stable at \u00b12.7)."
+       ],
+       [
+        "+",
+        "Matchup overall: -4.0% points vs his usual output (2 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 28.5 minutes vs usual 29.7 (-4.1%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "!",
+        "Opponent players out: IND without Aaron Nesmith (12%), Johnny Furphy (9%), T.J. McConnell (8%) of their minutes (+1.3%)."
+       ],
+       [
+        "!",
+        "Position defense: IND allow 2% more points per minute to forwards than average (+1.1%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 117.5 points (+0.6%)."
+       ],
+       [
+        "i",
+        "Rim protection: IND block 4.3 shots per 100 possessions (#22 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.0403,
+      "price_fmt": "-118"
+     }
+    ]
    }
   ]
  },
@@ -5228,7 +4566,7 @@
   },
   {
    "ok": true,
-   "text": "Odds: 2 markets, 291 credits left"
+   "text": "Odds: 2 markets, 269 credits left"
   }
  ],
  "odds_enabled": true,
