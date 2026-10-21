@@ -1,7 +1,7 @@
 {
  "date": "2026-10-21",
  "date_label": "Wednesday, October 21, 2026",
- "generated": "2026-10-21 21:32 UTC",
+ "generated": "2026-10-21 21:36 UTC",
  "games_today": 11,
  "safe": [
   {
@@ -1476,72 +1476,6 @@
   },
   {
    "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909837",
-   "matchup": "CHI @ TOR",
-   "player": "Scottie Barnes",
-   "team": "TOR",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 7.5,
-   "label": "Scottie Barnes Under 7.5 Rebounds",
-   "prob": 0.5759,
-   "fair": 0.5082,
-   "edge": 0.0677,
-   "ev": 0.1244,
-   "price": -105,
-   "book": "BetMGM",
-   "proj": 6.1938,
-   "l10": 0.6,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.8 pts. Best price -105 at BetMGM."
-    ],
-    [
-     "i",
-     "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
-    ],
-    [
-     "!",
-     "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
-    ],
-    [
-     "!",
-     "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
-    ],
-    [
-     "+",
-     "Opponent players out: CHI at full strength (-0.9%)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0466,
-   "price_fmt": "-105"
-  },
-  {
-   "kind": "market",
    "tier": "Lock",
    "game_id": "401909836",
    "matchup": "CHA @ BKN",
@@ -1762,10 +1696,10 @@
    "side": "under",
    "line": 21.5,
    "label": "Franz Wagner Under 21.5 Points",
-   "prob": 0.5694,
-   "fair": 0.5169,
-   "edge": 0.0524,
-   "ev": 0.0644,
+   "prob": 0.569,
+   "fair": 0.5164,
+   "edge": 0.0526,
+   "ev": 0.0638,
    "price": -115,
    "book": "BetMGM",
    "proj": 19.1326,
@@ -1778,7 +1712,7 @@
     ],
     [
      "+",
-     "Market: books price the under at 52% (no-vig). Blending model and market gives 57%, an edge of +5.2 pts. Best price -115 at BetMGM."
+     "Market: books price the under at 52% (no-vig). Blending model and market gives 57%, an edge of +5.3 pts. Best price -115 at BetMGM."
     ],
     [
      "+",
@@ -1819,126 +1753,6 @@
    ],
    "matchup_net": -0.0229,
    "price_fmt": "-115"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909834",
-   "matchup": "ATL @ ORL",
-   "player": "Jalen Johnson",
-   "team": "ATL",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 10.5,
-   "label": "Jalen Johnson Under 10.5 Rebounds",
-   "prob": 0.5909,
-   "fair": 0.5422,
-   "edge": 0.0487,
-   "ev": 0.0454,
-   "price": -130,
-   "book": "Bovada",
-   "proj": 9.0921,
-   "l10": 0.7,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Projection: 9.1 rebounds vs line 10.5. Model alone: 68% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 54% (no-vig). Blending model and market gives 59%, an edge of +4.9 pts. Best price -130 at Bovada."
-    ],
-    [
-     "+",
-     "Recent form: went under 10.5 in 7 of last 10, 13 of last 20."
-    ],
-    [
-     "+",
-     "Minutes: projected 35.3 (last 10 avg 34.3, stable at \u00b14.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.7% rebounds vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 34.0 minutes vs usual 35.3 (-3.4%)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0468,
-   "price_fmt": "-130"
-  },
-  {
-   "kind": "market",
-   "tier": "Strong",
-   "game_id": "401909840",
-   "matchup": "DAL @ HOU",
-   "player": "Max Christie",
-   "team": "DAL",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 3.5,
-   "label": "Max Christie Under 3.5 Rebounds",
-   "prob": 0.6275,
-   "fair": 0.5868,
-   "edge": 0.0407,
-   "ev": 0.0102,
-   "price": -164,
-   "book": "BetOnline.ag",
-   "proj": 2.7398,
-   "l10": 0.7,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Projection: 2.7 rebounds vs line 3.5. Model alone: 70% for the under."
-    ],
-    [
-     "+",
-     "Market: books price the under at 59% (no-vig). Blending model and market gives 63%, an edge of +4.1 pts. Best price -164 at BetOnline.ag."
-    ],
-    [
-     "+",
-     "Recent form: went under 3.5 in 7 of last 10, 14 of last 20."
-    ],
-    [
-     "i",
-     "Minutes: projected 29.2 (last 10 avg 27.1, fairly stable at \u00b15.7)."
-    ],
-    [
-     "+",
-     "Matchup overall: -8.4% rebounds vs his usual output (4 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.1 minutes vs usual 29.2 (-0.4 for blowout risk (spread 9.5)) (-3.7%)."
-    ],
-    [
-     "+",
-     "Opponent rebounding: HOU grab 54.7% of all rebounds in their games (#1 of 30, last season); Sengun 9.0 rpg, Adams 8.9 rpg (-3.0%)."
-    ],
-    [
-     "+",
-     "Opponent players out: HOU at full strength (-0.9%)."
-    ],
-    [
-     "+",
-     "Position defense: HOU allow 4% fewer rebounds per minute to guards than average (-0.8%)."
-    ],
-    [
-     "i",
-     "Early season: 0 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": -0.0843,
-   "price_fmt": "-164"
   }
  ],
  "lineups": {
@@ -3181,7 +2995,7 @@
   "value": [
    {
     "size": 3,
-    "prob": 0.2022,
+    "prob": 0.1952,
     "legs": [
      {
       "kind": "market",
@@ -3255,72 +3069,6 @@
      },
      {
       "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Scottie Barnes",
-      "team": "TOR",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 7.5,
-      "label": "Scottie Barnes Under 7.5 Rebounds",
-      "prob": 0.5759,
-      "fair": 0.5082,
-      "edge": 0.0677,
-      "ev": 0.1244,
-      "price": -105,
-      "book": "BetMGM",
-      "proj": 6.1938,
-      "l10": 0.6,
-      "l20": 0.7,
-      "reasons": [
-       [
-        "+",
-        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.8 pts. Best price -105 at BetMGM."
-       ],
-       [
-        "i",
-        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-       ],
-       [
-        "+",
-        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
-       ],
-       [
-        "!",
-        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
-       ],
-       [
-        "!",
-        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
-       ],
-       [
-        "+",
-        "Opponent players out: CHI at full strength (-0.9%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0466,
-      "price_fmt": "-105"
-     },
-     {
-      "kind": "market",
       "tier": "Lock",
       "game_id": "401909836",
       "matchup": "CHA @ BKN",
@@ -3388,12 +3136,86 @@
       ],
       "matchup_net": -0.0925,
       "price_fmt": "-114"
+     },
+     {
+      "kind": "market",
+      "tier": "Strong",
+      "game_id": "401909092",
+      "matchup": "GSW @ LAL",
+      "player": "Austin Reaves",
+      "team": "LAL",
+      "stat": "pts",
+      "stat_label": "Points",
+      "side": "under",
+      "line": 23.5,
+      "label": "Austin Reaves Under 23.5 Points",
+      "prob": 0.556,
+      "fair": 0.4928,
+      "edge": 0.0632,
+      "ev": 0.0806,
+      "price": -106,
+      "book": "DraftKings",
+      "proj": 20.6534,
+      "l10": 0.7,
+      "l20": 0.5,
+      "reasons": [
+       [
+        "+",
+        "Projection: 20.7 points vs line 23.5. Model alone: 67% for the under."
+       ],
+       [
+        "+",
+        "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -106 at DraftKings."
+       ],
+       [
+        "+",
+        "Recent form: went under 23.5 in 7 of last 10, 10 of last 20."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
+       ],
+       [
+        "+",
+        "Matchup overall: -1.2% points vs his usual output (2 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 33.6 minutes vs usual 34.8 (-3.5%)."
+       ],
+       [
+        "!",
+        "Opponent players out: GSW without Moses Moody (13%), Brandin Podziemski (13%), Jimmy Butler III (12%) of their minutes (+3.4%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 120.5 points (+1.1%)."
+       ],
+       [
+        "!",
+        "Position defense: GSW allow 1% more points per minute to guards than average (+0.8%)."
+       ],
+       [
+        "i",
+        "Rim protection: GSW block 4.1 shots per 100 possessions (#26 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+       ],
+       [
+        "i",
+        "Early season: 0 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": -0.012,
+      "price_fmt": "-106"
      }
     ]
    },
    {
     "size": 4,
-    "prob": 0.1124,
+    "prob": 0.1134,
     "legs": [
      {
       "kind": "market",
@@ -3464,358 +3286,6 @@
       ],
       "matchup_net": 0.1309,
       "price_fmt": "+100"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Scottie Barnes",
-      "team": "TOR",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 7.5,
-      "label": "Scottie Barnes Under 7.5 Rebounds",
-      "prob": 0.5759,
-      "fair": 0.5082,
-      "edge": 0.0677,
-      "ev": 0.1244,
-      "price": -105,
-      "book": "BetMGM",
-      "proj": 6.1938,
-      "l10": 0.6,
-      "l20": 0.7,
-      "reasons": [
-       [
-        "+",
-        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.8 pts. Best price -105 at BetMGM."
-       ],
-       [
-        "i",
-        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-       ],
-       [
-        "+",
-        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
-       ],
-       [
-        "!",
-        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
-       ],
-       [
-        "!",
-        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
-       ],
-       [
-        "+",
-        "Opponent players out: CHI at full strength (-0.9%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0466,
-      "price_fmt": "-105"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909836",
-      "matchup": "CHA @ BKN",
-      "player": "Egor Demin",
-      "team": "BKN",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 12.5,
-      "label": "Egor Demin Under 12.5 Points",
-      "prob": 0.598,
-      "fair": 0.5105,
-      "edge": 0.0875,
-      "ev": 0.1225,
-      "price": -114,
-      "book": "DraftKings",
-      "proj": 9.1082,
-      "l10": 0.7,
-      "l20": 0.65,
-      "reasons": [
-       [
-        "+",
-        "Projection: 9.1 points vs line 12.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 60%, an edge of +8.7 pts. Best price -114 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: -9.2% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 23.9 minutes vs usual 25.2 (-4.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "+",
-        "Position defense: CHA allow 2% fewer points per minute to guards than average (-1.4%)."
-       ],
-       [
-        "!",
-        "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0925,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909092",
-      "matchup": "GSW @ LAL",
-      "player": "Austin Reaves",
-      "team": "LAL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 23.5,
-      "label": "Austin Reaves Under 23.5 Points",
-      "prob": 0.556,
-      "fair": 0.4928,
-      "edge": 0.0632,
-      "ev": 0.0806,
-      "price": -106,
-      "book": "DraftKings",
-      "proj": 20.6534,
-      "l10": 0.7,
-      "l20": 0.5,
-      "reasons": [
-       [
-        "+",
-        "Projection: 20.7 points vs line 23.5. Model alone: 67% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -106 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went under 23.5 in 7 of last 10, 10 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
-       ],
-       [
-        "+",
-        "Matchup overall: -1.2% points vs his usual output (2 checks for this pick, 3 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.6 minutes vs usual 34.8 (-3.5%)."
-       ],
-       [
-        "!",
-        "Opponent players out: GSW without Moses Moody (13%), Brandin Podziemski (13%), Jimmy Butler III (12%) of their minutes (+3.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 120.5 points (+1.1%)."
-       ],
-       [
-        "!",
-        "Position defense: GSW allow 1% more points per minute to guards than average (+0.8%)."
-       ],
-       [
-        "i",
-        "Rim protection: GSW block 4.1 shots per 100 possessions (#26 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.012,
-      "price_fmt": "-106"
-     }
-    ]
-   },
-   {
-    "size": 5,
-    "prob": 0.0653,
-    "legs": [
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909839",
-      "matchup": "IND @ NOP",
-      "player": "Andrew Nembhard",
-      "team": "IND",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "over",
-      "line": 13.5,
-      "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5871,
-      "fair": 0.5042,
-      "edge": 0.0829,
-      "ev": 0.1743,
-      "price": 100,
-      "book": "BetOnline.ag",
-      "proj": 18.7654,
-      "l10": 0.6,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 50% (no-vig). Blending model and market gives 59%, an edge of +8.3 pts. Best price +100 at BetOnline.ag."
-       ],
-       [
-        "i",
-        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
-       ],
-       [
-        "+",
-        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "!",
-        "Opponent players out: NOP at full strength (-1.0%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.1309,
-      "price_fmt": "+100"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Scottie Barnes",
-      "team": "TOR",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 7.5,
-      "label": "Scottie Barnes Under 7.5 Rebounds",
-      "prob": 0.5759,
-      "fair": 0.5082,
-      "edge": 0.0677,
-      "ev": 0.1244,
-      "price": -105,
-      "book": "BetMGM",
-      "proj": 6.1938,
-      "l10": 0.6,
-      "l20": 0.7,
-      "reasons": [
-       [
-        "+",
-        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.8 pts. Best price -105 at BetMGM."
-       ],
-       [
-        "i",
-        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-       ],
-       [
-        "+",
-        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
-       ],
-       [
-        "!",
-        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
-       ],
-       [
-        "!",
-        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
-       ],
-       [
-        "+",
-        "Opponent players out: CHI at full strength (-0.9%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0466,
-      "price_fmt": "-105"
      },
      {
       "kind": "market",
@@ -4026,412 +3496,6 @@
       ],
       "matchup_net": -0.0141,
       "price_fmt": "-120"
-     }
-    ]
-   },
-   {
-    "size": 6,
-    "prob": 0.0386,
-    "legs": [
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909839",
-      "matchup": "IND @ NOP",
-      "player": "Andrew Nembhard",
-      "team": "IND",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "over",
-      "line": 13.5,
-      "label": "Andrew Nembhard Over 13.5 Points",
-      "prob": 0.5871,
-      "fair": 0.5042,
-      "edge": 0.0829,
-      "ev": 0.1743,
-      "price": 100,
-      "book": "BetOnline.ag",
-      "proj": 18.7654,
-      "l10": 0.6,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Projection: 18.8 points vs line 13.5. Model alone: 74% for the over."
-       ],
-       [
-        "+",
-        "Market: books price the over at 50% (no-vig). Blending model and market gives 59%, an edge of +8.3 pts. Best price +100 at BetOnline.ag."
-       ],
-       [
-        "i",
-        "Recent form: went over 13.5 in 6 of last 10, 12 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 31.2 (last 10 avg 29.7, fairly stable at \u00b15.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: +13.1% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.7 minutes vs usual 31.2 (+2.4 with teammates out) (+7.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: IND without Aaron Nesmith (15%), T.J. McConnell (8%), Johnny Furphy (5%) of the team's points (+2.8%)."
-       ],
-       [
-        "+",
-        "Position defense: NOP allow 3% more points per minute to guards than average (+1.5%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 121.0 points (+1.2%)."
-       ],
-       [
-        "!",
-        "Opponent players out: NOP at full strength (-1.0%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": 0.1309,
-      "price_fmt": "+100"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909837",
-      "matchup": "CHI @ TOR",
-      "player": "Scottie Barnes",
-      "team": "TOR",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 7.5,
-      "label": "Scottie Barnes Under 7.5 Rebounds",
-      "prob": 0.5759,
-      "fair": 0.5082,
-      "edge": 0.0677,
-      "ev": 0.1244,
-      "price": -105,
-      "book": "BetMGM",
-      "proj": 6.1938,
-      "l10": 0.6,
-      "l20": 0.7,
-      "reasons": [
-       [
-        "+",
-        "Projection: 6.2 rebounds vs line 7.5. Model alone: 70% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 58%, an edge of +6.8 pts. Best price -105 at BetMGM."
-       ],
-       [
-        "i",
-        "Recent form: went under 7.5 in 6 of last 10, 14 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.0 (last 10 avg 36.4, fairly stable at \u00b16.3)."
-       ],
-       [
-        "+",
-        "Matchup overall: -4.7% rebounds vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 32.1 minutes vs usual 34.0 (-0.7 for blowout risk (spread 10.5)) (-5.6%)."
-       ],
-       [
-        "!",
-        "Rebound chances: 91.5 total rebounds per game in CHI games (#2 of 30, last season) (+1.4%)."
-       ],
-       [
-        "!",
-        "Position defense: CHI allow 5% more rebounds per minute to forwards than average (+1.0%)."
-       ],
-       [
-        "+",
-        "Opponent players out: CHI at full strength (-0.9%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0466,
-      "price_fmt": "-105"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909836",
-      "matchup": "CHA @ BKN",
-      "player": "Egor Demin",
-      "team": "BKN",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 12.5,
-      "label": "Egor Demin Under 12.5 Points",
-      "prob": 0.598,
-      "fair": 0.5105,
-      "edge": 0.0875,
-      "ev": 0.1225,
-      "price": -114,
-      "book": "DraftKings",
-      "proj": 9.1082,
-      "l10": 0.7,
-      "l20": 0.65,
-      "reasons": [
-       [
-        "+",
-        "Projection: 9.1 points vs line 12.5. Model alone: 76% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 51% (no-vig). Blending model and market gives 60%, an edge of +8.7 pts. Best price -114 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went under 12.5 in 7 of last 10, 13 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 25.2 (last 10 avg 27.4, stable at \u00b13.0)."
-       ],
-       [
-        "+",
-        "Matchup overall: -9.2% points vs his usual output (4 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 23.9 minutes vs usual 25.2 (-4.8%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "+",
-        "Position defense: CHA allow 2% fewer points per minute to guards than average (-1.4%)."
-       ],
-       [
-        "!",
-        "Opponent players out: CHA without Kon Knueppel (13%), Grant Williams (8%), Coby White (8%) of their minutes (+1.2%)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 109.0 points (-1.1%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0925,
-      "price_fmt": "-114"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909092",
-      "matchup": "GSW @ LAL",
-      "player": "Austin Reaves",
-      "team": "LAL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 23.5,
-      "label": "Austin Reaves Under 23.5 Points",
-      "prob": 0.556,
-      "fair": 0.4928,
-      "edge": 0.0632,
-      "ev": 0.0806,
-      "price": -106,
-      "book": "DraftKings",
-      "proj": 20.6534,
-      "l10": 0.7,
-      "l20": 0.5,
-      "reasons": [
-       [
-        "+",
-        "Projection: 20.7 points vs line 23.5. Model alone: 67% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 49% (no-vig). Blending model and market gives 56%, an edge of +6.3 pts. Best price -106 at DraftKings."
-       ],
-       [
-        "+",
-        "Recent form: went under 23.5 in 7 of last 10, 10 of last 20."
-       ],
-       [
-        "i",
-        "Minutes: projected 34.8 (last 10 avg 35.2, fairly stable at \u00b15.4)."
-       ],
-       [
-        "+",
-        "Matchup overall: -1.2% points vs his usual output (2 checks for this pick, 3 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 33.6 minutes vs usual 34.8 (-3.5%)."
-       ],
-       [
-        "!",
-        "Opponent players out: GSW without Moses Moody (13%), Brandin Podziemski (13%), Jimmy Butler III (12%) of their minutes (+3.4%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.3%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 120.5 points (+1.1%)."
-       ],
-       [
-        "!",
-        "Position defense: GSW allow 1% more points per minute to guards than average (+0.8%)."
-       ],
-       [
-        "i",
-        "Rim protection: GSW block 4.1 shots per 100 possessions (#26 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.012,
-      "price_fmt": "-106"
-     },
-     {
-      "kind": "market",
-      "tier": "Lock",
-      "game_id": "401909834",
-      "matchup": "ATL @ ORL",
-      "player": "Jalen Suggs",
-      "team": "ORL",
-      "stat": "pts",
-      "stat_label": "Points",
-      "side": "under",
-      "line": 13.5,
-      "label": "Jalen Suggs Under 13.5 Points",
-      "prob": 0.5808,
-      "fair": 0.5198,
-      "edge": 0.061,
-      "ev": 0.0648,
-      "price": -120,
-      "book": "DraftKings",
-      "proj": 11.3407,
-      "l10": 0.6,
-      "l20": 0.65,
-      "reasons": [
-       [
-        "+",
-        "Projection: 11.3 points vs line 13.5. Model alone: 69% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 52% (no-vig). Blending model and market gives 58%, an edge of +6.1 pts. Best price -120 at DraftKings."
-       ],
-       [
-        "i",
-        "Recent form: went under 13.5 in 6 of last 10, 13 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 28.4 (last 10 avg 34.4, stable at \u00b14.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: -1.4% points vs his usual output (2 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Teammates out: ORL without Anthony Black (9%) of the team's points (-1.5%)."
-       ],
-       [
-        "+",
-        "Opponent players out: ATL at full strength (-1.0%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 118.0 points (+0.7%)."
-       ],
-       [
-        "!",
-        "Minutes: projected 28.6 minutes vs usual 28.4 (+0.6%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0141,
-      "price_fmt": "-120"
-     },
-     {
-      "kind": "market",
-      "tier": "Strong",
-      "game_id": "401909834",
-      "matchup": "ATL @ ORL",
-      "player": "Jalen Johnson",
-      "team": "ATL",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "side": "under",
-      "line": 10.5,
-      "label": "Jalen Johnson Under 10.5 Rebounds",
-      "prob": 0.5909,
-      "fair": 0.5422,
-      "edge": 0.0487,
-      "ev": 0.0454,
-      "price": -130,
-      "book": "Bovada",
-      "proj": 9.0921,
-      "l10": 0.7,
-      "l20": 0.65,
-      "reasons": [
-       [
-        "+",
-        "Projection: 9.1 rebounds vs line 10.5. Model alone: 68% for the under."
-       ],
-       [
-        "+",
-        "Market: books price the under at 54% (no-vig). Blending model and market gives 59%, an edge of +4.9 pts. Best price -130 at Bovada."
-       ],
-       [
-        "+",
-        "Recent form: went under 10.5 in 7 of last 10, 13 of last 20."
-       ],
-       [
-        "+",
-        "Minutes: projected 35.3 (last 10 avg 34.3, stable at \u00b14.9)."
-       ],
-       [
-        "+",
-        "Matchup overall: -4.7% rebounds vs his usual output (1 check for this pick, 0 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 34.0 minutes vs usual 35.3 (-3.4%)."
-       ],
-       [
-        "i",
-        "Early season: 0 games this season, so last season carries more weight."
-       ]
-      ],
-      "matchup_net": -0.0468,
-      "price_fmt": "-130"
      }
     ]
    }
@@ -4468,7 +3532,7 @@
   },
   {
    "ok": true,
-   "text": "Odds: 2 markets, 247 credits left"
+   "text": "Odds: 1 markets, 236 credits left"
   }
  ],
  "odds_enabled": true,
