@@ -64,6 +64,23 @@ matchups:
   # Checks with weight 0 (e.g. opponent height, opponent fouls) are still shown as context.
   show_context_min_effect: 0.03
 
+card:
+  # Tonight's card: 3 to 6 props at the real DraftKings line (lines via ESPN, free).
+  # Backtest at real DraftKings closing lines (last season, 46 days, mostly April + playoffs):
+  #   this rule: ~4.8 qualifying legs/day, 67% of legs hit, full card won ~17-20% of the time.
+  #   Small sample: the live track record is the real test.
+  p_min: 0.58          # blended chance the leg hits
+  form_min: 0.7        # cleared this exact line in 7+ of last 10
+  lean_min: 0.0        # matchup must not lean against the pick
+  min_legs: 3
+  max_legs: 6
+  max_per_game: 2
+  fill_p_min: 0.55     # if fewer than 3 qualify, fill with the best legs above these (marked "below bar")
+  fill_form_min: 0.6
+  # Blend of model and market, learned from real lines + results (scripts/backtest_lines.py):
+  # logit(p) = b0 + b1 * logit(model) + b2 * logit(DraftKings no-vig)
+  blend: [-0.000, 0.108, 0.894]
+
 lineups:
   sizes: [3, 4, 5, 6]
   max_legs_per_game: 2            # legs from the same game move together; cap the exposure

@@ -16,17 +16,26 @@ from zoneinfo import ZoneInfo
 
 from engine import DATA, database, fit, grading, load_config
 from engine.dashboard import render
-from engine.lineups import build_all
 from engine.model import MatchupContext, build_profiles
-from engine.picks import market_picks, safe_picks
+
 from engine.sources import espn
 from engine.sources.injuries import fetch_injuries
-from engine.sources.odds import OddsClient, consensus_lines, plan_markets
-from engine.stats import TEAM_NAMES
 
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+
+
+def save_line_snapshot(lines, day):
+    """Keep tonight's lines (as seen at run time) for grading and future backtests."""
+    import pandas as pd
+    if not lines:
+        return
+    path = DATA / "props_history.csv.gz"
+    new = pd.DataFrame(lines).assign(snapshot=day)
+    old = pd.read_csv(path, dtype={"game_id": str}) if path.exists() else pd.DataFrame()
+    allp = pd.concat([old, new], ignore_index=True).drop_duplicates(["game_id", "player_id", "stat"], keep="last")
+    allp.to_csv(path, index=False, compression="gzip")
 
 
 def main(day=None):
@@ -71,9 +80,8 @@ def main(day=None):
     log(f"{len(games)} games today")
     rosters = None
     injuries = None
-    profiles, safe, market, lineups = [], [], [], {"safest": [], "value": []}
+    profiles, safe, market, lineups = [], [], [], {"card": []}
     out_tonight = {}
-    odds = OddsClient(regions=cfg["odds_api"]["regions"])
     if games:
         from engine.sources.rosters import fetch_rosters
         roster_rows = []
@@ -103,37 +111,22 @@ def main(day=None):
         health.append({"ok": True, "text": f"{n_out} rotation players out tonight"})
         log("Out tonight: " + "; ".join(f"{t}: {', '.join(v)}" for t, v in sorted(out_tonight.items())))
         log(f"Projected {len(profiles)} players")
-        safe = safe_picks(profiles, injuries, cfg)
+        # 5. tonight's DraftKings lines (free, via ESPN) -> the card
+        from engine.card import build_card, candidates
+        from engine.sources.espn_props import fetch_lines
+        lines = fetch_lines([g["game_id"] for g in games])
+        save_line_snapshot(lines, today)
+        health.append({"ok": bool(lines), "text": f"DraftKings lines: {len(lines)} for {len({l['game_id'] for l in lines})} games"
+                       if lines else "DraftKings lines unavailable"})
+        cands = candidates(profiles, lines, injuries, cfg)
+        card, market = build_card(cands, cfg, injuries)
+        log(f"Lines: {len(lines)}; candidates: {len(cands)}; qualified: {len(market)}; "
+            f"card: {card['size'] if card else 0} legs")
+        lineups = {"card": [card] if card else []}
+        grading.record_today(today, [], market + ([l for l in card["legs"] if l["below_bar"]] if card else []),
+                             lineups)
 
-        lines = []
-        if odds.enabled:
-            try:
-                events = odds.events()
-                todays = {(g["home"], g["away"]) for g in games}
-                events = [e for e in events
-                          if (TEAM_NAMES.get(e["home_team"]), TEAM_NAMES.get(e["away_team"])) in todays]
-                oc = cfg["odds_api"]
-                markets = plan_markets(odds.remaining, len(events), oc["markets"], oc["reserve_credits"],
-                                       oc["max_daily_credits"])
-                log(f"Odds: {odds.remaining} credits left, fetching {len(markets)} markets x {len(events)} games")
-                if markets:
-                    for e in events:
-                        lines += consensus_lines(odds.event_props(e["id"], markets))
-                health.append({"ok": bool(markets),
-                               "text": f"Odds: {len(markets)} markets, {int(odds.remaining or 0)} credits left"})
-            except Exception as ex:
-                log(f"Odds API error: {ex}")
-                health.append({"ok": False, "text": "Odds API error"})
-        else:
-            health.append({"ok": False, "text": "No odds key: market picks off"})
-        market, skipped = market_picks(profiles, lines, injuries, cfg)
-        log(f"Picks: {len(safe)} safe, {len(market)} market ({len(lines)} lines checked)")
-
-        # 5. lineups + save
-        lineups = build_all(safe, market, cfg)
-        grading.record_today(today, safe, market, lineups)
-
-    render(today, len(games), safe, market, lineups, grading.track_record(), health, odds.enabled,
+    render(today, len(games), safe, market, lineups, grading.track_record(), health, True,
            out_tonight if games else {})
     log("Dashboard written to docs/index.html")
 

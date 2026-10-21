@@ -82,17 +82,14 @@ footer ol{padding-left:18px}
     <div><div class="date" id="date"></div><h1>NBA Prop Board</h1></div>
     <div class="chips" id="chips"></div>
   </div>
-  <p class="note">No pick is guaranteed. Every leg below passed strict filters, and each one shows the evidence for it and the risks against it. The track record at the bottom shows whether the probabilities are honest.</p>
+  <p class="note">Every leg is at the real DraftKings line. At the real line no prop is a sure thing: books set it near 50/50, and our best legs historically hit about two times in three. Each leg shows the evidence for it and the risks against it, and the track record at the bottom shows whether the percentages hold up.</p>
 
-  <h2>Tonight's lineups <small id="lu-sub"></small></h2>
-  <div class="tabs" id="flavor-tabs"></div>
-  <div class="tabs" id="size-tabs"></div>
+  <h2>Tonight's card <small id="lu-sub"></small></h2>
   <div class="panel" id="lineup"></div>
 
   <div class="panel" id="outs" style="margin-top:12px;padding:12px 18px;font-size:14px"></div>
 
-  <h2>All qualified picks <small>tap a row to see the reasoning</small></h2>
-  <div class="tabs" id="kind-tabs"></div>
+  <h2>All qualified picks <small id="q-sub">tap a row to see the reasoning</small></h2>
   <div style="margin-bottom:10px"><select id="stat-filter"></select></div>
   <div class="panel" id="allpicks"></div>
 
@@ -106,10 +103,10 @@ footer ol{padding-left:18px}
       <li>Every finished box score is stored. Each player's production per minute is weighted toward recent games; last season counts at half weight.</li>
       <li>Minutes are projected from the last ~5 games (blended with last season early on), and trimmed on back-to-backs.</li>
       <li>The opponent's tendency to allow each stat adjusts the projection, shrunk toward average until it has enough games.</li>
-      <li>A player-specific distribution turns the projection into a probability for any line.</li>
-      <li><b>Safe</b> picks need ≥85% from the model <i>and</i> ≥85% hit rate over the last 20 games. <b>Market</b> picks must beat the sportsbooks' no-vig price by 5+ points and agree with recent form.</li>
-      <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. Teammates and opponents who are out are part of it: their share of shots, assists, rebounds and minutes is redistributed. The line is set from the player's own numbers, and the matchup must then favor it by at least +1%. Last season this hit 89-90%, vs 86.5-87% for the original engine.</li>
-      <li>Players who are injured, listed questionable, low-minute or volatile are excluded. Lineups take one leg per team, at most two per game, and prefer the strongest matchups.</li>
+      <li>A player-specific distribution turns the projection into a probability at tonight's DraftKings line. That is blended with DraftKings' own price, using weights learned from last season's real lines and results (the market carries most of the weight; it predicted results better than the model alone).</li>
+      <li><b>A leg makes the card</b> when the blended chance is at least 58%, the player cleared that exact line in 7+ of his last 10, and the matchup leans his way. The card takes every qualifying leg, best first, up to 6. If fewer than 3 qualify it is filled to 3 with the next-best legs, marked "below bar".</li>
+      <li><b>Matchup checks.</b> Every stat has its own: rebounds look at the opponent's rebounding share, rebound chances, size and position defense; free throws at the FT rate they allow, their fouling, position defense and home/away; points at shooting allowed, rim protection and the Vegas team total; and so on. Each check is weighted by how much it actually predicted results in past games. Teammates and opponents who are out are part of it: their share of shots, assists, rebounds and minutes is redistributed. </li>
+      <li>Players who are injured, listed questionable, low-minute or volatile are excluded. The card takes one leg per player and at most two per game.</li>
     </ol>
     <div id="generated"></div>
   </footer>
@@ -126,42 +123,24 @@ $("generated").textContent = "Generated " + D.generated;
 $("chips").innerHTML = D.health.map(h => `<span class="chip ${h.ok ? "" : "bad"}">${esc(h.text)}</span>`).join("");
 
 function legHTML(p){
-  const right = p.kind === "market"
-    ? `${pct(p.prob)} <span class="meta">vs ${pct(p.fair)}</span>`
-    : pct(p.prob);
+  const sideTxt = `${p.side === "over" ? "Over" : "Under"} ${p.line}`;
   return `<details class="leg"><summary>
-    <div><div class="tier">${p.tier}${p.kind==="market" ? " · " + esc(p.price_fmt) + " " + esc(p.book) : ""}</div>
+    <div><div class="tier">${p.below_bar ? '<span class="down">Below bar</span> · ' : ""}DraftKings ${esc(p.price_fmt || "")}</div>
     <div class="what">${esc(p.label)}</div>
-    <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)}${p.matchup_net != null ? ` · <span class="${p.matchup_net >= 0 ? "up" : "down"}">matchup ${p.matchup_net >= 0 ? "+" : ""}${(p.matchup_net*100).toFixed(1)}%</span>` : ""}</div></div>
-    <div class="p">${right}</div></summary>
+    <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)} · last 10: ${p.l10 != null ? Math.round(p.l10*10) + "/10" : "–"}${p.matchup_net != null ? ` · <span class="${p.matchup_net >= 0 ? "up" : "down"}">matchup ${p.matchup_net >= 0 ? "+" : ""}${(p.matchup_net*100).toFixed(1)}%</span>` : ""}</div></div>
+    <div class="p">${pct(p.prob)}<div class="meta">book ${pct(p.fair)}</div></div></summary>
     <ul class="reasons">${p.reasons.map(r => `<li class="${RCLS[r[0]]}">${esc(r[1])}</li>`).join("")}</ul>
   </details>`;
 }
 
-// ---- lineups
-let flavor = "safest", size = 3;
-const FLAV = {safest:"Safest (X+ thresholds)", value:"Value (vs sportsbook lines)"};
-function drawLineups(){
-  $("flavor-tabs").innerHTML = Object.keys(FLAV).map(f =>
-    `<button class="tab ${f===flavor?"on":""}" data-f="${f}">${FLAV[f]}</button>`).join("");
-  const lus = D.lineups[flavor] || [];
-  $("size-tabs").innerHTML = [3,4,5,6].map(n => {
-    const has = lus.some(l => l.size === n);
-    return `<button class="tab ${n===size?"on":""}" data-s="${n}" ${has?"":"disabled style='opacity:.4'"}>${n}-man</button>`;
-  }).join("");
-  const lu = lus.find(l => l.size === size);
-  $("lineup").innerHTML = lu ? `<div class="lu-head"><div><div class="big">${pct(lu.prob)}<small>chance all ${size} legs hit</small></div></div>
-     <div class="meta">${flavor==="safest" ? "Each leg ≥85% on its own" : "Each leg beats the market price"}</div></div>`
-     + lu.legs.map(legHTML).join("")
-    : `<div class="empty">Not enough picks qualified for a ${size}-leg ${flavor} lineup today. The system won't pad a lineup with weaker legs.</div>`;
-  document.querySelectorAll("[data-f]").forEach(b => b.onclick = () => {flavor = b.dataset.f; drawLineups();});
-  document.querySelectorAll("[data-s]").forEach(b => b.onclick = () => {if(!b.disabled){size = +b.dataset.s; drawLineups();}});
-}
-const nLegs = f => Math.max(0, ...(D.lineups[f]||[]).map(l => l.size));
-if (!nLegs("safest") && nLegs("value")) flavor = "value";
-size = Math.min(3, nLegs(flavor)) || 3;
+// ---- tonight's card
+const CARD = (D.lineups.card || [])[0];
 $("lu-sub").textContent = D.games_today ? `${D.games_today} games tonight` : "no games today";
-drawLineups();
+$("lineup").innerHTML = CARD
+  ? `<div class="lu-head"><div><div class="big">${CARD.size} legs<small>${pct(CARD.prob)} chance all hit</small></div></div>
+     <div class="meta">${CARD.n_filled ? `${CARD.n_qualified} cleared the bar; ${CARD.n_filled} added to reach the minimum of 3` : `All ${CARD.size} cleared the bar`}</div></div>`
+    + CARD.legs.map(legHTML).join("")
+  : `<div class="empty">${D.games_today ? "Not even 3 reasonable legs tonight, so no card. Sitting out is a pick too." : "No games today."}</div>`;
 
 // ---- who's out
 const OUT = D.out_tonight || {};
@@ -172,19 +151,14 @@ $("outs").innerHTML = teams.length
   : `<span class="meta">No rotation players listed out tonight.</span>`;
 
 // ---- all picks
-let kind = "safe";
 function drawPicks(){
-  const KIND = {safe:`Safe (${D.safe.length})`, market:`Market (${D.market.length})`};
-  $("kind-tabs").innerHTML = Object.keys(KIND).map(k =>
-    `<button class="tab ${k===kind?"on":""}" data-k="${k}">${KIND[k]}</button>`).join("");
-  const list = D[kind];
+  const list = D.market || [];
+  $("q-sub").textContent = `${list.length} cleared the bar · tap a row for the reasoning`;
   const stats = [...new Set(list.map(p => p.stat_label))].sort();
   const sel = $("stat-filter"), cur = sel.value;
   sel.innerHTML = `<option value="">All stats</option>` + stats.map(s => `<option ${s===cur?"selected":""}>${esc(s)}</option>`).join("");
   const shown = list.filter(p => !sel.value || p.stat_label === sel.value);
-  $("allpicks").innerHTML = shown.length ? shown.map(legHTML).join("")
-    : `<div class="empty">${kind==="market" && !D.odds_enabled ? "Add an ODDS_API_KEY to enable picks against real sportsbook lines." : "Nothing qualified here today."}</div>`;
-  document.querySelectorAll("[data-k]").forEach(b => b.onclick = () => {kind = b.dataset.k; $("stat-filter").value=""; drawPicks();});
+  $("allpicks").innerHTML = shown.length ? shown.map(legHTML).join("") : `<div class="empty">Nothing cleared the bar today.</div>`;
 }
 $("stat-filter").onchange = drawPicks;
 drawPicks();
@@ -200,7 +174,7 @@ function barRow(label, actual, expected, n){
 const cards = [];
 cards.push(`<div class="panel"><h3>Hit rate by tier</h3>${R.by_tier.length ? R.by_tier.map(t => barRow(t.tier, t.rate, t.expected, t.n)).join("") : '<div class="meta">No graded picks yet.</div>'}</div>`);
 cards.push(`<div class="panel"><h3>Are the % honest?</h3>${R.calibration.length ? R.calibration.map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Needs graded picks. Bars should land on the black tick.</div>'}</div>`);
-cards.push(`<div class="panel"><h3>Lineups</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${l.flavor} ${l.size}-man`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
+cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${l.size}-leg cards`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
 $("record").innerHTML = cards.join("");
 $("recent").innerHTML = R.recent.length ? `<table><tr><th>Date</th><th>Pick</th><th class="n">Actual</th><th>Result</th></tr>` +
   R.recent.map(r => `<tr><td>${r.date}</td><td>${esc(r.player)} ${r.side} ${r.line} ${esc(r.stat)} <span class="meta">${r.tier}</span></td><td class="n">${r.actual ?? "–"}</td><td class="${r.result}">${r.result}</td></tr>`).join("") + `</table>`

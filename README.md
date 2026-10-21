@@ -7,15 +7,25 @@ Every afternoon this repo builds a board of NBA player props, picks 3-, 4-, 5- a
 
 ## What you get each day
 
-| Section | What it is |
-|---|---|
-| **Safest lineups** | "X or more" legs (e.g. *Jokić 9+ rebounds*, *Brunson 5+ FT attempts*). Each leg ≥85% by the model **and** cleared in ≥85% of the player's last 20 games. |
-| **Value lineups** | Over/unders against real sportsbook lines that beat the books' own no-vig price. |
-| **Reasons** | Every leg lists the facts behind it: **+** supports, **!** risk, **i** context. |
-| **Track record** | Hit rate by tier, and a check that "85%" picks really hit ~85% of the time. |
+**Tonight's card: 3 to 6 props at the real DraftKings line.** Lines come free from DraftKings
+via ESPN (points, rebounds, assists, threes, and the P+R / P+A / R+A / P+R+A combos).
 
-No pick is a guarantee. Six legs at 90% each still lose almost half the time (0.9⁶ = 53%).
-The dashboard always shows the combined probability so the risk is in plain sight.
+A leg makes the card when:
+
+| Check | Bar |
+|---|---|
+| Chance it hits (our model blended with DraftKings' price) | 58%+ |
+| Cleared this exact line recently | 7+ of last 10 |
+| Tonight's matchup (who's out, defense, pace, minutes) | leans its way |
+| Player gates | healthy, steady minutes, 3+ games with his current team |
+
+The card takes every qualifying leg, best first, up to 6 (one per player, at most 2 per game).
+If fewer than 3 qualify, it is filled to 3 with the next-best legs, marked **below bar**.
+
+At the real line nothing is a sure thing: books set it near 50/50. In the backtest at real
+DraftKings closing lines, qualifying legs hit about 67%, so a 3-leg card wins roughly 30% of
+the time and a 6-leg card under 10%. The dashboard shows the combined chance on every card,
+and the track record shows whether the numbers hold up.
 
 ## How a pick is made
 
@@ -28,9 +38,10 @@ The dashboard always shows the combined probability so the risk is in plain sigh
    shrunk toward neutral until there are enough games to trust it.
 5. **Probability.** A player-specific distribution (negative binomial) turns the projection
    into a probability for any line.
-6. **Market check.** For sportsbook lines, the final probability blends model (35%)
-   and market (65%), because sportsbooks are sharp and the model's biggest disagreements
-   with them are often the model's mistakes. A pick needs a 4+ point edge after blending.
+6. **Market check.** The model's chance at the DraftKings line is blended with DraftKings'
+   own (no-vig) price. The blend was learned from last season's real lines and results
+   (`scripts/backtest_lines.py`): the market carries ~90% of the weight, because on its own
+   the model was overconfident at real lines (legs it rated 60-80% hit only 50-56%).
 7. **Matchup checks.** Each stat has its own (see `engine/matchups.py`):
 
    | Stat | Checks |
@@ -82,9 +93,7 @@ Also tested and rejected: requiring 2+ individual checks to each pass a bar (~4 
 
 ## Setup (one time)
 
-1. **Odds key:** sign up at the-odds-api.com, then in this repo go to
-   *Settings → Secrets and variables → Actions → New repository secret*,
-   name it `ODDS_API_KEY`, paste the key. (Without it, Safe picks still work.)
+1. No odds key needed any more: DraftKings lines come free through ESPN.
 2. **Dashboard:** *Settings → Pages →* Source: *Deploy from a branch*, Branch: `main`, folder `/docs`.
 3. **First run:** *Actions → Daily picks → Run workflow*. The first run takes ~10 minutes
    (downloads last season). After that it runs by itself every day at ~5pm Eastern.

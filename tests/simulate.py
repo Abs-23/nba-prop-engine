@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import run_daily  # noqa: E402
 from engine import database, grading  # noqa: E402
 from engine import DATA  # noqa: E402
-from engine.sources import espn, odds as odds_mod  # noqa: E402
+from engine.sources import espn  # noqa: E402
 from engine.stats import TEAM_NAMES, norm_name  # noqa: E402
 
 rng = np.random.default_rng(7)
@@ -126,45 +126,40 @@ run_daily.fetch_injuries = lambda: {norm_name("BOS Alpha"): {"name": "BOS Alpha"
                                     norm_name("LAL Bravo"): {"name": "LAL Bravo", "status": "questionable", "detail": ""}}
 
 
-class FakeOdds(odds_mod.OddsClient):
-    """Sportsbook that knows the TRUE means and posts lines at them with -110/-110."""
-    def __init__(self, *a, **k):
-        super().__init__(api_key="fake", regions="us")
-        self.remaining = 20000
+def _american(p):
+    p = min(max(p, 0.02), 0.98)
+    return int(round(-100 * p / (1 - p))) if p >= 0.5 else int(round(100 * (1 - p) / p))
 
-    def events(self):
-        return [{"id": g["game_id"], "home_team": INV_TEAM[g["home"]], "away_team": INV_TEAM[g["away"]]}
-                for g in cur_sched if g["date"] == self.today]
 
-    def event_props(self, event_id, markets):
-        g = next(x for x in cur_sched if x["game_id"] == event_id)
-        outs = []
+def fake_lines(event_ids, workers=6):
+    """A sharp sportsbook: knows each player's TRUE mean. Like real books it posts lines a little
+    off center and shades the PRICE to the true probability (plus ~4.5% margin)."""
+    from scipy.stats import poisson
+    rows = []
+    for g in [x for x in cur_sched if x["game_id"] in set(event_ids)]:
         for side, opp in ((g["home"], g["away"]), (g["away"], g["home"])):
             for p in [x for x in players if x["team"] == side and x["mins"] > 20]:
                 m, f, r = p["mins"], TEAM_DEF[opp], p["rate"]
-                true = {"player_points": (2 * 0.47 * r["fga"] + 0.36 * r["fg3a"] + 0.78 * r["fta"]) * m * f,
-                        "player_rebounds": r["reb"] * m * f, "player_assists": r["ast"] * m * f}
-                for mk, mu in true.items():
-                    if mk not in markets:
-                        continue
-                    line = np.floor(mu) + 0.5
-                    outs.append((mk, p["name"], line))
-        bms = []
-        for book in ("BookA", "BookB", "BookC"):
-            mkts = {}
-            for mk, name, line in outs:
-                mkts.setdefault(mk, []).extend([
-                    {"name": "Over", "description": name, "price": -110, "point": line},
-                    {"name": "Under", "description": name, "price": -110, "point": line}])
-            bms.append({"title": book, "markets": [{"key": k, "outcomes": v} for k, v in mkts.items()]})
-        return {"home_team": INV_TEAM[g["home"]], "away_team": INV_TEAM[g["away"]], "bookmakers": bms}
+                pts = (2 * 0.47 * r["fga"] + 0.36 * r["fg3a"] + 0.78 * r["fta"]) * m * f
+                true = {"pts": pts, "reb": r["reb"] * m * f, "ast": r["ast"] * m * f,
+                        "fg3m": 0.36 * r["fg3a"] * m * f}
+                true["pra"] = true["pts"] + true["reb"] + true["ast"]
+                for stat, mu in true.items():
+                    line = float(np.floor(mu + rng.normal(0, 0.12 * mu ** 0.5 + 0.4)) + 0.5)
+                    po = float(poisson.sf(np.floor(line), mu))
+                    rows.append({"game_id": g["game_id"], "player_id": p["pid"], "stat": stat, "line": line,
+                                 "over_price": _american(po * 1.045), "under_price": _american((1 - po) * 1.045),
+                                 "fair_over": po, "open_line": line, "book": "DraftKings"})
+    return rows
+
+
+import engine.sources.espn_props as espn_props  # noqa: E402
+espn_props.fetch_lines = fake_lines
 
 
 # ---------------------------------------------------------------- run 14 "days"
 days = sorted({g["date"] for g in cur_sched})
 for d in days[-7:-1]:  # last 6 days (each day re-learns weights, ~1 min)
-    FakeOdds.today = d
-    run_daily.OddsClient = FakeOdds
     run_daily.main(d)
 
 # ---------------------------------------------------------------- checks
@@ -176,5 +171,5 @@ print(f"picks recorded {len(ph)}, graded {len(g)}, void {(ph.result == 'void').s
 for (kind, tier), s in g.groupby(["kind", "tier"]):
     print(f"{kind:7s} {tier:7s} n={len(s):5d}  predicted {s.prob.mean():.3f}  actual {(s.result == 'hit').mean():.3f}")
 for (fl, size), s in lh[lh.result.isin(['win', 'loss'])].groupby(["flavor", "size"]):
-    print(f"lineup {fl:7s} {size}-leg n={len(s):3d} predicted {s.prob.mean():.3f} actual {(s.result == 'win').mean():.3f}")
+    print(f"{fl} {size}-leg n={len(s):3d} predicted {s.prob.mean():.3f} actual {(s.result == 'win').mean():.3f}")
 print(ph.groupby("stat").size().to_string())
