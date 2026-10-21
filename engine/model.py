@@ -254,19 +254,35 @@ class MatchupContext:
             if not inj or inj["status"] not in out_status or team_now != r["team"] or r["cur_min"] < ROT_MIN:
                 continue
             self.out.setdefault(r["team"], []).append({
-                "player": r["player"], "pos": r["pos"], "min": float(r["cur_min"]),
-                **{s: float(r[f"cur_sh_{s}"]) for s in SHARE_STATS}})
-        # --- each player's normal situation (recent average of teammates/opponents missing)
+                **{s: float(r[f"cur_sh_{s}"]) for s in SHARE_STATS},
+                "player": r["player"], "pos": r["pos"], "minutes": float(r["cur_min"])})
+        # --- each player's normal situation: how many teammates/opponents are usually missing.
+        # Measured from THIS season's games only (rosters change over the summer, and the end of
+        # last season is full of tanking/rest absences). Until a player has 10 games this season,
+        # it is blended toward the typical level for this point of the season (injuries pile up:
+        # ~6% of a team's production is missing on a typical October night, ~48% by March).
         self.base = {}
         if frame is not None and len(frame):
             cols = [c for c in frame.columns if c.startswith("d_vac_") or c.startswith("d_ovac_")]
-            keep = ["player_id", "date"] + cols + [c.replace("d_", "x_", 1) + "_base" for c in cols]
-            f = pd.DataFrame({c: frame[c].to_numpy() for c in keep}).sort_values(["player_id", "date"])
-            for c in cols:
-                raw = f[c] + f[c.replace("d_", "x_", 1) + "_base"]
-                last_ew = raw.groupby(f["player_id"]).agg(lambda x: x.ewm(halflife=15).mean().iloc[-1])
-                for pid, v in last_ew.items():
-                    self.base.setdefault(int(pid), {})[c.replace("d_", "x_", 1)] = float(v)
+            xcols = [c.replace("d_", "x_", 1) for c in cols]
+            f = pd.DataFrame({"player_id": frame["player_id"].to_numpy(), "date": frame["date"].astype(str).to_numpy(),
+                              **{x: (frame[c] + frame[x + "_base"]).to_numpy() for c, x in zip(cols, xcols)}})
+            month = f["date"].str[5:7].astype(int)
+            m_now = int((today or f["date"].max())[5:7])
+            near = {10: [10, 11], 11: [10, 11, 12], 12: [11, 12, 1], 1: [12, 1, 2], 2: [1, 2, 3], 3: [2, 3, 4],
+                    4: [3, 4], 5: [4, 5], 6: [5, 6]}.get(m_now, [m_now])
+            pool = f[month.isin(near)]
+            typical = (pool if len(pool) > 500 else f)[xcols].mean().to_dict()
+            f["season"] = f["date"].map(season_key)
+            cur = f[f["season"] == season].sort_values(["player_id", "date"])
+            k = 10
+            ew = cur.groupby("player_id")[xcols].agg(lambda x: x.ewm(halflife=15).mean().iloc[-1]) if len(cur) else None
+            n = cur.groupby("player_id").size() if len(cur) else {}
+            self.typical = typical
+            for pid in set(f["player_id"].astype(int)):
+                ncur = int(n.get(pid, 0)) if len(cur) else 0
+                self.base[pid] = {x: ((ncur * float(ew.loc[pid, x]) if ncur else 0.0) + k * typical[x]) / (ncur + k)
+                                  for x in xcols}
         tg = M.team_games(logs, players)
         self.team = M.team_latest(tg, season)
         self.pos = M.pos_latest(M.pos_table(logs), season)
@@ -307,14 +323,14 @@ class MatchupContext:
         from engine.absences import boost_x
         from engine.fit import ALTITUDE, USAGE_SRC
         pm = prof["proj_min"]
-        base = self.base.get(int(prof["player_id"]), {})
+        base = self.base.get(int(prof["player_id"]), getattr(self, "typical", {}))
         team, wm = prof["team"], w["minutes"]
         mates = [o for o in self.out.get(team, []) if o["player"] != prof["player"]]
         opps = self.out.get(opp, [])
         vac = {s: min(0.8, sum(o[s] for o in mates)) for s in self.SHARE_STATS}
         ovac = {s: min(0.8, sum(o[s] for o in opps)) for s in self.SHARE_STATS}
-        same = sum(o["min"] for o in mates if o["pos"] == pos)
-        other = sum(o["min"] for o in mates if o["pos"] != pos)
+        same = sum(o["minutes"] for o in mates if o["pos"] == pos)
+        other = sum(o["minutes"] for o in mates if o["pos"] != pos)
         d_same = same - base.get("x_vac_min_same", 0.0)
         d_other = other - base.get("x_vac_min_other", 0.0)
         today = self.today or game.get("date")
