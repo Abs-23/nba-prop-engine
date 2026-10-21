@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats as sps
 
-from engine.database import season_of
+from engine.database import season_key
 from engine.stats import STATS, add_stat_columns, norm_name
 
 
@@ -32,7 +32,7 @@ def prepare_logs(logs, cfg):
     df = logs.copy()
     df = df[(df["played"].astype(bool)) & (df["min"] > 0)]
     df = add_stat_columns(df)
-    df["season"] = df["game_id"].map(season_of)
+    df["season"] = df["date"].astype(str).map(season_key)
     df = df.sort_values(["date", "game_id"]).reset_index(drop=True)
     return df
 
@@ -42,7 +42,7 @@ def prepare_logs(logs, cfg):
 def opponent_factors(df, cfg):
     """{team: {stat: (factor, rank, n_games)}} — rank 30 = most generous defense."""
     mcfg = cfg["model"]
-    cur, prior = cfg["season"]["current_id_prefix"], cfg["season"]["prior_id_prefix"]
+    cur, prior = cfg["season"]["current"], cfg["season"]["prior"]
     keys = list(STATS)
     tg = df.groupby(["game_id", "season", "team", "opp"])[keys].sum().reset_index()
 
@@ -111,7 +111,7 @@ def player_profile(h, team, opp, game_date, cfg, opp_f, disp0, last_game_by_team
     `h` is the player's game log (both seasons), oldest first.
     """
     mcfg = cfg["model"]
-    cur, prior = cfg["season"]["current_id_prefix"], cfg["season"]["prior_id_prefix"]
+    cur, prior = cfg["season"]["current"], cfg["season"]["prior"]
     h = h[h["season"].isin([cur, prior])]
     n = len(h)
     if n == 0:

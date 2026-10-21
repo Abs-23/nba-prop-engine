@@ -21,7 +21,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import run_daily  # noqa: E402
 from engine import database, grading  # noqa: E402
-from engine.sources import nba_cdn, odds as odds_mod  # noqa: E402
+from engine import DATA  # noqa: E402
+from engine.sources import espn, odds as odds_mod  # noqa: E402
 from engine.stats import TEAM_NAMES, norm_name  # noqa: E402
 
 rng = np.random.default_rng(7)
@@ -92,21 +93,21 @@ for g in cur_sched:
     BOX[g["game_id"]] = sim_game(g["game_id"], g["date"], g["home"], g["away"])
 
 # ---------------------------------------------------------------- fakes
-for f in [database.PATH, grading.PICKS, grading.LINEUPS]:
+for f in [database.PATH, grading.PICKS, grading.LINEUPS, DATA / "backfill_2025.done"]:
     if f.exists():
         f.unlink()
 database.save(pd.DataFrame(rows))
-database.backfill_season = lambda db, prefix, max_games=1230: (db, 0)
+(DATA / "backfill_2025.done").write_text("sim")
+for g in cur_sched:
+    g["completed"] = True
 
 
-def fake_update(db, schedule, today):
-    have = set(db["game_id"])
-    new = [r for g in cur_sched if g["date"] < today and g["game_id"] not in have for r in BOX[g["game_id"]]]
-    return (pd.concat([db, pd.DataFrame(new)], ignore_index=True) if new else db), len({r["game_id"] for r in new})
+def fake_boxes(game_ids, workers=8):
+    return [r for gid in game_ids for r in BOX[gid]], 0
 
 
-database.update_from_schedule = fake_update
-nba_cdn.fetch_schedule = lambda: cur_sched
+database.fetch_boxes = fake_boxes
+espn.games_between = lambda start, end: [g for g in cur_sched if start <= g["date"] <= end]
 import engine.sources.rosters as ros  # noqa: E402
 
 ros.fetch_rosters = lambda: {norm_name(p["name"]): p["team"] for p in players}
@@ -151,8 +152,6 @@ class FakeOdds(odds_mod.OddsClient):
 # ---------------------------------------------------------------- run 14 "days"
 days = sorted({g["date"] for g in cur_sched})
 for d in days[:-1]:
-    for g in cur_sched:
-        g["status"] = 3 if g["date"] < d else 1
     FakeOdds.today = d
     run_daily.OddsClient = FakeOdds
     run_daily.main(d)

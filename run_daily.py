@@ -11,15 +11,15 @@ Steps
   5. Build 3-6 leg lineups, save everything, publish the dashboard.
 """
 import argparse
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from engine import database, grading, load_config
+from engine import DATA, database, grading, load_config
 from engine.dashboard import render
 from engine.lineups import build_all
 from engine.model import build_profiles
 from engine.picks import market_picks, safe_picks
-from engine.sources import nba_cdn
+from engine.sources import espn
 from engine.sources.injuries import fetch_injuries
 from engine.sources.odds import OddsClient, consensus_lines, plan_markets
 from engine.stats import TEAM_NAMES
@@ -36,17 +36,27 @@ def main(day=None):
 
     # 1. database
     db = database.load()
-    prior = cfg["season"]["prior_id_prefix"]
-    n_prior = db.loc[db["game_id"].map(database.season_of) == prior, "game_id"].nunique() if len(db) else 0
-    if n_prior < 1200:
-        log(f"Backfilling {cfg['season']['prior']} (one-time, ~10 minutes)...")
-        db, _ = database.backfill_season(db, prior)
-    schedule = nba_cdn.fetch_schedule()
-    db, added = database.update_from_schedule(db, schedule, today)
+    cur_year = espn.season_start_year(today)
+    # Seasons are worked out from the date, so the engine rolls over each October by itself.
+    cfg["season"] = {"current": str(cur_year)[2:], "prior": str(cur_year - 1)[2:]}
+    marker = DATA / f"backfill_{cur_year - 1}.done"
+    if not marker.exists():
+        log(f"Backfilling the {cur_year - 1}-{str(cur_year)[2:]} season (one-time, ~10 minutes)...")
+        past = espn.games_between(f"{cur_year - 1}-10-01", f"{cur_year}-06-30")
+        db, added, missing = database.add_games(db, past)
+        log(f"Backfill: {len(past)} games found, {added} downloaded, {missing} failed")
+        database.save(db)
+        if added > 1000:
+            marker.write_text(f"{added} games\n")
+    cur = db[db["date"].astype(str) >= f"{cur_year}-08-01"] if len(db) else db
+    start = (date.fromisoformat(cur["date"].max()) - timedelta(days=3)).isoformat() if len(cur) \
+        else f"{cur_year}-10-01"
+    schedule = espn.games_between(start, today)
+    db, added, missing = database.add_games(db, [g for g in schedule if g["date"] < today])
     database.save(db)
     n_games = db["game_id"].nunique()
-    log(f"Database: {n_games} games ({added} new)")
-    health.append({"ok": True, "text": f"{n_games:,} games in database"})
+    log(f"Database: {n_games} games ({added} new, {missing} not downloadable)")
+    health.append({"ok": n_games > 1000, "text": f"{n_games:,} games in database"})
 
     # 2. grade
     grading.grade(db)

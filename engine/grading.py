@@ -59,10 +59,10 @@ def grade(logs):
     if ph.empty:
         return
     logs = add_stat_columns(logs.copy())
-    finished = set(logs["game_id"])
-    idx = {(r.game_id, int(r.player_id)): r for r in logs.itertuples()}
+    finished = set(logs["game_id"].astype(str))
+    idx = {(str(r.game_id), int(r.player_id)): r for r in logs.itertuples()}
     for i, r in ph[ph["result"] == "pending"].iterrows():
-        gid = str(r["game_id"]).zfill(10)
+        gid = str(r["game_id"])
         if gid not in finished:
             continue
         row = idx.get((gid, int(r["player_id"])))

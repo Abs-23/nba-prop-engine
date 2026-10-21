@@ -1,4 +1,4 @@
-"""Our own game-log database: one row per player per game, built from box scores.
+"""Our own game-log database: one row per player per game, built from ESPN box scores.
 
 Stored as data/gamelogs.csv.gz inside the repo, so every daily run starts
 from yesterday's database and only downloads the games it's missing.
@@ -8,16 +8,14 @@ from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 
 from engine import DATA
-from engine.sources import nba_cdn
+from engine.sources import espn
 
 PATH = DATA / "gamelogs.csv.gz"
 
 
 def load():
     if PATH.exists():
-        df = pd.read_csv(PATH, dtype={"game_id": str})
-        df["game_id"] = df["game_id"].str.zfill(10)
-        return df
+        return pd.read_csv(PATH, dtype={"game_id": str})
     return pd.DataFrame(columns=["game_id", "date", "player_id"])
 
 
@@ -27,51 +25,41 @@ def save(df):
     df.to_csv(PATH, index=False, compression="gzip")
 
 
-def _fetch_many(game_ids, workers=8):
-    rows, missing = [], []
+def season_key(day_iso):
+    """'2026-11-03' -> '26' (the 2026-27 season)."""
+    return str(espn.season_start_year(str(day_iso)[:10]))[2:]
 
+
+def add_season(df):
+    df = df.copy()
+    df["season"] = df["date"].astype(str).map(season_key) if len(df) else []
+    return df
+
+
+def fetch_boxes(game_ids, workers=8):
     def one(gid):
         try:
-            return gid, nba_cdn.fetch_box(gid)
-        except nba_cdn.NotFound:
-            return gid, "notfound"
+            return espn.box(gid)
         except Exception:
-            return gid, None
+            return None
 
+    rows, missing = [], 0
     with ThreadPoolExecutor(workers) as ex:
-        for gid, res in ex.map(one, game_ids):
-            if isinstance(res, list):
+        for res in ex.map(one, game_ids):
+            if res:
                 rows.extend(res)
             else:
-                missing.append((gid, res))
+                missing += 1
     return rows, missing
 
 
-def update_from_schedule(df, schedule, today_iso):
-    """Download every finished game from the schedule that we don't have yet."""
-    have = set(df["game_id"]) if len(df) else set()
-    todo = [g["game_id"] for g in schedule if g["date"] < today_iso and g["game_id"] not in have]
+def add_games(df, games):
+    """Download box scores for completed games we don't have yet."""
+    have = set(df["game_id"].astype(str)) if len(df) else set()
+    todo = [g["game_id"] for g in games if g["completed"] and g["game_id"] not in have]
     if not todo:
-        return df, 0
-    rows, _ = _fetch_many(todo)
+        return df, 0, 0
+    rows, missing = fetch_boxes(todo)
     if rows:
         df = pd.concat([df, pd.DataFrame(rows)], ignore_index=True)
-    return df, len({r["game_id"] for r in rows})
-
-
-def backfill_season(df, id_prefix, max_games=1230):
-    """Download a past season's regular season by walking game IDs 00{yy}00001.."""
-    have = set(df["game_id"]) if len(df) else set()
-    ids = [f"002{id_prefix}{i:05d}" for i in range(1, max_games + 1)]
-    todo = [g for g in ids if g not in have]
-    if not todo:
-        return df, 0
-    rows, missing = _fetch_many(todo)
-    if rows:
-        df = pd.concat([df, pd.DataFrame(rows)], ignore_index=True)
-    print(f"backfill {id_prefix}: {len({r['game_id'] for r in rows})} games added, {len(missing)} unavailable")
-    return df, len({r["game_id"] for r in rows})
-
-
-def season_of(game_id):
-    return str(game_id)[3:5]
+    return df, len({r["game_id"] for r in rows}), missing

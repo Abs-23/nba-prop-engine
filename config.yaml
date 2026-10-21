@@ -2,12 +2,6 @@
 # Every number here is a deliberate rule. Change one, and the dashboard's
 # track record will tell you whether it helped.
 
-season:
-  current: "2026-27"        # season being predicted
-  prior: "2025-26"          # last season, used as a baseline early on
-  current_id_prefix: "26"   # NBA game IDs look like 0022600001 -> "26"
-  prior_id_prefix: "25"
-
 model:
   rate_half_life_games: 15        # how fast old games fade when estimating per-minute production
   minutes_half_life_games: 5      # minutes react faster (role changes show up quickly)
