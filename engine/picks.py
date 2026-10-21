@@ -41,6 +41,8 @@ def general_gate(prof, injuries, cfg):
         fails.append(f'projected {prof["proj_min"]:.0f} min')
     if prof["min_cv10"] > g["max_minutes_cv"]:
         fails.append("minutes too volatile")
+    if prof.get("games_with_team", 99) < g.get("min_games_with_team", 0):
+        fails.append(f'only {prof.get("games_with_team", 0)} games with {prof["team"]} (new team: role unknown)')
     inj = (injuries or {}).get(norm_name(prof["player"]))
     if inj and inj["status"] in g["exclude_injury_statuses"]:
         fails.append(f'injury status: {inj["status"]}')

@@ -143,6 +143,10 @@ def player_profile(h, team, opp, game_date, cfg, opp_f, disp0, last_game_by_team
 
     last_team = h["team"].iloc[-1]
     new_team = last_team != team
+    games_with_team = int((h["team"] == team).sum()) if not new_team else 0
+    if not new_team:  # count only the current stint (consecutive games at the end of the log)
+        t = h["team"].to_numpy()
+        games_with_team = int(len(t) - np.flatnonzero(t != team)[-1] - 1) if (t != team).any() else len(t)
     if new_team and n_cur == 0:
         # last season's role on a different team says little about minutes now
         proj_min *= 0.95
@@ -172,6 +176,7 @@ def player_profile(h, team, opp, game_date, cfg, opp_f, disp0, last_game_by_team
     return {
         "player_id": int(h["player_id"].iloc[-1]), "player": h["player"].iloc[-1],
         "team": team, "opp_abbr": opp, "n": n, "n_cur": n_cur, "new_team": bool(new_team),
+        "games_with_team": games_with_team,
         "last_team": last_team, "b2b": bool(b2b),
         "proj_min": float(proj_min), "min_l10": m10, "min_sd10": sd10, "min_cv10": cv10,
         "rates": rates, "means": means, "disp": disp, "opp": opp_info,
