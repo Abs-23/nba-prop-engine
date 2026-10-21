@@ -29,7 +29,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Check data sources
-        run: PYTHONPATH=. python scripts/probe_sources.py
+        run: python scripts/probe_sources.py
 
       - name: Build today's picks
         env:
@@ -37,6 +37,7 @@ jobs:
         run: python run_daily.py
 
       - name: Save database, history and dashboard
+        if: always()
         run: |
           git config user.name "nba-prop-engine"
           git config user.email "actions@users.noreply.github.com"
