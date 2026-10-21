@@ -105,6 +105,16 @@ def main(day=None):
 
 
 if __name__ == "__main__":
+    import sys
+    import traceback
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="YYYY-MM-DD (default: today, US Eastern)")
-    main(ap.parse_args().date)
+    try:
+        main(ap.parse_args().date)
+    except Exception:
+        # Surface the full error as a GitHub annotation, readable from the run summary.
+        tb = traceback.format_exc()
+        print(tb, file=sys.stderr)
+        print("::error title=run_daily failed::" + tb[-3000:].replace("%", "%25").replace("\r", "").replace("\n", "%0A"))
+        sys.exit(1)
