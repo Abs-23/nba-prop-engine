@@ -43,6 +43,17 @@ def general_gate(prof, injuries, cfg):
         fails.append("minutes too volatile")
     if prof.get("games_with_team", 99) < g.get("min_games_with_team", 0):
         fails.append(f'only {prof.get("games_with_team", 0)} games with {prof["team"]} (new team: role unknown)')
+    # Role check (lesson from Oct 21: Collier went from starter to 16 bench minutes, Turner from
+    # 23 to 32). Early in the season, if this season's minutes differ a lot from last season's,
+    # his role has changed and last season's numbers can't be trusted yet.
+    rc = g.get("role_change")
+    if rc and prof.get("min_prior"):
+        mc, mp = prof.get("min_cur"), prof["min_prior"]
+        if prof.get("n_cur", 0) == 0 and prof.get("team_games_cur", 0) >= 1:
+            fails.append("hasn't played yet this season")
+        elif mc is not None and prof.get("n_cur", 0) < rc["until_games"]:
+            if abs(mc - mp) > max(rc["min_change"], rc["pct_change"] * mp):
+                fails.append(f"role changed: {mc:.0f} min this season vs {mp:.0f} last season")
     inj = (injuries or {}).get(norm_name(prof["player"]))
     if inj and inj["status"] in g["exclude_injury_statuses"]:
         fails.append(f'injury status: {inj["status"]}')

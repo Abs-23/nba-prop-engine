@@ -177,6 +177,7 @@ def player_profile(h, team, opp, game_date, cfg, opp_f, disp0, last_game_by_team
         "player_id": int(h["player_id"].iloc[-1]), "player": h["player"].iloc[-1],
         "team": team, "opp_abbr": opp, "n": n, "n_cur": n_cur, "new_team": bool(new_team),
         "games_with_team": games_with_team,
+        "min_cur": m_cur, "min_prior": m_prior, "min_cur_last": float(hc["min"].iloc[-1]) if n_cur else None,
         "last_team": last_team, "b2b": bool(b2b),
         "proj_min": float(proj_min), "min_l10": m10, "min_sd10": sd10, "min_cv10": cv10,
         "rates": rates, "means": means, "disp": disp, "opp": opp_info,
@@ -457,6 +458,7 @@ def build_profiles(logs, games, rosters, cfg, mctx=None):
         team_of = dict(zip(latest["player_id"], latest["team"]))
 
     by_player = dict(tuple(df.groupby("player_id")))
+    cur_games = df[df["season"] == cfg["season"]["current"]].groupby("team")["game_id"].nunique().to_dict()
     profiles = []
     for g in games:
         for team, opp, home in ((g["home"], g["away"], True), (g["away"], g["home"], False)):
@@ -466,7 +468,7 @@ def build_profiles(logs, games, rosters, cfg, mctx=None):
                 prof = player_profile(by_player[pid], team, opp, g["date"], cfg, opp_f, disp0, last_by_team)
                 if prof:
                     prof.update(game_id=g["game_id"], home=home, tipoff_utc=g.get("tipoff_utc"),
-                                matchup=f'{g["away"]} @ {g["home"]}')
+                                matchup=f'{g["away"]} @ {g["home"]}', team_games_cur=cur_games.get(team, 0))
                     if mctx is not None:
                         mctx.apply(prof, g)
                     profiles.append(prof)

@@ -17,6 +17,10 @@ gates:                             # a pick must pass ALL of these to be shown
   min_projected_minutes: 24
   max_minutes_cv: 0.30            # skip players whose minutes swing wildly (coefficient of variation, last 10)
   min_games_with_team: 3          # traded/signed players: wait until we've seen their new role
+  role_change:                    # early season: skip players whose minutes changed a lot vs last season
+    until_games: 10               # applies until a player has this many games this season
+    min_change: 6                 # minutes difference that counts as a role change...
+    pct_change: 0.25              # ...or this share of last season's minutes, whichever is bigger
   exclude_injury_statuses: ["out", "doubtful", "questionable", "day-to-day"]
 
 market_picks:                      # picks against a real sportsbook line
@@ -79,6 +83,8 @@ card:
       form_min: 0.7         # cleared this exact line in 7+ of last 10
       lean_min: 0.0         # matchup must not lean against the pick
       price_min: null       # no price limit
+      max_gap: 0.10         # model may be at most 10 pts more confident than DraftKings.
+                            # Backtest: gap <=10 pts hit 72.6% (146 legs) vs 66.5% for all legs
       fill_p_min: 0.55      # if fewer than 3 qualify, fill with legs above these (marked "below bar")
       fill_form_min: 0.6
     fair:                   # "Fair price": every leg -150 or better. Backtest: legs hit ~57% at ~-126.
@@ -87,6 +93,7 @@ card:
       form_min: 0.6
       lean_min: 0.01
       price_min: -150
+      max_gap: 0.20         # Backtest: legs with model >20 pts above DraftKings hit only 47.6% (170 legs)
       fill_p_min: 0.50
       fill_form_min: 0.5
   # Blend of model and market, learned from real lines + results (scripts/backtest_lines.py):

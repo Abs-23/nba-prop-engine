@@ -78,9 +78,15 @@ def price_ok(c, rule):
     return rule.get("price_min") is None or c["price"] >= rule["price_min"]
 
 
+def agrees_with_market(c, rule):
+    """Lesson from Oct 21 + last season's real lines: when our model is far more confident than
+    DraftKings, the book usually knows something we don't (a role change, a minutes limit)."""
+    return rule.get("max_gap") is None or c["p_model"] - c["fair"] <= rule["max_gap"]
+
+
 def qualifies(c, rule):
-    return (price_ok(c, rule) and c["p"] >= rule["p_min"] and c["h10"] is not None
-            and c["h10"] >= rule["form_min"] and c["lean"] >= rule["lean_min"])
+    return (price_ok(c, rule) and agrees_with_market(c, rule) and c["p"] >= rule["p_min"]
+            and c["h10"] is not None and c["h10"] >= rule["form_min"] and c["lean"] >= rule["lean_min"])
 
 
 def reasons(c, cfg, injuries, rule):
@@ -98,6 +104,10 @@ def reasons(c, cfg, injuries, rule):
          f'Recent form: went {side} {line} in {c["n10"]} of his last {min(10, n_hist)} games '
          f'and {c["n20"]} of his last {min(20, n_hist)}.'),
     ]
+    gap = c["p_model"] - c["fair"]
+    r.append(("+" if abs(gap) <= 0.05 else "i",
+              f"Model vs DraftKings: {100*c['p_model']:.0f}% vs {100*c['fair']:.0f}% "
+              + ("(they agree)." if abs(gap) <= 0.05 else f"(model {'higher' if gap > 0 else 'lower'} by {100*abs(gap):.0f} pts, within the allowed gap).")))
     if c["open_line"] != line:
         moved_our_way = (c["open_line"] < line) if side == "over" else (c["open_line"] > line)
         r.append(("i" if moved_our_way else "+",
@@ -149,7 +159,8 @@ def build_card(cands, cfg, injuries, card_name):
     legs = _pick_legs(good, cc["max_legs"], cc["max_per_game"])
     fill = []
     if len(legs) < cc["min_legs"]:
-        backup = [c for c in cands if c not in good and price_ok(c, rule) and c["p"] >= rule["fill_p_min"]
+        backup = [c for c in cands if c not in good and price_ok(c, rule) and agrees_with_market(c, rule)
+                  and c["p"] >= rule["fill_p_min"]
                   and (c["h10"] or 0) >= rule["fill_form_min"] and c["lean"] >= 0]
         fill = _pick_legs(backup, cc["min_legs"] - len(legs), cc["max_per_game"], taken=legs)
     picks = ([to_pick(c, cfg, injuries, rule, card_name) for c in legs]
