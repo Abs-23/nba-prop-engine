@@ -100,6 +100,28 @@ card:
   # logit(p) = b0 + b1 * logit(model) + b2 * logit(DraftKings no-vig)
   blend: [-0.000, 0.108, 0.894]
 
+pickem:
+  # PrizePicks card (lines via The Odds API region "us_dfs"; 1 credit per stat per game).
+  # Chance at PrizePicks' line is anchored to DraftKings' price for the same player and stat.
+  # No backtest exists for PrizePicks lines yet: these bars are judgment calls, to be checked
+  # against the live track record.
+  p_min: 0.57          # every PrizePicks pick pays the same; break-even is roughly 54-58% per pick
+  form_min: 0.6        # cleared PrizePicks' line in 6+ of last 10
+  lean_min: 0.0        # matchup must not lean against the pick
+  max_gap: 0.10        # model at most 10 pts more confident than the DraftKings-anchored chance
+  fill_p_min: 0.55     # if fewer than 3 qualify, fill to 3 with legs above these (marked "below bar")
+  fill_form_min: 0.5
+  breakeven: 0.545     # rough per-pick break-even used only to sort by value
+  markets:             # priority order; with few credits, later ones are dropped first
+    - player_points
+    - player_points_rebounds_assists
+    - player_rebounds
+    - player_assists
+    - player_threes
+    - player_points_rebounds
+    - player_points_assists
+    - player_rebounds_assists
+
 lineups:
   sizes: [3, 4, 5, 6]
   max_legs_per_game: 2            # legs from the same game move together; cap the exposure

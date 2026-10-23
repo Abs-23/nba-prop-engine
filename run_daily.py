@@ -133,6 +133,31 @@ def main(day=None):
         lineups, market = build_cards(cands, cfg, injuries)
         log(f"Lines: {len(lines)}; candidates: {len(cands)}; qualified: {len(market)}; cards: "
             + ", ".join(f"{k} {v[0]['size'] if v else 0} legs" for k, v in lineups.items()))
+        # 6. PrizePicks card (licensed via The Odds API), priced with DraftKings' lines
+        from engine import pickem
+        from engine.sources.odds import OddsClient, plan_markets
+        client = OddsClient(regions="us_dfs")
+        if client.enabled:
+            try:
+                events = pickem.tonight_events(client, games)
+                pc = cfg["pickem"]
+                mk = plan_markets(client.remaining, len(events), pc["markets"],
+                                  cfg["odds_api"]["reserve_credits"], cfg["odds_api"]["max_daily_credits"])
+                pp_lines = pickem.fetch_pickem_lines(client, events, mk) if mk else []
+                pcands = pickem.candidates(profiles, pp_lines, lines, injuries, cfg)
+                pcard, pq = pickem.build_card(pcands, cfg, injuries)
+                lineups["prizepicks"] = [pcard] if pcard else []
+                market += pq
+                n_pp = len([l for l in pp_lines if l["book_key"] == "prizepicks"])
+                health.append({"ok": bool(n_pp), "text": f"PrizePicks: {n_pp} lines, {len(mk)} stats, "
+                               f"{int(client.remaining or 0)} credits left"})
+                log(f"PrizePicks: {n_pp} lines ({', '.join(mk)}); {len(pq)} qualified; "
+                    f"card {pcard['size'] if pcard else 0} legs; credits left {client.remaining}")
+            except Exception as ex:
+                log(f"PrizePicks lines unavailable: {ex}")
+                health.append({"ok": False, "text": "PrizePicks lines unavailable"})
+        else:
+            health.append({"ok": False, "text": "No odds key: PrizePicks card off"})
         fills = [l for v in lineups.values() for c in v for l in c["legs"] if l["below_bar"]]
         grading.record_today(today, [], market + fills, lineups)
 

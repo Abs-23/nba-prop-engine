@@ -126,7 +126,7 @@ $("chips").innerHTML = D.health.map(h => `<span class="chip ${h.ok ? "" : "bad"}
 function legHTML(p){
   const sideTxt = `${p.side === "over" ? "Over" : "Under"} ${p.line}`;
   return `<details class="leg"><summary>
-    <div><div class="tier">${p.below_bar ? '<span class="down">Below bar</span> · ' : ""}${esc(p.tier || "")} · DraftKings ${esc(p.price_fmt || "")}</div>
+    <div><div class="tier">${p.below_bar ? '<span class="down">Below bar</span> · ' : ""}${esc(p.tier || "")} · ${p.card === "prizepicks" ? `DraftKings line ${p.dk_line}` : `DraftKings ${esc(p.price_fmt || "")}`}</div>
     <div class="what">${esc(p.label)}</div>
     <div class="meta">${esc(p.matchup)} · proj ${p.proj.toFixed(1)} · last 10: ${p.l10 != null ? Math.round(p.l10*10) + "/10" : "–"}${p.matchup_net != null ? ` · <span class="${p.matchup_net >= 0 ? "up" : "down"}">matchup ${p.matchup_net >= 0 ? "+" : ""}${(p.matchup_net*100).toFixed(1)}%</span>` : ""}</div></div>
     <div class="p">${pct(p.prob)}<div class="meta">book ${pct(p.fair)}</div></div></summary>
@@ -137,7 +137,8 @@ function legHTML(p){
 // ---- tonight's cards
 const CARD_INFO = {
   likely: "Highest chance at any price. Legs are usually heavy favorites (often -160 or worse), so they pay less.",
-  fair: "Only legs priced -150 or better. Each leg is a little less likely, but every one pays a fair price."
+  fair: "Only legs priced -150 or better. Each leg is a little less likely, but every one pays a fair price.",
+  prizepicks: "PrizePicks lines (every pick pays the same), with each chance worked out from DraftKings' price on the same player and stat. Best when PrizePicks' line lags behind DraftKings'."
 };
 const CARDS = D.lineups || {};
 const names = Object.keys(CARDS);
@@ -145,7 +146,7 @@ let cardName = names.find(n => (CARDS[n] || []).length) || names[0];
 function drawCard(){
   $("card-tabs").innerHTML = names.map(n => {
     const c = (CARDS[n] || [])[0];
-    const title = c ? c.title : ({likely: "Most likely", fair: "Fair price"}[n] || n);
+    const title = c ? c.title : ({likely: "Most likely", fair: "Fair price", prizepicks: "PrizePicks"}[n] || n);
     return `<button class="tab ${n===cardName?"on":""}" data-c="${n}">${esc(title)}${c ? ` (${c.size})` : ""}</button>`;
   }).join("");
   const c = (CARDS[cardName] || [])[0];
@@ -191,7 +192,7 @@ function barRow(label, actual, expected, n){
 const cards = [];
 cards.push(`<div class="panel"><h3>Hit rate by tier</h3>${R.by_tier.length ? R.by_tier.map(t => barRow(t.tier, t.rate, t.expected, t.n)).join("") : '<div class="meta">No graded picks yet.</div>'}</div>`);
 cards.push(`<div class="panel"><h3>Are the % honest?</h3>${R.calibration.length ? R.calibration.map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Needs graded picks. Bars should land on the black tick.</div>'}</div>`);
-cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${({likely:"Most likely",fair:"Fair price"})[l.flavor] || l.flavor} · ${l.size} legs`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
+cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${({likely:"Most likely",fair:"Fair price",prizepicks:"PrizePicks"})[l.flavor] || l.flavor} · ${l.size} legs`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
 $("record").innerHTML = cards.join("");
 $("recent").innerHTML = R.recent.length ? `<table><tr><th>Date</th><th>Pick</th><th class="n">Actual</th><th>Result</th></tr>` +
   R.recent.map(r => `<tr><td>${r.date}</td><td>${esc(r.player)} ${r.side} ${r.line} ${esc(r.stat)} <span class="meta">${r.tier}</span></td><td class="n">${r.actual ?? "–"}</td><td class="${r.result}">${r.result}</td></tr>`).join("") + `</table>`

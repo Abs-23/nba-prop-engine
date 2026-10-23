@@ -21,6 +21,17 @@ DraftKings via ESPN (points, rebounds, assists, threes, and the P+R / P+A / R+A 
 Both need the player gates: healthy, steady minutes, 3+ games with his current team.
 Neither card beat DraftKings on profit by more than noise in the backtest (about +-2% per leg).
 
+**PrizePicks card (third tab).** PrizePicks lines come through The Odds API (region `us_dfs`,
+the licensed route; PrizePicks itself is not scraped). Every PrizePicks pick pays the same,
+so a pick is good when the true chance of More/Less at PrizePicks' line is high. That chance
+is worked out from DraftKings' price on the same player and stat (a distribution matched to
+DraftKings' line and price, evaluated at PrizePicks' line), blended with our model. Edges come
+mostly from PrizePicks lines that lag DraftKings'. Picks without a DraftKings line to anchor
+to are skipped. Bars: 57%+ chance, 6+ of last 10, matchup not against, model within 10 pts of
+the DraftKings-anchored chance. There is no PrizePicks line history to backtest yet, so the
+live track record is the test. Uses about 1 Odds API credit per stat per game; the engine
+spreads the monthly credits automatically (free plan: ~2 stats a night).
+
 Each card takes every qualifying leg, best first, up to 6 (one per player, at most 2 per game).
 If fewer than 3 qualify, it is filled to 3 with the next-best legs, marked **below bar**.
 
@@ -95,23 +106,14 @@ Also tested and rejected: requiring 2+ individual checks to each pass a bar (~4 
 
 ## Setup (one time)
 
-1. No odds key needed any more: DraftKings lines come free through ESPN.
+1. DraftKings lines come free through ESPN. The `ODDS_API_KEY` secret is only used for the
+   PrizePicks card (The Odds API, region `us_dfs`).
 2. **Dashboard:** *Settings → Pages →* Source: *Deploy from a branch*, Branch: `main`, folder `/docs`.
 3. **First run:** *Actions → Daily picks → Run workflow*. The first run takes ~10 minutes
    (downloads last season). After that it runs by itself every day at ~5pm Eastern.
 
 ## Odds API credits
 
-The free plan has a small monthly allowance. Each game's props cost
-(markets × regions) credits, so the engine spreads what's left over the rest of the month
-and drops the lowest-priority markets first (order in `config.yaml`). For full coverage
-of all 8 markets every day, the paid tier is needed.
-
-## Roadmap
-
-- Teammate-out usage boost (with/without splits from the database)
-- Blowout risk from game spreads
-- Position-level defense (e.g. rebounds allowed to centers)
-- Bet-size guidance once the track record proves an edge
-
-*For entertainment and analysis. If you bet, bet only what you can afford to lose.*
+Only the PrizePicks card uses them: 1 credit per stat per game. The engine spreads what's left
+over the rest of the month and drops the lowest-priority stats first (order in `config.yaml`
+under `pickem.markets`). The $30/month plan covers every stat every night.
