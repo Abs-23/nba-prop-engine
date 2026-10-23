@@ -83,6 +83,9 @@ def main(day=None):
     now_utc = datetime.now(timezone.utc)
     started = [g for g in games if g.get("tipoff_utc") and
                datetime.fromisoformat(g["tipoff_utc"].replace("Z", "+00:00")) <= now_utc]
+    if started:
+        print("::notice title=games started::" + "; ".join(f'{g["away"]}@{g["home"]} {g["tipoff_utc"]}' for g in started)
+              + f" (now {now_utc:%H:%M} UTC)")
     if started and grading.has_cards(today):
         log(f"{len(started)} games already started and tonight's cards exist: cards are locked, nothing rebuilt.")
         return
