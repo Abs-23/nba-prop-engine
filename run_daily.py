@@ -11,10 +11,13 @@ Steps
   5. Build 3-6 leg lineups, save everything, publish the dashboard.
 """
 import argparse
+import json
+import os
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from engine import DATA, database, fit, grading, load_config
+from engine import DATA, DOCS, database, fit, grading, load_config
+from engine.stats import norm_name
 from engine.dashboard import render
 from engine.model import MatchupContext, build_profiles
 
@@ -86,11 +89,19 @@ def main(day=None):
     if started:
         print("::notice title=games started::" + "; ".join(f'{g["away"]}@{g["home"]} {g["tipoff_utc"]}' for g in started)
               + f" (now {now_utc:%H:%M} UTC)")
+    locked = {}
     if started and grading.has_cards(today):
-        log(f"{len(started)} games already started and tonight's cards exist: cards are locked, nothing rebuilt.")
-        return
+        # Published cards stay exactly as they were; only cards not yet published get built.
+        prev = json.loads((DOCS / "picks.json").read_text()) if (DOCS / "picks.json").exists() else {}
+        if prev.get("date") == today:
+            locked = {k: v for k, v in prev.get("lineups", {}).items() if v}
+        wanted = set(cfg["card"]["cards"]) | ({"prizepicks"} if os.environ.get("ODDS_API_KEY") else set())
+        if wanted <= set(locked):
+            log(f"{len(started)} games already started and all of tonight's cards exist: locked, nothing rebuilt.")
+            return
+        log(f"Locked cards kept as published: {sorted(locked)}; building the rest from games not started.")
     if started:
-        log(f"{len(started)} games already started: building cards from the {len(games) - len(started)} that haven't.")
+        log(f"{len(started)} games already started: building from the {len(games) - len(started)} that haven't.")
         games = [g for g in games if g not in started]
     rosters = None
     injuries = None
@@ -161,6 +172,18 @@ def main(day=None):
                 health.append({"ok": False, "text": "PrizePicks lines unavailable"})
         else:
             health.append({"ok": False, "text": "No odds key: PrizePicks card off"})
+        if locked:
+            ids = {norm_name(p["player"]): p["player_id"] for p in profiles}
+            ids.update({norm_name(r.player): r.player_id for r in db.drop_duplicates("player_id", keep="last").itertuples()})
+            kept = []
+            for name, cs in locked.items():
+                for leg in cs[0]["legs"]:
+                    leg.setdefault("player_id", ids.get(norm_name(leg["player"])))
+                    leg.setdefault("card", name)
+                    leg.setdefault("kind", "card")
+                    kept.append(leg)
+                lineups[name] = cs
+            market = [m for m in market if m.get("card") not in locked] + kept
         fills = [l for v in lineups.values() for c in v for l in c["legs"] if l["below_bar"]]
         grading.record_today(today, [], market + fills, lineups)
 

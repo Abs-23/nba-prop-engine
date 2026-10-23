@@ -8,7 +8,7 @@ from engine import DOCS, ROOT
 
 KEEP = ["kind", "tier", "game_id", "matchup", "player", "team", "stat", "stat_label", "side", "line",
         "label", "prob", "fair", "edge", "ev", "price", "book", "proj", "l10", "l20", "reasons", "matchup_net",
-        "below_bar", "prob_model", "card", "dk_line"]
+        "below_bar", "prob_model", "card", "dk_line", "player_id"]
 
 
 def _clean(o):
