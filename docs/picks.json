@@ -1,7 +1,7 @@
 {
  "date": "2026-10-23",
  "date_label": "Friday, October 23, 2026",
- "generated": "2026-10-23 21:40 UTC",
+ "generated": "2026-10-23 21:44 UTC",
  "games_today": 11,
  "safe": [],
  "market": [
@@ -2406,7 +2406,7 @@
   },
   {
    "ok": true,
-   "text": "Injury report: 70 listed"
+   "text": "Injury report: 69 listed"
   },
   {
    "ok": true,
@@ -2422,7 +2422,7 @@
   },
   {
    "ok": true,
-   "text": "PrizePicks: 315 lines, 2 stats, 213 credits left"
+   "text": "PrizePicks: 103 lines, 2 stats, 191 credits left"
   }
  ],
  "odds_enabled": true,
