@@ -112,15 +112,18 @@ pickem:
   fill_p_min: 0.55     # if fewer than 3 qualify, fill to 3 with legs above these (marked "below bar")
   fill_form_min: 0.5
   breakeven: 0.545     # rough per-pick break-even used only to sort by value
-  markets:             # priority order; with few credits, later ones are dropped first
-    - player_points
-    - player_points_rebounds_assists
-    - player_rebounds
-    - player_assists
+  markets:             # priority order; with few credits, later ones are dropped first.
+    # Low-count stats first: DraftKings prices them lopsided (e.g. Under 1.5 threes at -200, ~64%),
+    # and on PrizePicks every pick pays the same, so those become high-chance picks with no juice.
+    # Points and P+R+A are priced ~50/50 on DraftKings, so they rarely clear the bar.
     - player_threes
+    - player_assists
+    - player_rebounds
+    - player_points
+    - player_rebounds_assists
+    - player_points_rebounds_assists
     - player_points_rebounds
     - player_points_assists
-    - player_rebounds_assists
 
 lineups:
   sizes: [3, 4, 5, 6]

@@ -41,6 +41,19 @@ def save_line_snapshot(lines, day):
     allp.to_csv(path, index=False, compression="gzip")
 
 
+def save_pickem_snapshot(pp_lines, dk_lines, day):
+    """Keep every PrizePicks line next to DraftKings' line for the same player/stat (for later study)."""
+    import pandas as pd
+    if not pp_lines:
+        return
+    path = DATA / "pickem_history.csv.gz"
+    new = pd.DataFrame(pp_lines).assign(snapshot=day)
+    old = pd.read_csv(path, dtype={"game_id": str}) if path.exists() else pd.DataFrame()
+    allp = pd.concat([old, new], ignore_index=True).drop_duplicates(
+        ["game_id", "player_key", "stat", "book_key"], keep="last")
+    allp.to_csv(path, index=False, compression="gzip")
+
+
 def main(day=None):
     cfg = load_config()
     today = day or datetime.now(ZoneInfo("America/New_York")).date().isoformat()
@@ -158,7 +171,12 @@ def main(day=None):
                 mk = plan_markets(client.remaining, len(events), pc["markets"],
                                   cfg["odds_api"]["reserve_credits"], cfg["odds_api"]["max_daily_credits"])
                 pp_lines = pickem.fetch_pickem_lines(client, events, mk) if mk else []
+                save_pickem_snapshot(pp_lines, lines, today)
                 pcands = pickem.candidates(profiles, pp_lines, lines, injuries, cfg)
+                top = sorted(pcands, key=lambda c: -c["p"])[:5]
+                print("::notice title=PrizePicks best::" + "; ".join(
+                    f'{c["prof"]["player"]} {c["side"]} {c["line"]} {c["stat"]} {100*c["p"]:.0f}% (DK {c["dk"]["line"]})'
+                    for c in top))
                 pcard, pq = pickem.build_card(pcands, cfg, injuries)
                 lineups["prizepicks"] = [pcard] if pcard else []
                 market += pq
