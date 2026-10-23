@@ -1,8 +1,8 @@
 {
  "date": "2026-10-23",
  "date_label": "Friday, October 23, 2026",
- "generated": "2026-10-23 21:44 UTC",
- "games_today": 11,
+ "generated": "2026-10-23 23:32 UTC",
+ "games_today": 6,
  "safe": [],
  "market": [
   {
@@ -2406,7 +2406,7 @@
   },
   {
    "ok": true,
-   "text": "Injury report: 69 listed"
+   "text": "Injury report: 70 listed"
   },
   {
    "ok": true,
@@ -2414,15 +2414,15 @@
   },
   {
    "ok": true,
-   "text": "20 rotation players out tonight"
+   "text": "22 rotation players out tonight"
   },
   {
    "ok": true,
-   "text": "DraftKings lines: 1027 for 11 games"
+   "text": "DraftKings lines: 568 for 6 games"
   },
   {
    "ok": true,
-   "text": "PrizePicks: 103 lines, 2 stats, 191 credits left"
+   "text": "PrizePicks: 115 lines, 3 stats, 173 credits left"
   }
  ],
  "odds_enabled": true,
@@ -2465,6 +2465,10 @@
   ],
   "MIN": [
    "Donte DiVincenzo"
+  ],
+  "DEN": [
+   "Spencer Jones",
+   "Cameron Johnson"
   ],
   "ORL": [
    "Anthony Black"
