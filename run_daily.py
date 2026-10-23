@@ -11,7 +11,7 @@ Steps
   5. Build 3-6 leg lineups, save everything, publish the dashboard.
 """
 import argparse
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 from engine import DATA, database, fit, grading, load_config
@@ -78,6 +78,17 @@ def main(day=None):
     # 3. tonight
     games = [g for g in schedule if g["date"] == today]
     log(f"{len(games)} games today")
+    # Lock: once tonight's cards exist and a game has tipped off, never rebuild them
+    # (lines and injury news after tip-off would silently change the cards you already saw).
+    now_utc = datetime.now(timezone.utc)
+    started = [g for g in games if g.get("tipoff_utc") and
+               datetime.fromisoformat(g["tipoff_utc"].replace("Z", "+00:00")) <= now_utc]
+    if started and grading.has_cards(today):
+        log(f"{len(started)} games already started and tonight's cards exist: cards are locked, nothing rebuilt.")
+        return
+    if started:
+        log(f"{len(started)} games already started: building cards from the {len(games) - len(started)} that haven't.")
+        games = [g for g in games if g not in started]
     rosters = None
     injuries = None
     profiles, safe, market, lineups = [], [], [], {}

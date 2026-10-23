@@ -2,9 +2,11 @@ name: Daily picks
 
 on:
   schedule:
-    # 21:13 UTC = 5:13pm Eastern (4:13pm in winter). Late enough for most injury
-    # news and posted prop lines, early enough before 7pm tip-offs.
-    - cron: "13 21 * * *"
+    # GitHub often starts scheduled runs 2-3 hours late, so run three times a day.
+    # UTC 15:47 / 18:47 / 20:47 = 11:47am / 2:47pm / 4:47pm Eastern (an hour earlier in winter).
+    # Each run before the first tip-off refreshes the cards with the latest injury news and
+    # lines; once a game has started, the cards are locked.
+    - cron: "47 15,18,20 * * *"
   workflow_dispatch:        # adds a "Run workflow" button on GitHub
 
 permissions:

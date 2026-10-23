@@ -120,3 +120,9 @@ def track_record():
         out["lineups"].append({"flavor": flavor, "size": int(size), "n": int(len(s)),
                                "wins": int((s["result"] == "win").sum()), "expected": float(s["prob"].mean())})
     return out
+
+
+def has_cards(date):
+    """True if cards for this date were already published."""
+    lh = _load(LINEUPS, ["date", "flavor", "size", "prob", "legs", "result"])
+    return bool(len(lh)) and (lh["date"] == date).any()
