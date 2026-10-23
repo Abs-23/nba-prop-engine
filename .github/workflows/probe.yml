@@ -1,0 +1,28 @@
+name: Probe line sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python scripts/probe_pickem.py
+      - name: Save samples to the probe branch
+        if: always()
+        run: |
+          git config user.name "nba-prop-engine"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b probe-samples
+          git add -f data/debug || true
+          git commit -m "probe samples" || exit 0
+          git push -f origin probe-samples
