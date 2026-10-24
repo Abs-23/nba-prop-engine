@@ -41,6 +41,15 @@ def save_line_snapshot(lines, day):
     allp.to_csv(path, index=False, compression="gzip")
 
 
+def pickem_board_ready(games, now_utc):
+    """Download PrizePicks lines once a day, late enough that its board is mostly posted:
+    from 2pm Eastern, or within 3 hours of the first tip-off if that comes earlier."""
+    et = now_utc.astimezone(ZoneInfo("America/New_York"))
+    tips = [datetime.fromisoformat(g["tipoff_utc"].replace("Z", "+00:00")) for g in games if g.get("tipoff_utc")]
+    soon = bool(tips) and min(tips) - now_utc <= timedelta(hours=3)
+    return et.hour >= 14 or soon
+
+
 def save_pickem_snapshot(pp_lines, dk_lines, day):
     """Keep every PrizePicks line next to DraftKings' line for the same player/stat (for later study)."""
     import pandas as pd
@@ -171,6 +180,9 @@ def main(day=None):
             pp_lines = cache["lines"]
             log(f"PrizePicks: reusing today's {len(pp_lines)} lines (no credits spent)")
             health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines (downloaded earlier today)"})
+        elif client.enabled and not pickem_board_ready(games, now_utc):
+            log("PrizePicks: board still filling in; waiting for a later run to download (saves credits)")
+            health.append({"ok": True, "text": "PrizePicks: download waits until 2pm ET (board still filling in)"})
         elif client.enabled:
             try:
                 events = pickem.tonight_events(client, games)
