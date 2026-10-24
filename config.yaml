@@ -101,6 +101,15 @@ card:
   blend: [-0.000, 0.108, 0.894]
 
 pickem:
+  # Free plan: The Odds API gives 500 credits/month (~16/day). Lines are downloaded ONCE a day
+  # (later runs reuse them) and today's share of the month's credits is split:
+  #   mode "shadow": first the shadow test (free throws made/attempted, FG made: stats DraftKings
+  #   doesn't post) on as many games as fit, rotating games day to day; leftovers go to the
+  #   PrizePicks card's stats, one stat across the whole slate at a time.
+  #   mode "card": skip the shadow test.
+  mode: shadow
+  shadow_markets: [player_frees_made, player_frees_attempts, player_field_goals]
+  shadow_max_games: 6
   # PrizePicks card (lines via The Odds API region "us_dfs"; 1 credit per stat per game).
   # Chance at PrizePicks' line is anchored to DraftKings' price for the same player and stat.
   # No backtest exists for PrizePicks lines yet: these bars are judgment calls, to be checked
@@ -143,4 +152,4 @@ odds_api:
     - player_frees_attempts
     - player_field_goals
   reserve_credits: 10             # never spend the last few credits
-  max_daily_credits: 400          # hard cap per run even on a paid plan
+  max_daily_credits: 400          # hard cap per day even on a paid plan

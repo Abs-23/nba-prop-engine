@@ -38,8 +38,10 @@ def record_today(date, safe, market, lineups):
         rows.append({"pick_id": pick_id(date, p), "date": date, "kind": p["kind"], "tier": p["tier"],
                      "game_id": p["game_id"], "player_id": p["player_id"], "player": p["player"],
                      "team": p["team"], "stat": p["stat"], "side": p["side"], "line": p["line"],
-                     "prob": round(p["prob"], 4), "fair": round(p.get("fair", np.nan), 4),
-                     "edge": round(p.get("edge", np.nan), 4), "price": p.get("price"),
+                     "prob": round(float(p["prob"]), 4),
+                     "fair": round(float(p["fair"]), 4) if p.get("fair") is not None and not pd.isna(p.get("fair")) else np.nan,
+                     "edge": round(float(p["edge"]), 4) if p.get("edge") is not None and not pd.isna(p.get("edge")) else np.nan,
+                     "price": p.get("price"),
                      "result": "pending", "actual": None})
     ph = pd.concat([ph, pd.DataFrame(rows, columns=PICK_COLS)], ignore_index=True).drop_duplicates("pick_id")
     ph.to_csv(PICKS, index=False)
@@ -98,8 +100,21 @@ def track_record():
     """Summary numbers for the dashboard."""
     ph, lh = _load(PICKS, PICK_COLS), _load(LINEUPS, ["date", "flavor", "size", "prob", "legs", "result"])
     g = ph[ph["result"].isin(["hit", "miss"])].copy()
+    sh = g[g["kind"] == "shadow"].copy()
+    g = g[g["kind"] != "shadow"]
     out = {"graded_picks": int(len(g)), "by_tier": [], "by_stat": [], "calibration": [], "lineups": [],
-           "recent": []}
+           "recent": [], "shadow": {"n": int(len(sh)), "buckets": [], "by_stat": []}}
+    if len(sh):
+        sh["hit"] = (sh["result"] == "hit").astype(int)
+        out["shadow"]["rate"] = float(sh["hit"].mean())
+        out["shadow"]["expected"] = float(sh["prob"].mean())
+        sh["bucket"] = pd.cut(sh["prob"], [0.5, 0.6, 0.7, 0.8, 1.0], include_lowest=True)
+        for b, s in sh.groupby("bucket", observed=True):
+            out["shadow"]["buckets"].append({"bucket": f"{int(b.left*100)}-{int(b.right*100)}%", "n": int(len(s)),
+                                             "predicted": float(s["prob"].mean()), "actual": float(s["hit"].mean())})
+        for st, s in sh.groupby("stat"):
+            out["shadow"]["by_stat"].append({"stat": st, "n": int(len(s)), "rate": float(s["hit"].mean()),
+                                             "expected": float(s["prob"].mean())})
     if len(g):
         g["hit"] = (g["result"] == "hit").astype(int)
         for tier, s in g.groupby("tier"):
@@ -126,3 +141,17 @@ def has_cards(date):
     """True if cards for this date were already published."""
     lh = _load(LINEUPS, ["date", "flavor", "size", "prob", "legs", "result"])
     return bool(len(lh)) and (lh["date"] == date).any()
+
+
+def todays_rows(date, kind=None, game_ids=None):
+    """Picks already recorded today (as dicts), optionally only one kind / some games."""
+    ph = _load(PICKS, PICK_COLS)
+    ph = ph[ph["date"] == date]
+    if kind:
+        ph = ph[ph["kind"] == kind]
+    if game_ids is not None:
+        ph = ph[ph["game_id"].astype(str).isin({str(g) for g in game_ids})]
+    rows = ph.to_dict("records")
+    for r in rows:
+        r["card"] = r.get("card") or ("shadow" if r.get("kind") == "shadow" else "")
+    return rows

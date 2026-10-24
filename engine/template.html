@@ -193,6 +193,9 @@ const cards = [];
 cards.push(`<div class="panel"><h3>Hit rate by tier</h3>${R.by_tier.length ? R.by_tier.map(t => barRow(t.tier, t.rate, t.expected, t.n)).join("") : '<div class="meta">No graded picks yet.</div>'}</div>`);
 cards.push(`<div class="panel"><h3>Are the % honest?</h3>${R.calibration.length ? R.calibration.map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Needs graded picks. Bars should land on the black tick.</div>'}</div>`);
 cards.push(`<div class="panel"><h3>Cards</h3>${R.lineups.length ? R.lineups.map(l => barRow(`${({likely:"Most likely",fair:"Fair price",prizepicks:"PrizePicks"})[l.flavor] || l.flavor} · ${l.size} legs`, l.wins/l.n, l.expected, l.n)).join("") : '<div class="meta">No settled lineups yet.</div>'}</div>`);
+const SH = R.shadow || {n: 0};
+const SHL = {ftm: "Free throws made", fta: "Free throw attempts", fgm: "FG made"};
+cards.push(`<div class="panel"><h3>Free throw / FG test</h3><div class="meta" style="margin-bottom:6px">Model-only picks on stats DraftKings doesn't post. Recorded and graded, never on a card, until they prove the percentages hold.</div>${SH.n ? (SH.by_stat || []).map(s => barRow(SHL[s.stat] || s.stat, s.rate, s.expected, s.n)).join("") + (SH.buckets || []).map(c => barRow("Said " + c.bucket, c.actual, c.predicted, c.n)).join("") : '<div class="meta">Starts filling in after the first graded games.</div>'}</div>`);
 $("record").innerHTML = cards.join("");
 $("recent").innerHTML = R.recent.length ? `<table><tr><th>Date</th><th>Pick</th><th class="n">Actual</th><th>Result</th></tr>` +
   R.recent.map(r => `<tr><td>${r.date}</td><td>${esc(r.player)} ${r.side} ${r.line} ${esc(r.stat)} <span class="meta">${r.tier}</span></td><td class="n">${r.actual ?? "–"}</td><td class="${r.result}">${r.result}</td></tr>`).join("") + `</table>`

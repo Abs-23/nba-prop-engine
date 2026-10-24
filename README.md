@@ -112,8 +112,26 @@ Also tested and rejected: requiring 2+ individual checks to each pass a bar (~4 
 3. **First run:** *Actions → Daily picks → Run workflow*. The first run takes ~10 minutes
    (downloads last season). After that it runs by itself every day at ~5pm Eastern.
 
-## Odds API credits
+## Running cost: $0
 
-Only the PrizePicks card uses them: 1 credit per stat per game. The engine spreads what's left
-over the rest of the month and drops the lowest-priority stats first (order in `config.yaml`
-under `pickem.markets`). The $30/month plan covers every stat every night.
+| Part | Cost | How |
+|---|---|---|
+| Box scores, rosters, injuries, schedules, Vegas spreads | free | ESPN public feeds |
+| DraftKings lines (Most likely and Fair price cards) | free | ESPN's odds feed, no key |
+| Engine runs (3 a day) | free | GitHub Actions, unlimited for public repos |
+| Dashboard | free | GitHub Pages |
+| PrizePicks lines (shadow test, PrizePicks card) | free | The Odds API free plan, 500 credits/month |
+
+Only the PrizePicks lines use credits (1 per stat per game). To stay inside the free 500:
+lines are downloaded **once a day** (later runs reuse them), and each day spends only its share
+of what's left in the month (about 15 credits a day). In `mode: shadow` the free-throw / FG-made
+test takes those credits first, on about 5 rotating games a night; the PrizePicks card only gets
+a stat when there are enough left to cover the whole slate. Settings: `config.yaml` -> `pickem`.
+
+### Shadow test (free throws made, free throw attempts, FG made)
+
+DraftKings doesn't post these, so there's no sharp price to check the model against, and on its
+own the model was overconfident at real lines. The shadow test records the model's pick on every
+PrizePicks line for these stats, grades it, and shows the results on the dashboard ("Free throw /
+FG test") without ever putting them on a card. If the percentages hold over a few weeks
+(~1,000 graded picks), they can earn a card; if not, they stay off.

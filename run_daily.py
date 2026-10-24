@@ -160,36 +160,48 @@ def main(day=None):
         lineups, market = build_cards(cands, cfg, injuries)
         log(f"Lines: {len(lines)}; candidates: {len(cands)}; qualified: {len(market)}; cards: "
             + ", ".join(f"{k} {v[0]['size'] if v else 0} legs" for k, v in lineups.items()))
-        # 6. PrizePicks card (licensed via The Odds API), priced with DraftKings' lines
+        # 6. PrizePicks (licensed via The Odds API): downloaded once a day to stay on the free plan
         from engine import pickem
-        from engine.sources.odds import OddsClient, plan_markets
+        from engine.sources.odds import OddsClient
         client = OddsClient(regions="us_dfs")
-        if client.enabled:
+        cache_path = DATA / "pickem_today.json"
+        cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
+        pp_lines = None
+        if cache.get("date") == today:
+            pp_lines = cache["lines"]
+            log(f"PrizePicks: reusing today's {len(pp_lines)} lines (no credits spent)")
+            health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines (downloaded earlier today)"})
+        elif client.enabled:
             try:
                 events = pickem.tonight_events(client, games)
-                pc = cfg["pickem"]
-                mk = plan_markets(client.remaining, len(events), pc["markets"],
-                                  cfg["odds_api"]["reserve_credits"], cfg["odds_api"]["max_daily_credits"])
-                pp_lines = pickem.fetch_pickem_lines(client, events, mk) if mk else []
+                plan = pickem.plan_free(client.remaining, events, cfg, today)
+                pp_lines = pickem.fetch_planned(client, plan)
+                cache_path.write_text(json.dumps({"date": today, "lines": pp_lines}))
                 save_pickem_snapshot(pp_lines, lines, today)
-                pcands = pickem.candidates(profiles, pp_lines, lines, injuries, cfg)
-                top = sorted(pcands, key=lambda c: -c["p"])[:5]
-                print("::notice title=PrizePicks best::" + "; ".join(
-                    f'{c["prof"]["player"]} {c["side"]} {c["line"]} {c["stat"]} {100*c["p"]:.0f}% (DK {c["dk"]["line"]})'
-                    for c in top))
-                pcard, pq = pickem.build_card(pcands, cfg, injuries)
-                lineups["prizepicks"] = [pcard] if pcard else []
-                market += pq
-                n_pp = len([l for l in pp_lines if l["book_key"] == "prizepicks"])
-                health.append({"ok": bool(n_pp), "text": f"PrizePicks: {n_pp} lines, {len(mk)} stats, "
-                               f"{int(client.remaining or 0)} credits left"})
-                log(f"PrizePicks: {n_pp} lines ({', '.join(mk)}); {len(pq)} qualified; "
-                    f"card {pcard['size'] if pcard else 0} legs; credits left {client.remaining}")
+                used = sum(len(m) for _, m in plan)
+                health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines, {used} credits used, "
+                               f"{int(client.remaining or 0)} left this month"})
+                log(f"PrizePicks: {len(pp_lines)} lines from {len(plan)} games; {used} credits; "
+                    f"left {client.remaining}")
             except Exception as ex:
                 log(f"PrizePicks lines unavailable: {ex}")
                 health.append({"ok": False, "text": "PrizePicks lines unavailable"})
         else:
-            health.append({"ok": False, "text": "No odds key: PrizePicks card off"})
+            health.append({"ok": False, "text": "No odds key: PrizePicks off"})
+        if pp_lines:
+            live = {g["game_id"] for g in games}
+            pp_live = [l for l in pp_lines if l["game_id"] in live]
+            shadow = pickem.shadow_picks(profiles, pp_live, injuries, cfg)
+            market += shadow
+            log(f"Shadow test: {len(shadow)} model-only picks recorded (free throws / FG made)")
+            pcands = pickem.candidates(profiles, pp_live, lines, injuries, cfg)
+            if pcands:
+                pcard, pq = pickem.build_card(pcands, cfg, injuries)
+                lineups["prizepicks"] = [pcard] if pcard else []
+                market += pq
+        if locked or started:
+            # keep shadow picks already recorded today for games that have since started
+            market += grading.todays_rows(today, kind="shadow", game_ids={g["game_id"] for g in started})
         if locked:
             ids = {norm_name(p["player"]): p["player_id"] for p in profiles}
             ids.update({norm_name(r.player): r.player_id for r in db.drop_duplicates("player_id", keep="last").itertuples()})
@@ -205,7 +217,7 @@ def main(day=None):
         fills = [l for v in lineups.values() for c in v for l in c["legs"] if l["below_bar"]]
         grading.record_today(today, [], market + fills, lineups)
 
-    render(today, len(games), safe, market, lineups, grading.track_record(), health, True,
+    render(today, len(games), safe, [m for m in market if m.get("kind") != "shadow"], lineups, grading.track_record(), health, True,
            out_tonight if games else {})
     log("Dashboard written to docs/index.html")
 

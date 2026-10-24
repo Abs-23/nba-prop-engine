@@ -165,3 +165,74 @@ def build_card(cands, cfg, injuries):
     return {"name": "prizepicks", "title": "PrizePicks", "size": len(picks), "legs": picks,
             "prob": float(np.prod([p["prob"] for p in picks])), "n_qualified": len(legs),
             "n_filled": len(fill)}, qualified
+
+
+# ---------------------------------------------------------------- free-credit plan + shadow test
+
+SHADOW_STATS = {"ftm", "fta", "fgm"}
+
+
+def plan_free(remaining, events, cfg, today):
+    """Split today's share of the free monthly credits.
+
+    Shadow test first: its stats on as many games as the budget allows (rotating which games
+    get covered day to day). Whatever is left goes to the PrizePicks card's stats, one stat
+    across all games at a time. Returns [(event, [markets])]."""
+    import calendar
+    import hashlib
+    from datetime import date as _d
+    pc, oc = cfg["pickem"], cfg["odds_api"]
+    if remaining is None or not events:
+        return []
+    d = _d.fromisoformat(today)
+    days_left = calendar.monthrange(d.year, d.month)[1] - d.day + 1
+    budget = int(min(oc["max_daily_credits"], max(0, (remaining - oc["reserve_credits"]) / days_left)))
+    plan = {e["id"]: [] for e in events}
+    order = sorted(events, key=lambda e: hashlib.md5(f'{today}{e["id"]}'.encode()).hexdigest())
+    if pc.get("mode") == "shadow":
+        sm = pc["shadow_markets"]
+        n = min(len(order), pc.get("shadow_max_games", 99), budget // len(sm))
+        for e in order[:n]:
+            plan[e["id"]] += sm
+        budget -= n * len(sm)
+    for m in pc["markets"]:  # card stats: only if the whole slate can be covered
+        if budget < len(events):
+            break
+        for e in events:
+            plan[e["id"]].append(m)
+        budget -= len(events)
+    return [(e, plan[e["id"]]) for e in events if plan[e["id"]]]
+
+
+def fetch_planned(client, plan):
+    rows = []
+    for e, markets in plan:
+        rows += fetch_pickem_lines(client, [e], markets)
+    return rows
+
+
+def shadow_picks(profiles, pp_lines, injuries, cfg):
+    """Model-only picks on stats DraftKings doesn't post (free throws, FG made). Recorded and graded
+    so we can see whether the model can be trusted on them. Never put on a card."""
+    by_name = {norm_name(p["player"]): p for p in profiles}
+    out = []
+    for ln in pp_lines:
+        if ln["book_key"] != "prizepicks" or ln["stat"] not in SHADOW_STATS:
+            continue
+        prof = by_name.get(ln["player_key"])
+        if prof is None or general_gate(prof, injuries, cfg):
+            continue
+        stat, line = ln["stat"], ln["line"]
+        mean, disp = prof["means"][stat], prof["disp"][stat]
+        p_over = side_probability(mean, disp, line, "over")
+        side, p = ("over", p_over) if p_over >= 0.5 else ("under", 1 - p_over)
+        vals = prof["history"][stat].to_numpy()
+        h10, _ = hit_rate(vals[-10:], line, side)
+        word = "More" if side == "over" else "Less"
+        out.append({"kind": "shadow", "tier": "Shadow test", "card": "shadow", "game_id": prof["game_id"],
+                    "matchup": prof["matchup"], "player_id": prof["player_id"], "player": prof["player"],
+                    "team": prof["team"], "stat": stat, "stat_label": LABELS[stat], "side": side, "line": line,
+                    "label": f'{prof["player"]} {word} {line} {LABELS[stat]}', "prob": p, "prob_model": p,
+                    "fair": None, "edge": None, "ev": 0.0, "price": None, "book": "PrizePicks", "proj": mean,
+                    "l10": h10, "l20": None, "matchup_net": None, "below_bar": False, "reasons": []})
+    return out
