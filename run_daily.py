@@ -111,6 +111,7 @@ def main(day=None):
     if started:
         print("::notice title=games started::" + "; ".join(f'{g["away"]}@{g["home"]} {g["tipoff_utc"]}' for g in started)
               + f" (now {now_utc:%H:%M} UTC)")
+    games_all = list(games)
     locked = {}
     if started and grading.has_cards(today):
         # Published cards stay exactly as they were; only cards not yet published get built.
@@ -176,11 +177,12 @@ def main(day=None):
         cache_path = DATA / "pickem_today.json"
         cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
         pp_lines = None
-        if cache.get("date") == today:
+        fetched = datetime.fromisoformat(cache["fetched_at"]) if cache.get("fetched_at") else None
+        if cache.get("date") == today and fetched and pickem_board_ready(games_all, fetched):
             pp_lines = cache["lines"]
             log(f"PrizePicks: reusing today's {len(pp_lines)} lines (no credits spent)")
             health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines (downloaded earlier today)"})
-        elif client.enabled and not pickem_board_ready(games, now_utc):
+        elif client.enabled and not pickem_board_ready(games_all, now_utc):
             log("PrizePicks: board still filling in; waiting for a later run to download (saves credits)")
             health.append({"ok": True, "text": "PrizePicks: downloads in the final run, 1 hour before the first tip"})
         elif client.enabled:
@@ -188,7 +190,8 @@ def main(day=None):
                 events = pickem.tonight_events(client, games)
                 plan = pickem.plan_free(client.remaining, events, cfg, today)
                 pp_lines = pickem.fetch_planned(client, plan)
-                cache_path.write_text(json.dumps({"date": today, "lines": pp_lines}))
+                cache_path.write_text(json.dumps({"date": today, "lines": pp_lines,
+                                                  "fetched_at": now_utc.isoformat()}))
                 save_pickem_snapshot(pp_lines, lines, today)
                 used = sum(len(m) for _, m in plan)
                 health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines, {used} credits used, "
