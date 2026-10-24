@@ -2,6 +2,7 @@ player_id,player,team,height,pos
 4997530,Khalifa Diop,CLE,83.0,C
 5106268,Nae'Qwan Tomlin,CLE,80.0,F
 5106261,Ernest Udeh Jr.,CLE,83.0,C
+4411057,Kevin McCullar Jr.,NYK,78.0,G
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -344,7 +345,6 @@ player_id,player,team,height,pos
 4897943,Dalton Knecht,NYK,78.0,F
 4433225,Tyler Kolek,NYK,74.0,G
 4431823,Miles McBride,NYK,74.0,G
-4411057,Kevin McCullar Jr.,NYK,78.0,G
 4838721,Tyler Nickel,NYK,80.0,F
 3914044,Landry Shamet,NYK,77.0,G
 3136195,Karl-Anthony Towns,NYK,84.0,C
@@ -359,6 +359,7 @@ player_id,player,team,height,pos
 4683778,Jared McCain,OKC,75.0,G
 4900671,Ajay Mitchell,OKC,76.0,G
 5106270,Otega Oweh,OKC,76.0,G
+4432185,Micah Peavy,OKC,79.0,G
 5061603,Thomas Sorber,OKC,81.0,C
 5241364,Bennett Stirtz,OKC,76.0,G
 5159925,Nikola Topic,OKC,78.0,G
