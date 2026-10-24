@@ -42,12 +42,12 @@ def save_line_snapshot(lines, day):
 
 
 def pickem_board_ready(games, now_utc):
-    """Download PrizePicks lines once a day, late enough that its board is mostly posted:
-    from 2pm Eastern, or within 3 hours of the first tip-off if that comes earlier."""
-    et = now_utc.astimezone(ZoneInfo("America/New_York"))
+    """Download PrizePicks lines once a day, late enough that the board is filled in (many
+    players' props are only posted in the late afternoon): within schedule ->
+    pickem_minutes_before_first_tip of today's first tip-off."""
+    mins = load_config()["schedule"]["pickem_minutes_before_first_tip"]
     tips = [datetime.fromisoformat(g["tipoff_utc"].replace("Z", "+00:00")) for g in games if g.get("tipoff_utc")]
-    soon = bool(tips) and min(tips) - now_utc <= timedelta(hours=3)
-    return et.hour >= 14 or soon
+    return bool(tips) and min(tips) - now_utc <= timedelta(minutes=mins)
 
 
 def save_pickem_snapshot(pp_lines, dk_lines, day):
@@ -182,7 +182,7 @@ def main(day=None):
             health.append({"ok": True, "text": f"PrizePicks: {len(pp_lines)} lines (downloaded earlier today)"})
         elif client.enabled and not pickem_board_ready(games, now_utc):
             log("PrizePicks: board still filling in; waiting for a later run to download (saves credits)")
-            health.append({"ok": True, "text": "PrizePicks: download waits until 2pm ET (board still filling in)"})
+            health.append({"ok": True, "text": "PrizePicks: downloads in the final run, 1 hour before the first tip"})
         elif client.enabled:
             try:
                 events = pickem.tonight_events(client, games)

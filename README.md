@@ -109,8 +109,12 @@ Also tested and rejected: requiring 2+ individual checks to each pass a bar (~4 
 1. DraftKings lines come free through ESPN. The `ODDS_API_KEY` secret is only used for the
    PrizePicks card (The Odds API, region `us_dfs`).
 2. **Dashboard:** *Settings → Pages →* Source: *Deploy from a branch*, Branch: `main`, folder `/docs`.
-3. **First run:** *Actions → Daily picks → Run workflow*. The first run takes ~10 minutes
-   (downloads last season). After that it runs by itself every day at ~5pm Eastern.
+3. **First run:** *Actions → Daily picks → Run workflow* (runs once immediately). After that it
+   runs by itself, timed to each day's first tip-off: cards are built 2.5 hours before it
+   (~4:30pm ET for a 7pm slate, ~10:30am for a 1pm weekend game) and refreshed 1 hour before
+   it with the latest injury news and late-posted lines; PrizePicks lines are downloaded in that
+   final refresh. GitHub starts scheduled runs late and sometimes skips them, so the workflow
+   wakes up 4 times a day and `scripts/wait_and_run.py` waits for the right moment.
 
 ## Running cost: $0
 
