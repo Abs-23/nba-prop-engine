@@ -1,10 +1,85 @@
 {
  "date": "2026-10-25",
  "date_label": "Sunday, October 25, 2026",
- "generated": "2026-10-25 20:02 UTC",
+ "generated": "2026-10-25 20:04 UTC",
  "games_today": 7,
  "safe": [],
  "market": [
+  {
+   "kind": "card",
+   "tier": "Most likely",
+   "game_id": "401909861",
+   "matchup": "LAL @ UTA",
+   "player": "Ace Bailey",
+   "team": "UTA",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "under",
+   "line": 2.5,
+   "label": "Ace Bailey Under 2.5 Assists",
+   "prob": 0.6541,
+   "fair": 0.6124,
+   "edge": 0.0417,
+   "ev": 0.0019,
+   "price": -188,
+   "book": "DraftKings",
+   "proj": 1.8982,
+   "l10": 0.8,
+   "l20": 0.6,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 65%. DraftKings prices under 2.5 at -188 (61% after removing their margin); our model says 70%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 1.9 assists tonight (his usual 1.9) vs the line of 2.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 2.5 in 8 of his last 10 games and 12 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 70% vs 61% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.2 (last 10 avg 29.9, stable at \u00b14.5)."
+    ],
+    [
+     "+",
+     "Matchup overall: -0.3% assists vs his usual output (2 checks for this pick, 2 against)."
+    ],
+    [
+     "!",
+     "Teammates out: UTA without Jusuf Nurkic (19%) of the team's assists (+1.4%)."
+    ],
+    [
+     "+",
+     "Opponent players out: LAL at full strength (-1.2%)."
+    ],
+    [
+     "+",
+     "Turnovers forced: LAL force 13.9 turnovers per 100 possessions (#8 most, last season) (-0.9%)."
+    ],
+    [
+     "!",
+     "Position defense: LAL allow 2% more assists per minute to guards than average (+0.7%)."
+    ],
+    [
+     "i",
+     "Early season: 2 games this season, so last season carries more weight."
+    ]
+   ],
+   "matchup_net": 0.0029,
+   "below_bar": false,
+   "prob_model": 0.7042,
+   "card": "likely",
+   "dk_line": null,
+   "player_id": 4873138,
+   "price_fmt": "-188"
+  },
   {
    "kind": "card",
    "tier": "Most likely",
@@ -709,81 +784,6 @@
    "tier": "Fair price",
    "game_id": "401909861",
    "matchup": "LAL @ UTA",
-   "player": "Keyonte George",
-   "team": "UTA",
-   "stat": "ra",
-   "stat_label": "Reb+Ast",
-   "side": "under",
-   "line": 10.5,
-   "label": "Keyonte George Under 10.5 Reb+Ast",
-   "prob": 0.5879,
-   "fair": 0.5323,
-   "edge": 0.0556,
-   "ev": 0.0332,
-   "price": -132,
-   "book": "DraftKings",
-   "proj": 8.8073,
-   "l10": 0.9,
-   "l20": 0.85,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 59%. DraftKings prices under 10.5 at -132 (53% after removing their margin); our model says 70%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 8.8 reb+ast tonight (his usual 8.7) vs the line of 10.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 10.5 in 9 of his last 10 games and 17 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 70% vs 53% (model higher by 17 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 32.4 (last 10 avg 26.2, fairly stable at \u00b16.1)."
-    ],
-    [
-     "+",
-     "Matchup overall: -2.3% reb+ast vs his usual output (3 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 81.8 total rebounds per game in LAL games (#30 of 30, last season) (-1.2%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Teammates out: UTA without Jusuf Nurkic (19%) of the team's assists (+1.0%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Opponent players out: LAL at full strength (-0.8%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Turnovers forced: LAL force 13.9 turnovers per 100 possessions (#8 most, last season) (-0.6%)."
-    ],
-    [
-     "i",
-     "Early season: 2 games this season, so last season carries more weight."
-    ]
-   ],
-   "matchup_net": 0.0233,
-   "below_bar": false,
-   "prob_model": 0.698,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4433627,
-   "price_fmt": "-132"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909861",
-   "matchup": "LAL @ UTA",
    "player": "Lauri Markkanen",
    "team": "UTA",
    "stat": "fg3m",
@@ -1299,6 +1299,81 @@
    "dk_line": null,
    "player_id": 4278104,
    "price_fmt": "-133"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909861",
+   "matchup": "LAL @ UTA",
+   "player": "Keyonte George",
+   "team": "UTA",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
+   "side": "under",
+   "line": 10.5,
+   "label": "Keyonte George Under 10.5 Reb+Ast",
+   "prob": 0.5804,
+   "fair": 0.5232,
+   "edge": 0.0572,
+   "ev": 0.0374,
+   "price": -127,
+   "book": "DraftKings",
+   "proj": 8.8073,
+   "l10": 0.9,
+   "l20": 0.85,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 58%. DraftKings prices under 10.5 at -127 (52% after removing their margin); our model says 70%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 8.8 reb+ast tonight (his usual 8.7) vs the line of 10.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 10.5 in 9 of his last 10 games and 17 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 70% vs 52% (model higher by 17 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 32.4 (last 10 avg 26.2, fairly stable at \u00b16.1)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.3% reb+ast vs his usual output (3 checks for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 81.8 total rebounds per game in LAL games (#30 of 30, last season) (-1.2%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Teammates out: UTA without Jusuf Nurkic (19%) of the team's assists (+1.0%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Opponent players out: LAL at full strength (-0.8%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Turnovers forced: LAL force 13.9 turnovers per 100 possessions (#8 most, last season) (-0.6%)."
+    ],
+    [
+     "i",
+     "Early season: 2 games this season, so last season carries more weight."
+    ]
+   ],
+   "matchup_net": 0.0233,
+   "below_bar": false,
+   "prob_model": 0.698,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4433627,
+   "price_fmt": "-127"
   },
   {
    "kind": "card",
@@ -5310,8 +5385,83 @@
   "likely": [
    {
     "size": 6,
-    "prob": 0.0619,
+    "prob": 0.0664,
     "legs": [
+     {
+      "kind": "card",
+      "tier": "Most likely",
+      "game_id": "401909861",
+      "matchup": "LAL @ UTA",
+      "player": "Ace Bailey",
+      "team": "UTA",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "side": "under",
+      "line": 2.5,
+      "label": "Ace Bailey Under 2.5 Assists",
+      "prob": 0.6541,
+      "fair": 0.6124,
+      "edge": 0.0417,
+      "ev": 0.0019,
+      "price": -188,
+      "book": "DraftKings",
+      "proj": 1.8982,
+      "l10": 0.8,
+      "l20": 0.6,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 65%. DraftKings prices under 2.5 at -188 (61% after removing their margin); our model says 70%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "+",
+        "Projection: 1.9 assists tonight (his usual 1.9) vs the line of 2.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 2.5 in 8 of his last 10 games and 12 of his last 20."
+       ],
+       [
+        "i",
+        "Model vs DraftKings: 70% vs 61% (model higher by 9 pts, within the allowed gap)."
+       ],
+       [
+        "+",
+        "Minutes: projected 26.2 (last 10 avg 29.9, stable at \u00b14.5)."
+       ],
+       [
+        "+",
+        "Matchup overall: -0.3% assists vs his usual output (2 checks for this pick, 2 against)."
+       ],
+       [
+        "!",
+        "Teammates out: UTA without Jusuf Nurkic (19%) of the team's assists (+1.4%)."
+       ],
+       [
+        "+",
+        "Opponent players out: LAL at full strength (-1.2%)."
+       ],
+       [
+        "+",
+        "Turnovers forced: LAL force 13.9 turnovers per 100 possessions (#8 most, last season) (-0.9%)."
+       ],
+       [
+        "!",
+        "Position defense: LAL allow 2% more assists per minute to guards than average (+0.7%)."
+       ],
+       [
+        "i",
+        "Early season: 2 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0029,
+      "below_bar": false,
+      "prob_model": 0.7042,
+      "card": "likely",
+      "dk_line": null,
+      "player_id": 4873138,
+      "price_fmt": "-188"
+     },
      {
       "kind": "card",
       "tier": "Most likely",
@@ -5784,7 +5934,7 @@
   "fair": [
    {
     "size": 6,
-    "prob": 0.0414,
+    "prob": 0.0411,
     "legs": [
      {
       "kind": "card",
@@ -6028,26 +6178,164 @@
       "tier": "Fair price",
       "game_id": "401909861",
       "matchup": "LAL @ UTA",
-      "player": "Keyonte George",
+      "player": "Lauri Markkanen",
+      "team": "UTA",
+      "stat": "fg3m",
+      "stat_label": "3-Pointers Made",
+      "side": "under",
+      "line": 2.5,
+      "label": "Lauri Markkanen Under 2.5 3-Pointers Made",
+      "prob": 0.586,
+      "fair": 0.5516,
+      "edge": 0.0345,
+      "ev": -0.0042,
+      "price": -143,
+      "book": "DraftKings",
+      "proj": 2.5195,
+      "l10": 0.6,
+      "l20": 0.5,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 59%. DraftKings prices under 2.5 at -143 (55% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "!",
+        "Projection: 2.5 3-pointers made tonight (his usual 2.5) vs the line of 2.5."
+       ],
+       [
+        "i",
+        "Recent form: went under 2.5 in 6 of his last 10 games and 10 of his last 20."
+       ],
+       [
+        "+",
+        "Model vs DraftKings: 54% vs 55% (they agree)."
+       ],
+       [
+        "i",
+        "Minutes: projected 34.5 (last 10 avg 29.7, fairly stable at \u00b15.9)."
+       ],
+       [
+        "+",
+        "Matchup overall: -2.3% 3-pointers made vs his usual output (2 checks for this pick, 0 against)."
+       ],
+       [
+        "+",
+        "Opponent players out: LAL at full strength (-0.7%)."
+       ],
+       [
+        "+",
+        "Teammates out: UTA without Jusuf Nurkic (7%) of the team's 3PA (-0.6%)."
+       ],
+       [
+        "i",
+        "Early season: 2 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0235,
+      "below_bar": false,
+      "prob_model": 0.5388,
+      "card": "fair",
+      "dk_line": null,
+      "player_id": 4066336,
+      "price_fmt": "-143"
+     },
+     {
+      "kind": "card",
+      "tier": "Fair price",
+      "game_id": "401909863",
+      "matchup": "ORL @ NYK",
+      "player": "Mikal Bridges",
+      "team": "NYK",
+      "stat": "fg3m",
+      "stat_label": "3-Pointers Made",
+      "side": "under",
+      "line": 1.5,
+      "label": "Mikal Bridges Under 1.5 3-Pointers Made",
+      "prob": 0.584,
+      "fair": 0.5294,
+      "edge": 0.0546,
+      "ev": 0.0332,
+      "price": -130,
+      "book": "DraftKings",
+      "proj": 1.1364,
+      "l10": 0.7,
+      "l20": 0.65,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 58%. DraftKings prices under 1.5 at -130 (53% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "+",
+        "Projection: 1.1 3-pointers made tonight (his usual 1.2) vs the line of 1.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 1.5 in 7 of his last 10 games and 13 of his last 20."
+       ],
+       [
+        "i",
+        "Model vs DraftKings: 69% vs 53% (model higher by 16 pts, within the allowed gap)."
+       ],
+       [
+        "i",
+        "Minutes: projected 31.3 (last 10 avg 33.2, fairly stable at \u00b16.9)."
+       ],
+       [
+        "+",
+        "Matchup overall: -6.6% 3-pointers made vs his usual output (3 checks for this pick, 0 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 30.3 minutes vs usual 31.3 (-3.2%)."
+       ],
+       [
+        "+",
+        "3s allowed: 39% of shots vs ORL are 3s (#26 most, last season) (-2.5%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.3%)."
+       ],
+       [
+        "i",
+        "Early season: 2 games this season, so last season carries more weight."
+       ]
+      ],
+      "matchup_net": 0.0656,
+      "below_bar": false,
+      "prob_model": 0.6859,
+      "card": "fair",
+      "dk_line": null,
+      "player_id": 3147657,
+      "price_fmt": "-130"
+     },
+     {
+      "kind": "card",
+      "tier": "Fair price",
+      "game_id": "401909861",
+      "matchup": "LAL @ UTA",
+      "player": "Jaren Jackson Jr.",
       "team": "UTA",
       "stat": "ra",
       "stat_label": "Reb+Ast",
       "side": "under",
-      "line": 10.5,
-      "label": "Keyonte George Under 10.5 Reb+Ast",
-      "prob": 0.5879,
-      "fair": 0.5323,
-      "edge": 0.0556,
-      "ev": 0.0332,
-      "price": -132,
+      "line": 8.5,
+      "label": "Jaren Jackson Jr. Under 8.5 Reb+Ast",
+      "prob": 0.584,
+      "fair": 0.5391,
+      "edge": 0.0449,
+      "ev": 0.0134,
+      "price": -136,
       "book": "DraftKings",
-      "proj": 8.8073,
-      "l10": 0.9,
-      "l20": 0.85,
+      "proj": 7.8128,
+      "l10": 0.7,
+      "l20": 0.75,
       "reasons": [
        [
         "+",
-        "Chance it hits: 59%. DraftKings prices under 10.5 at -132 (53% after removing their margin); our model says 70%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+        "Chance it hits: 58%. DraftKings prices under 8.5 at -136 (54% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
        ],
        [
         "+",
@@ -6090,9 +6378,9 @@
         "Early season: 2 games this season, so last season carries more weight."
        ]
       ],
-      "matchup_net": 0.0233,
+      "matchup_net": 0.0528,
       "below_bar": false,
-      "prob_model": 0.698,
+      "prob_model": 0.616,
       "card": "fair",
       "dk_line": null,
       "player_id": 4433627,
@@ -6723,7 +7011,7 @@
   },
   {
    "ok": true,
-   "text": "PrizePicks: 110 lines, 18 credits used, 129 left this month"
+   "text": "PrizePicks: 87 lines, 15 credits used, 114 left this month"
   }
  ],
  "odds_enabled": true,
