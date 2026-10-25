@@ -48,11 +48,18 @@ def save(label):
     sh("git", "add", "data", "docs")
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode != 0:
         sh("git", "commit", "-q", "-m", f"Picks ({label})")
+    # Our run is the newest: if someone else pushed meanwhile, keep THEIR code but OUR generated
+    # files whole (a line-by-line merge of two picks.json versions corrupts the cards).
     for _ in range(3):
-        sh("git", "pull", "-q", "--rebase", "-X", "theirs", check=False)
         if sh("git", "push", "-q", check=False).returncode == 0:
             return
-        time.sleep(10)
+        sh("git", "fetch", "-q", check=False)
+        ours = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        sh("git", "reset", "-q", "--hard", "origin/main", check=False)
+        sh("git", "checkout", ours, "--", "data", "docs", check=False)
+        sh("git", "add", "data", "docs")
+        sh("git", "commit", "-q", "-m", f"Picks ({label})", check=False)
+        time.sleep(5)
 
 
 def marks(today):
@@ -97,6 +104,8 @@ def main(run_now, push):
     print(f"First tip-off today: {first.astimezone(et):%I:%M %p} ET. "
           + "; ".join(f"{s} at {t.astimezone(et):%I:%M %p} ET" for s, t in steps))
     for step, at in steps:
+        if push:  # another wake-up may have done this step while we waited: get its marks first
+            sh("git", "pull", "-q", "--rebase", check=False)
         if step in marks(today):
             print(f"{step}: already done today.")
             continue
@@ -109,6 +118,11 @@ def main(run_now, push):
                 return True
             print(f"{step}: waiting {wait} until {at.astimezone(et):%I:%M %p} ET")
             time.sleep(wait.total_seconds())
+            if push:
+                sh("git", "pull", "-q", "--rebase", check=False)
+                if step in marks(today):
+                    print(f"{step}: done by another wake-up while we waited.")
+                    continue
         mark(today, step)
         run_engine(step, push)
         if now() >= first:
