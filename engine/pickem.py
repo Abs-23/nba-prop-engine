@@ -19,7 +19,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from engine.card import blend, _pick_legs, CARD_STATS
+from engine.card import blend, side_lean, _pick_legs, CARD_STATS
 from engine.model import hit_rate, side_probability
 from engine.picks import common_reasons, general_gate, teammates_out
 from engine.stats import LABELS, MARKET_TO_STAT, TEAM_NAMES, norm_name
@@ -93,7 +93,7 @@ def candidates(profiles, pp_lines, dk_lines, injuries, cfg):
         for side in ("over", "under"):
             p_mkt, mu_mkt = anchored_prob(d["line"], d["fair_over"], disp, line, side)
             p_model = side_probability(mean, disp, line, side)
-            p = blend(p_model, p_mkt, b)
+            p = blend(p_model, p_mkt, b, side_lean(stat, side, cfg))
             h10, n10 = hit_rate(vals[-10:], line, side)
             h20, n20 = hit_rate(vals[-20:], line, side)
             out.append({"prof": prof, "stat": stat, "side": side, "line": line, "dk": d,

@@ -32,8 +32,16 @@ def _logit(p):
     return np.log(p / (1 - p))
 
 
-def blend(p_model, fair, b):
-    return float(1 / (1 + np.exp(-(b[0] + b[1] * _logit(p_model) + b[2] * _logit(fair)))))
+def side_lean(stat, side, cfg):
+    """Over/under adjustment (log-odds). Unders beat DraftKings' no-vig price ~3.5 pts across
+    12,600 real lines (every month and stat except rebounds), so unders get +lean, overs -lean."""
+    ul = cfg["card"].get("under_lean", {})
+    v = float(ul.get(stat, ul.get("default", 0.0)))
+    return v if side == "under" else -v
+
+
+def blend(p_model, fair, b, lean=0.0):
+    return float(1 / (1 + np.exp(-(b[0] + b[1] * _logit(p_model) + b[2] * _logit(fair) + lean))))
 
 
 def _price(p):
@@ -61,7 +69,7 @@ def candidates(profiles, lines, injuries, cfg):
             line = ln["line"]
             p_model = side_probability(mean, disp, line, side)
             fair = ln["fair_over"] if side == "over" else 1 - ln["fair_over"]
-            p = blend(p_model, fair, b)
+            p = blend(p_model, fair, b, side_lean(stat, side, cfg))
             price = ln["over_price"] if side == "over" else ln["under_price"]
             h10, n10 = hit_rate(vals[-10:], line, side)
             h20, n20 = hit_rate(vals[-20:], line, side)
@@ -97,7 +105,9 @@ def reasons(c, cfg, injuries, rule):
         ("+" if c["p"] >= rule["p_min"] else "!",
          f'Chance it hits: {100*c["p"]:.0f}%. DraftKings prices {side} {line} at {_price(c["price"])} '
          f'({100*c["fair"]:.0f}% after removing their margin); our model says {100*c["p_model"]:.0f}%. '
-         f'The two are blended using how each predicted results last season.'),
+         f'The two are blended using how each predicted results at real lines'
+         + (', including the market\'s lean toward overs (unders beat DraftKings\' price ~3.5 pts on average).'
+            if side_lean(stat, side, cfg) else '.')),
         ("+" if side == "over" and c["mean"] > line or side == "under" and c["mean"] < line else "!",
          f'Projection: {c["mean"]:.1f} {lab} tonight (his usual {c["base"]:.1f}) vs the line of {line}.'),
         ("+" if (c["h10"] or 0) >= 0.7 else "i",

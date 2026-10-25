@@ -55,6 +55,11 @@ and the track record shows whether the numbers hold up.
    own (no-vig) price. The blend was learned from last season's real lines and results
    (`scripts/backtest_lines.py`): the market carries ~90% of the weight, because on its own
    the model was overconfident at real lines (legs it rated 60-80% hit only 50-56%).
+   **Over/under lean (added Oct 25):** across 12,600 real DraftKings lines, unders hit 53.8%
+   while DraftKings' no-vig price said 50.4%, in every month and every stat except rebounds
+   (casual bettors favor overs, so books shade them). The blend adds that lean: about +4 pts for
+   an under priced 50/50 and -4 pts for an over; none for rebounds. In the backtest this made
+   the stated chances more honest and lifted Most likely card legs from 70.5% to 76.3%.
 7. **Matchup checks.** Each stat has its own (see `engine/matchups.py`):
 
    | Stat | Checks |

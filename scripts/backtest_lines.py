@@ -41,6 +41,22 @@ def fit_blend(pm, pf, y):
     return b
 
 
+def fit_side(c, model_w):
+    """Over/under term (Oct 25): logit(p) = b0 + model_w*logit(model) + b2*logit(market) + lean*(+1 under / -1 over),
+    with a separate lean for rebounds. Model weight held fixed. Returns [b0, b2, lean_other, lean_reb]."""
+    u = np.where(c["side"] == "under", 1.0, -1.0)
+    X = np.column_stack([np.ones(len(c)), logit(c["fair"].to_numpy()),
+                         np.where(c["stat"] != "reb", u, 0.0), np.where(c["stat"] == "reb", u, 0.0)])
+    off, y, b = model_w * logit(c["p_model"].to_numpy()), c["win"].astype(float).to_numpy(), np.zeros(4)
+    for _ in range(80):
+        p = 1 / (1 + np.exp(-(X @ b + off)))
+        step = np.linalg.solve(X.T @ (X * (p * (1 - p))[:, None]) + np.eye(4) * 1e-3, X.T @ (y - p))
+        b += step
+        if np.abs(step).max() < 1e-10:
+            break
+    return b
+
+
 def blend(b, pm, pf):
     return 1 / (1 + np.exp(-(b[0] + b[1] * logit(pm) + b[2] * logit(pf))))
 
@@ -134,6 +150,10 @@ def main(split):
     print(te.groupby(mb, observed=True).agg(n=("win", "size"), predicted=("p_model", "mean"),
                                             actual=("win", "mean")).round(3).to_string())
     print(f"Blend learned on training games: logit(p) = {b[0]:+.2f} + {b[1]:.2f} x logit(model) + {b[2]:.2f} x logit(market)")
+    sb = fit_side(c, b[1])
+    print(f"Over/under term (model weight fixed at {b[1]:.3f}): market {sb[1]:.3f}, under lean {sb[2]:+.3f} "
+          f"(rebounds {sb[3]:+.3f}). Unders hit {c.loc[c.side == 'under', 'win'].mean():.1%} vs DraftKings "
+          f"{c.loc[c.side == 'under', 'fair'].mean():.1%}.")
     print("\nCalibration on test lines (all sides):")
     te = te.assign(bucket=pd.cut(te["p"], [0, .45, .5, .55, .6, .65, .7, .8, 1]))
     print(te.groupby("bucket", observed=True).agg(n=("win", "size"), predicted=("p", "mean"),
