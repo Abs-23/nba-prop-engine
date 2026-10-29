@@ -1,7 +1,6 @@
 player_id,player,team,height,pos
 4997530,Khalifa Diop,CLE,83.0,C
 5106268,Nae'Qwan Tomlin,CLE,80.0,F
-5106261,Ernest Udeh Jr.,CLE,83.0,C
 4411057,Kevin McCullar Jr.,NYK,78.0,G
 5106270,Otega Oweh,OKC,76.0,G
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
@@ -104,6 +103,7 @@ player_id,player,team,height,pos
 5023693,Tyrese Proctor,CLE,76.0,G
 5041951,Meleek Thomas,CLE,75.0,G
 4683747,Jaylon Tyson,CLE,78.0,G
+5106261,Ernest Udeh Jr.,CLE,81.0,C
 4576087,Peyton Watson,CLE,80.0,G
 4593125,Santi Aldama,DAL,84.0,F
 5148538,Tarik Biberovic,DAL,79.0,F
