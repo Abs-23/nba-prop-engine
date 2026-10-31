@@ -112,6 +112,9 @@ card:
   under_lean:
     default: 0.155          # ~ +4 pts for an under priced 50/50, -4 pts for an over
     reb: 0.0                # rebounds: no measurable under lean
+    fg3m: 0.087             # Oct 31: threes get about half. The under edge on threes lives in near-50/50
+                            # lines; favored 3PM unders (DraftKings 55%+, the ones cards pick) showed ~0 edge
+                            # last season and slightly negative in October. Fitted separately: 0.087.
 
 pickem:
   # Free plan: The Odds API gives 500 credits/month (~16/day). Lines are downloaded ONCE a day
