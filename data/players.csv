@@ -4,6 +4,7 @@ player_id,player,team,height,pos
 4411057,Kevin McCullar Jr.,NYK,78.0,G
 5106270,Otega Oweh,OKC,76.0,G
 4397018,Ochai Agbaji,OKC,77.0,G
+4396963,Blake Hinson,UTA,80.0,F
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -319,7 +320,7 @@ player_id,player,team,height,pos
 4432847,Terrence Shannon Jr.,MIN,78.0,G
 4895758,Cody Williams,MIN,80.0,F
 5157587,Rocco Zikarsky,MIN,87.0,C
-4397136,Saddiq Bey,NOP,80.0,G
+4397136,Saddiq Bey,NOP,80.0,F
 4712862,Malik Dia,NOP,81.0,F
 5144091,Jeremiah Fears,NOP,75.0,G
 5170947,AJ Johnson,NOP,77.0,G
@@ -493,12 +494,12 @@ player_id,player,team,height,pos
 4873138,Ace Bailey,UTA,81.0,G
 4277919,Mo Bamba,UTA,84.0,C
 4065673,Tony Bradley,UTA,82.0,C
+4683736,Kobe Bufkin,UTA,76.0,G
 4683766,Isaiah Collier,UTA,76.0,G
 4684793,Kyle Filipowski,UTA,83.0,F
 4433627,Keyonte George,UTA,76.0,G
 4432811,Josh Green,UTA,78.0,G
 4397077,Jaxson Hayes,UTA,84.0,C
-4396963,Blake Hinson,UTA,80.0,F
 4433618,Harrison Ingram,UTA,77.0,F
 4277961,Jaren Jackson Jr.,UTA,82.0,F
 4066336,Lauri Markkanen,UTA,85.0,F
