@@ -1,7 +1,6 @@
 player_id,player,team,height,pos
 4997530,Khalifa Diop,CLE,83.0,C
 5106268,Nae'Qwan Tomlin,CLE,80.0,F
-4411057,Kevin McCullar Jr.,NYK,78.0,G
 5106270,Otega Oweh,OKC,76.0,G
 4397018,Ochai Agbaji,OKC,77.0,G
 4396963,Blake Hinson,UTA,80.0,F
@@ -485,6 +484,7 @@ player_id,player,team,height,pos
 4431684,Trayce Jackson-Davis,TOR,81.0,F
 6450,Kawhi Leonard,TOR,78.0,F
 4702656,Alijah Martin,TOR,74.0,G
+4411057,Kevin McCullar Jr.,TOR,78.0,G
 5093267,Collin Murray-Boyles,TOR,79.0,F
 3134908,Jakob Poeltl,TOR,84.0,C
 4395724,Immanuel Quickley,TOR,74.0,G
@@ -521,7 +521,7 @@ player_id,player,team,height,pos
 5238230,Tre Johnson,WAS,77.0,G
 4432819,Tre Mann,WAS,76.0,G
 6609,Khris Middleton,WAS,79.0,F
-5105841,Felix Okpara,WAS,82.0,F
+5105841,Felix Okpara,WAS,83.0,F
 5144126,Will Riley,WAS,81.0,G
 5160992,Alex Sarr,WAS,84.0,C
 4997537,Tristan Vukcevic,WAS,84.0,F
