@@ -1,7 +1,7 @@
 {
  "date": "2026-11-05",
  "date_label": "Thursday, November 5, 2026",
- "generated": "2026-11-05 23:32 UTC",
+ "generated": "2026-11-06 01:01 UTC",
  "games_today": 2,
  "safe": [],
  "market": [
@@ -86,149 +86,260 @@
   },
   {
    "kind": "card",
-   "tier": "Fair price",
+   "tier": "Most likely",
    "game_id": "401909937",
    "matchup": "MIA @ GSW",
-   "player": "Andrew Wiggins",
+   "player": "Pelle Larsson",
    "team": "MIA",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
    "side": "under",
-   "line": 15.5,
-   "label": "Andrew Wiggins Under 15.5 Pts+Reb",
-   "prob": 0.567,
-   "fair": 0.5273,
-   "edge": 0.0397,
-   "ev": 0.0066,
-   "price": -129,
+   "line": 7.5,
+   "label": "Pelle Larsson Under 7.5 Reb+Ast",
+   "prob": 0.5887,
+   "fair": 0.5458,
+   "edge": 0.0429,
+   "ev": 0.0092,
+   "price": -140,
    "book": "DraftKings",
-   "proj": 15.5009,
-   "l10": 0.7,
+   "proj": 6.9297,
+   "l10": 0.8,
    "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 15.5 at -129 (53% after removing their margin); our model says 55%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 6.9 reb+ast tonight (his usual 7.0) vs the line of 7.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 7.5 in 8 of his last 10 games and 12 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 55% (model higher by 6 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 29.0 (last 10 avg 29.2, fairly stable at \u00b14.9)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.1% reb+ast vs his usual output (4 checks for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 28.1 minutes vs usual 29.0 (-0.1 on a back-to-back) (-3.0%)."
     ],
     [
      "!",
-     "Projection: 15.5 pts+reb tonight (his usual 15.9) vs the line of 15.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 15.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 55% vs 53% (they agree)."
-    ],
-    [
-     "i",
-     "Line moved from 16.5 to 15.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -3.0% pts+reb vs his usual output (1 check for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
+     "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+2.3%)."
     ],
     [
      "!",
-     "Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.7%)."
+     "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+1.5%)."
     ],
     [
-     "i",
-     "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.9%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Turnovers forced: GSW force 15.0 turnovers per 100 possessions (#4 most, last season) (-0.7%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-0.7%)."
     ],
     [
      "i",
      "Second night of a back-to-back (last season this didn't cut starters' minutes)."
     ]
    ],
-   "matchup_net": 0.0299,
+   "matchup_net": 0.0109,
    "below_bar": false,
-   "prob_model": 0.5504,
-   "card": "fair",
+   "prob_model": 0.6087,
+   "card": "likely",
    "dk_line": null,
-   "player_id": 3059319,
-   "price_fmt": "-129"
+   "player_id": 4601025,
+   "price_fmt": "-140"
   },
   {
    "kind": "card",
    "tier": "Fair price",
    "game_id": "401909937",
    "matchup": "MIA @ GSW",
-   "player": "Andrew Wiggins",
+   "player": "Pelle Larsson",
    "team": "MIA",
-   "stat": "pts",
-   "stat_label": "Points",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
    "side": "under",
-   "line": 11.5,
-   "label": "Andrew Wiggins Under 11.5 Points",
-   "prob": 0.5581,
-   "fair": 0.5188,
-   "edge": 0.0393,
-   "ev": 0.0155,
-   "price": -122,
+   "line": 7.5,
+   "label": "Pelle Larsson Under 7.5 Reb+Ast",
+   "prob": 0.5887,
+   "fair": 0.5458,
+   "edge": 0.0429,
+   "ev": 0.0092,
+   "price": -140,
    "book": "DraftKings",
-   "proj": 11.8465,
-   "l10": 0.6,
-   "l20": 0.45,
+   "proj": 6.9297,
+   "l10": 0.8,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 56%. DraftKings prices under 11.5 at -122 (52% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 6.9 reb+ast tonight (his usual 7.0) vs the line of 7.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 7.5 in 8 of his last 10 games and 12 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 55% (model higher by 6 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 29.0 (last 10 avg 29.2, fairly stable at \u00b14.9)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.1% reb+ast vs his usual output (4 checks for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 28.1 minutes vs usual 29.0 (-0.1 on a back-to-back) (-3.0%)."
     ],
     [
      "!",
-     "Projection: 11.8 points tonight (his usual 12.3) vs the line of 11.5."
+     "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+2.3%)."
     ],
     [
-     "i",
-     "Recent form: went under 11.5 in 6 of his last 10 games and 9 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 53% vs 52% (they agree)."
-    ],
-    [
-     "i",
-     "Line moved from 12.5 to 11.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
+     "!",
+     "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+1.5%)."
     ],
     [
      "+",
-     "Matchup overall: -3.1% points vs his usual output (1 check for this pick, 0 against)."
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.9%)."
     ],
     [
      "+",
-     "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
+     "Assists \u00b7 Turnovers forced: GSW force 15.0 turnovers per 100 possessions (#4 most, last season) (-0.7%)."
     ],
     [
-     "i",
-     "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+     "+",
+     "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-0.7%)."
     ],
     [
      "i",
      "Second night of a back-to-back (last season this didn't cut starters' minutes)."
     ]
    ],
-   "matchup_net": 0.0311,
+   "matchup_net": 0.0109,
    "below_bar": false,
-   "prob_model": 0.5337,
+   "prob_model": 0.6087,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3059319,
-   "price_fmt": "-122"
+   "player_id": 4601025,
+   "price_fmt": "-140"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909937",
+   "matchup": "MIA @ GSW",
+   "player": "Bam Adebayo",
+   "team": "MIA",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
+   "side": "under",
+   "line": 12.5,
+   "label": "Bam Adebayo Under 12.5 Reb+Ast",
+   "prob": 0.5598,
+   "fair": 0.5232,
+   "edge": 0.0366,
+   "ev": 0.0006,
+   "price": -127,
+   "book": "DraftKings",
+   "proj": 12.6436,
+   "l10": 0.7,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 12.5 at -127 (52% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 12.6 reb+ast tonight (his usual 12.9) vs the line of 12.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 12.5 in 7 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 52% vs 52% (they agree)."
+    ],
+    [
+     "i",
+     "Line moved from 14.5 to 12.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 33.0 (last 10 avg 30.1, fairly stable at \u00b18.4)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.0% reb+ast vs his usual output (4 checks for this pick, 3 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.1 minutes vs usual 33.0 (-0.1 on a back-to-back) (-2.6%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+2.1%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+1.3%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Position defense: GSW allow 7% fewer rebounds per minute to centers than average (-1.3%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-1.0%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Position defense: GSW allow 7% more assists per minute to centers than average (+0.6%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.5%)."
+    ],
+    [
+     "i",
+     "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+    ]
+   ],
+   "matchup_net": 0.0204,
+   "below_bar": false,
+   "prob_model": 0.515,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4066261,
+   "price_fmt": "-127"
   },
   {
    "kind": "card",
@@ -242,11 +353,11 @@
    "side": "under",
    "line": 18.5,
    "label": "Pelle Larsson Under 18.5 Pts+Reb+Ast",
-   "prob": 0.5557,
-   "fair": 0.5122,
-   "edge": 0.0435,
-   "ev": 0.015,
-   "price": -121,
+   "prob": 0.5549,
+   "fair": 0.5112,
+   "edge": 0.0437,
+   "ev": 0.0173,
+   "price": -120,
    "book": "DraftKings",
    "proj": 18.153,
    "l10": 0.6,
@@ -254,7 +365,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 56%. DraftKings prices under 18.5 at -121 (51% after removing their margin); our model says 56%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 55%. DraftKings prices under 18.5 at -120 (51% after removing their margin); our model says 56%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
@@ -311,7 +422,7 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 4601025,
-   "price_fmt": "-121"
+   "price_fmt": "-120"
   },
   {
    "kind": "card",
@@ -325,11 +436,11 @@
    "side": "under",
    "line": 2.5,
    "label": "Davion Mitchell Under 2.5 Rebounds",
-   "prob": 0.5532,
-   "fair": 0.547,
-   "edge": 0.0062,
-   "ev": -0.0516,
-   "price": -140,
+   "prob": 0.5459,
+   "fair": 0.5384,
+   "edge": 0.0076,
+   "ev": -0.0497,
+   "price": -135,
    "book": "DraftKings",
    "proj": 2.2225,
    "l10": 0.8,
@@ -337,7 +448,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 55%. DraftKings prices under 2.5 at -140 (55% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines."
+     "Chance it hits: 55%. DraftKings prices under 2.5 at -135 (54% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines."
     ],
     [
      "+",
@@ -349,7 +460,7 @@
     ],
     [
      "i",
-     "Model vs DraftKings: 62% vs 55% (model higher by 7 pts, within the allowed gap)."
+     "Model vs DraftKings: 62% vs 54% (model higher by 8 pts, within the allowed gap)."
     ],
     [
      "i",
@@ -386,98 +497,7 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 4278053,
-   "price_fmt": "-140"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909937",
-   "matchup": "MIA @ GSW",
-   "player": "Bam Adebayo",
-   "team": "MIA",
-   "stat": "ra",
-   "stat_label": "Reb+Ast",
-   "side": "under",
-   "line": 12.5,
-   "label": "Bam Adebayo Under 12.5 Reb+Ast",
-   "prob": 0.5522,
-   "fair": 0.5142,
-   "edge": 0.038,
-   "ev": 0.0049,
-   "price": -122,
-   "book": "DraftKings",
-   "proj": 12.6436,
-   "l10": 0.7,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 12.5 at -122 (51% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 12.6 reb+ast tonight (his usual 12.9) vs the line of 12.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 12.5 in 7 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 52% vs 51% (they agree)."
-    ],
-    [
-     "i",
-     "Line moved from 14.5 to 12.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "i",
-     "Minutes: projected 33.0 (last 10 avg 30.1, fairly stable at \u00b18.4)."
-    ],
-    [
-     "+",
-     "Matchup overall: -2.0% reb+ast vs his usual output (4 checks for this pick, 3 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.1 minutes vs usual 33.0 (-0.1 on a back-to-back) (-2.6%)."
-    ],
-    [
-     "!",
-     "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+2.1%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+1.3%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Position defense: GSW allow 7% fewer rebounds per minute to centers than average (-1.3%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-1.0%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Position defense: GSW allow 7% more assists per minute to centers than average (+0.6%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.5%)."
-    ],
-    [
-     "i",
-     "Second night of a back-to-back (last season this didn't cut starters' minutes)."
-    ]
-   ],
-   "matchup_net": 0.0204,
-   "below_bar": false,
-   "prob_model": 0.515,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4066261,
-   "price_fmt": "-122"
+   "price_fmt": "-135"
   },
   {
    "kind": "card",
@@ -565,16 +585,95 @@
    "matchup": "MIA @ GSW",
    "player": "Andrew Wiggins",
    "team": "MIA",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
+   "side": "under",
+   "line": 16.5,
+   "label": "Andrew Wiggins Under 16.5 Pts+Reb+Ast",
+   "prob": 0.5288,
+   "fair": 0.4888,
+   "edge": 0.0401,
+   "ev": 0.014,
+   "price": -109,
+   "book": "DraftKings",
+   "proj": 17.4577,
+   "l10": 0.7,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 53%. DraftKings prices under 16.5 at -109 (49% after removing their margin); our model says 50%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 17.5 pts+reb+ast tonight (his usual 18.0) vs the line of 16.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 16.5 in 7 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 50% vs 49% (they agree)."
+    ],
+    [
+     "i",
+     "Line moved from 18.5 to 16.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.8% pts+reb+ast vs his usual output (1 check for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.6%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+0.5%)."
+    ],
+    [
+     "i",
+     "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+    ]
+   ],
+   "matchup_net": 0.0277,
+   "below_bar": false,
+   "prob_model": 0.4967,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3059319,
+   "price_fmt": "-109"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909937",
+   "matchup": "MIA @ GSW",
+   "player": "Andrew Wiggins",
+   "team": "MIA",
    "stat": "fg3m",
    "stat_label": "3-Pointers Made",
    "side": "under",
    "line": 1.5,
    "label": "Andrew Wiggins Under 1.5 3-Pointers Made",
-   "prob": 0.535,
-   "fair": 0.5183,
-   "edge": 0.0167,
-   "ev": -0.0336,
-   "price": -124,
+   "prob": 0.5264,
+   "fair": 0.5081,
+   "edge": 0.0183,
+   "ev": -0.0313,
+   "price": -119,
    "book": "DraftKings",
    "proj": 1.8078,
    "l10": 0.6,
@@ -582,7 +681,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 53%. DraftKings prices under 1.5 at -124 (52% after removing their margin); our model says 48%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 53%. DraftKings prices under 1.5 at -119 (51% after removing their margin); our model says 48%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "!",
@@ -594,7 +693,7 @@
     ],
     [
      "+",
-     "Model vs DraftKings: 48% vs 52% (they agree)."
+     "Model vs DraftKings: 48% vs 51% (they agree)."
     ],
     [
      "i",
@@ -631,7 +730,82 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 3059319,
-   "price_fmt": "-124"
+   "price_fmt": "-119"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909937",
+   "matchup": "MIA @ GSW",
+   "player": "Andrew Wiggins",
+   "team": "MIA",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 14.5,
+   "label": "Andrew Wiggins Under 14.5 Pts+Reb",
+   "prob": 0.5249,
+   "fair": 0.4847,
+   "edge": 0.0402,
+   "ev": 0.0155,
+   "price": -107,
+   "book": "DraftKings",
+   "proj": 15.5009,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 52%. DraftKings prices under 14.5 at -107 (48% after removing their margin); our model says 49%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 15.5 pts+reb tonight (his usual 15.9) vs the line of 14.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 14.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 49% vs 48% (they agree)."
+    ],
+    [
+     "i",
+     "Line moved from 16.5 to 14.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -3.0% pts+reb vs his usual output (1 check for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
+    ],
+    [
+     "!",
+     "Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.7%)."
+    ],
+    [
+     "i",
+     "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+    ]
+   ],
+   "matchup_net": 0.0299,
+   "below_bar": false,
+   "prob_model": 0.4925,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3059319,
+   "price_fmt": "-107"
   },
   {
    "kind": "card",
@@ -645,11 +819,11 @@
    "side": "under",
    "line": 3.5,
    "label": "Pelle Larsson Under 3.5 Rebounds",
-   "prob": 0.5212,
-   "fair": 0.5162,
-   "edge": 0.005,
-   "ev": -0.0551,
-   "price": -123,
+   "prob": 0.5229,
+   "fair": 0.5183,
+   "edge": 0.0047,
+   "ev": -0.0554,
+   "price": -124,
    "book": "DraftKings",
    "proj": 3.4201,
    "l10": 0.8,
@@ -657,7 +831,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 52%. DraftKings prices under 3.5 at -123 (52% after removing their margin); our model says 57%. The two are blended using how each predicted results at real lines."
+     "Chance it hits: 52%. DraftKings prices under 3.5 at -124 (52% after removing their margin); our model says 57%. The two are blended using how each predicted results at real lines."
     ],
     [
      "+",
@@ -706,14 +880,14 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 4601025,
-   "price_fmt": "-123"
+   "price_fmt": "-124"
   }
  ],
  "lineups": {
   "likely": [
    {
     "size": 3,
-    "prob": 0.2179,
+    "prob": 0.2286,
     "legs": [
      {
       "kind": "card",
@@ -797,293 +971,40 @@
      {
       "kind": "card",
       "tier": "Most likely",
-      "game_id": "401909936",
-      "matchup": "ORL @ PHX",
-      "player": "Desmond Bane",
-      "team": "ORL",
-      "stat": "fg3m",
-      "stat_label": "3-Pointers Made",
-      "side": "over",
-      "line": 2.5,
-      "label": "Desmond Bane Over 2.5 3-Pointers Made",
-      "prob": 0.5682,
-      "fair": 0.5867,
-      "edge": -0.0186,
-      "ev": -0.0916,
-      "price": -167,
-      "book": "DraftKings",
-      "proj": 3.3884,
-      "l10": 0.8,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "!",
-        "Chance it hits: 57%. DraftKings prices over 2.5 at -167 (59% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-       ],
-       [
-        "+",
-        "Projection: 3.4 3-pointers made tonight (his usual 3.2) vs the line of 2.5."
-       ],
-       [
-        "+",
-        "Recent form: went over 2.5 in 8 of his last 10 games and 12 of his last 20."
-       ],
-       [
-        "i",
-        "Model vs DraftKings: 64% vs 59% (model higher by 6 pts, within the allowed gap)."
-       ],
-       [
-        "+",
-        "Minutes: projected 34.9 (last 10 avg 35.4, stable at \u00b13.8)."
-       ],
-       [
-        "+",
-        "Matchup overall: +10.6% 3-pointers made vs his usual output (5 checks for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 36.1 minutes vs usual 34.9 (+1.2 with teammates out) (+3.6%)."
-       ],
-       [
-        "+",
-        "Opponent on a back-to-back: PHX played yesterday (+2.9%)."
-       ],
-       [
-        "+",
-        "Position defense: PHX allow 8% more 3-pointers made per minute to guards than average (+2.0%)."
-       ],
-       [
-        "+",
-        "Teammates out: ORL without Jalen Suggs (18%), Paolo Banchero (16%) of the team's 3PA (+2.0%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 110.5 points (-1.9%)."
-       ],
-       [
-        "+",
-        "3s allowed: 41% of shots vs PHX are 3s (#9 most, last season) (+1.5%)."
-       ],
-       [
-        "i",
-        "3P% allowed: PHX allow 35.1% from three (#2 worst, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "i",
-        "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
-       ]
-      ],
-      "matchup_net": 0.1056,
-      "below_bar": true,
-      "prob_model": 0.6435,
-      "card": "likely",
-      "dk_line": null,
-      "player_id": 4066320,
-      "price_fmt": "-167"
-     },
-     {
-      "kind": "card",
-      "tier": "Most likely",
-      "game_id": "401909937",
-      "matchup": "MIA @ GSW",
-      "player": "Andrew Wiggins",
-      "team": "MIA",
-      "stat": "pr",
-      "stat_label": "Pts+Reb",
-      "side": "under",
-      "line": 15.5,
-      "label": "Andrew Wiggins Under 15.5 Pts+Reb",
-      "prob": 0.567,
-      "fair": 0.5273,
-      "edge": 0.0397,
-      "ev": 0.0066,
-      "price": -129,
-      "book": "DraftKings",
-      "proj": 15.5009,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "!",
-        "Chance it hits: 57%. DraftKings prices under 15.5 at -129 (53% after removing their margin); our model says 55%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-       ],
-       [
-        "!",
-        "Projection: 15.5 pts+reb tonight (his usual 15.9) vs the line of 15.5."
-       ],
-       [
-        "+",
-        "Recent form: went under 15.5 in 7 of his last 10 games and 12 of his last 20."
-       ],
-       [
-        "+",
-        "Model vs DraftKings: 55% vs 53% (they agree)."
-       ],
-       [
-        "i",
-        "Line moved from 16.5 to 15.5 since it opened (the market has moved toward this side; value is thinner)."
-       ],
-       [
-        "i",
-        "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
-       ],
-       [
-        "+",
-        "Matchup overall: -3.0% pts+reb vs his usual output (1 check for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
-       ],
-       [
-        "!",
-        "Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "i",
-        "Second night of a back-to-back (last season this didn't cut starters' minutes)."
-       ]
-      ],
-      "matchup_net": 0.0299,
-      "below_bar": true,
-      "prob_model": 0.5504,
-      "card": "likely",
-      "dk_line": null,
-      "player_id": 3059319,
-      "price_fmt": "-129"
-     }
-    ],
-    "title": "Most likely",
-    "name": "likely",
-    "n_qualified": 1,
-    "n_filled": 2
-   }
-  ],
-  "fair": [
-   {
-    "size": 3,
-    "prob": 0.1745,
-    "legs": [
-     {
-      "kind": "card",
-      "tier": "Fair price",
-      "game_id": "401909937",
-      "matchup": "MIA @ GSW",
-      "player": "Andrew Wiggins",
-      "team": "MIA",
-      "stat": "pr",
-      "stat_label": "Pts+Reb",
-      "side": "under",
-      "line": 15.5,
-      "label": "Andrew Wiggins Under 15.5 Pts+Reb",
-      "prob": 0.567,
-      "fair": 0.5273,
-      "edge": 0.0397,
-      "ev": 0.0066,
-      "price": -129,
-      "book": "DraftKings",
-      "proj": 15.5009,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Chance it hits: 57%. DraftKings prices under 15.5 at -129 (53% after removing their margin); our model says 55%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-       ],
-       [
-        "!",
-        "Projection: 15.5 pts+reb tonight (his usual 15.9) vs the line of 15.5."
-       ],
-       [
-        "+",
-        "Recent form: went under 15.5 in 7 of his last 10 games and 12 of his last 20."
-       ],
-       [
-        "+",
-        "Model vs DraftKings: 55% vs 53% (they agree)."
-       ],
-       [
-        "i",
-        "Line moved from 16.5 to 15.5 since it opened (the market has moved toward this side; value is thinner)."
-       ],
-       [
-        "i",
-        "Minutes: projected 27.9 (last 10 avg 27.9, fairly stable at \u00b16.6)."
-       ],
-       [
-        "+",
-        "Matchup overall: -3.0% pts+reb vs his usual output (1 check for this pick, 1 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 27.0 minutes vs usual 27.9 (-0.1 on a back-to-back) (-3.1%)."
-       ],
-       [
-        "!",
-        "Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.7%)."
-       ],
-       [
-        "i",
-        "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
-       ],
-       [
-        "i",
-        "Second night of a back-to-back (last season this didn't cut starters' minutes)."
-       ]
-      ],
-      "matchup_net": 0.0299,
-      "below_bar": false,
-      "prob_model": 0.5504,
-      "card": "fair",
-      "dk_line": null,
-      "player_id": 3059319,
-      "price_fmt": "-129"
-     },
-     {
-      "kind": "card",
-      "tier": "Fair price",
       "game_id": "401909937",
       "matchup": "MIA @ GSW",
       "player": "Pelle Larsson",
       "team": "MIA",
-      "stat": "pra",
-      "stat_label": "Pts+Reb+Ast",
+      "stat": "ra",
+      "stat_label": "Reb+Ast",
       "side": "under",
-      "line": 18.5,
-      "label": "Pelle Larsson Under 18.5 Pts+Reb+Ast",
-      "prob": 0.5557,
-      "fair": 0.5122,
-      "edge": 0.0435,
-      "ev": 0.015,
-      "price": -121,
+      "line": 7.5,
+      "label": "Pelle Larsson Under 7.5 Reb+Ast",
+      "prob": 0.5887,
+      "fair": 0.5458,
+      "edge": 0.0429,
+      "ev": 0.0092,
+      "price": -140,
       "book": "DraftKings",
-      "proj": 18.153,
-      "l10": 0.6,
-      "l20": 0.5,
+      "proj": 6.9297,
+      "l10": 0.8,
+      "l20": 0.6,
       "reasons": [
        [
         "+",
-        "Chance it hits: 56%. DraftKings prices under 18.5 at -121 (51% after removing their margin); our model says 56%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+        "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
        ],
        [
         "+",
-        "Projection: 18.2 pts+reb+ast tonight (his usual 18.6) vs the line of 18.5."
+        "Projection: 6.9 reb+ast tonight (his usual 7.0) vs the line of 7.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 7.5 in 8 of his last 10 games and 12 of his last 20."
        ],
        [
         "i",
-        "Recent form: went under 18.5 in 6 of his last 10 games and 10 of his last 20."
-       ],
-       [
-        "i",
-        "Model vs DraftKings: 56% vs 51% (model higher by 5 pts, within the allowed gap)."
-       ],
-       [
-        "i",
-        "Line moved from 20.5 to 18.5 since it opened (the market has moved toward this side; value is thinner)."
+        "Model vs DraftKings: 61% vs 55% (model higher by 6 pts, within the allowed gap)."
        ],
        [
         "i",
@@ -1091,7 +1012,7 @@
        ],
        [
         "+",
-        "Matchup overall: -2.3% pts+reb+ast vs his usual output (1 check for this pick, 2 against)."
+        "Matchup overall: -1.1% reb+ast vs his usual output (4 checks for this pick, 2 against)."
        ],
        [
         "+",
@@ -1099,32 +1020,305 @@
        ],
        [
         "!",
-        "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+0.9%)."
+        "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+2.3%)."
        ],
        [
         "!",
-        "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+0.6%)."
+        "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+1.5%)."
        ],
        [
-        "i",
-        "Position defense: GSW allow 5% more points per minute to guards than average. Checked, but it had no measurable effect last season, so it is not counted."
+        "+",
+        "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.9%)."
        ],
        [
-        "i",
-        "Rim protection: GSW block 4.1 shots per 100 possessions (#27 most, last season). Checked, but it had no measurable effect last season, so it is not counted."
+        "+",
+        "Assists \u00b7 Turnovers forced: GSW force 15.0 turnovers per 100 possessions (#4 most, last season) (-0.7%)."
+       ],
+       [
+        "+",
+        "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-0.7%)."
        ],
        [
         "i",
         "Second night of a back-to-back (last season this didn't cut starters' minutes)."
        ]
       ],
-      "matchup_net": 0.0226,
+      "matchup_net": 0.0109,
       "below_bar": false,
-      "prob_model": 0.5632,
+      "prob_model": 0.6087,
+      "card": "likely",
+      "dk_line": null,
+      "player_id": 4601025,
+      "price_fmt": "-140"
+     },
+     {
+      "kind": "card",
+      "tier": "Most likely",
+      "game_id": "401909936",
+      "matchup": "ORL @ PHX",
+      "player": "Dillon Brooks",
+      "team": "PHX",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "side": "over",
+      "line": 3.5,
+      "label": "Dillon Brooks Over 3.5 Rebounds",
+      "prob": 0.5741,
+      "fair": 0.5723,
+      "edge": 0.0018,
+      "ev": -0.0602,
+      "price": -157,
+      "book": "DraftKings",
+      "proj": 4.2978,
+      "l10": 0.8,
+      "l20": 0.65,
+      "reasons": [
+       [
+        "!",
+        "Chance it hits: 57%. DraftKings prices over 3.5 at -157 (57% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines."
+       ],
+       [
+        "+",
+        "Projection: 4.3 rebounds tonight (his usual 4.3) vs the line of 3.5."
+       ],
+       [
+        "+",
+        "Recent form: went over 3.5 in 8 of his last 10 games and 13 of his last 20."
+       ],
+       [
+        "+",
+        "Model vs DraftKings: 62% vs 57% (they agree)."
+       ],
+       [
+        "+",
+        "Line moved from 4.5 to 3.5 since it opened (it moved against this side, so the number is now easier)."
+       ],
+       [
+        "i",
+        "Minutes: projected 31.0 (last 10 avg 33.3, fairly stable at \u00b15.9)."
+       ],
+       [
+        "+",
+        "Matchup overall: +0.6% rebounds vs his usual output (3 checks for this pick, 2 against)."
+       ],
+       [
+        "!",
+        "Rebound chances: 86.7 total rebounds per game in ORL games (#26 of 30, last season) (-1.9%)."
+       ],
+       [
+        "+",
+        "Opponent rebounding: ORL grab 49.9% of all rebounds in their games (#26 of 30, last season); Banchero 8.2 rpg, Jr. 7.4 rpg (+1.7%)."
+       ],
+       [
+        "+",
+        "Opponent players out: ORL without Paolo Banchero (20%), Jalen Suggs (10%) of their rebounds (+1.0%)."
+       ],
+       [
+        "!",
+        "Position defense: ORL allow 2% fewer rebounds per minute to forwards than average (-0.6%)."
+       ],
+       [
+        "+",
+        "Minutes: projected 31.1 minutes vs usual 31.0 (-0.1 on a back-to-back) (+0.5%)."
+       ],
+       [
+        "i",
+        "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+       ]
+      ],
+      "matchup_net": 0.0062,
+      "below_bar": true,
+      "prob_model": 0.6169,
+      "card": "likely",
+      "dk_line": null,
+      "player_id": 3155526,
+      "price_fmt": "-157"
+     }
+    ],
+    "title": "Most likely",
+    "name": "likely",
+    "n_qualified": 2,
+    "n_filled": 1
+   }
+  ],
+  "fair": [
+   {
+    "size": 3,
+    "prob": 0.1784,
+    "legs": [
+     {
+      "kind": "card",
+      "tier": "Fair price",
+      "game_id": "401909937",
+      "matchup": "MIA @ GSW",
+      "player": "Pelle Larsson",
+      "team": "MIA",
+      "stat": "ra",
+      "stat_label": "Reb+Ast",
+      "side": "under",
+      "line": 7.5,
+      "label": "Pelle Larsson Under 7.5 Reb+Ast",
+      "prob": 0.5887,
+      "fair": 0.5458,
+      "edge": 0.0429,
+      "ev": 0.0092,
+      "price": -140,
+      "book": "DraftKings",
+      "proj": 6.9297,
+      "l10": 0.8,
+      "l20": 0.6,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "+",
+        "Projection: 6.9 reb+ast tonight (his usual 7.0) vs the line of 7.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 7.5 in 8 of his last 10 games and 12 of his last 20."
+       ],
+       [
+        "i",
+        "Model vs DraftKings: 61% vs 55% (model higher by 6 pts, within the allowed gap)."
+       ],
+       [
+        "i",
+        "Minutes: projected 29.0 (last 10 avg 29.2, fairly stable at \u00b14.9)."
+       ],
+       [
+        "+",
+        "Matchup overall: -1.1% reb+ast vs his usual output (4 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 28.1 minutes vs usual 29.0 (-0.1 on a back-to-back) (-3.0%)."
+       ],
+       [
+        "!",
+        "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+2.3%)."
+       ],
+       [
+        "!",
+        "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+1.5%)."
+       ],
+       [
+        "+",
+        "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.9%)."
+       ],
+       [
+        "+",
+        "Assists \u00b7 Turnovers forced: GSW force 15.0 turnovers per 100 possessions (#4 most, last season) (-0.7%)."
+       ],
+       [
+        "+",
+        "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-0.7%)."
+       ],
+       [
+        "i",
+        "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+       ]
+      ],
+      "matchup_net": 0.0109,
+      "below_bar": false,
+      "prob_model": 0.6087,
       "card": "fair",
       "dk_line": null,
       "player_id": 4601025,
-      "price_fmt": "-121"
+      "price_fmt": "-140"
+     },
+     {
+      "kind": "card",
+      "tier": "Fair price",
+      "game_id": "401909937",
+      "matchup": "MIA @ GSW",
+      "player": "Bam Adebayo",
+      "team": "MIA",
+      "stat": "ra",
+      "stat_label": "Reb+Ast",
+      "side": "under",
+      "line": 12.5,
+      "label": "Bam Adebayo Under 12.5 Reb+Ast",
+      "prob": 0.5598,
+      "fair": 0.5232,
+      "edge": 0.0366,
+      "ev": 0.0006,
+      "price": -127,
+      "book": "DraftKings",
+      "proj": 12.6436,
+      "l10": 0.7,
+      "l20": 0.5,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 56%. DraftKings prices under 12.5 at -127 (52% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "!",
+        "Projection: 12.6 reb+ast tonight (his usual 12.9) vs the line of 12.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 12.5 in 7 of his last 10 games and 10 of his last 20."
+       ],
+       [
+        "+",
+        "Model vs DraftKings: 52% vs 52% (they agree)."
+       ],
+       [
+        "i",
+        "Line moved from 14.5 to 12.5 since it opened (the market has moved toward this side; value is thinner)."
+       ],
+       [
+        "i",
+        "Minutes: projected 33.0 (last 10 avg 30.1, fairly stable at \u00b18.4)."
+       ],
+       [
+        "+",
+        "Matchup overall: -2.0% reb+ast vs his usual output (4 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 32.1 minutes vs usual 33.0 (-0.1 on a back-to-back) (-2.6%)."
+       ],
+       [
+        "!",
+        "Rebounds \u00b7 Opponent players out: GSW without Kristaps Porzingis (15%), Jimmy Butler III (13%), Gui Santos (11%) of their rebounds (+2.1%)."
+       ],
+       [
+        "!",
+        "Assists \u00b7 Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Kristaps Porzingis (11%) of their minutes (+1.3%)."
+       ],
+       [
+        "+",
+        "Rebounds \u00b7 Position defense: GSW allow 7% fewer rebounds per minute to centers than average (-1.3%)."
+       ],
+       [
+        "+",
+        "Rebounds \u00b7 Rebound chances: 86.2 total rebounds per game in GSW games (#23 of 30, last season) (-1.0%)."
+       ],
+       [
+        "!",
+        "Assists \u00b7 Position defense: GSW allow 7% more assists per minute to centers than average (+0.6%)."
+       ],
+       [
+        "+",
+        "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.5%)."
+       ],
+       [
+        "i",
+        "Second night of a back-to-back (last season this didn't cut starters' minutes)."
+       ]
+      ],
+      "matchup_net": 0.0204,
+      "below_bar": false,
+      "prob_model": 0.515,
+      "card": "fair",
+      "dk_line": null,
+      "player_id": 4066261,
+      "price_fmt": "-127"
      },
      {
       "kind": "card",
@@ -1138,11 +1332,11 @@
       "side": "over",
       "line": 5.5,
       "label": "Franz Wagner Over 5.5 Rebounds",
-      "prob": 0.5539,
-      "fair": 0.5579,
-      "edge": -0.0039,
-      "ev": -0.0693,
-      "price": -147,
+      "prob": 0.5414,
+      "fair": 0.5431,
+      "edge": -0.0017,
+      "ev": -0.0663,
+      "price": -138,
       "book": "DraftKings",
       "proj": 6.0646,
       "l10": 0.5,
@@ -1150,7 +1344,7 @@
       "reasons": [
        [
         "+",
-        "Chance it hits: 55%. DraftKings prices over 5.5 at -147 (56% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines."
+        "Chance it hits: 54%. DraftKings prices over 5.5 at -138 (54% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines."
        ],
        [
         "+",
@@ -1162,7 +1356,7 @@
        ],
        [
         "+",
-        "Model vs DraftKings: 54% vs 56% (they agree)."
+        "Model vs DraftKings: 54% vs 54% (they agree)."
        ],
        [
         "+",
@@ -1203,7 +1397,7 @@
       "card": "fair",
       "dk_line": null,
       "player_id": 4566434,
-      "price_fmt": "-147"
+      "price_fmt": "-138"
      }
     ],
     "title": "Fair price",
@@ -1211,7 +1405,8 @@
     "n_qualified": 2,
     "n_filled": 1
    }
-  ]
+  ],
+  "prizepicks": []
  },
  "record": {
   "graded_picks": 886,
@@ -1710,7 +1905,7 @@
   },
   {
    "ok": true,
-   "text": "Injury report: 94 listed"
+   "text": "Injury report: 93 listed"
   },
   {
    "ok": true,
@@ -1726,7 +1921,7 @@
   },
   {
    "ok": true,
-   "text": "PrizePicks: downloads in the final run, 1 hour before the first tip"
+   "text": "PrizePicks: 214 lines, 16 credits used, 438 left this month"
   }
  ],
  "odds_enabled": true,
