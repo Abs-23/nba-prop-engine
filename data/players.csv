@@ -6,8 +6,7 @@ player_id,player,team,height,pos
 4396963,Blake Hinson,UTA,80.0,F
 4592699,Enrique Freeman,MIN,81.0,F
 5142621,Chris Cenac Jr.,BOS,83.0,F
-5177362,Riley Minix,CLE,79.0,F
-5105837,Bruce Thornton,HOU,72.0,G
+4431734,Tristan Enaruna,CLE,80.0,F
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -97,10 +96,10 @@ player_id,player,team,height,pos
 5095151,Caleb Wilson,CHI,81.0,F
 4066328,Jarrett Allen,CLE,81.0,C
 3934723,Thomas Bryant,CLE,81.0,C
-4431734,Tristan Enaruna,CLE,80.0,F
 3992,James Harden,CLE,77.0,G
 2995706,Mario Hezonja,CLE,80.0,F
 4066757,Sam Merrill,CLE,76.0,G
+5177362,Riley Minix,CLE,79.0,F
 3908809,Donovan Mitchell,CLE,74.0,G
 4432158,Evan Mobley,CLE,83.0,C
 4702134,Norchad Omier,CLE,79.0,C
@@ -195,6 +194,7 @@ player_id,player,team,height,pos
 4432639,Jabari Smith Jr.,HOU,83.0,F
 3136777,Jae'Sean Tate,HOU,76.0,F
 4684740,Amen Thompson,HOU,79.0,G
+5105837,Bruce Thornton,HOU,72.0,G
 4432827,Oscar Tshiebwe,HOU,80.0,C
 2991230,Fred VanVleet,HOU,72.0,G
 4431752,Kobe Brown,IND,79.0,G
