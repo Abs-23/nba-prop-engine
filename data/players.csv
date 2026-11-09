@@ -7,6 +7,7 @@ player_id,player,team,height,pos
 4592699,Enrique Freeman,MIN,81.0,F
 5142621,Chris Cenac Jr.,BOS,83.0,F
 4431734,Tristan Enaruna,CLE,80.0,F
+4433159,Dalen Terry,OKC,78.0,G
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -359,6 +360,7 @@ player_id,player,team,height,pos
 4432808,James Wiseman,NYK,83.0,C
 4684208,Brooks Barnhizer,OKC,78.0,F
 2991350,Alex Caruso,OKC,77.0,G
+4702384,Nique Clifford,OKC,77.0,G
 5105800,Josh Dix,OKC,77.0,G
 4278073,Shai Gilgeous-Alexander,OKC,78.0,G
 4222252,Isaiah Hartenstein,OKC,84.0,C
@@ -369,7 +371,6 @@ player_id,player,team,height,pos
 4432185,Micah Peavy,OKC,79.0,G
 5061603,Thomas Sorber,OKC,81.0,C
 5241364,Bennett Stirtz,OKC,76.0,G
-4433159,Dalen Terry,OKC,78.0,G
 5159925,Nikola Topic,OKC,78.0,G
 4683692,Cason Wallace,OKC,75.0,G
 4593803,Jalen Williams,OKC,77.0,G
@@ -447,7 +448,6 @@ player_id,player,team,height,pos
 5142620,Darius Acuff Jr.,SAC,74.0,G
 4395650,Leaky Black,SAC,78.0,F
 4433174,Dylan Cardwell,SAC,82.0,C
-4702384,Nique Clifford,SAC,77.0,G
 4065732,De'Andre Hunter,SAC,79.0,F
 4917149,Alex Karaban,SAC,79.0,F
 3064440,Zach LaVine,SAC,77.0,G
