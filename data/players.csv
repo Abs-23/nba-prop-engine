@@ -8,6 +8,8 @@ player_id,player,team,height,pos
 5142621,Chris Cenac Jr.,BOS,83.0,F
 4431734,Tristan Enaruna,CLE,80.0,F
 4433159,Dalen Terry,OKC,78.0,G
+4700852,Chaz Lanier,DET,75.0,G
+5061585,Isaiah Evans,MIN,78.0,F
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -155,7 +157,6 @@ player_id,player,team,height,pos
 5107199,Daniss Jenkins,DET,76.0,G
 4395702,Isaiah Joe,DET,76.0,G
 5107818,Isaac Jones,DET,80.0,C
-4700852,Chaz Lanier,DET,75.0,G
 5258459,Ebuka Okorie,DET,74.0,G
 5037878,Ugonna Onyenso,DET,84.0,C
 2990962,Taurean Prince,DET,78.0,F
@@ -313,7 +314,6 @@ player_id,player,team,height,pos
 3934673,Donte DiVincenzo,MIN,76.0,G
 4397002,Ayo Dosunmu,MIN,76.0,G
 4594268,Anthony Edwards,MIN,76.0,G
-5061585,Isaiah Evans,MIN,78.0,F
 3032976,Rudy Gobert,MIN,85.0,C
 4592492,Bones Hyland,MIN,74.0,G
 4433247,Jonathan Kuminga,MIN,79.0,F
