@@ -5,11 +5,11 @@ player_id,player,team,height,pos
 4397018,Ochai Agbaji,OKC,77.0,G
 4396963,Blake Hinson,UTA,80.0,F
 4592699,Enrique Freeman,MIN,81.0,F
-5142621,Chris Cenac Jr.,BOS,83.0,F
 4431734,Tristan Enaruna,CLE,80.0,F
 4433159,Dalen Terry,OKC,78.0,G
 4700852,Chaz Lanier,DET,75.0,G
 5061585,Isaiah Evans,MIN,78.0,F
+4596528,Lawson Lovering,LAL,85.0,C
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4869342,Dyson Daniels,ATL,79.0,G
 4431941,RayJ Dennis,ATL,74.0,G
@@ -29,6 +29,7 @@ player_id,player,team,height,pos
 4397183,Aaron Wiggins,ATL,77.0,G
 4431714,Jalen Wilson,ATL,78.0,F
 4433188,Devin Carter,BOS,74.0,G
+5142621,Chris Cenac Jr.,BOS,83.0,F
 3195,Mike Conley,BOS,73.0,G
 4277951,Luka Garza,BOS,82.0,C
 4251,Paul George,BOS,80.0,F
@@ -236,6 +237,7 @@ player_id,player,team,height,pos
 5254165,Keaton Wagler,LAC,77.0,G
 4683935,Blake Wesley,LAC,76.0,G
 5113969,Cameron Carr,LAL,77.0,G
+5105817,Carson Cooper,LAL,83.0,C
 3945274,Luka Doncic,LAL,80.0,G
 4397014,Quentin Grimes,LAL,76.0,G
 4868423,Jaden Hardy,LAL,75.0,G
@@ -244,7 +246,6 @@ player_id,player,team,height,pos
 4433136,Walker Kessler,LAL,86.0,C
 4592691,Jake LaRavia,LAL,79.0,F
 3155535,Kevon Looney,LAL,81.0,F
-4596528,Lawson Lovering,LAL,85.0,C
 4278580,Sandro Mamukelashvili,LAL,81.0,F
 4702972,Chris Manon,LAL,76.0,G
 5114350,AK Okereke,LAL,79.0,F
@@ -255,7 +256,6 @@ player_id,player,team,height,pos
 4278077,Jarred Vanderbilt,LAL,80.0,F
 4433137,Ziaire Williams,LAL,81.0,F
 5041935,Cameron Boozer,MEM,80.0,F
-5105817,Carson Cooper,MEM,83.0,C
 4903027,Cedric Coward,MEM,77.0,F
 4600663,Zach Edey,MEM,87.0,C
 2991070,Jerami Grant,MEM,79.0,F
