@@ -1,7 +1,7 @@
 {
  "date": "2026-11-15",
  "date_label": "Sunday, November 15, 2026",
- "generated": "2026-11-15 17:43 UTC",
+ "generated": "2026-11-15 17:47 UTC",
  "games_today": 9,
  "safe": [],
  "market": [
@@ -1142,81 +1142,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
-   "player": "Myles Turner",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
-   "side": "under",
-   "line": 12.5,
-   "label": "Myles Turner Under 12.5 Pts+Ast",
-   "prob": 0.5759,
-   "fair": 0.5232,
-   "edge": 0.0527,
-   "ev": 0.0293,
-   "price": -127,
-   "book": "DraftKings",
-   "proj": 10.8664,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 58%. DraftKings prices under 12.5 at -127 (52% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 10.9 pts+ast tonight (his usual 11.6) vs the line of 12.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 12.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 66% vs 52% (model higher by 14 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.4 (last 10 avg 26.7, fairly stable at \u00b14.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.6% pts+ast vs his usual output (2 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.0 minutes vs usual 27.4 (-5.1%)."
-    ],
-    [
-     "!",
-     "Position defense: ATL allow 27% more assists per minute to centers than average (+1.7%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
-    ],
-    [
-     "i",
-     "Position defense: ATL allow 7% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0458,
-   "below_bar": false,
-   "prob_model": 0.6606,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3133628,
-   "price_fmt": "-127"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909986",
    "matchup": "LAL @ PHX",
    "player": "Collin Gillespie",
@@ -1280,6 +1205,69 @@
    "dk_line": null,
    "player_id": 4278585,
    "price_fmt": "-128"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Tyler Herro",
+   "team": "MIL",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
+   "side": "under",
+   "line": 31.5,
+   "label": "Tyler Herro Under 31.5 Pts+Reb+Ast",
+   "prob": 0.5751,
+   "fair": 0.5183,
+   "edge": 0.0568,
+   "ev": 0.0389,
+   "price": -124,
+   "book": "DraftKings",
+   "proj": 28.063,
+   "l10": 0.6,
+   "l20": 0.55,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 58%. DraftKings prices under 31.5 at -124 (52% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 28.1 pts+reb+ast tonight (his usual 30.2) vs the line of 31.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 31.5 in 6 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 69% vs 52% (model higher by 17 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 31.6 (last 10 avg 31.2, stable at \u00b13.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.0% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
+    ],
+    [
+     "i",
+     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0505,
+   "below_bar": false,
+   "prob_model": 0.6886,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4395725,
+   "price_fmt": "-124"
   },
   {
    "kind": "card",
@@ -1537,6 +1525,77 @@
    "dk_line": null,
    "player_id": 4845367,
    "price_fmt": "-127"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Tyler Herro",
+   "team": "MIL",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
+   "side": "under",
+   "line": 9.5,
+   "label": "Tyler Herro Under 9.5 Reb+Ast",
+   "prob": 0.5713,
+   "fair": 0.5142,
+   "edge": 0.0571,
+   "ev": 0.0396,
+   "price": -122,
+   "book": "DraftKings",
+   "proj": 8.0691,
+   "l10": 0.8,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 57%. DraftKings prices under 9.5 at -122 (51% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 8.1 reb+ast tonight (his usual 8.9) vs the line of 9.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 9.5 in 8 of his last 10 games and 14 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 69% vs 51% (model higher by 17 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 31.6 (last 10 avg 31.2, stable at \u00b13.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -6.3% reb+ast vs his usual output (3 checks for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.4%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Turnovers forced: ATL force 16.8 turnovers per 100 possessions (#3 most) (-0.8%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent rebounding: ATL grab 49.1% of all rebounds in their games (#20 of 30); Johnson 9.4 rpg, Okongwu 7.4 rpg (+0.6%)."
+    ]
+   ],
+   "matchup_net": 0.0632,
+   "below_bar": false,
+   "prob_model": 0.6853,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4395725,
+   "price_fmt": "-122"
   },
   {
    "kind": "card",
@@ -2043,81 +2102,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "under",
-   "line": 5.5,
-   "label": "Kyle Kuzma Under 5.5 Rebounds",
-   "prob": 0.5671,
-   "fair": 0.5541,
-   "edge": 0.013,
-   "ev": -0.0418,
-   "price": -145,
-   "book": "DraftKings",
-   "proj": 4.5247,
-   "l10": 0.8,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 57%. DraftKings prices under 5.5 at -145 (55% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines."
-    ],
-    [
-     "+",
-     "Projection: 4.5 rebounds tonight (his usual 4.8) vs the line of 5.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 5.5 in 8 of his last 10 games and 13 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 69% vs 55% (model higher by 13 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.1 (last 10 avg 26.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -3.5% rebounds vs his usual output (2 checks for this pick, 3 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.7 minutes vs usual 27.1 (-5.2%)."
-    ],
-    [
-     "!",
-     "Opponent rebounding: ATL grab 49.1% of all rebounds in their games (#20 of 30); Johnson 9.4 rpg, Okongwu 7.4 rpg (+1.2%)."
-    ],
-    [
-     "!",
-     "Rebound chances: 89.7 total rebounds per game in ATL games (#9 of 30) (+1.0%)."
-    ],
-    [
-     "+",
-     "Opponent players out: ATL without Kingston Flemings (5%), Keshon Gilbert (0%) of their rebounds (-0.8%)."
-    ],
-    [
-     "!",
-     "Position defense: ATL allow 4% more rebounds per minute to forwards than average (+0.8%)."
-    ]
-   ],
-   "matchup_net": 0.0352,
-   "below_bar": false,
-   "prob_model": 0.688,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-145"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909989",
    "matchup": "DAL @ BOS",
    "player": "Payton Pritchard",
@@ -2199,63 +2183,71 @@
    "tier": "Fair price",
    "game_id": "401909992",
    "matchup": "ATL @ MIL",
-   "player": "Tyler Herro",
+   "player": "Kyle Kuzma",
    "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
    "side": "under",
-   "line": 31.5,
-   "label": "Tyler Herro Under 31.5 Pts+Reb+Ast",
-   "prob": 0.5658,
-   "fair": 0.5071,
-   "edge": 0.0587,
-   "ev": 0.0454,
-   "price": -118,
+   "line": 17.5,
+   "label": "Kyle Kuzma Under 17.5 Pts+Reb",
+   "prob": 0.5657,
+   "fair": 0.5142,
+   "edge": 0.0515,
+   "ev": 0.0294,
+   "price": -122,
    "book": "DraftKings",
-   "proj": 28.063,
-   "l10": 0.6,
-   "l20": 0.55,
+   "proj": 15.8231,
+   "l10": 0.7,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 31.5 at -118 (51% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 57%. DraftKings prices under 17.5 at -122 (51% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 28.1 pts+reb+ast tonight (his usual 30.2) vs the line of 31.5."
+     "Projection: 15.8 pts+reb tonight (his usual 16.9) vs the line of 17.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 17.5 in 7 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
-     "Recent form: went under 31.5 in 6 of his last 10 games and 11 of his last 20."
+     "Model vs DraftKings: 64% vs 51% (model higher by 12 pts, within the allowed gap)."
     ],
     [
      "i",
-     "Model vs DraftKings: 69% vs 51% (model higher by 18 pts, within the allowed gap)."
+     "Line moved from 18.5 to 17.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.1 (last 10 avg 26.3, fairly stable at \u00b14.6)."
     ],
     [
      "+",
-     "Minutes: projected 31.6 (last 10 avg 31.2, stable at \u00b13.2)."
+     "Matchup overall: -4.7% pts+reb vs his usual output (1 check for this pick, 0 against)."
     ],
     [
      "+",
-     "Matchup overall: -5.0% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
+     "Minutes: projected 25.7 minutes vs usual 27.1 (-5.2%)."
     ],
     [
-     "+",
-     "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
+     "i",
+     "Position defense: ATL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
      "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0505,
+   "matchup_net": 0.047,
    "below_bar": false,
-   "prob_model": 0.6886,
+   "prob_model": 0.6381,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4395725,
-   "price_fmt": "-118"
+   "player_id": 3134907,
+   "price_fmt": "-122"
   },
   {
    "kind": "card",
@@ -2406,6 +2398,77 @@
    "dk_line": null,
    "player_id": 4065648,
    "price_fmt": "-149"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
+   "side": "under",
+   "line": 24.5,
+   "label": "Jaime Jaquez Jr. Under 24.5 Pts+Reb+Ast",
+   "prob": 0.5618,
+   "fair": 0.5162,
+   "edge": 0.0456,
+   "ev": 0.0186,
+   "price": -123,
+   "book": "DraftKings",
+   "proj": 23.4525,
+   "l10": 0.6,
+   "l20": 0.4,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 24.5 at -123 (52% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 23.5 pts+reb+ast tonight (his usual 25.3) vs the line of 24.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 24.5 in 6 of his last 10 games and 8 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 59% vs 52% (model higher by 7 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Line moved from 23.5 to 24.5 since it opened (it moved against this side, so the number is now easier)."
+    ],
+    [
+     "+",
+     "Minutes: projected 27.7 (last 10 avg 26.8, stable at \u00b12.7)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.4% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.3 minutes vs usual 27.7 (-5.1%)."
+    ],
+    [
+     "i",
+     "Position defense: ATL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0537,
+   "below_bar": false,
+   "prob_model": 0.5879,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4432848,
+   "price_fmt": "-123"
   },
   {
    "kind": "card",
@@ -2754,77 +2817,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 17.5,
-   "label": "Kyle Kuzma Under 17.5 Pts+Reb",
-   "prob": 0.5581,
-   "fair": 0.5051,
-   "edge": 0.053,
-   "ev": 0.0351,
-   "price": -117,
-   "book": "DraftKings",
-   "proj": 15.8231,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 56%. DraftKings prices under 17.5 at -117 (51% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 15.8 pts+reb tonight (his usual 16.9) vs the line of 17.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 17.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 64% vs 51% (model higher by 13 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Line moved from 18.5 to 17.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "i",
-     "Minutes: projected 27.1 (last 10 avg 26.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.7% pts+reb vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.7 minutes vs usual 27.1 (-5.2%)."
-    ],
-    [
-     "i",
-     "Position defense: ATL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.047,
-   "below_bar": false,
-   "prob_model": 0.6381,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-117"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909988",
    "matchup": "SAS @ UTA",
    "player": "Keyonte George",
@@ -2999,77 +2991,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909990",
-   "matchup": "NYK @ TOR",
-   "player": "OG Anunoby",
-   "team": "NYK",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 22.5,
-   "label": "OG Anunoby Under 22.5 Pts+Reb",
-   "prob": 0.5574,
-   "fair": 0.5092,
-   "edge": 0.0482,
-   "ev": 0.0258,
-   "price": -119,
-   "book": "DraftKings",
-   "proj": 21.2561,
-   "l10": 0.7,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 56%. DraftKings prices under 22.5 at -119 (51% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 21.3 pts+reb tonight (his usual 21.6) vs the line of 22.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 22.5 in 7 of his last 10 games and 13 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 60% vs 51% (model higher by 9 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.8 (last 10 avg 32.8, stable at \u00b14.0)."
-    ],
-    [
-     "+",
-     "Matchup overall: -3.1% pts+reb vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.0 minutes vs usual 32.8 (-2.4%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 82.4 total rebounds per game in TOR games (#29 of 30) (-0.6%)."
-    ],
-    [
-     "i",
-     "Position defense: TOR allow 4% fewer points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: TOR block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0307,
-   "below_bar": false,
-   "prob_model": 0.6016,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3934719,
-   "price_fmt": "-119"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909989",
    "matchup": "DAL @ BOS",
    "player": "Naji Marshall",
@@ -3230,109 +3151,38 @@
    "tier": "Fair price",
    "game_id": "401909992",
    "matchup": "ATL @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 24.5,
-   "label": "Jaime Jaquez Jr. Under 24.5 Pts+Reb+Ast",
-   "prob": 0.555,
-   "fair": 0.5081,
-   "edge": 0.0469,
-   "ev": 0.0214,
-   "price": -119,
-   "book": "DraftKings",
-   "proj": 23.4525,
-   "l10": 0.6,
-   "l20": 0.4,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 24.5 at -119 (51% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 23.5 pts+reb+ast tonight (his usual 25.3) vs the line of 24.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 24.5 in 6 of his last 10 games and 8 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 59% vs 51% (model higher by 8 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Line moved from 23.5 to 24.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.7 (last 10 avg 26.8, stable at \u00b12.7)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.4% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.3 minutes vs usual 27.7 (-5.1%)."
-    ],
-    [
-     "i",
-     "Position defense: ATL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0537,
-   "below_bar": false,
-   "prob_model": 0.5879,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-119"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
    "player": "Tyler Herro",
    "team": "MIL",
-   "stat": "ra",
-   "stat_label": "Reb+Ast",
+   "stat": "pa",
+   "stat_label": "Pts+Ast",
    "side": "under",
-   "line": 9.5,
-   "label": "Tyler Herro Under 9.5 Reb+Ast",
-   "prob": 0.5535,
-   "fair": 0.4929,
-   "edge": 0.0606,
-   "ev": 0.0521,
-   "price": -111,
+   "line": 26.5,
+   "label": "Tyler Herro Under 26.5 Pts+Ast",
+   "prob": 0.5538,
+   "fair": 0.4969,
+   "edge": 0.0568,
+   "ev": 0.0439,
+   "price": -113,
    "book": "DraftKings",
-   "proj": 8.0691,
-   "l10": 0.8,
-   "l20": 0.7,
+   "proj": 24.0191,
+   "l10": 0.6,
+   "l20": 0.55,
    "reasons": [
     [
      "+",
-     "Chance it hits: 55%. DraftKings prices under 9.5 at -111 (49% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 55%. DraftKings prices under 26.5 at -113 (50% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 8.1 reb+ast tonight (his usual 8.9) vs the line of 9.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 9.5 in 8 of his last 10 games and 14 of his last 20."
+     "Projection: 24.0 pts+ast tonight (his usual 25.8) vs the line of 26.5."
     ],
     [
      "i",
-     "Model vs DraftKings: 69% vs 49% (model higher by 19 pts, within the allowed gap)."
+     "Recent form: went under 26.5 in 6 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 66% vs 50% (model higher by 16 pts, within the allowed gap)."
     ],
     [
      "+",
@@ -3340,32 +3190,24 @@
     ],
     [
      "+",
-     "Matchup overall: -6.3% reb+ast vs his usual output (3 checks for this pick, 1 against)."
+     "Matchup overall: -5.2% pts+ast vs his usual output (1 check for this pick, 0 against)."
     ],
     [
      "+",
      "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
     ],
     [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.4%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Turnovers forced: ATL force 16.8 turnovers per 100 possessions (#3 most) (-0.8%)."
-    ],
-    [
-     "!",
-     "Rebounds \u00b7 Opponent rebounding: ATL grab 49.1% of all rebounds in their games (#20 of 30); Johnson 9.4 rpg, Okongwu 7.4 rpg (+0.6%)."
+     "i",
+     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0632,
+   "matchup_net": 0.0521,
    "below_bar": false,
-   "prob_model": 0.6853,
+   "prob_model": 0.6594,
    "card": "fair",
    "dk_line": null,
    "player_id": 4395725,
-   "price_fmt": "-111"
+   "price_fmt": "-113"
   },
   {
    "kind": "card",
@@ -3599,6 +3441,77 @@
   {
    "kind": "card",
    "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "stat": "ast",
+   "stat_label": "Assists",
+   "side": "under",
+   "line": 3.5,
+   "label": "Jaime Jaquez Jr. Under 3.5 Assists",
+   "prob": 0.5518,
+   "fair": 0.5031,
+   "edge": 0.0487,
+   "ev": 0.0274,
+   "price": -116,
+   "book": "DraftKings",
+   "proj": 3.2296,
+   "l10": 0.8,
+   "l20": 0.55,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 55%. DraftKings prices under 3.5 at -116 (50% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 3.2 assists tonight (his usual 3.7) vs the line of 3.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 3.5 in 8 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 60% vs 50% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 27.7 (last 10 avg 26.8, stable at \u00b12.7)."
+    ],
+    [
+     "+",
+     "Matchup overall: -9.7% assists vs his usual output (4 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.3 minutes vs usual 27.7 (-5.1%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.9%)."
+    ],
+    [
+     "+",
+     "Turnovers forced: ATL force 16.8 turnovers per 100 possessions (#3 most) (-1.7%)."
+    ],
+    [
+     "+",
+     "Vegas team total: Vegas implied team total 112.5 points (-0.9%)."
+    ]
+   ],
+   "matchup_net": 0.0967,
+   "below_bar": false,
+   "prob_model": 0.5969,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4432848,
+   "price_fmt": "-116"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
    "game_id": "401909986",
    "matchup": "LAL @ PHX",
    "player": "Jalen Green",
@@ -3670,6 +3583,77 @@
    "dk_line": null,
    "player_id": 4437244,
    "price_fmt": "-123"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909990",
+   "matchup": "NYK @ TOR",
+   "player": "OG Anunoby",
+   "team": "NYK",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 22.5,
+   "label": "OG Anunoby Under 22.5 Pts+Reb",
+   "prob": 0.5506,
+   "fair": 0.501,
+   "edge": 0.0496,
+   "ev": 0.0293,
+   "price": -115,
+   "book": "DraftKings",
+   "proj": 21.2561,
+   "l10": 0.7,
+   "l20": 0.65,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 55%. DraftKings prices under 22.5 at -115 (50% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 21.3 pts+reb tonight (his usual 21.6) vs the line of 22.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 22.5 in 7 of his last 10 games and 13 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 60% vs 50% (model higher by 10 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.8 (last 10 avg 32.8, stable at \u00b14.0)."
+    ],
+    [
+     "+",
+     "Matchup overall: -3.1% pts+reb vs his usual output (2 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.0 minutes vs usual 32.8 (-2.4%)."
+    ],
+    [
+     "+",
+     "Rebound chances: 82.4 total rebounds per game in TOR games (#29 of 30) (-0.6%)."
+    ],
+    [
+     "i",
+     "Position defense: TOR allow 4% fewer points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: TOR block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0307,
+   "below_bar": false,
+   "prob_model": 0.6016,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3934719,
+   "price_fmt": "-115"
   },
   {
    "kind": "card",
@@ -3998,69 +3982,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
-   "side": "under",
-   "line": 26.5,
-   "label": "Tyler Herro Under 26.5 Pts+Ast",
-   "prob": 0.5469,
-   "fair": 0.4888,
-   "edge": 0.0581,
-   "ev": 0.0487,
-   "price": -109,
-   "book": "DraftKings",
-   "proj": 24.0191,
-   "l10": 0.6,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 26.5 at -109 (49% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 24.0 pts+ast tonight (his usual 25.8) vs the line of 26.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 26.5 in 6 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 66% vs 49% (model higher by 17 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.6 (last 10 avg 31.2, stable at \u00b13.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.2% pts+ast vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
-    ],
-    [
-     "i",
-     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0521,
-   "below_bar": false,
-   "prob_model": 0.6594,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4395725,
-   "price_fmt": "-109"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909990",
    "matchup": "NYK @ TOR",
    "player": "Josh Hart",
@@ -4132,6 +4053,77 @@
    "dk_line": null,
    "player_id": 3062679,
    "price_fmt": "-117"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909985",
+   "matchup": "IND @ PHI",
+   "player": "LeBron James",
+   "team": "PHI",
+   "stat": "reb",
+   "stat_label": "Rebounds",
+   "side": "over",
+   "line": 6.5,
+   "label": "LeBron James Over 6.5 Rebounds",
+   "prob": 0.545,
+   "fair": 0.5458,
+   "edge": -0.0008,
+   "ev": -0.0658,
+   "price": -140,
+   "book": "DraftKings",
+   "proj": 7.1856,
+   "l10": 0.7,
+   "l20": 0.6,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 54%. DraftKings prices over 6.5 at -140 (55% after removing their margin); our model says 56%. The two are blended using how each predicted results at real lines."
+    ],
+    [
+     "+",
+     "Projection: 7.2 rebounds tonight (his usual 7.1) vs the line of 6.5."
+    ],
+    [
+     "+",
+     "Recent form: went over 6.5 in 7 of his last 10 games and 12 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 56% vs 55% (they agree)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.7 (last 10 avg 32.5, stable at \u00b11.5)."
+    ],
+    [
+     "+",
+     "Matchup overall: +6.5% rebounds vs his usual output (3 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Opponent rebounding: IND grab 46.8% of all rebounds in their games (#29 of 30); Zubac 10.7 rpg, Siakam 6.7 rpg (+3.6%)."
+    ],
+    [
+     "+",
+     "Opponent players out: IND without Johnny Furphy (13%), Tyrese Haliburton (10%), Ben Sheppard (7%) of their rebounds (+1.5%)."
+    ],
+    [
+     "+",
+     "Rebound chances: 89.0 total rebounds per game in IND games (#14 of 30) (+0.7%)."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0647,
+   "below_bar": false,
+   "prob_model": 0.5563,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 1966,
+   "price_fmt": "-140"
   },
   {
    "kind": "card",
@@ -4588,77 +4580,6 @@
    "tier": "Fair price",
    "game_id": "401909992",
    "matchup": "ATL @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "under",
-   "line": 3.5,
-   "label": "Jaime Jaquez Jr. Under 3.5 Assists",
-   "prob": 0.5355,
-   "fair": 0.4838,
-   "edge": 0.0517,
-   "ev": 0.036,
-   "price": -107,
-   "book": "DraftKings",
-   "proj": 3.2296,
-   "l10": 0.8,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 54%. DraftKings prices under 3.5 at -107 (48% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 3.2 assists tonight (his usual 3.7) vs the line of 3.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 3.5 in 8 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 60% vs 48% (model higher by 11 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 27.7 (last 10 avg 26.8, stable at \u00b12.7)."
-    ],
-    [
-     "+",
-     "Matchup overall: -9.7% assists vs his usual output (4 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.3 minutes vs usual 27.7 (-5.1%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.9%)."
-    ],
-    [
-     "+",
-     "Turnovers forced: ATL force 16.8 turnovers per 100 possessions (#3 most) (-1.7%)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 112.5 points (-0.9%)."
-    ]
-   ],
-   "matchup_net": 0.0967,
-   "below_bar": false,
-   "prob_model": 0.5969,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-107"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909992",
-   "matchup": "ATL @ MIL",
    "player": "Myles Turner",
    "team": "MIL",
    "stat": "pts",
@@ -4791,77 +4712,6 @@
    "dk_line": null,
    "player_id": 3062679,
    "price_fmt": "-108"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909985",
-   "matchup": "IND @ PHI",
-   "player": "Pascal Siakam",
-   "team": "IND",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "over",
-   "line": 3.5,
-   "label": "Pascal Siakam Over 3.5 Assists",
-   "prob": 0.5332,
-   "fair": 0.5622,
-   "edge": -0.0289,
-   "ev": -0.1113,
-   "price": -150,
-   "book": "DraftKings",
-   "proj": 4.5659,
-   "l10": 0.7,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 53%. DraftKings prices over 3.5 at -150 (56% after removing their margin); our model says 67%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 4.6 assists tonight (his usual 4.0) vs the line of 3.5."
-    ],
-    [
-     "+",
-     "Recent form: went over 3.5 in 7 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 67% vs 56% (model higher by 11 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.6 (last 10 avg 32.3, stable at \u00b13.4)."
-    ],
-    [
-     "+",
-     "Matchup overall: +13.1% assists vs his usual output (2 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Teammates out: IND without Tyrese Haliburton (33%), Andrew Nembhard (27%), Johnny Furphy (7%) of the team's assists (+16.7%)."
-    ],
-    [
-     "+",
-     "Minutes: projected 33.9 minutes vs usual 32.6 (+1.4 with teammates out) (+4.1%)."
-    ],
-    [
-     "!",
-     "Position defense: PHI allow 12% fewer assists per minute to forwards than average (-4.0%)."
-    ],
-    [
-     "!",
-     "Vegas team total: Vegas implied team total 109.0 points (-2.6%)."
-    ]
-   ],
-   "matchup_net": 0.1312,
-   "below_bar": false,
-   "prob_model": 0.6687,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3149673,
-   "price_fmt": "-150"
   },
   {
    "kind": "card",
@@ -5095,6 +4945,172 @@
    "dk_line": null,
    "player_id": 3135045,
    "price_fmt": "-135"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Myles Turner",
+   "team": "MIL",
+   "stat": "pa",
+   "stat_label": "Pts+Ast",
+   "side": "under",
+   "line": 11.5,
+   "label": "Myles Turner Under 11.5 Pts+Ast",
+   "prob": 0.5255,
+   "fair": 0.4706,
+   "edge": 0.0549,
+   "ev": 0.0458,
+   "price": -101,
+   "book": "DraftKings",
+   "proj": 10.8664,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 53%. DraftKings prices under 11.5 at -101 (47% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 10.9 pts+ast tonight (his usual 11.6) vs the line of 11.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 11.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 47% (model higher by 14 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Line moved from 12.5 to 11.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.4 (last 10 avg 26.7, fairly stable at \u00b14.9)."
+    ],
+    [
+     "+",
+     "Matchup overall: -4.6% pts+ast vs his usual output (2 checks for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.0 minutes vs usual 27.4 (-5.1%)."
+    ],
+    [
+     "!",
+     "Position defense: ATL allow 27% more assists per minute to centers than average (+1.7%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
+    ],
+    [
+     "i",
+     "Position defense: ATL allow 7% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0458,
+   "below_bar": false,
+   "prob_model": 0.6071,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3133628,
+   "price_fmt": "-101"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909992",
+   "matchup": "ATL @ MIL",
+   "player": "Kyle Kuzma",
+   "team": "MIL",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
+   "side": "under",
+   "line": 7.5,
+   "label": "Kyle Kuzma Under 7.5 Reb+Ast",
+   "prob": 0.5241,
+   "fair": 0.4686,
+   "edge": 0.0556,
+   "ev": 0.0483,
+   "price": 100,
+   "book": "DraftKings",
+   "proj": 6.9364,
+   "l10": 0.7,
+   "l20": 0.55,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 52%. DraftKings prices under 7.5 at +100 (47% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 6.9 reb+ast tonight (his usual 7.6) vs the line of 7.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 7.5 in 7 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 47% (model higher by 14 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Line moved from 8.5 to 7.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.1 (last 10 avg 26.3, fairly stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.7% reb+ast vs his usual output (4 checks for this pick, 3 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 25.7 minutes vs usual 27.1 (-5.2%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.0%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent rebounding: ATL grab 49.1% of all rebounds in their games (#20 of 30); Johnson 9.4 rpg, Okongwu 7.4 rpg (+0.8%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Rebound chances: 89.7 total rebounds per game in ATL games (#9 of 30) (+0.6%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Turnovers forced: ATL force 16.8 turnovers per 100 possessions (#3 most) (-0.6%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Opponent players out: ATL without Kingston Flemings (5%), Keshon Gilbert (0%) of their rebounds (-0.5%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Position defense: ATL allow 4% more rebounds per minute to forwards than average (+0.5%)."
+    ]
+   ],
+   "matchup_net": 0.0572,
+   "below_bar": false,
+   "prob_model": 0.6106,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3134907,
+   "price_fmt": "+100"
   }
  ],
  "lineups": {
@@ -5926,75 +5942,63 @@
       "tier": "Fair price",
       "game_id": "401909992",
       "matchup": "ATL @ MIL",
-      "player": "Myles Turner",
+      "player": "Tyler Herro",
       "team": "MIL",
-      "stat": "pa",
-      "stat_label": "Pts+Ast",
+      "stat": "pra",
+      "stat_label": "Pts+Reb+Ast",
       "side": "under",
-      "line": 12.5,
-      "label": "Myles Turner Under 12.5 Pts+Ast",
-      "prob": 0.5759,
-      "fair": 0.5232,
-      "edge": 0.0527,
-      "ev": 0.0293,
-      "price": -127,
+      "line": 31.5,
+      "label": "Tyler Herro Under 31.5 Pts+Reb+Ast",
+      "prob": 0.5751,
+      "fair": 0.5183,
+      "edge": 0.0568,
+      "ev": 0.0389,
+      "price": -124,
       "book": "DraftKings",
-      "proj": 10.8664,
-      "l10": 0.7,
-      "l20": 0.6,
+      "proj": 28.063,
+      "l10": 0.6,
+      "l20": 0.55,
       "reasons": [
        [
         "+",
-        "Chance it hits: 58%. DraftKings prices under 12.5 at -127 (52% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+        "Chance it hits: 58%. DraftKings prices under 31.5 at -124 (52% after removing their margin); our model says 69%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
        ],
        [
         "+",
-        "Projection: 10.9 pts+ast tonight (his usual 11.6) vs the line of 12.5."
-       ],
-       [
-        "+",
-        "Recent form: went under 12.5 in 7 of his last 10 games and 12 of his last 20."
+        "Projection: 28.1 pts+reb+ast tonight (his usual 30.2) vs the line of 31.5."
        ],
        [
         "i",
-        "Model vs DraftKings: 66% vs 52% (model higher by 14 pts, within the allowed gap)."
+        "Recent form: went under 31.5 in 6 of his last 10 games and 11 of his last 20."
        ],
        [
         "i",
-        "Minutes: projected 27.4 (last 10 avg 26.7, fairly stable at \u00b14.9)."
+        "Model vs DraftKings: 69% vs 52% (model higher by 17 pts, within the allowed gap)."
        ],
        [
         "+",
-        "Matchup overall: -4.6% pts+ast vs his usual output (2 checks for this pick, 1 against)."
+        "Minutes: projected 31.6 (last 10 avg 31.2, stable at \u00b13.2)."
        ],
        [
         "+",
-        "Minutes: projected 26.0 minutes vs usual 27.4 (-5.1%)."
-       ],
-       [
-        "!",
-        "Position defense: ATL allow 27% more assists per minute to centers than average (+1.7%)."
+        "Matchup overall: -5.0% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
        ],
        [
         "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
-       ],
-       [
-        "i",
-        "Position defense: ATL allow 7% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+        "Minutes: projected 30.2 minutes vs usual 31.6 (-4.5%)."
        ],
        [
         "i",
         "Rim protection: ATL block 3.8 shots per 100 possessions (#29 most). Checked, but it had no measurable effect last season, so it is not counted."
        ]
       ],
-      "matchup_net": 0.0458,
+      "matchup_net": 0.0505,
       "below_bar": false,
-      "prob_model": 0.6606,
+      "prob_model": 0.6886,
       "card": "fair",
       "dk_line": null,
-      "player_id": 3133628,
-      "price_fmt": "-127"
+      "player_id": 4395725,
+      "price_fmt": "-124"
      }
     ],
     "title": "Fair price",
@@ -6520,11 +6524,11 @@
   },
   {
    "ok": true,
-   "text": "DraftKings lines: 780 for 9 games"
+   "text": "DraftKings lines: 788 for 9 games"
   },
   {
    "ok": true,
-   "text": "PrizePicks: 187 lines, 18 credits used, 294 left this month"
+   "text": "PrizePicks: 187 lines (downloaded earlier today)"
   }
  ],
  "odds_enabled": true,
