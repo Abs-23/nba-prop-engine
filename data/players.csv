@@ -8,6 +8,7 @@ player_id,player,team,height,pos
 4700852,Chaz Lanier,DET,75.0,G
 4596528,Lawson Lovering,LAL,85.0,C
 4585618,Keshon Gilbert,ATL,76.0,G
+4433268,Trey Alexander,UTA,77.0,G
 4278039,Nickeil Alexander-Walker,ATL,77.0,G
 4684443,Rafael Castro,ATL,81.0,F
 4869342,Dyson Daniels,ATL,79.0,G
@@ -498,7 +499,6 @@ player_id,player,team,height,pos
 4432241,Jamal Shead,TOR,73.0,G
 4397784,Malachi Smith,TOR,76.0,G
 4684272,Ja'Kobe Walter,TOR,76.0,G
-4433268,Trey Alexander,UTA,77.0,G
 4873138,Ace Bailey,UTA,81.0,G
 4277919,Mo Bamba,UTA,84.0,C
 4065673,Tony Bradley,UTA,82.0,C
