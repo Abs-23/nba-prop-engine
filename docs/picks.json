@@ -1,92 +1,84 @@
 {
  "date": "2026-11-25",
  "date_label": "Wednesday, November 25, 2026",
- "generated": "2026-11-25 20:29 UTC",
+ "generated": "2026-11-25 21:02 UTC",
  "games_today": 9,
  "safe": [],
  "market": [
   {
    "kind": "card",
    "tier": "Most likely",
-   "game_id": "401909324",
-   "matchup": "SAC @ GSW",
-   "player": "Domantas Sabonis",
-   "team": "SAC",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Ryan Rollins",
+   "team": "MIL",
    "stat": "ast",
    "stat_label": "Assists",
    "side": "under",
-   "line": 5.5,
-   "label": "Domantas Sabonis Under 5.5 Assists",
-   "prob": 0.6174,
-   "fair": 0.578,
-   "edge": 0.0395,
+   "line": 4.5,
+   "label": "Ryan Rollins Under 4.5 Assists",
+   "prob": 0.6232,
+   "fair": 0.5835,
+   "edge": 0.0397,
    "ev": 0.0009,
-   "price": -161,
+   "price": -165,
    "book": "DraftKings",
-   "proj": 4.9252,
-   "l10": 0.8,
-   "l20": 0.55,
+   "proj": 3.9477,
+   "l10": 0.7,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 62%. DraftKings prices under 5.5 at -161 (58% after removing their margin); our model says 63%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 62%. DraftKings prices under 4.5 at -165 (58% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 4.9 assists tonight (his usual 5.2) vs the line of 5.5."
+     "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
     ],
     [
      "+",
-     "Recent form: went under 5.5 in 8 of his last 10 games and 11 of his last 20."
+     "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
-     "Model vs DraftKings: 63% vs 58% (model higher by 5 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.4 (last 10 avg 30.9, stable at \u00b14.5)."
-    ],
-    [
-     "+",
-     "Matchup overall: -1.7% assists vs his usual output (4 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 105.0 points (-4.3%)."
-    ],
-    [
-     "!",
-     "Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Stephen Curry (11%) of their minutes (+3.7%)."
-    ],
-    [
-     "!",
-     "Position defense: GSW allow 6% more assists per minute to forwards than average (+1.9%)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.1 minutes vs usual 31.4 (-1.1%)."
-    ],
-    [
-     "+",
-     "Turnovers forced: GSW force 15.3 turnovers per 100 possessions (#6 most) (-0.9%)."
-    ],
-    [
-     "+",
-     "Teammates out: SAC without Maxime Raynaud (7%) of the team's assists (-0.8%)."
+     "Model vs DraftKings: 64% vs 58% (model higher by 6 pts, within the allowed gap)."
     ],
     [
      "i",
-     "Assisted shots allowed: 69% of made shots vs GSW are assisted (#3 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
+    ],
+    [
+     "!",
+     "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
+    ],
+    [
+     "+",
+     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
     ]
    ],
-   "matchup_net": 0.0171,
+   "matchup_net": 0.0514,
    "below_bar": false,
-   "prob_model": 0.6284,
+   "prob_model": 0.6393,
    "card": "likely",
    "dk_line": null,
-   "player_id": 3155942,
-   "price_fmt": "-161"
+   "player_id": 4591725,
+   "price_fmt": "-165"
   },
   {
    "kind": "card",
@@ -307,235 +299,6 @@
   },
   {
    "kind": "card",
-   "tier": "Most likely",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
-   "team": "MIL",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "under",
-   "line": 4.5,
-   "label": "Ryan Rollins Under 4.5 Assists",
-   "prob": 0.5899,
-   "fair": 0.5431,
-   "edge": 0.0468,
-   "ev": 0.0174,
-   "price": -138,
-   "book": "DraftKings",
-   "proj": 3.9477,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 59%. DraftKings prices under 4.5 at -138 (54% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 64% vs 54% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
-    ],
-    [
-     "!",
-     "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
-    ],
-    [
-     "!",
-     "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
-    ],
-    [
-     "+",
-     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
-    ]
-   ],
-   "matchup_net": 0.0514,
-   "below_bar": false,
-   "prob_model": 0.6393,
-   "card": "likely",
-   "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-138"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
-   "team": "MIL",
-   "stat": "ast",
-   "stat_label": "Assists",
-   "side": "under",
-   "line": 4.5,
-   "label": "Ryan Rollins Under 4.5 Assists",
-   "prob": 0.5899,
-   "fair": 0.5431,
-   "edge": 0.0468,
-   "ev": 0.0174,
-   "price": -138,
-   "book": "DraftKings",
-   "proj": 3.9477,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 59%. DraftKings prices under 4.5 at -138 (54% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 64% vs 54% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
-    ],
-    [
-     "!",
-     "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
-    ],
-    [
-     "!",
-     "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
-    ],
-    [
-     "+",
-     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
-    ]
-   ],
-   "matchup_net": 0.0514,
-   "below_bar": false,
-   "prob_model": 0.6393,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-138"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "ra",
-   "stat_label": "Reb+Ast",
-   "side": "under",
-   "line": 7.5,
-   "label": "Jaime Jaquez Jr. Under 7.5 Reb+Ast",
-   "prob": 0.5869,
-   "fair": 0.5458,
-   "edge": 0.0411,
-   "ev": 0.0061,
-   "price": -140,
-   "book": "DraftKings",
-   "proj": 7.0676,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 7.1 reb+ast tonight (his usual 7.6) vs the line of 7.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 7.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 59% vs 55% (they agree)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -6.7% reb+ast vs his usual output (3 checks for this pick, 3 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.5%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.3%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Position defense: BKN allow 7% more assists per minute to forwards than average (+1.0%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+0.9%)."
-    ],
-    [
-     "!",
-     "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.8%)."
-    ]
-   ],
-   "matchup_net": 0.0672,
-   "below_bar": false,
-   "prob_model": 0.5919,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-140"
-  },
-  {
-   "kind": "card",
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
@@ -546,11 +309,11 @@
    "side": "under",
    "line": 11.5,
    "label": "Julius Randle Under 11.5 Reb+Ast",
-   "prob": 0.5843,
-   "fair": 0.5335,
-   "edge": 0.0508,
-   "ev": 0.027,
-   "price": -132,
+   "prob": 0.585,
+   "fair": 0.5343,
+   "edge": 0.0507,
+   "ev": 0.0248,
+   "price": -133,
    "book": "DraftKings",
    "proj": 10.3046,
    "l10": 0.7,
@@ -558,7 +321,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 58%. DraftKings prices under 11.5 at -132 (53% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 58%. DraftKings prices under 11.5 at -133 (53% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
@@ -631,7 +394,7 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 3064514,
-   "price_fmt": "-132"
+   "price_fmt": "-133"
   },
   {
    "kind": "card",
@@ -719,6 +482,89 @@
    "dk_line": null,
    "player_id": 3136193,
    "price_fmt": "-137"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Brayden Burries",
+   "team": "MIL",
+   "stat": "fg3m",
+   "stat_label": "3-Pointers Made",
+   "side": "under",
+   "line": 1.5,
+   "label": "Brayden Burries Under 1.5 3-Pointers Made",
+   "prob": 0.584,
+   "fair": 0.5579,
+   "edge": 0.0261,
+   "ev": -0.0188,
+   "price": -147,
+   "book": "DraftKings",
+   "proj": 1.3077,
+   "l10": 0.6,
+   "l20": 0.7222,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 58%. DraftKings prices under 1.5 at -147 (56% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 1.3 3-pointers made tonight (his usual 1.4) vs the line of 1.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 1.5 in 6 of his last 10 games and 13 of his last 18."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 62% vs 56% (model higher by 7 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.5 (last 10 avg 27.2, fairly stable at \u00b14.9)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.7% 3-pointers made vs his usual output (3 checks for this pick, 3 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.2 minutes vs usual 25.5 (-5.0%)."
+    ],
+    [
+     "!",
+     "3s allowed: 47% of shots vs BKN are 3s (#5 most) (+2.5%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.6%)."
+    ],
+    [
+     "!",
+     "Position defense: BKN allow 8% more 3-pointers made per minute to guards than average (+1.5%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 118.0 points (+1.5%)."
+    ],
+    [
+     "+",
+     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.6%)."
+    ],
+    [
+     "i",
+     "3P% allowed: BKN allow 37.7% from three (#3 worst). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0175,
+   "below_bar": false,
+   "prob_model": 0.6241,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 5082206,
+   "price_fmt": "-147"
   },
   {
    "kind": "card",
@@ -952,247 +798,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Brayden Burries",
-   "team": "MIL",
-   "stat": "fg3m",
-   "stat_label": "3-Pointers Made",
-   "side": "under",
-   "line": 1.5,
-   "label": "Brayden Burries Under 1.5 3-Pointers Made",
-   "prob": 0.5787,
-   "fair": 0.5516,
-   "edge": 0.0272,
-   "ev": -0.0166,
-   "price": -143,
-   "book": "DraftKings",
-   "proj": 1.3077,
-   "l10": 0.6,
-   "l20": 0.7222,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 58%. DraftKings prices under 1.5 at -143 (55% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 1.3 3-pointers made tonight (his usual 1.4) vs the line of 1.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 1.5 in 6 of his last 10 games and 13 of his last 18."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 62% vs 55% (model higher by 7 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.5 (last 10 avg 27.2, fairly stable at \u00b14.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -1.7% 3-pointers made vs his usual output (3 checks for this pick, 3 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 24.2 minutes vs usual 25.5 (-5.0%)."
-    ],
-    [
-     "!",
-     "3s allowed: 47% of shots vs BKN are 3s (#5 most) (+2.5%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.6%)."
-    ],
-    [
-     "!",
-     "Position defense: BKN allow 8% more 3-pointers made per minute to guards than average (+1.5%)."
-    ],
-    [
-     "!",
-     "Vegas team total: Vegas implied team total 118.0 points (+1.5%)."
-    ],
-    [
-     "+",
-     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.6%)."
-    ],
-    [
-     "i",
-     "3P% allowed: BKN allow 37.7% from three (#3 worst). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0175,
-   "below_bar": false,
-   "prob_model": 0.6241,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 5082206,
-   "price_fmt": "-143"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 21.5,
-   "label": "Kyle Kuzma Under 21.5 Pts+Reb+Ast",
-   "prob": 0.5745,
-   "fair": 0.5253,
-   "edge": 0.0493,
-   "ev": 0.0234,
-   "price": -128,
-   "book": "DraftKings",
-   "proj": 19.6392,
-   "l10": 0.6,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 57%. DraftKings prices under 21.5 at -128 (53% after removing their margin); our model says 63%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 19.6 pts+reb+ast tonight (his usual 21.2) vs the line of 21.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 21.5 in 6 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 63% vs 53% (model higher by 11 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Line moved from 22.5 to 21.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.3% pts+reb+ast vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0528,
-   "below_bar": false,
-   "prob_model": 0.6343,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-128"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
-   "side": "under",
-   "line": 16.5,
-   "label": "Kyle Kuzma Under 16.5 Pts+Ast",
-   "prob": 0.5736,
-   "fair": 0.5253,
-   "edge": 0.0483,
-   "ev": 0.0217,
-   "price": -128,
-   "book": "DraftKings",
-   "proj": 15.1302,
-   "l10": 0.7,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 57%. DraftKings prices under 16.5 at -128 (53% after removing their margin); our model says 63%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 15.1 pts+ast tonight (his usual 16.4) vs the line of 16.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 16.5 in 7 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 63% vs 53% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.6% pts+ast vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0459,
-   "below_bar": false,
-   "prob_model": 0.6259,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-128"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909325",
    "matchup": "SAS @ POR",
    "player": "Deni Avdija",
@@ -1270,50 +875,137 @@
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Julius Randle",
-   "team": "BKN",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
+   "player": "Kyle Kuzma",
+   "team": "MIL",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
    "side": "under",
-   "line": 28.5,
-   "label": "Julius Randle Under 28.5 Pts+Reb",
-   "prob": 0.5726,
-   "fair": 0.5224,
-   "edge": 0.0502,
-   "ev": 0.027,
-   "price": -126,
+   "line": 7.5,
+   "label": "Kyle Kuzma Under 7.5 Reb+Ast",
+   "prob": 0.5721,
+   "fair": 0.5253,
+   "edge": 0.0468,
+   "ev": 0.0191,
+   "price": -128,
    "book": "DraftKings",
-   "proj": 26.2263,
+   "proj": 6.8996,
    "l10": 0.6,
-   "l20": 0.65,
+   "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 28.5 at -126 (52% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 57%. DraftKings prices under 7.5 at -128 (53% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 26.2 pts+reb tonight (his usual 28.0) vs the line of 28.5."
+     "Projection: 6.9 reb+ast tonight (his usual 7.4) vs the line of 7.5."
     ],
     [
      "i",
-     "Recent form: went under 28.5 in 6 of his last 10 games and 13 of his last 20."
+     "Recent form: went under 7.5 in 6 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
-     "Model vs DraftKings: 64% vs 52% (model higher by 12 pts, within the allowed gap)."
+     "Model vs DraftKings: 61% vs 53% (model higher by 9 pts, within the allowed gap)."
     ],
     [
      "+",
-     "Minutes: projected 33.0 (last 10 avg 32.6, stable at \u00b13.6)."
+     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
     ],
     [
      "+",
-     "Matchup overall: -2.4% pts+reb vs his usual output (1 check for this pick, 0 against)."
+     "Matchup overall: -6.5% reb+ast vs his usual output (4 checks for this pick, 3 against)."
     ],
     [
      "+",
-     "Minutes: projected 32.0 minutes vs usual 33.0 (-3.2%)."
+     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.8%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.0%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.9%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Position defense: BKN allow 7% more assists per minute to forwards than average (+0.8%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+0.7%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Opponent players out: BKN without Nolan Traore (4%) of their rebounds (-0.6%)."
+    ]
+   ],
+   "matchup_net": 0.0654,
+   "below_bar": false,
+   "prob_model": 0.6128,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3134907,
+   "price_fmt": "-128"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Michael Porter Jr.",
+   "team": "BKN",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "under",
+   "line": 22.5,
+   "label": "Michael Porter Jr. Under 22.5 Points",
+   "prob": 0.5707,
+   "fair": 0.5146,
+   "edge": 0.0561,
+   "ev": 0.0462,
+   "price": -120,
+   "book": "DraftKings",
+   "proj": 19.6923,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 57%. DraftKings prices under 22.5 at -120 (51% after removing their margin); our model says 68%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 19.7 points tonight (his usual 21.2) vs the line of 22.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 22.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 68% vs 51% (model higher by 16 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Line moved from 20.5 to 22.5 since it opened (it moved against this side, so the number is now easier)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -3.2% points vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
     ],
     [
      "i",
@@ -1324,242 +1016,329 @@
      "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0244,
+   "matchup_net": 0.0323,
    "below_bar": false,
-   "prob_model": 0.6385,
+   "prob_model": 0.6773,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3064514,
-   "price_fmt": "-126"
+   "player_id": 4278104,
+   "price_fmt": "-120"
   },
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909323",
-   "matchup": "PHX @ HOU",
-   "player": "Alperen Sengun",
-   "team": "HOU",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Egor Demin",
+   "team": "BKN",
+   "stat": "pts",
+   "stat_label": "Points",
    "side": "under",
-   "line": 27.5,
-   "label": "Alperen Sengun Under 27.5 Pts+Ast",
-   "prob": 0.5659,
-   "fair": 0.5142,
-   "edge": 0.0517,
-   "ev": 0.0297,
-   "price": -122,
+   "line": 10.5,
+   "label": "Egor Demin Under 10.5 Points",
+   "prob": 0.5701,
+   "fair": 0.5281,
+   "edge": 0.042,
+   "ev": 0.0189,
+   "price": -127,
    "book": "DraftKings",
-   "proj": 25.1753,
+   "proj": 10.5202,
    "l10": 0.6,
-   "l20": 0.55,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 27.5 at -122 (51% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 57%. DraftKings prices under 10.5 at -127 (53% after removing their margin); our model says 57%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 10.5 points tonight (his usual 11.1) vs the line of 10.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 10.5 in 6 of his last 10 games and 12 of his last 20."
     ],
     [
      "+",
-     "Projection: 25.2 pts+ast tonight (his usual 26.8) vs the line of 27.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 27.5 in 6 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 64% vs 51% (model higher by 13 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 32.0 (last 10 avg 31.9, fairly stable at \u00b17.2)."
+     "Model vs DraftKings: 57% vs 53% (they agree)."
     ],
     [
      "+",
-     "Matchup overall: -6.5% pts+ast vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.2 minutes vs usual 32.0 (-0.4 for blowout risk (spread 9.5)) (-5.5%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.7%)."
+     "Line moved from 9.5 to 10.5 since it opened (it moved against this side, so the number is now easier)."
     ],
     [
      "i",
-     "Position defense: PHX allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+     "Minutes: projected 24.5 (last 10 avg 24.0, fairly stable at \u00b16.3)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.5% points vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.2 minutes vs usual 24.5 (-1.5%)."
     ],
     [
      "i",
-     "Rim protection: PHX block 4.0 shots per 100 possessions (#28 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Position defense: MIL allow 3% more points per minute to guards than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0651,
+   "matchup_net": 0.0152,
    "below_bar": false,
-   "prob_model": 0.6394,
+   "prob_model": 0.5729,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4871144,
-   "price_fmt": "-122"
+   "player_id": 5175643,
+   "price_fmt": "-127"
   },
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909323",
-   "matchup": "PHX @ HOU",
-   "player": "Alperen Sengun",
-   "team": "HOU",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Kyle Kuzma",
+   "team": "MIL",
    "stat": "pr",
    "stat_label": "Pts+Reb",
    "side": "under",
-   "line": 30.5,
-   "label": "Alperen Sengun Under 30.5 Pts+Reb",
-   "prob": 0.5657,
-   "fair": 0.5153,
-   "edge": 0.0504,
-   "ev": 0.0294,
-   "price": -122,
+   "line": 18.5,
+   "label": "Kyle Kuzma Under 18.5 Pts+Reb",
+   "prob": 0.568,
+   "fair": 0.5203,
+   "edge": 0.0477,
+   "ev": 0.0223,
+   "price": -125,
    "book": "DraftKings",
-   "proj": 28.2447,
+   "proj": 17.2486,
    "l10": 0.6,
-   "l20": 0.55,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 30.5 at -122 (52% after removing their margin); our model says 63%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 57%. DraftKings prices under 18.5 at -125 (52% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 28.2 pts+reb tonight (his usual 29.7) vs the line of 30.5."
+     "Projection: 17.2 pts+reb tonight (his usual 18.5) vs the line of 18.5."
     ],
     [
      "i",
-     "Recent form: went under 30.5 in 6 of his last 10 games and 11 of his last 20."
+     "Recent form: went under 18.5 in 6 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
-     "Model vs DraftKings: 63% vs 52% (model higher by 11 pts, within the allowed gap)."
+     "Model vs DraftKings: 61% vs 52% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Line moved from 19.5 to 18.5 since it opened (the market has moved toward this side; value is thinner)."
     ],
     [
      "+",
-     "Line moved from 29.5 to 30.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "i",
-     "Minutes: projected 32.0 (last 10 avg 31.9, fairly stable at \u00b17.2)."
+     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
     ],
     [
      "+",
-     "Matchup overall: -4.3% pts+reb vs his usual output (1 check for this pick, 2 against)."
+     "Matchup overall: -5.4% pts+reb vs his usual output (2 checks for this pick, 0 against)."
     ],
     [
      "+",
-     "Minutes: projected 30.2 minutes vs usual 32.0 (-0.4 for blowout risk (spread 9.5)) (-5.5%)."
+     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
     ],
     [
-     "!",
-     "Opponent rebounding: PHX grab 47.3% of all rebounds in their games (#27 of 30); Williams 7.5 rpg, Maluach 6.2 rpg (+0.8%)."
-    ],
-    [
-     "!",
-     "Position defense: PHX allow 9% more rebounds per minute to centers than average (+0.7%)."
+     "+",
+     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.7%)."
     ],
     [
      "i",
-     "Position defense: PHX allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
-     "Rim protection: PHX block 4.0 shots per 100 possessions (#28 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0432,
+   "matchup_net": 0.0539,
    "below_bar": false,
-   "prob_model": 0.6299,
+   "prob_model": 0.6127,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4871144,
-   "price_fmt": "-122"
+   "player_id": 3134907,
+   "price_fmt": "-125"
   },
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909324",
-   "matchup": "SAC @ GSW",
-   "player": "Domantas Sabonis",
-   "team": "SAC",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Michael Porter Jr.",
+   "team": "BKN",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
    "side": "under",
-   "line": 19.5,
-   "label": "Domantas Sabonis Under 19.5 Pts+Ast",
-   "prob": 0.5651,
-   "fair": 0.5244,
-   "edge": 0.0407,
-   "ev": 0.0101,
-   "price": -127,
+   "line": 29.5,
+   "label": "Michael Porter Jr. Under 29.5 Pts+Reb",
+   "prob": 0.5657,
+   "fair": 0.5112,
+   "edge": 0.0545,
+   "ev": 0.0371,
+   "price": -120,
    "book": "DraftKings",
-   "proj": 19.2629,
+   "proj": 26.4222,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 57%. DraftKings prices under 29.5 at -120 (51% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 26.4 pts+reb tonight (his usual 28.2) vs the line of 29.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 29.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 66% vs 51% (model higher by 15 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Line moved from 27.5 to 29.5 since it opened (it moved against this side, so the number is now easier)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.3% pts+reb vs his usual output (1 check for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
+    ],
+    [
+     "!",
+     "Opponent rebounding: MIL grab 48.3% of all rebounds in their games (#26 of 30); Ware 9.0 rpg, Sims 7.0 rpg (+0.5%)."
+    ],
+    [
+     "i",
+     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0234,
+   "below_bar": false,
+   "prob_model": 0.6593,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4278104,
+   "price_fmt": "-120"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Myles Turner",
+   "team": "MIL",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 15.5,
+   "label": "Myles Turner Under 15.5 Pts+Reb",
+   "prob": 0.5639,
+   "fair": 0.5162,
+   "edge": 0.0476,
+   "ev": 0.0223,
+   "price": -123,
+   "book": "DraftKings",
+   "proj": 14.5923,
    "l10": 0.6,
    "l20": 0.55,
    "reasons": [
     [
      "+",
-     "Chance it hits: 57%. DraftKings prices under 19.5 at -127 (52% after removing their margin); our model says 56%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 56%. DraftKings prices under 15.5 at -123 (52% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 19.3 pts+ast tonight (his usual 19.5) vs the line of 19.5."
+     "Projection: 14.6 pts+reb tonight (his usual 15.9) vs the line of 15.5."
     ],
     [
      "i",
-     "Recent form: went under 19.5 in 6 of his last 10 games and 11 of his last 20."
+     "Recent form: went under 15.5 in 6 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 52% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
     ],
     [
      "+",
-     "Model vs DraftKings: 56% vs 52% (they agree)."
+     "Matchup overall: -6.4% pts+reb vs his usual output (3 checks for this pick, 1 against)."
     ],
     [
      "+",
-     "Minutes: projected 31.4 (last 10 avg 30.9, stable at \u00b14.5)."
+     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
     ],
     [
      "+",
-     "Matchup overall: -1.2% pts+ast vs his usual output (2 checks for this pick, 1 against)."
+     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.0%)."
     ],
     [
      "+",
-     "Minutes: projected 31.1 minutes vs usual 31.4 (-1.1%)."
-    ],
-    [
-     "+",
-     "Vegas team total: Vegas implied team total 105.0 points (-1.1%)."
+     "Position defense: BKN allow 10% fewer rebounds per minute to centers than average (-1.0%)."
     ],
     [
      "!",
-     "Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Stephen Curry (11%) of their minutes (+1.0%)."
+     "Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.5%)."
     ],
     [
      "i",
-     "Vegas team total: Vegas implied team total 105.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
-     "Rim protection: GSW block 5.4 shots per 100 possessions (#12 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
-     "Assisted shots allowed: 69% of made shots vs GSW are assisted (#3 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0123,
+   "matchup_net": 0.0643,
    "below_bar": false,
-   "prob_model": 0.5551,
+   "prob_model": 0.6066,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3155942,
-   "price_fmt": "-127"
+   "player_id": 3133628,
+   "price_fmt": "-123"
   },
   {
    "kind": "card",
@@ -1653,58 +1432,133 @@
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
+   "player": "Michael Porter Jr.",
+   "team": "BKN",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
    "side": "under",
-   "line": 28.5,
-   "label": "Tyler Herro Under 28.5 Pts+Ast",
-   "prob": 0.5626,
-   "fair": 0.5071,
-   "edge": 0.0554,
-   "ev": 0.0393,
-   "price": -118,
+   "line": 31.5,
+   "label": "Michael Porter Jr. Under 31.5 Pts+Reb+Ast",
+   "prob": 0.5636,
+   "fair": 0.5092,
+   "edge": 0.0544,
+   "ev": 0.0372,
+   "price": -119,
    "book": "DraftKings",
-   "proj": 25.4645,
+   "proj": 28.4081,
    "l10": 0.6,
-   "l20": 0.6,
+   "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 56%. DraftKings prices under 28.5 at -118 (51% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 56%. DraftKings prices under 31.5 at -119 (51% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 25.5 pts+ast tonight (his usual 27.4) vs the line of 28.5."
+     "Projection: 28.4 pts+reb+ast tonight (his usual 30.3) vs the line of 31.5."
     ],
     [
      "i",
-     "Recent form: went under 28.5 in 6 of his last 10 games and 12 of his last 20."
+     "Recent form: went under 31.5 in 6 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
      "Model vs DraftKings: 66% vs 51% (model higher by 15 pts, within the allowed gap)."
     ],
     [
+     "+",
+     "Line moved from 29.5 to 31.5 since it opened (it moved against this side, so the number is now easier)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.4% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
+    ],
+    [
      "i",
-     "Line moved from 29.5 to 28.5 since it opened (the market has moved toward this side; value is thinner)."
+     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
-     "Minutes: projected 31.6 (last 10 avg 31.6, fairly stable at \u00b16.2)."
+     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.024,
+   "below_bar": false,
+   "prob_model": 0.6557,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4278104,
+   "price_fmt": "-119"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 16.5,
+   "label": "Jaime Jaquez Jr. Under 16.5 Pts+Reb",
+   "prob": 0.5631,
+   "fair": 0.5253,
+   "edge": 0.0379,
+   "ev": 0.0031,
+   "price": -128,
+   "book": "DraftKings",
+   "proj": 16.8366,
+   "l10": 0.6,
+   "l20": 0.4,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 16.5 at -128 (53% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 16.8 pts+reb tonight (his usual 18.2) vs the line of 16.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 16.5 in 6 of his last 10 games and 8 of his last 20."
     ],
     [
      "+",
-     "Matchup overall: -4.0% pts+ast vs his usual output (2 checks for this pick, 0 against)."
+     "Model vs DraftKings: 53% vs 53% (they agree)."
     ],
     [
      "+",
-     "Minutes: projected 30.4 minutes vs usual 31.6 (-3.9%)."
+     "Line moved from 15.5 to 16.5 since it opened (it moved against this side, so the number is now easier)."
     ],
     [
      "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.5%)."
+     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.7% pts+reb vs his usual output (2 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
+    ],
+    [
+     "+",
+     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
+    ],
+    [
+     "i",
+     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
@@ -1719,88 +1573,13 @@
      "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0403,
+   "matchup_net": 0.0573,
    "below_bar": false,
-   "prob_model": 0.6616,
+   "prob_model": 0.5301,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4395725,
-   "price_fmt": "-118"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909317",
-   "matchup": "MIA @ PHI",
-   "player": "VJ Edgecombe",
-   "team": "PHI",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 5.5,
-   "label": "VJ Edgecombe Over 5.5 Rebounds",
-   "prob": 0.5614,
-   "fair": 0.561,
-   "edge": 0.0004,
-   "ev": -0.0643,
-   "price": -150,
-   "book": "DraftKings",
-   "proj": 6.3575,
-   "l10": 0.6,
-   "l20": 0.65,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 56%. DraftKings prices over 5.5 at -150 (56% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines."
-    ],
-    [
-     "+",
-     "Projection: 6.4 rebounds tonight (his usual 6.4) vs the line of 5.5."
-    ],
-    [
-     "i",
-     "Recent form: went over 5.5 in 6 of his last 10 games and 13 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 59% vs 56% (they agree)."
-    ],
-    [
-     "+",
-     "Minutes: projected 35.2 (last 10 avg 35.0, stable at \u00b13.5)."
-    ],
-    [
-     "+",
-     "Matchup overall: +1.6% rebounds vs his usual output (3 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Position defense: MIA allow 5% more rebounds per minute to guards than average (+1.4%)."
-    ],
-    [
-     "+",
-     "Opponent rebounding: MIA grab 48.7% of all rebounds in their games (#20 of 30); Antetokounmpo 10.6 rpg, Adebayo 9.5 rpg (+1.2%)."
-    ],
-    [
-     "!",
-     "Opponent players out: MIA at full strength (-1.0%)."
-    ],
-    [
-     "!",
-     "Minutes: projected 35.0 minutes vs usual 35.2 (-0.7%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 87.4 total rebounds per game in MIA games (#13 of 30) (+0.6%)."
-    ]
-   ],
-   "matchup_net": 0.0159,
-   "below_bar": false,
-   "prob_model": 0.5888,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 5124612,
-   "price_fmt": "-150"
+   "player_id": 4432848,
+   "price_fmt": "-128"
   },
   {
    "kind": "card",
@@ -1880,6 +1659,89 @@
   {
    "kind": "card",
    "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Tyler Herro",
+   "team": "MIL",
+   "stat": "ra",
+   "stat_label": "Reb+Ast",
+   "side": "under",
+   "line": 9.5,
+   "label": "Tyler Herro Under 9.5 Reb+Ast",
+   "prob": 0.5608,
+   "fair": 0.5122,
+   "edge": 0.0487,
+   "ev": 0.0243,
+   "price": -121,
+   "book": "DraftKings",
+   "proj": 8.8086,
+   "l10": 0.7,
+   "l20": 0.7,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 9.5 at -121 (51% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 8.8 reb+ast tonight (his usual 9.3) vs the line of 9.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 9.5 in 7 of his last 10 games and 14 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 61% vs 51% (model higher by 10 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Line moved from 10.5 to 9.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 31.6 (last 10 avg 31.6, fairly stable at \u00b16.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.4% reb+ast vs his usual output (3 checks for this pick, 3 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 30.4 minutes vs usual 31.6 (-3.9%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.5%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.4%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+1.0%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Position defense: BKN allow 5% more assists per minute to guards than average (+0.8%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.7%)."
+    ]
+   ],
+   "matchup_net": 0.0544,
+   "below_bar": false,
+   "prob_model": 0.6099,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4395725,
+   "price_fmt": "-121"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
    "game_id": "401909323",
    "matchup": "PHX @ HOU",
    "player": "Jabari Smith Jr.",
@@ -1947,6 +1809,89 @@
    "dk_line": null,
    "player_id": 4432639,
    "price_fmt": "-146"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909317",
+   "matchup": "MIA @ PHI",
+   "player": "Pelle Larsson",
+   "team": "MIA",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 14.5,
+   "label": "Pelle Larsson Under 14.5 Pts+Reb",
+   "prob": 0.5606,
+   "fair": 0.5203,
+   "edge": 0.0402,
+   "ev": 0.009,
+   "price": -125,
+   "book": "DraftKings",
+   "proj": 14.6109,
+   "l10": 0.6,
+   "l20": 0.55,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 14.5 at -125 (52% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 14.6 pts+reb tonight (his usual 15.0) vs the line of 14.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 14.5 in 6 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 54% vs 52% (they agree)."
+    ],
+    [
+     "i",
+     "Line moved from 15.5 to 14.5 since it opened (the market has moved toward this side; value is thinner)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.1 (last 10 avg 28.1, fairly stable at \u00b16.1)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.5% pts+reb vs his usual output (1 check for this pick, 1 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.5 minutes vs usual 27.1 (-2.5%)."
+    ],
+    [
+     "!",
+     "Position defense: PHI allow 11% more rebounds per minute to guards than average (+0.6%)."
+    ],
+    [
+     "i",
+     "Vegas team total: Vegas implied team total 120.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: PHI block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0155,
+   "below_bar": false,
+   "prob_model": 0.5448,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4601025,
+   "price_fmt": "-125"
   },
   {
    "kind": "card",
@@ -2022,235 +1967,160 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
+   "game_id": "401909317",
+   "matchup": "MIA @ PHI",
+   "player": "Andrew Wiggins",
+   "team": "MIA",
+   "stat": "ast",
+   "stat_label": "Assists",
    "side": "under",
-   "line": 12.5,
-   "label": "Jaime Jaquez Jr. Under 12.5 Points",
+   "line": 1.5,
+   "label": "Andrew Wiggins Under 1.5 Assists",
    "prob": 0.5604,
-   "fair": 0.5218,
-   "edge": 0.0386,
-   "ev": 0.0123,
-   "price": -124,
+   "fair": 0.5294,
+   "edge": 0.031,
+   "ev": -0.0086,
+   "price": -130,
    "book": "DraftKings",
-   "proj": 12.8963,
-   "l10": 0.6,
-   "l20": 0.4,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 56%. DraftKings prices under 12.5 at -124 (52% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 12.9 points tonight (his usual 14.0) vs the line of 12.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 12.5 in 6 of his last 10 games and 8 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 53% vs 52% (they agree)."
-    ],
-    [
-     "+",
-     "Line moved from 11.5 to 12.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.0% points vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0502,
-   "below_bar": false,
-   "prob_model": 0.5317,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-124"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 18.5,
-   "label": "Kyle Kuzma Under 18.5 Pts+Reb",
-   "prob": 0.5594,
-   "fair": 0.5101,
-   "edge": 0.0493,
-   "ev": 0.0257,
-   "price": -120,
-   "book": "DraftKings",
-   "proj": 17.2486,
-   "l10": 0.6,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 56%. DraftKings prices under 18.5 at -120 (51% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 17.2 pts+reb tonight (his usual 18.5) vs the line of 18.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 18.5 in 6 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 61% vs 51% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Line moved from 19.5 to 18.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.4% pts+reb vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.7%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0539,
-   "below_bar": false,
-   "prob_model": 0.6127,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-120"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Michael Porter Jr.",
-   "team": "BKN",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 22.5,
-   "label": "Michael Porter Jr. Under 22.5 Points",
-   "prob": 0.5585,
-   "fair": 0.5,
-   "edge": 0.0585,
-   "ev": 0.0527,
-   "price": -113,
-   "book": "DraftKings",
-   "proj": 19.6923,
+   "proj": 1.7773,
    "l10": 0.6,
    "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 56%. DraftKings prices under 22.5 at -113 (50% after removing their margin); our model says 68%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 56%. DraftKings prices under 1.5 at -130 (53% after removing their margin); our model says 47%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
-     "+",
-     "Projection: 19.7 points tonight (his usual 21.2) vs the line of 22.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 22.5 in 6 of his last 10 games and 10 of his last 20."
+     "!",
+     "Projection: 1.8 assists tonight (his usual 1.9) vs the line of 1.5."
     ],
     [
      "i",
-     "Model vs DraftKings: 68% vs 50% (model higher by 18 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Line moved from 20.5 to 22.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -3.2% points vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
+     "Recent form: went under 1.5 in 6 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
-     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
+     "Model vs DraftKings: 47% vs 53% (model lower by 6 pts, within the allowed gap)."
     ],
     [
      "i",
-     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Minutes: projected 27.2 (last 10 avg 25.6, fairly stable at \u00b15.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -4.9% assists vs his usual output (4 checks for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.4 minutes vs usual 27.2 (-3.0%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 120.0 points (+2.9%)."
+    ],
+    [
+     "+",
+     "Position defense: PHI allow 8% fewer assists per minute to forwards than average (-2.6%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.0%)."
+    ],
+    [
+     "+",
+     "Opponent players out: PHI without Joel Embiid (13%) of their minutes (-0.8%)."
+    ],
+    [
+     "!",
+     "Turnovers forced: PHI force 13.3 turnovers per 100 possessions (#18 most) (+0.6%)."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0323,
+   "matchup_net": 0.0487,
    "below_bar": false,
-   "prob_model": 0.6773,
+   "prob_model": 0.4718,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4278104,
-   "price_fmt": "-113"
+   "player_id": 3059319,
+   "price_fmt": "-130"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Myles Turner",
+   "team": "MIL",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "under",
+   "line": 9.5,
+   "label": "Myles Turner Under 9.5 Points",
+   "prob": 0.5604,
+   "fair": 0.5125,
+   "edge": 0.0479,
+   "ev": 0.0313,
+   "price": -119,
+   "book": "DraftKings",
+   "proj": 9.0711,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 56%. DraftKings prices under 9.5 at -119 (51% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 9.1 points tonight (his usual 9.8) vs the line of 9.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 9.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "i",
+     "Model vs DraftKings: 60% vs 51% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
+    ],
+    [
+     "+",
+     "Matchup overall: -4.5% points vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
+    ],
+    [
+     "i",
+     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0451,
+   "below_bar": false,
+   "prob_model": 0.6033,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3133628,
+   "price_fmt": "-119"
   },
   {
    "kind": "card",
@@ -2336,83 +2206,67 @@
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
+   "player": "Julius Randle",
+   "team": "BKN",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
    "side": "under",
-   "line": 15.5,
-   "label": "Jaime Jaquez Jr. Under 15.5 Pts+Ast",
-   "prob": 0.5558,
-   "fair": 0.5183,
-   "edge": 0.0375,
-   "ev": 0.004,
-   "price": -124,
+   "line": 28.5,
+   "label": "Julius Randle Under 28.5 Pts+Reb",
+   "prob": 0.5565,
+   "fair": 0.5031,
+   "edge": 0.0534,
+   "ev": 0.0362,
+   "price": -116,
    "book": "DraftKings",
-   "proj": 16.0236,
+   "proj": 26.2263,
    "l10": 0.6,
-   "l20": 0.4,
+   "l20": 0.65,
    "reasons": [
     [
      "+",
-     "Chance it hits: 56%. DraftKings prices under 15.5 at -124 (52% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 56%. DraftKings prices under 28.5 at -116 (50% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
-     "!",
-     "Projection: 16.0 pts+ast tonight (his usual 17.5) vs the line of 15.5."
+     "+",
+     "Projection: 26.2 pts+reb tonight (his usual 28.0) vs the line of 28.5."
     ],
     [
      "i",
-     "Recent form: went under 15.5 in 6 of his last 10 games and 8 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 52% vs 52% (they agree)."
-    ],
-    [
-     "+",
-     "Line moved from 14.5 to 15.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.0% pts+ast vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
+     "Recent form: went under 28.5 in 6 of his last 10 games and 13 of his last 20."
     ],
     [
      "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
+     "Model vs DraftKings: 64% vs 50% (model higher by 14 pts, within the allowed gap)."
+    ],
+    [
+     "+",
+     "Minutes: projected 33.0 (last 10 avg 32.6, stable at \u00b13.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -2.4% pts+reb vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 32.0 minutes vs usual 33.0 (-3.2%)."
     ],
     [
      "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
+     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0502,
+   "matchup_net": 0.0244,
    "below_bar": false,
-   "prob_model": 0.5164,
+   "prob_model": 0.6385,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-124"
+   "player_id": 3064514,
+   "price_fmt": "-116"
   },
   {
    "kind": "card",
@@ -2484,93 +2338,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Myles Turner",
-   "team": "MIL",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 15.5,
-   "label": "Myles Turner Under 15.5 Pts+Reb",
-   "prob": 0.5545,
-   "fair": 0.5051,
-   "edge": 0.0495,
-   "ev": 0.0285,
-   "price": -117,
-   "book": "DraftKings",
-   "proj": 14.5923,
-   "l10": 0.6,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 15.5 at -117 (51% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 14.6 pts+reb tonight (his usual 15.9) vs the line of 15.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 15.5 in 6 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 61% vs 51% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
-    ],
-    [
-     "+",
-     "Matchup overall: -6.4% pts+reb vs his usual output (3 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.0%)."
-    ],
-    [
-     "+",
-     "Position defense: BKN allow 10% fewer rebounds per minute to centers than average (-1.0%)."
-    ],
-    [
-     "!",
-     "Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.5%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0643,
-   "below_bar": false,
-   "prob_model": 0.6066,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3133628,
-   "price_fmt": "-117"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909323",
    "matchup": "PHX @ HOU",
    "player": "Kevin Durant",
@@ -2638,81 +2405,6 @@
    "dk_line": null,
    "player_id": 3202,
    "price_fmt": "-143"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Michael Porter Jr.",
-   "team": "BKN",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 29.5,
-   "label": "Michael Porter Jr. Under 29.5 Pts+Reb",
-   "prob": 0.5538,
-   "fair": 0.4969,
-   "edge": 0.0568,
-   "ev": 0.0438,
-   "price": -113,
-   "book": "DraftKings",
-   "proj": 26.4222,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 29.5 at -113 (50% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 26.4 pts+reb tonight (his usual 28.2) vs the line of 29.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 29.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 66% vs 50% (model higher by 16 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Line moved from 27.5 to 29.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -2.3% pts+reb vs his usual output (1 check for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
-    ],
-    [
-     "!",
-     "Opponent rebounding: MIL grab 48.3% of all rebounds in their games (#26 of 30); Ware 9.0 rpg, Sims 7.0 rpg (+0.5%)."
-    ],
-    [
-     "i",
-     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0234,
-   "below_bar": false,
-   "prob_model": 0.6593,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4278104,
-   "price_fmt": "-113"
   },
   {
    "kind": "card",
@@ -2790,137 +2482,204 @@
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
+   "player": "Kyle Kuzma",
    "team": "MIL",
-   "stat": "fg3m",
-   "stat_label": "3-Pointers Made",
+   "stat": "ast",
+   "stat_label": "Assists",
    "side": "under",
-   "line": 1.5,
-   "label": "Ryan Rollins Under 1.5 3-Pointers Made",
-   "prob": 0.552,
-   "fair": 0.5323,
-   "edge": 0.0197,
-   "ev": -0.0299,
-   "price": -132,
+   "line": 2.5,
+   "label": "Kyle Kuzma Under 2.5 Assists",
+   "prob": 0.5511,
+   "fair": 0.5031,
+   "edge": 0.048,
+   "ev": 0.0262,
+   "price": -116,
    "book": "DraftKings",
-   "proj": 1.6373,
+   "proj": 2.3906,
    "l10": 0.6,
-   "l20": 0.55,
+   "l20": 0.35,
    "reasons": [
     [
      "+",
-     "Chance it hits: 55%. DraftKings prices under 1.5 at -132 (53% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 55%. DraftKings prices under 2.5 at -116 (50% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
-     "!",
-     "Projection: 1.6 3-pointers made tonight (his usual 1.7) vs the line of 1.5."
+     "+",
+     "Projection: 2.4 assists tonight (his usual 2.6) vs the line of 2.5."
     ],
     [
      "i",
-     "Recent form: went under 1.5 in 6 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 53% vs 53% (they agree)."
+     "Recent form: went under 2.5 in 6 of his last 10 games and 7 of his last 20."
     ],
     [
      "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+     "Model vs DraftKings: 59% vs 50% (model higher by 9 pts, within the allowed gap)."
     ],
     [
      "+",
-     "Matchup overall: -1.4% 3-pointers made vs his usual output (3 checks for this pick, 3 against)."
+     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
     ],
     [
      "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-    ],
-    [
-     "!",
-     "3s allowed: 47% of shots vs BKN are 3s (#5 most) (+2.5%)."
-    ],
-    [
-     "!",
-     "Position defense: BKN allow 8% more 3-pointers made per minute to guards than average (+1.5%)."
+     "Matchup overall: -4.6% assists vs his usual output (3 checks for this pick, 2 against)."
     ],
     [
      "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.5%)."
+     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.0%)."
     ],
     [
      "!",
-     "Vegas team total: Vegas implied team total 118.0 points (+1.5%)."
+     "Position defense: BKN allow 7% more assists per minute to forwards than average (+2.2%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
     ],
     [
      "+",
      "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.7%)."
+    ]
+   ],
+   "matchup_net": 0.0458,
+   "below_bar": false,
+   "prob_model": 0.591,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3134907,
+   "price_fmt": "-116"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909323",
+   "matchup": "PHX @ HOU",
+   "player": "Alperen Sengun",
+   "team": "HOU",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "under",
+   "line": 20.5,
+   "label": "Alperen Sengun Under 20.5 Points",
+   "prob": 0.5507,
+   "fair": 0.5021,
+   "edge": 0.0486,
+   "ev": 0.0338,
+   "price": -114,
+   "book": "DraftKings",
+   "proj": 19.4822,
+   "l10": 0.7,
+   "l20": 0.6,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 55%. DraftKings prices under 20.5 at -114 (50% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 19.5 points tonight (his usual 20.6) vs the line of 20.5."
+    ],
+    [
+     "+",
+     "Recent form: went under 20.5 in 7 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
-     "3P% allowed: BKN allow 37.7% from three (#3 worst). Checked, but it had no measurable effect last season, so it is not counted."
+     "Model vs DraftKings: 59% vs 50% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 32.0 (last 10 avg 31.9, fairly stable at \u00b17.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.5% points vs his usual output (1 check for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 30.2 minutes vs usual 32.0 (-0.4 for blowout risk (spread 9.5)) (-5.5%)."
+    ],
+    [
+     "i",
+     "Position defense: PHX allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: PHX block 4.0 shots per 100 possessions (#28 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0144,
+   "matchup_net": 0.0551,
    "below_bar": false,
-   "prob_model": 0.5274,
+   "prob_model": 0.595,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-132"
+   "player_id": 4871144,
+   "price_fmt": "-114"
   },
   {
    "kind": "card",
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
+   "player": "Myles Turner",
    "team": "MIL",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
    "side": "under",
-   "line": 15.5,
-   "label": "Ryan Rollins Under 15.5 Pts+Reb",
-   "prob": 0.5481,
-   "fair": 0.5092,
-   "edge": 0.039,
-   "ev": 0.0088,
-   "price": -119,
+   "line": 17.5,
+   "label": "Myles Turner Under 17.5 Pts+Reb+Ast",
+   "prob": 0.5494,
+   "fair": 0.501,
+   "edge": 0.0484,
+   "ev": 0.0272,
+   "price": -115,
    "book": "DraftKings",
-   "proj": 16.0187,
+   "proj": 16.7645,
    "l10": 0.6,
    "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 55%. DraftKings prices under 15.5 at -119 (51% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 55%. DraftKings prices under 17.5 at -115 (50% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
-     "!",
-     "Projection: 16.0 pts+reb tonight (his usual 17.2) vs the line of 15.5."
+     "+",
+     "Projection: 16.8 pts+reb+ast tonight (his usual 18.3) vs the line of 17.5."
     ],
     [
      "i",
-     "Recent form: went under 15.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 52% vs 51% (they agree)."
+     "Recent form: went under 17.5 in 6 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+     "Model vs DraftKings: 59% vs 50% (model higher by 9 pts, within the allowed gap)."
+    ],
+    [
+     "i",
+     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
     ],
     [
      "+",
-     "Matchup overall: -5.3% pts+reb vs his usual output (2 checks for this pick, 0 against)."
+     "Matchup overall: -6.7% pts+reb+ast vs his usual output (3 checks for this pick, 0 against)."
     ],
     [
      "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
     ],
     [
      "+",
-     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.7%)."
+     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.9%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Position defense: BKN allow 10% fewer rebounds per minute to centers than average (-0.9%)."
+    ],
+    [
+     "i",
+     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
      "i",
@@ -2935,13 +2694,13 @@
      "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0531,
+   "matchup_net": 0.0669,
    "below_bar": false,
-   "prob_model": 0.5163,
+   "prob_model": 0.5914,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-119"
+   "player_id": 3133628,
+   "price_fmt": "-115"
   },
   {
    "kind": "card",
@@ -3017,168 +2776,168 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
+   "game_id": "401909317",
+   "matchup": "MIA @ PHI",
+   "player": "Andrew Wiggins",
+   "team": "MIA",
    "stat": "ra",
    "stat_label": "Reb+Ast",
    "side": "under",
-   "line": 7.5,
-   "label": "Kyle Kuzma Under 7.5 Reb+Ast",
-   "prob": 0.5467,
-   "fair": 0.4949,
-   "edge": 0.0518,
-   "ev": 0.0348,
-   "price": -112,
+   "line": 4.5,
+   "label": "Andrew Wiggins Under 4.5 Reb+Ast",
+   "prob": 0.547,
+   "fair": 0.5122,
+   "edge": 0.0349,
+   "ev": -0.0009,
+   "price": -121,
    "book": "DraftKings",
-   "proj": 6.8996,
+   "proj": 5.0831,
+   "l10": 0.6,
+   "l20": 0.65,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 55%. DraftKings prices under 4.5 at -121 (51% after removing their margin); our model says 48%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 5.1 reb+ast tonight (his usual 5.3) vs the line of 4.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 4.5 in 6 of his last 10 games and 13 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 48% vs 51% (they agree)."
+    ],
+    [
+     "i",
+     "Minutes: projected 27.2 (last 10 avg 25.6, fairly stable at \u00b15.2)."
+    ],
+    [
+     "+",
+     "Matchup overall: -3.0% reb+ast vs his usual output (3 checks for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 26.4 minutes vs usual 27.2 (-3.0%)."
+    ],
+    [
+     "!",
+     "Rebounds \u00b7 Opponent rebounding: PHI grab 48.3% of all rebounds in their games (#25 of 30); Embiid 8.4 rpg, Hukporti 7.6 rpg (+1.2%)."
+    ],
+    [
+     "!",
+     "Assists \u00b7 Vegas team total: Vegas implied team total 120.0 points (+1.0%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Position defense: PHI allow 8% fewer assists per minute to forwards than average (-0.9%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.7%)."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0301,
+   "below_bar": false,
+   "prob_model": 0.4825,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 3059319,
+   "price_fmt": "-121"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909317",
+   "matchup": "MIA @ PHI",
+   "player": "Bam Adebayo",
+   "team": "MIA",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
+   "side": "under",
+   "line": 30.5,
+   "label": "Bam Adebayo Under 30.5 Pts+Reb+Ast",
+   "prob": 0.5467,
+   "fair": 0.5081,
+   "edge": 0.0386,
+   "ev": 0.0061,
+   "price": -119,
+   "book": "DraftKings",
+   "proj": 31.859,
    "l10": 0.6,
    "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 55%. DraftKings prices under 7.5 at -112 (49% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 55%. DraftKings prices under 30.5 at -119 (51% after removing their margin); our model says 51%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
-     "+",
-     "Projection: 6.9 reb+ast tonight (his usual 7.4) vs the line of 7.5."
+     "!",
+     "Projection: 31.9 pts+reb+ast tonight (his usual 32.6) vs the line of 30.5."
     ],
     [
      "i",
-     "Recent form: went under 7.5 in 6 of his last 10 games and 10 of his last 20."
+     "Recent form: went under 30.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 51% vs 51% (they agree)."
     ],
     [
      "i",
-     "Model vs DraftKings: 61% vs 49% (model higher by 12 pts, within the allowed gap)."
+     "Minutes: projected 32.4 (last 10 avg 33.3, fairly stable at \u00b16.9)."
     ],
     [
      "+",
-     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
+     "Matchup overall: -1.5% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
     ],
     [
      "+",
-     "Matchup overall: -6.5% reb+ast vs his usual output (4 checks for this pick, 3 against)."
+     "Minutes: projected 31.6 minutes vs usual 32.4 (-2.4%)."
     ],
     [
-     "+",
-     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
+     "i",
+     "Position defense: PHI allow 3% fewer points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.8%)."
+     "i",
+     "Vegas team total: Vegas implied team total 120.0 points. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.0%)."
+     "i",
+     "Rim protection: PHI block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.9%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Assists \u00b7 Position defense: BKN allow 7% more assists per minute to forwards than average (+0.8%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+0.7%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Opponent players out: BKN without Nolan Traore (4%) of their rebounds (-0.6%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0654,
+   "matchup_net": 0.0151,
    "below_bar": false,
-   "prob_model": 0.6128,
+   "prob_model": 0.5113,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-112"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pr",
-   "stat_label": "Pts+Reb",
-   "side": "under",
-   "line": 16.5,
-   "label": "Jaime Jaquez Jr. Under 16.5 Pts+Reb",
-   "prob": 0.5462,
-   "fair": 0.5051,
-   "edge": 0.0411,
-   "ev": 0.013,
-   "price": -117,
-   "book": "DraftKings",
-   "proj": 16.8366,
-   "l10": 0.6,
-   "l20": 0.4,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 16.5 at -117 (51% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 16.8 pts+reb tonight (his usual 18.2) vs the line of 16.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 16.5 in 6 of his last 10 games and 8 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 53% vs 51% (they agree)."
-    ],
-    [
-     "+",
-     "Line moved from 15.5 to 16.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.7% pts+reb vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0573,
-   "below_bar": false,
-   "prob_model": 0.5301,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-117"
+   "player_id": 4066261,
+   "price_fmt": "-119"
   },
   {
    "kind": "card",
@@ -3266,257 +3025,40 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909321",
-   "matchup": "LAC @ MEM",
-   "player": "Cedric Coward",
-   "team": "MEM",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 6.5,
-   "label": "Cedric Coward Over 6.5 Rebounds",
-   "prob": 0.5459,
-   "fair": 0.5438,
-   "edge": 0.0021,
-   "ev": -0.0613,
-   "price": -139,
-   "book": "DraftKings",
-   "proj": 7.6879,
-   "l10": 0.7,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices over 6.5 at -139 (54% after removing their margin); our model says 58%. The two are blended using how each predicted results at real lines."
-    ],
-    [
-     "+",
-     "Projection: 7.7 rebounds tonight (his usual 7.3) vs the line of 6.5."
-    ],
-    [
-     "+",
-     "Recent form: went over 6.5 in 7 of his last 10 games and 14 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 58% vs 54% (they agree)."
-    ],
-    [
-     "+",
-     "Minutes: projected 28.3 (last 10 avg 28.6, stable at \u00b13.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: +5.4% rebounds vs his usual output (3 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 29.6 minutes vs usual 28.3 (+1.4 with teammates out) (+4.6%)."
-    ],
-    [
-     "+",
-     "Opponent rebounding: LAC grab 47.1% of all rebounds in their games (#28 of 30); Niederhauser 6.4 rpg, Jackson 5.7 rpg (+2.8%)."
-    ],
-    [
-     "!",
-     "Rebound chances: 83.6 total rebounds per game in LAC games (#28 of 30) (-2.2%)."
-    ],
-    [
-     "+",
-     "Position defense: LAC allow 4% more rebounds per minute to forwards than average (+0.9%)."
-    ],
-    [
-     "!",
-     "Opponent players out: LAC without Jordan Miller (7%), Bradley Beal (2%) of their rebounds (-0.9%)."
-    ]
-   ],
-   "matchup_net": 0.0543,
-   "below_bar": false,
-   "prob_model": 0.5803,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4903027,
-   "price_fmt": "-139"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Michael Porter Jr.",
-   "team": "BKN",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 31.5,
-   "label": "Michael Porter Jr. Under 31.5 Pts+Reb+Ast",
-   "prob": 0.5457,
-   "fair": 0.4878,
-   "edge": 0.0578,
-   "ev": 0.0463,
-   "price": -109,
-   "book": "DraftKings",
-   "proj": 28.4081,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 55%. DraftKings prices under 31.5 at -109 (49% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 28.4 pts+reb+ast tonight (his usual 30.3) vs the line of 31.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 31.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 66% vs 49% (model higher by 17 pts, within the allowed gap)."
-    ],
-    [
-     "+",
-     "Line moved from 29.5 to 31.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 32.5 (last 10 avg 33.6, stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -2.4% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.5 minutes vs usual 32.5 (-3.2%)."
-    ],
-    [
-     "i",
-     "Position defense: MIL allow 5% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: MIL block 4.8 shots per 100 possessions (#20 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.024,
-   "below_bar": false,
-   "prob_model": 0.6557,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4278104,
-   "price_fmt": "-109"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
-   "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
-   "side": "under",
-   "line": 11.5,
-   "label": "Ryan Rollins Under 11.5 Points",
-   "prob": 0.5438,
-   "fair": 0.501,
-   "edge": 0.0427,
-   "ev": 0.025,
-   "price": -113,
-   "book": "DraftKings",
-   "proj": 11.7979,
-   "l10": 0.7,
-   "l20": 0.55,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 54%. DraftKings prices under 11.5 at -113 (50% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 11.8 points tonight (his usual 12.8) vs the line of 11.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 11.5 in 7 of his last 10 games and 11 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 54% vs 50% (they agree)."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -4.6% points vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0465,
-   "below_bar": false,
-   "prob_model": 0.5392,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-113"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
    "player": "Myles Turner",
    "team": "MIL",
-   "stat": "pts",
-   "stat_label": "Points",
+   "stat": "pa",
+   "stat_label": "Pts+Ast",
    "side": "under",
-   "line": 9.5,
-   "label": "Myles Turner Under 9.5 Points",
-   "prob": 0.5429,
-   "fair": 0.4917,
-   "edge": 0.0512,
-   "ev": 0.041,
-   "price": -109,
+   "line": 11.5,
+   "label": "Myles Turner Under 11.5 Pts+Ast",
+   "prob": 0.5421,
+   "fair": 0.4939,
+   "edge": 0.0482,
+   "ev": 0.0262,
+   "price": -112,
    "book": "DraftKings",
-   "proj": 9.0711,
+   "proj": 11.2433,
    "l10": 0.6,
    "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 54%. DraftKings prices under 9.5 at -109 (49% after removing their margin); our model says 60%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 54%. DraftKings prices under 11.5 at -112 (49% after removing their margin); our model says 58%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 9.1 points tonight (his usual 9.8) vs the line of 9.5."
+     "Projection: 11.2 pts+ast tonight (his usual 12.3) vs the line of 11.5."
     ],
     [
      "i",
-     "Recent form: went under 9.5 in 6 of his last 10 games and 10 of his last 20."
+     "Recent form: went under 11.5 in 6 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
-     "Model vs DraftKings: 60% vs 49% (model higher by 11 pts, within the allowed gap)."
+     "Model vs DraftKings: 58% vs 49% (model higher by 9 pts, within the allowed gap)."
     ],
     [
      "i",
@@ -3524,11 +3066,15 @@
     ],
     [
      "+",
-     "Matchup overall: -4.5% points vs his usual output (1 check for this pick, 0 against)."
+     "Matchup overall: -5.3% pts+ast vs his usual output (2 checks for this pick, 0 against)."
     ],
     [
      "+",
      "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
     ],
     [
      "i",
@@ -3547,13 +3093,13 @@
      "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0451,
+   "matchup_net": 0.0527,
    "below_bar": false,
-   "prob_model": 0.6033,
+   "prob_model": 0.5794,
    "card": "fair",
    "dk_line": null,
    "player_id": 3133628,
-   "price_fmt": "-109"
+   "price_fmt": "-112"
   },
   {
    "kind": "card",
@@ -3696,89 +3242,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Tyler Herro",
-   "team": "MIL",
-   "stat": "ra",
-   "stat_label": "Reb+Ast",
-   "side": "under",
-   "line": 9.5,
-   "label": "Tyler Herro Under 9.5 Reb+Ast",
-   "prob": 0.5404,
-   "fair": 0.4878,
-   "edge": 0.0526,
-   "ev": 0.0362,
-   "price": -109,
-   "book": "DraftKings",
-   "proj": 8.8086,
-   "l10": 0.7,
-   "l20": 0.7,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 54%. DraftKings prices under 9.5 at -109 (49% after removing their margin); our model says 61%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 8.8 reb+ast tonight (his usual 9.3) vs the line of 9.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 9.5 in 7 of his last 10 games and 14 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 61% vs 49% (model higher by 12 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Line moved from 10.5 to 9.5 since it opened (the market has moved toward this side; value is thinner)."
-    ],
-    [
-     "i",
-     "Minutes: projected 31.6 (last 10 avg 31.6, fairly stable at \u00b16.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.4% reb+ast vs his usual output (3 checks for this pick, 3 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.4 minutes vs usual 31.6 (-3.9%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.5%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.4%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+1.0%)."
-    ],
-    [
-     "!",
-     "Assists \u00b7 Position defense: BKN allow 5% more assists per minute to guards than average (+0.8%)."
-    ],
-    [
-     "!",
-     "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.7%)."
-    ]
-   ],
-   "matchup_net": 0.0544,
-   "below_bar": false,
-   "prob_model": 0.6099,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4395725,
-   "price_fmt": "-109"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909323",
    "matchup": "PHX @ HOU",
    "player": "Amen Thompson",
@@ -3846,23 +3309,23 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909323",
-   "matchup": "PHX @ HOU",
-   "player": "Alperen Sengun",
-   "team": "HOU",
-   "stat": "pts",
-   "stat_label": "Points",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Kyle Kuzma",
+   "team": "MIL",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
    "side": "under",
    "line": 20.5,
-   "label": "Alperen Sengun Under 20.5 Points",
-   "prob": 0.5402,
-   "fair": 0.4896,
-   "edge": 0.0506,
-   "ev": 0.0404,
+   "label": "Kyle Kuzma Under 20.5 Pts+Reb+Ast",
+   "prob": 0.5361,
+   "fair": 0.4858,
+   "edge": 0.0503,
+   "ev": 0.0326,
    "price": -108,
    "book": "DraftKings",
-   "proj": 19.4822,
-   "l10": 0.7,
+   "proj": 19.6392,
+   "l10": 0.6,
    "l20": 0.6,
    "reasons": [
     [
@@ -3871,102 +3334,35 @@
     ],
     [
      "+",
-     "Projection: 19.5 points tonight (his usual 20.6) vs the line of 20.5."
-    ],
-    [
-     "+",
-     "Recent form: went under 20.5 in 7 of his last 10 games and 12 of his last 20."
+     "Projection: 19.6 pts+reb+ast tonight (his usual 21.2) vs the line of 20.5."
     ],
     [
      "i",
-     "Model vs DraftKings: 59% vs 49% (model higher by 11 pts, within the allowed gap)."
+     "Recent form: went under 20.5 in 6 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
-     "Minutes: projected 32.0 (last 10 avg 31.9, fairly stable at \u00b17.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.5% points vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 30.2 minutes vs usual 32.0 (-0.4 for blowout risk (spread 9.5)) (-5.5%)."
+     "Model vs DraftKings: 59% vs 49% (model higher by 10 pts, within the allowed gap)."
     ],
     [
      "i",
-     "Position defense: PHX allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: PHX block 4.0 shots per 100 possessions (#28 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0551,
-   "below_bar": false,
-   "prob_model": 0.595,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4871144,
-   "price_fmt": "-108"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Jaime Jaquez Jr.",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 19.5,
-   "label": "Jaime Jaquez Jr. Under 19.5 Pts+Reb+Ast",
-   "prob": 0.5381,
-   "fair": 0.4969,
-   "edge": 0.0411,
-   "ev": 0.0143,
-   "price": -113,
-   "book": "DraftKings",
-   "proj": 19.9639,
-   "l10": 0.6,
-   "l20": 0.35,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 54%. DraftKings prices under 19.5 at -113 (50% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 20.0 pts+reb+ast tonight (his usual 21.6) vs the line of 19.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 19.5 in 6 of his last 10 games and 7 of his last 20."
+     "Line moved from 22.5 to 20.5 since it opened (the market has moved toward this side; value is thinner)."
     ],
     [
      "+",
-     "Model vs DraftKings: 52% vs 50% (they agree)."
+     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
     ],
     [
      "+",
-     "Line moved from 18.5 to 19.5 since it opened (it moved against this side, so the number is now easier)."
+     "Matchup overall: -5.3% pts+reb+ast vs his usual output (2 checks for this pick, 0 against)."
     ],
     [
      "+",
-     "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
+     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
     ],
     [
      "+",
-     "Matchup overall: -5.6% pts+reb+ast vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.5%)."
+     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
     ],
     [
      "i",
@@ -3985,13 +3381,88 @@
      "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0562,
+   "matchup_net": 0.0528,
    "below_bar": false,
-   "prob_model": 0.5186,
+   "prob_model": 0.5871,
    "card": "fair",
    "dk_line": null,
-   "player_id": 4432848,
-   "price_fmt": "-113"
+   "player_id": 3134907,
+   "price_fmt": "-108"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Ryan Rollins",
+   "team": "MIL",
+   "stat": "pr",
+   "stat_label": "Pts+Reb",
+   "side": "under",
+   "line": 15.5,
+   "label": "Ryan Rollins Under 15.5 Pts+Reb",
+   "prob": 0.5361,
+   "fair": 0.4949,
+   "edge": 0.0412,
+   "ev": 0.0148,
+   "price": -112,
+   "book": "DraftKings",
+   "proj": 16.0187,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 54%. DraftKings prices under 15.5 at -112 (49% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 16.0 pts+reb tonight (his usual 17.2) vs the line of 15.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 15.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 52% vs 49% (they agree)."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.3% pts+reb vs his usual output (2 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+    ],
+    [
+     "+",
+     "Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.7%)."
+    ],
+    [
+     "i",
+     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0531,
+   "below_bar": false,
+   "prob_model": 0.5163,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4591725,
+   "price_fmt": "-112"
   },
   {
    "kind": "card",
@@ -4071,139 +3542,52 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909317",
-   "matchup": "MIA @ PHI",
-   "player": "Davion Mitchell",
-   "team": "MIA",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 2.5,
-   "label": "Davion Mitchell Over 2.5 Rebounds",
-   "prob": 0.5353,
-   "fair": 0.5384,
-   "edge": -0.0031,
-   "ev": -0.0682,
-   "price": -135,
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Ryan Rollins",
+   "team": "MIL",
+   "stat": "pts",
+   "stat_label": "Points",
+   "side": "under",
+   "line": 11.5,
+   "label": "Ryan Rollins Under 11.5 Points",
+   "prob": 0.5341,
+   "fair": 0.4896,
+   "edge": 0.0445,
+   "ev": 0.0287,
+   "price": -108,
    "book": "DraftKings",
-   "proj": 2.8027,
-   "l10": 0.6,
-   "l20": 0.45,
+   "proj": 11.7979,
+   "l10": 0.7,
+   "l20": 0.55,
    "reasons": [
     [
      "+",
-     "Chance it hits: 54%. DraftKings prices over 2.5 at -135 (54% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines."
-    ],
-    [
-     "+",
-     "Projection: 2.8 rebounds tonight (his usual 2.8) vs the line of 2.5."
-    ],
-    [
-     "i",
-     "Recent form: went over 2.5 in 6 of his last 10 games and 9 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 52% vs 54% (they agree)."
-    ],
-    [
-     "+",
-     "Line moved from 3.5 to 2.5 since it opened (it moved against this side, so the number is now easier)."
-    ],
-    [
-     "+",
-     "Minutes: projected 34.0 (last 10 avg 36.2, stable at \u00b14.2)."
-    ],
-    [
-     "+",
-     "Matchup overall: +1.5% rebounds vs his usual output (2 checks for this pick, 1 against)."
-    ],
-    [
-     "+",
-     "Position defense: PHI allow 11% more rebounds per minute to guards than average (+2.7%)."
+     "Chance it hits: 53%. DraftKings prices under 11.5 at -108 (49% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "!",
-     "Minutes: projected 33.1 minutes vs usual 34.0 (-2.6%)."
+     "Projection: 11.8 points tonight (his usual 12.8) vs the line of 11.5."
     ],
     [
      "+",
-     "Opponent rebounding: PHI grab 48.3% of all rebounds in their games (#25 of 30); Embiid 8.4 rpg, Hukporti 7.6 rpg (+1.8%)."
+     "Recent form: went under 11.5 in 7 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 54% vs 49% (they agree)."
     ],
     [
      "i",
-     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0146,
-   "below_bar": false,
-   "prob_model": 0.525,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4278053,
-   "price_fmt": "-135"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Myles Turner",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 17.5,
-   "label": "Myles Turner Under 17.5 Pts+Reb+Ast",
-   "prob": 0.5349,
-   "fair": 0.4838,
-   "edge": 0.0511,
-   "ev": 0.0348,
-   "price": -107,
-   "book": "DraftKings",
-   "proj": 16.7645,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 53%. DraftKings prices under 17.5 at -107 (48% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
     ],
     [
      "+",
-     "Projection: 16.8 pts+reb+ast tonight (his usual 18.3) vs the line of 17.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 17.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 59% vs 48% (model higher by 11 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
+     "Matchup overall: -4.6% points vs his usual output (1 check for this pick, 0 against)."
     ],
     [
      "+",
-     "Matchup overall: -6.7% pts+reb+ast vs his usual output (3 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.9%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Position defense: BKN allow 10% fewer rebounds per minute to centers than average (-0.9%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
+     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
     ],
     [
      "i",
@@ -4218,13 +3602,96 @@
      "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0669,
+   "matchup_net": 0.0465,
    "below_bar": false,
-   "prob_model": 0.5914,
+   "prob_model": 0.5392,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3133628,
-   "price_fmt": "-107"
+   "player_id": 4591725,
+   "price_fmt": "-108"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Ryan Rollins",
+   "team": "MIL",
+   "stat": "fg3m",
+   "stat_label": "3-Pointers Made",
+   "side": "under",
+   "line": 1.5,
+   "label": "Ryan Rollins Under 1.5 3-Pointers Made",
+   "prob": 0.5333,
+   "fair": 0.5101,
+   "edge": 0.0231,
+   "ev": -0.0224,
+   "price": -120,
+   "book": "DraftKings",
+   "proj": 1.6373,
+   "l10": 0.6,
+   "l20": 0.55,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 53%. DraftKings prices under 1.5 at -120 (51% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 1.6 3-pointers made tonight (his usual 1.7) vs the line of 1.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 1.5 in 6 of his last 10 games and 11 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 53% vs 51% (they agree)."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -1.4% 3-pointers made vs his usual output (3 checks for this pick, 3 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+    ],
+    [
+     "!",
+     "3s allowed: 47% of shots vs BKN are 3s (#5 most) (+2.5%)."
+    ],
+    [
+     "!",
+     "Position defense: BKN allow 8% more 3-pointers made per minute to guards than average (+1.5%)."
+    ],
+    [
+     "+",
+     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.5%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 118.0 points (+1.5%)."
+    ],
+    [
+     "+",
+     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.7%)."
+    ],
+    [
+     "i",
+     "3P% allowed: BKN allow 37.7% from three (#3 worst). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0144,
+   "below_bar": false,
+   "prob_model": 0.5274,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4591725,
+   "price_fmt": "-120"
   },
   {
    "kind": "card",
@@ -4371,81 +3838,85 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Julius Randle",
-   "team": "BKN",
-   "stat": "ast",
-   "stat_label": "Assists",
+   "game_id": "401909317",
+   "matchup": "MIA @ PHI",
+   "player": "Andrew Wiggins",
+   "team": "MIA",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
    "side": "under",
-   "line": 4.5,
-   "label": "Julius Randle Under 4.5 Assists",
-   "prob": 0.5317,
-   "fair": 0.4797,
-   "edge": 0.052,
-   "ev": 0.038,
-   "price": -105,
+   "line": 13.5,
+   "label": "Andrew Wiggins Under 13.5 Pts+Reb+Ast",
+   "prob": 0.5324,
+   "fair": 0.501,
+   "edge": 0.0314,
+   "ev": -0.0047,
+   "price": -115,
    "book": "DraftKings",
-   "proj": 4.1886,
-   "l10": 0.6,
-   "l20": 0.6,
+   "proj": 15.7355,
+   "l10": 0.7,
+   "l20": 0.5,
    "reasons": [
     [
      "+",
-     "Chance it hits: 53%. DraftKings prices under 4.5 at -105 (48% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 53%. DraftKings prices under 13.5 at -115 (50% after removing their margin); our model says 43%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 15.7 pts+reb+ast tonight (his usual 16.3) vs the line of 13.5."
     ],
     [
      "+",
-     "Projection: 4.2 assists tonight (his usual 4.5) vs the line of 4.5."
+     "Recent form: went under 13.5 in 7 of his last 10 games and 10 of his last 20."
     ],
     [
      "i",
-     "Recent form: went under 4.5 in 6 of his last 10 games and 12 of his last 20."
+     "Model vs DraftKings: 43% vs 50% (model lower by 7 pts, within the allowed gap)."
     ],
     [
      "i",
-     "Model vs DraftKings: 59% vs 48% (model higher by 11 pts, within the allowed gap)."
+     "Minutes: projected 27.2 (last 10 avg 25.6, fairly stable at \u00b15.2)."
     ],
     [
      "+",
-     "Minutes: projected 33.0 (last 10 avg 32.6, stable at \u00b13.6)."
+     "Matchup overall: -3.0% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
     ],
     [
      "+",
-     "Matchup overall: -3.3% assists vs his usual output (3 checks for this pick, 3 against)."
+     "Minutes: projected 26.4 minutes vs usual 27.2 (-3.0%)."
     ],
     [
-     "+",
-     "Teammates out: BKN without Nolan Traore (13%) of the team's assists (-3.3%)."
+     "i",
+     "Position defense: PHI allow 6% more points per minute to forwards than average. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "+",
-     "Minutes: projected 32.0 minutes vs usual 33.0 (-3.2%)."
+     "i",
+     "Vegas team total: Vegas implied team total 120.0 points. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Position defense: MIL allow 6% more assists per minute to forwards than average (+2.1%)."
+     "i",
+     "Rim protection: PHI block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Turnovers forced: MIL force 12.8 turnovers per 100 possessions (#27 most) (+1.4%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "+",
-     "Opponent players out: MIL at full strength (-1.4%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ],
     [
-     "!",
-     "Vegas team total: Vegas implied team total 116.5 points (+1.3%)."
+     "i",
+     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
     ]
    ],
-   "matchup_net": 0.0325,
+   "matchup_net": 0.0297,
    "below_bar": false,
-   "prob_model": 0.5935,
+   "prob_model": 0.4339,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3064514,
-   "price_fmt": "-105"
+   "player_id": 3059319,
+   "price_fmt": "-115"
   },
   {
    "kind": "card",
@@ -4533,164 +4004,6 @@
   {
    "kind": "card",
    "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Ryan Rollins",
-   "team": "MIL",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 19.5,
-   "label": "Ryan Rollins Under 19.5 Pts+Reb+Ast",
-   "prob": 0.5306,
-   "fair": 0.4878,
-   "edge": 0.0427,
-   "ev": 0.0173,
-   "price": -109,
-   "book": "DraftKings",
-   "proj": 19.9664,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 53%. DraftKings prices under 19.5 at -109 (49% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 20.0 pts+reb+ast tonight (his usual 21.5) vs the line of 19.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 19.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 52% vs 49% (they agree)."
-    ],
-    [
-     "i",
-     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.3% pts+reb+ast vs his usual output (3 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-    ],
-    [
-     "+",
-     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
-    ],
-    [
-     "+",
-     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0526,
-   "below_bar": false,
-   "prob_model": 0.52,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4591725,
-   "price_fmt": "-109"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Myles Turner",
-   "team": "MIL",
-   "stat": "pa",
-   "stat_label": "Pts+Ast",
-   "side": "under",
-   "line": 11.5,
-   "label": "Myles Turner Under 11.5 Pts+Ast",
-   "prob": 0.5284,
-   "fair": 0.4776,
-   "edge": 0.0507,
-   "ev": 0.0364,
-   "price": -104,
-   "book": "DraftKings",
-   "proj": 11.2433,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 53%. DraftKings prices under 11.5 at -104 (48% after removing their margin); our model says 58%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "+",
-     "Projection: 11.2 pts+ast tonight (his usual 12.3) vs the line of 11.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 11.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "i",
-     "Model vs DraftKings: 58% vs 48% (model higher by 10 pts, within the allowed gap)."
-    ],
-    [
-     "i",
-     "Minutes: projected 26.5 (last 10 avg 27.1, fairly stable at \u00b14.5)."
-    ],
-    [
-     "+",
-     "Matchup overall: -5.3% pts+ast vs his usual output (2 checks for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 25.3 minutes vs usual 26.5 (-4.5%)."
-    ],
-    [
-     "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
-    ],
-    [
-     "i",
-     "Position defense: BKN allow 9% more points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0527,
-   "below_bar": false,
-   "prob_model": 0.5794,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 3133628,
-   "price_fmt": "-104"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
    "game_id": "401909323",
    "matchup": "PHX @ HOU",
    "player": "Oso Ighodaro",
@@ -4772,34 +4085,34 @@
    "tier": "Fair price",
    "game_id": "401909322",
    "matchup": "BKN @ MIL",
-   "player": "Kyle Kuzma",
-   "team": "MIL",
+   "player": "Julius Randle",
+   "team": "BKN",
    "stat": "ast",
    "stat_label": "Assists",
    "side": "under",
-   "line": 2.5,
-   "label": "Kyle Kuzma Under 2.5 Assists",
-   "prob": 0.5272,
-   "fair": 0.4747,
-   "edge": 0.0525,
-   "ev": 0.039,
-   "price": -103,
+   "line": 4.5,
+   "label": "Julius Randle Under 4.5 Assists",
+   "prob": 0.524,
+   "fair": 0.4706,
+   "edge": 0.0534,
+   "ev": 0.0428,
+   "price": -101,
    "book": "DraftKings",
-   "proj": 2.3906,
+   "proj": 4.1886,
    "l10": 0.6,
-   "l20": 0.35,
+   "l20": 0.6,
    "reasons": [
     [
      "+",
-     "Chance it hits: 53%. DraftKings prices under 2.5 at -103 (47% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 52%. DraftKings prices under 4.5 at -101 (47% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "+",
-     "Projection: 2.4 assists tonight (his usual 2.6) vs the line of 2.5."
+     "Projection: 4.2 assists tonight (his usual 4.5) vs the line of 4.5."
     ],
     [
      "i",
-     "Recent form: went under 2.5 in 6 of his last 10 games and 7 of his last 20."
+     "Recent form: went under 4.5 in 6 of his last 10 games and 12 of his last 20."
     ],
     [
      "i",
@@ -4807,198 +4120,44 @@
     ],
     [
      "+",
-     "Minutes: projected 28.0 (last 10 avg 28.8, stable at \u00b13.8)."
+     "Minutes: projected 33.0 (last 10 avg 32.6, stable at \u00b13.6)."
     ],
     [
      "+",
-     "Matchup overall: -4.6% assists vs his usual output (3 checks for this pick, 2 against)."
+     "Matchup overall: -3.3% assists vs his usual output (3 checks for this pick, 3 against)."
     ],
     [
      "+",
-     "Minutes: projected 26.7 minutes vs usual 28.0 (-4.6%)."
+     "Teammates out: BKN without Nolan Traore (13%) of the team's assists (-3.3%)."
     ],
     [
      "+",
-     "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-3.0%)."
+     "Minutes: projected 32.0 minutes vs usual 33.0 (-3.2%)."
     ],
     [
      "!",
-     "Position defense: BKN allow 7% more assists per minute to forwards than average (+2.2%)."
+     "Position defense: MIL allow 6% more assists per minute to forwards than average (+2.1%)."
     ],
     [
      "!",
-     "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
+     "Turnovers forced: MIL force 12.8 turnovers per 100 possessions (#27 most) (+1.4%)."
     ],
     [
      "+",
-     "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.7%)."
+     "Opponent players out: MIL at full strength (-1.4%)."
+    ],
+    [
+     "!",
+     "Vegas team total: Vegas implied team total 116.5 points (+1.3%)."
     ]
    ],
-   "matchup_net": 0.0458,
+   "matchup_net": 0.0325,
    "below_bar": false,
-   "prob_model": 0.591,
+   "prob_model": 0.5935,
    "card": "fair",
    "dk_line": null,
-   "player_id": 3134907,
-   "price_fmt": "-103"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909322",
-   "matchup": "BKN @ MIL",
-   "player": "Egor Demin",
-   "team": "BKN",
-   "stat": "reb",
-   "stat_label": "Rebounds",
-   "side": "over",
-   "line": 2.5,
-   "label": "Egor Demin Over 2.5 Rebounds",
-   "prob": 0.5242,
-   "fair": 0.5302,
-   "edge": -0.0061,
-   "ev": -0.0757,
-   "price": -131,
-   "book": "DraftKings",
-   "proj": 2.8024,
-   "l10": 0.6,
-   "l20": 0.6,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 52%. DraftKings prices over 2.5 at -131 (53% after removing their margin); our model says 49%. The two are blended using how each predicted results at real lines."
-    ],
-    [
-     "+",
-     "Projection: 2.8 rebounds tonight (his usual 2.9) vs the line of 2.5."
-    ],
-    [
-     "i",
-     "Recent form: went over 2.5 in 6 of his last 10 games and 12 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 49% vs 53% (they agree)."
-    ],
-    [
-     "i",
-     "Minutes: projected 24.5 (last 10 avg 24.0, fairly stable at \u00b16.3)."
-    ],
-    [
-     "+",
-     "Matchup overall: +1.7% rebounds vs his usual output (3 checks for this pick, 2 against)."
-    ],
-    [
-     "+",
-     "Opponent rebounding: MIL grab 48.3% of all rebounds in their games (#26 of 30); Ware 9.0 rpg, Sims 7.0 rpg (+2.0%)."
-    ],
-    [
-     "+",
-     "Rebound chances: 92.1 total rebounds per game in MIL games (#3 of 30) (+1.6%)."
-    ],
-    [
-     "!",
-     "Minutes: projected 24.2 minutes vs usual 24.5 (-1.5%)."
-    ],
-    [
-     "!",
-     "Opponent players out: MIL at full strength (-1.0%)."
-    ],
-    [
-     "+",
-     "Position defense: MIL allow 4% more rebounds per minute to guards than average (+0.9%)."
-    ]
-   ],
-   "matchup_net": 0.017,
-   "below_bar": false,
-   "prob_model": 0.4861,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 5175643,
-   "price_fmt": "-131"
-  },
-  {
-   "kind": "card",
-   "tier": "Fair price",
-   "game_id": "401909317",
-   "matchup": "MIA @ PHI",
-   "player": "Bam Adebayo",
-   "team": "MIA",
-   "stat": "pra",
-   "stat_label": "Pts+Reb+Ast",
-   "side": "under",
-   "line": 30.5,
-   "label": "Bam Adebayo Under 30.5 Pts+Reb+Ast",
-   "prob": 0.522,
-   "fair": 0.4788,
-   "edge": 0.0431,
-   "ev": 0.0191,
-   "price": -105,
-   "book": "DraftKings",
-   "proj": 31.859,
-   "l10": 0.6,
-   "l20": 0.5,
-   "reasons": [
-    [
-     "+",
-     "Chance it hits: 52%. DraftKings prices under 30.5 at -105 (48% after removing their margin); our model says 51%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-    ],
-    [
-     "!",
-     "Projection: 31.9 pts+reb+ast tonight (his usual 32.6) vs the line of 30.5."
-    ],
-    [
-     "i",
-     "Recent form: went under 30.5 in 6 of his last 10 games and 10 of his last 20."
-    ],
-    [
-     "+",
-     "Model vs DraftKings: 51% vs 48% (they agree)."
-    ],
-    [
-     "i",
-     "Minutes: projected 32.4 (last 10 avg 33.3, fairly stable at \u00b16.9)."
-    ],
-    [
-     "+",
-     "Matchup overall: -1.5% pts+reb+ast vs his usual output (1 check for this pick, 0 against)."
-    ],
-    [
-     "+",
-     "Minutes: projected 31.6 minutes vs usual 32.4 (-2.4%)."
-    ],
-    [
-     "i",
-     "Position defense: PHI allow 3% fewer points per minute to centers than average. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Vegas team total: Vegas implied team total 120.0 points. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Rim protection: PHI block 4.3 shots per 100 possessions (#23 most). Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
-    ],
-    [
-     "i",
-     "Extra rest (3+ days): 3 days since last game. Checked, but it had no measurable effect last season, so it is not counted."
-    ]
-   ],
-   "matchup_net": 0.0151,
-   "below_bar": false,
-   "prob_model": 0.5113,
-   "card": "fair",
-   "dk_line": null,
-   "player_id": 4066261,
-   "price_fmt": "-105"
+   "player_id": 3064514,
+   "price_fmt": "-101"
   },
   {
    "kind": "card",
@@ -5012,11 +4171,11 @@
    "side": "under",
    "line": 15.5,
    "label": "Ryan Rollins Under 15.5 Pts+Ast",
-   "prob": 0.5213,
-   "fair": 0.4747,
-   "edge": 0.0465,
-   "ev": 0.0273,
-   "price": -103,
+   "prob": 0.523,
+   "fair": 0.4768,
+   "edge": 0.0462,
+   "ev": 0.0259,
+   "price": -104,
    "book": "DraftKings",
    "proj": 15.7456,
    "l10": 0.7,
@@ -5024,7 +4183,7 @@
    "reasons": [
     [
      "+",
-     "Chance it hits: 52%. DraftKings prices under 15.5 at -103 (47% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+     "Chance it hits: 52%. DraftKings prices under 15.5 at -104 (48% after removing their margin); our model says 54%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
     ],
     [
      "!",
@@ -5036,7 +4195,7 @@
     ],
     [
      "i",
-     "Model vs DraftKings: 54% vs 47% (model higher by 6 pts, within the allowed gap)."
+     "Model vs DraftKings: 54% vs 48% (model higher by 6 pts, within the allowed gap)."
     ],
     [
      "i",
@@ -5077,97 +4236,235 @@
    "card": "fair",
    "dk_line": null,
    "player_id": 4591725,
-   "price_fmt": "-103"
+   "price_fmt": "-104"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909322",
+   "matchup": "BKN @ MIL",
+   "player": "Ryan Rollins",
+   "team": "MIL",
+   "stat": "pra",
+   "stat_label": "Pts+Reb+Ast",
+   "side": "under",
+   "line": 19.5,
+   "label": "Ryan Rollins Under 19.5 Pts+Reb+Ast",
+   "prob": 0.5219,
+   "fair": 0.4776,
+   "edge": 0.0443,
+   "ev": 0.0237,
+   "price": -104,
+   "book": "DraftKings",
+   "proj": 19.9664,
+   "l10": 0.6,
+   "l20": 0.5,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 52%. DraftKings prices under 19.5 at -104 (48% after removing their margin); our model says 52%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "!",
+     "Projection: 20.0 pts+reb+ast tonight (his usual 21.5) vs the line of 19.5."
+    ],
+    [
+     "i",
+     "Recent form: went under 19.5 in 6 of his last 10 games and 10 of his last 20."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 52% vs 48% (they agree)."
+    ],
+    [
+     "i",
+     "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+    ],
+    [
+     "+",
+     "Matchup overall: -5.3% pts+reb+ast vs his usual output (3 checks for this pick, 0 against)."
+    ],
+    [
+     "+",
+     "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+    ],
+    [
+     "+",
+     "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-0.6%)."
+    ],
+    [
+     "+",
+     "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-0.6%)."
+    ],
+    [
+     "i",
+     "Vegas team total: Vegas implied team total 118.0 points. Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Shooting allowed: BKN allow 57.0% effective FG (#1 worst defense). Checked, but it had no measurable effect last season, so it is not counted."
+    ],
+    [
+     "i",
+     "Rim protection: BKN block 4.6 shots per 100 possessions (#24 most). Checked, but it had no measurable effect last season, so it is not counted."
+    ]
+   ],
+   "matchup_net": 0.0526,
+   "below_bar": false,
+   "prob_model": 0.52,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 4591725,
+   "price_fmt": "-104"
+  },
+  {
+   "kind": "card",
+   "tier": "Fair price",
+   "game_id": "401909324",
+   "matchup": "SAC @ GSW",
+   "player": "Darius Acuff Jr.",
+   "team": "SAC",
+   "stat": "fg3m",
+   "stat_label": "3-Pointers Made",
+   "side": "over",
+   "line": 2.5,
+   "label": "Darius Acuff Jr. Over 2.5 3-Pointers Made",
+   "prob": 0.52,
+   "fair": 0.5458,
+   "edge": -0.0258,
+   "ev": -0.1085,
+   "price": -140,
+   "book": "DraftKings",
+   "proj": 2.9202,
+   "l10": 0.7,
+   "l20": 0.5882,
+   "reasons": [
+    [
+     "+",
+     "Chance it hits: 52%. DraftKings prices over 2.5 at -140 (55% after removing their margin); our model says 53%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+    ],
+    [
+     "+",
+     "Projection: 2.9 3-pointers made tonight (his usual 2.9) vs the line of 2.5."
+    ],
+    [
+     "+",
+     "Recent form: went over 2.5 in 7 of his last 10 games and 10 of his last 17."
+    ],
+    [
+     "+",
+     "Model vs DraftKings: 53% vs 55% (they agree)."
+    ],
+    [
+     "+",
+     "Minutes: projected 36.3 (last 10 avg 36.6, stable at \u00b13.4)."
+    ],
+    [
+     "+",
+     "Matchup overall: +1.1% 3-pointers made vs his usual output (1 check for this pick, 2 against)."
+    ],
+    [
+     "+",
+     "Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Stephen Curry (11%) of their minutes (+3.1%)."
+    ],
+    [
+     "!",
+     "Position defense: GSW allow 5% fewer 3-pointers made per minute to guards than average (-1.0%)."
+    ],
+    [
+     "!",
+     "Teammates out: SAC without Maxime Raynaud (6%) of the team's 3PA (-1.0%)."
+    ]
+   ],
+   "matchup_net": 0.011,
+   "below_bar": false,
+   "prob_model": 0.5258,
+   "card": "fair",
+   "dk_line": null,
+   "player_id": 5142620,
+   "price_fmt": "-140"
   }
  ],
  "lineups": {
   "likely": [
    {
-    "size": 5,
-    "prob": 0.0812,
+    "size": 4,
+    "prob": 0.139,
     "legs": [
      {
       "kind": "card",
       "tier": "Most likely",
-      "game_id": "401909324",
-      "matchup": "SAC @ GSW",
-      "player": "Domantas Sabonis",
-      "team": "SAC",
+      "game_id": "401909322",
+      "matchup": "BKN @ MIL",
+      "player": "Ryan Rollins",
+      "team": "MIL",
       "stat": "ast",
       "stat_label": "Assists",
       "side": "under",
-      "line": 5.5,
-      "label": "Domantas Sabonis Under 5.5 Assists",
-      "prob": 0.6174,
-      "fair": 0.578,
-      "edge": 0.0395,
+      "line": 4.5,
+      "label": "Ryan Rollins Under 4.5 Assists",
+      "prob": 0.6232,
+      "fair": 0.5835,
+      "edge": 0.0397,
       "ev": 0.0009,
-      "price": -161,
+      "price": -165,
       "book": "DraftKings",
-      "proj": 4.9252,
-      "l10": 0.8,
-      "l20": 0.55,
+      "proj": 3.9477,
+      "l10": 0.7,
+      "l20": 0.6,
       "reasons": [
        [
         "+",
-        "Chance it hits: 62%. DraftKings prices under 5.5 at -161 (58% after removing their margin); our model says 63%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+        "Chance it hits: 62%. DraftKings prices under 4.5 at -165 (58% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
        ],
        [
         "+",
-        "Projection: 4.9 assists tonight (his usual 5.2) vs the line of 5.5."
+        "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
        ],
        [
         "+",
-        "Recent form: went under 5.5 in 8 of his last 10 games and 11 of his last 20."
+        "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
        ],
        [
         "i",
-        "Model vs DraftKings: 63% vs 58% (model higher by 5 pts, within the allowed gap)."
-       ],
-       [
-        "+",
-        "Minutes: projected 31.4 (last 10 avg 30.9, stable at \u00b14.5)."
-       ],
-       [
-        "+",
-        "Matchup overall: -1.7% assists vs his usual output (4 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Vegas team total: Vegas implied team total 105.0 points (-4.3%)."
-       ],
-       [
-        "!",
-        "Opponent players out: GSW without Moses Moody (13%), Jimmy Butler III (12%), Stephen Curry (11%) of their minutes (+3.7%)."
-       ],
-       [
-        "!",
-        "Position defense: GSW allow 6% more assists per minute to forwards than average (+1.9%)."
-       ],
-       [
-        "+",
-        "Minutes: projected 31.1 minutes vs usual 31.4 (-1.1%)."
-       ],
-       [
-        "+",
-        "Turnovers forced: GSW force 15.3 turnovers per 100 possessions (#6 most) (-0.9%)."
-       ],
-       [
-        "+",
-        "Teammates out: SAC without Maxime Raynaud (7%) of the team's assists (-0.8%)."
+        "Model vs DraftKings: 64% vs 58% (model higher by 6 pts, within the allowed gap)."
        ],
        [
         "i",
-        "Assisted shots allowed: 69% of made shots vs GSW are assisted (#3 most). Checked, but it had no measurable effect last season, so it is not counted."
+        "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
+       ],
+       [
+        "+",
+        "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
+       ],
+       [
+        "!",
+        "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
+       ],
+       [
+        "+",
+        "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
        ]
       ],
-      "matchup_net": 0.0171,
+      "matchup_net": 0.0514,
       "below_bar": false,
-      "prob_model": 0.6284,
+      "prob_model": 0.6393,
       "card": "likely",
       "dk_line": null,
-      "player_id": 3155942,
-      "price_fmt": "-161"
+      "player_id": 4591725,
+      "price_fmt": "-165"
      },
      {
       "kind": "card",
@@ -5385,247 +4682,117 @@
       "dk_line": null,
       "player_id": 5081727,
       "price_fmt": "-171"
-     },
-     {
-      "kind": "card",
-      "tier": "Most likely",
-      "game_id": "401909322",
-      "matchup": "BKN @ MIL",
-      "player": "Ryan Rollins",
-      "team": "MIL",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "side": "under",
-      "line": 4.5,
-      "label": "Ryan Rollins Under 4.5 Assists",
-      "prob": 0.5899,
-      "fair": 0.5431,
-      "edge": 0.0468,
-      "ev": 0.0174,
-      "price": -138,
-      "book": "DraftKings",
-      "proj": 3.9477,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Chance it hits: 59%. DraftKings prices under 4.5 at -138 (54% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-       ],
-       [
-        "+",
-        "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
-       ],
-       [
-        "+",
-        "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
-       ],
-       [
-        "i",
-        "Model vs DraftKings: 64% vs 54% (model higher by 10 pts, within the allowed gap)."
-       ],
-       [
-        "i",
-        "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
-       ],
-       [
-        "!",
-        "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
-       ],
-       [
-        "+",
-        "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
-       ]
-      ],
-      "matchup_net": 0.0514,
-      "below_bar": false,
-      "prob_model": 0.6393,
-      "card": "likely",
-      "dk_line": null,
-      "player_id": 4591725,
-      "price_fmt": "-138"
      }
     ],
     "title": "Most likely",
     "name": "likely",
-    "n_qualified": 5,
+    "n_qualified": 4,
     "n_filled": 0
    }
   ],
   "fair": [
    {
     "size": 6,
-    "prob": 0.0394,
+    "prob": 0.0389,
     "legs": [
      {
       "kind": "card",
       "tier": "Fair price",
       "game_id": "401909322",
       "matchup": "BKN @ MIL",
-      "player": "Ryan Rollins",
-      "team": "MIL",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "side": "under",
-      "line": 4.5,
-      "label": "Ryan Rollins Under 4.5 Assists",
-      "prob": 0.5899,
-      "fair": 0.5431,
-      "edge": 0.0468,
-      "ev": 0.0174,
-      "price": -138,
-      "book": "DraftKings",
-      "proj": 3.9477,
-      "l10": 0.7,
-      "l20": 0.6,
-      "reasons": [
-       [
-        "+",
-        "Chance it hits: 59%. DraftKings prices under 4.5 at -138 (54% after removing their margin); our model says 64%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
-       ],
-       [
-        "+",
-        "Projection: 3.9 assists tonight (his usual 4.3) vs the line of 4.5."
-       ],
-       [
-        "+",
-        "Recent form: went under 4.5 in 7 of his last 10 games and 12 of his last 20."
-       ],
-       [
-        "i",
-        "Model vs DraftKings: 64% vs 54% (model higher by 10 pts, within the allowed gap)."
-       ],
-       [
-        "i",
-        "Minutes: projected 25.6 (last 10 avg 22.3, fairly stable at \u00b14.6)."
-       ],
-       [
-        "+",
-        "Matchup overall: -5.1% assists vs his usual output (3 checks for this pick, 2 against)."
-       ],
-       [
-        "+",
-        "Minutes: projected 24.4 minutes vs usual 25.6 (-4.6%)."
-       ],
-       [
-        "+",
-        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-2.8%)."
-       ],
-       [
-        "!",
-        "Vegas team total: Vegas implied team total 118.0 points (+2.0%)."
-       ],
-       [
-        "!",
-        "Position defense: BKN allow 5% more assists per minute to guards than average (+1.7%)."
-       ],
-       [
-        "+",
-        "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.8%)."
-       ]
-      ],
-      "matchup_net": 0.0514,
-      "below_bar": false,
-      "prob_model": 0.6393,
-      "card": "fair",
-      "dk_line": null,
-      "player_id": 4591725,
-      "price_fmt": "-138"
-     },
-     {
-      "kind": "card",
-      "tier": "Fair price",
-      "game_id": "401909322",
-      "matchup": "BKN @ MIL",
-      "player": "Jaime Jaquez Jr.",
-      "team": "MIL",
+      "player": "Julius Randle",
+      "team": "BKN",
       "stat": "ra",
       "stat_label": "Reb+Ast",
       "side": "under",
-      "line": 7.5,
-      "label": "Jaime Jaquez Jr. Under 7.5 Reb+Ast",
-      "prob": 0.5869,
-      "fair": 0.5458,
-      "edge": 0.0411,
-      "ev": 0.0061,
-      "price": -140,
+      "line": 11.5,
+      "label": "Julius Randle Under 11.5 Reb+Ast",
+      "prob": 0.585,
+      "fair": 0.5343,
+      "edge": 0.0507,
+      "ev": 0.0248,
+      "price": -133,
       "book": "DraftKings",
-      "proj": 7.0676,
-      "l10": 0.6,
-      "l20": 0.5,
+      "proj": 10.3046,
+      "l10": 0.7,
+      "l20": 0.7,
       "reasons": [
        [
         "+",
-        "Chance it hits: 59%. DraftKings prices under 7.5 at -140 (55% after removing their margin); our model says 59%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+        "Chance it hits: 58%. DraftKings prices under 11.5 at -133 (53% after removing their margin); our model says 66%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
        ],
        [
         "+",
-        "Projection: 7.1 reb+ast tonight (his usual 7.6) vs the line of 7.5."
+        "Projection: 10.3 reb+ast tonight (his usual 10.9) vs the line of 11.5."
+       ],
+       [
+        "+",
+        "Recent form: went under 11.5 in 7 of his last 10 games and 14 of his last 20."
        ],
        [
         "i",
-        "Recent form: went under 7.5 in 6 of his last 10 games and 10 of his last 20."
+        "Model vs DraftKings: 66% vs 53% (model higher by 13 pts, within the allowed gap)."
        ],
        [
         "+",
-        "Model vs DraftKings: 59% vs 55% (they agree)."
+        "Line moved from 10.5 to 11.5 since it opened (it moved against this side, so the number is now easier)."
        ],
        [
         "+",
-        "Minutes: projected 26.6 (last 10 avg 25.9, stable at \u00b12.9)."
+        "Minutes: projected 33.0 (last 10 avg 32.6, stable at \u00b13.6)."
        ],
        [
         "+",
-        "Matchup overall: -6.7% reb+ast vs his usual output (3 checks for this pick, 3 against)."
+        "Matchup overall: -1.2% reb+ast vs his usual output (4 checks for this pick, 6 against)."
        ],
        [
         "+",
-        "Minutes: projected 25.2 minutes vs usual 26.6 (-5.0%)."
+        "Minutes: projected 32.0 minutes vs usual 33.0 (-3.2%)."
        ],
        [
         "+",
-        "Rebounds \u00b7 Rebound chances: 82.2 total rebounds per game in BKN games (#30 of 30) (-1.5%)."
-       ],
-       [
-        "+",
-        "Assists \u00b7 Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.3%)."
+        "Assists \u00b7 Teammates out: BKN without Nolan Traore (13%) of the team's assists (-1.3%)."
        ],
        [
         "!",
-        "Assists \u00b7 Position defense: BKN allow 7% more assists per minute to forwards than average (+1.0%)."
+        "Rebounds \u00b7 Opponent rebounding: MIL grab 48.3% of all rebounds in their games (#26 of 30); Ware 9.0 rpg, Sims 7.0 rpg (+1.2%)."
        ],
        [
         "!",
-        "Assists \u00b7 Vegas team total: Vegas implied team total 118.0 points (+0.9%)."
+        "Rebounds \u00b7 Rebound chances: 92.1 total rebounds per game in MIL games (#3 of 30) (+1.0%)."
        ],
        [
         "!",
-        "Rebounds \u00b7 Opponent rebounding: BKN grab 49.2% of all rebounds in their games (#22 of 30); Sharpe 7.5 rpg, Jr. 6.6 rpg (+0.8%)."
+        "Assists \u00b7 Position defense: MIL allow 6% more assists per minute to forwards than average (+0.8%)."
+       ],
+       [
+        "!",
+        "Rebounds \u00b7 Position defense: MIL allow 5% more rebounds per minute to forwards than average (+0.8%)."
+       ],
+       [
+        "+",
+        "Rebounds \u00b7 Opponent players out: MIL at full strength (-0.6%)."
+       ],
+       [
+        "!",
+        "Assists \u00b7 Turnovers forced: MIL force 12.8 turnovers per 100 possessions (#27 most) (+0.6%)."
+       ],
+       [
+        "+",
+        "Assists \u00b7 Opponent players out: MIL at full strength (-0.6%)."
+       ],
+       [
+        "!",
+        "Assists \u00b7 Vegas team total: Vegas implied team total 116.5 points (+0.5%)."
        ]
       ],
-      "matchup_net": 0.0672,
+      "matchup_net": 0.0119,
       "below_bar": false,
-      "prob_model": 0.5919,
+      "prob_model": 0.66,
       "card": "fair",
       "dk_line": null,
-      "player_id": 4432848,
-      "price_fmt": "-140"
+      "player_id": 3064514,
+      "price_fmt": "-133"
      },
      {
       "kind": "card",
@@ -5713,6 +4880,89 @@
       "dk_line": null,
       "player_id": 3136193,
       "price_fmt": "-137"
+     },
+     {
+      "kind": "card",
+      "tier": "Fair price",
+      "game_id": "401909322",
+      "matchup": "BKN @ MIL",
+      "player": "Brayden Burries",
+      "team": "MIL",
+      "stat": "fg3m",
+      "stat_label": "3-Pointers Made",
+      "side": "under",
+      "line": 1.5,
+      "label": "Brayden Burries Under 1.5 3-Pointers Made",
+      "prob": 0.584,
+      "fair": 0.5579,
+      "edge": 0.0261,
+      "ev": -0.0188,
+      "price": -147,
+      "book": "DraftKings",
+      "proj": 1.3077,
+      "l10": 0.6,
+      "l20": 0.7222,
+      "reasons": [
+       [
+        "+",
+        "Chance it hits: 58%. DraftKings prices under 1.5 at -147 (56% after removing their margin); our model says 62%. The two are blended using how each predicted results at real lines, including the market's lean toward overs (unders beat DraftKings' price ~3.5 pts on average)."
+       ],
+       [
+        "+",
+        "Projection: 1.3 3-pointers made tonight (his usual 1.4) vs the line of 1.5."
+       ],
+       [
+        "i",
+        "Recent form: went under 1.5 in 6 of his last 10 games and 13 of his last 18."
+       ],
+       [
+        "i",
+        "Model vs DraftKings: 62% vs 56% (model higher by 7 pts, within the allowed gap)."
+       ],
+       [
+        "i",
+        "Minutes: projected 25.5 (last 10 avg 27.2, fairly stable at \u00b14.9)."
+       ],
+       [
+        "+",
+        "Matchup overall: -1.7% 3-pointers made vs his usual output (3 checks for this pick, 3 against)."
+       ],
+       [
+        "+",
+        "Minutes: projected 24.2 minutes vs usual 25.5 (-5.0%)."
+       ],
+       [
+        "!",
+        "3s allowed: 47% of shots vs BKN are 3s (#5 most) (+2.5%)."
+       ],
+       [
+        "+",
+        "Teammates out: No new absences vs his recent games (a returning teammate can lower this) (-1.6%)."
+       ],
+       [
+        "!",
+        "Position defense: BKN allow 8% more 3-pointers made per minute to guards than average (+1.5%)."
+       ],
+       [
+        "!",
+        "Vegas team total: Vegas implied team total 118.0 points (+1.5%)."
+       ],
+       [
+        "+",
+        "Opponent players out: BKN without Nolan Traore (10%) of their minutes (-0.6%)."
+       ],
+       [
+        "i",
+        "3P% allowed: BKN allow 37.7% from three (#3 worst). Checked, but it had no measurable effect last season, so it is not counted."
+       ]
+      ],
+      "matchup_net": 0.0175,
+      "below_bar": false,
+      "prob_model": 0.6241,
+      "card": "fair",
+      "dk_line": null,
+      "player_id": 5082206,
+      "price_fmt": "-147"
      },
      {
       "kind": "card",
@@ -6473,11 +5723,11 @@
   },
   {
    "ok": true,
-   "text": "DraftKings lines: 748 for 9 games"
+   "text": "DraftKings lines: 756 for 9 games"
   },
   {
    "ok": true,
-   "text": "PrizePicks: downloads in the final run, 1 hour before the first tip"
+   "text": "PrizePicks: 216 lines, 18 credits used, 119 left this month"
   }
  ],
  "odds_enabled": true,
